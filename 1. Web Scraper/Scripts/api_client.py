@@ -5,7 +5,15 @@ import requests
 import json
 
 
-def get_city_lan_lat(cities):
+def get_city_lan_lat():
+
+    # Read config json
+    with open(r'C:\Users\cameu\Desktop\Python Projects\1. Web Scraper\Requirements\config.json', 'r') as f:
+        config = json.load(f)
+
+    # Load the list of city in the json config
+    cities = config['cities']
+
     # Get API key from .env file
     load_dotenv()
     api_key = os.getenv('API_KEY')
@@ -48,15 +56,8 @@ def get_city_lan_lat(cities):
         json.dump(cleaned_data, file, indent=4)
     
 def main():
-    # Read config json
-    with open(r'C:\Users\cameu\Desktop\Python Projects\1. Web Scraper\Requirements\config.json', 'r') as f:
-        config = json.load(f)
-
-    # Load the list of city in the json config
-    cities = config['cities']
-
-    # Gets latitude and longtitude of the city from weatherapi
-    get_city_lan_lat(cities)
+    
+    get_city_lan_lat()
 
 
 if __name__ == "__main__":

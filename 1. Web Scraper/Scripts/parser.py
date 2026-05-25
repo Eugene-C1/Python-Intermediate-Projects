@@ -22,7 +22,15 @@ def output_csv(weather_records):
 
 
 # Get raw data
-def get_raw_data(city_loc, api_key):
+def get_raw_data():
+
+    with open(r'C:\Users\cameu\Desktop\Python Projects\1. Web Scraper\Requirements\raw_city_loc.json', 'r') as f:
+        city_loc = json.load(f)
+
+    # Get API key from .env file
+    load_dotenv()
+    api_key = os.getenv('API_KEY')
+
     weather_records = []
 
     for city in city_loc:
@@ -51,14 +59,7 @@ def get_raw_data(city_loc, api_key):
     output_csv(weather_records)
 
 def main():
-    with open(r'C:\Users\cameu\Desktop\Python Projects\1. Web Scraper\Requirements\raw_city_loc.json', 'r') as f:
-        city_loc = json.load(f)
-
-    # Get API key from .env file
-    load_dotenv()
-    api_key = os.getenv('API_KEY')
-
-    get_raw_data(city_loc, api_key)
+    get_raw_data()
 
 if __name__ == '__main__':
     main()
