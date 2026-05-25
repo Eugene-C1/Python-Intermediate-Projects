@@ -1,0 +1,8 @@
+{
+  "units": "metric",
+  "cities": ["Manila", "Tokyo", "London", "New York", "Sydney"],
+  "output_folder": "output/",
+  "data_file": "data/weather_history.csv",
+  "fetch_interval_hours": 6,
+  "city_requirements" : "Requirements/city.json"
+}
