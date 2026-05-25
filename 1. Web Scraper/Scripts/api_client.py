@@ -34,8 +34,8 @@ def get_city_lan_lat(cities):
     for city, lon, lat in zip(cities, lons, lats):
         combined_data.append({
             'city' : city,
-            'lot' : lon,
-            'lat' : lat
+            'lat' : lat,
+            'lon' : lon
         })
 
     
