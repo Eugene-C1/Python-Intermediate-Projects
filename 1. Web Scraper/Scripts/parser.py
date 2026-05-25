@@ -10,7 +10,12 @@ def output_csv(weather_records):
     if weather_records:
         df = pd.DataFrame(weather_records)
         output_path = r'C:\Users\cameu\Desktop\Python Projects\1. Web Scraper\Outputs\raw_city_temp.csv'
-        df.to_csv(output_path, index=False)
+
+        # Check if file exists so we don't duplicate headers
+        file_exists = os.path.exists(output_path)
+
+        # Append mode active, headers only written if file is brand new
+        df.to_csv(output_path, mode='a', index=False, header=not file_exists)
         print(f"\n All data successfully saved to: {output_path}")
     else:
         print("\nNo data was retrieved. CSV file not created.")
@@ -23,6 +28,7 @@ def get_raw_data(city_loc, api_key):
     for city in city_loc:
         # Changed the endpoint from '3.0/onecall' to '2.5/weather'
         url = f'https://api.openweathermap.org/data/2.5/weather?lat={city["lat"]}&lon={city["lon"]}&appid={api_key}&units=metric'
+        
         response = requests.get(url)
         
         if response.status_code == 200:
