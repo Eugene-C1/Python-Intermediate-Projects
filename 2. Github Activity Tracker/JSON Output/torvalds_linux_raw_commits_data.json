@@ -1,0 +1,2452 @@
+[
+    {
+        "sha": "e43ffb69e0438cddd72aaa30898b4dc446f664f8",
+        "node_id": "C_kwDOACN7MtoAKGU0M2ZmYjY5ZTA0MzhjZGRkNzJhYWEzMDg5OGI0ZGM0NDZmNjY0Zjg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T22:14:24Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T22:14:24Z"
+            },
+            "message": "Linux 7.1-rc6",
+            "tree": {
+                "sha": "4f844efc76f40c4cb998567f5348b46c128b6415",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/4f844efc76f40c4cb998567f5348b46c128b6415"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/e43ffb69e0438cddd72aaa30898b4dc446f664f8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/e43ffb69e0438cddd72aaa30898b4dc446f664f8",
+        "html_url": "https://github.com/torvalds/linux/commit/e43ffb69e0438cddd72aaa30898b4dc446f664f8",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/e43ffb69e0438cddd72aaa30898b4dc446f664f8/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8d9c51eac648ec953ea534b536d62337be3744b7",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/8d9c51eac648ec953ea534b536d62337be3744b7",
+                "html_url": "https://github.com/torvalds/linux/commit/8d9c51eac648ec953ea534b536d62337be3744b7"
+            }
+        ]
+    },
+    {
+        "sha": "8d9c51eac648ec953ea534b536d62337be3744b7",
+        "node_id": "C_kwDOACN7MtoAKDhkOWM1MWVhYzY0OGVjOTUzZWE1MzRiNTM2ZDYyMzM3YmUzNzQ0Yjc",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T18:50:39Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T18:50:39Z"
+            },
+            "message": "Merge tag 'media/v7.1-4' of git://git.kernel.org/pub/scm/linux/kernel/git/mchehab/linux-media\n\nPull media fixes from Mauro Carvalho Chehab:\n\n - rc: igorplugusb: fix control request setup packet\n\n - vsp1: revert a couple patches to fix regressions when setting DRM\n   pipelines\n\n* tag 'media/v7.1-4' of git://git.kernel.org/pub/scm/linux/kernel/git/mchehab/linux-media:\n  media: rc: igorplugusb: fix control request setup packet\n  Revert \"media: renesas: vsp1: brx: Fix format propagation\"\n  Revert \"media: renesas: vsp1: Initialize format on all pads\"",
+            "tree": {
+                "sha": "94032dd5785d14a2dc3b38a8a5d116b2a703cf34",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/94032dd5785d14a2dc3b38a8a5d116b2a703cf34"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/8d9c51eac648ec953ea534b536d62337be3744b7",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/8d9c51eac648ec953ea534b536d62337be3744b7",
+        "html_url": "https://github.com/torvalds/linux/commit/8d9c51eac648ec953ea534b536d62337be3744b7",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/8d9c51eac648ec953ea534b536d62337be3744b7/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "968966c2823a4b426a1c71101cb682faa0982892",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/968966c2823a4b426a1c71101cb682faa0982892",
+                "html_url": "https://github.com/torvalds/linux/commit/968966c2823a4b426a1c71101cb682faa0982892"
+            },
+            {
+                "sha": "171022c7d594c133a45f92357a2a91475edabe20",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/171022c7d594c133a45f92357a2a91475edabe20",
+                "html_url": "https://github.com/torvalds/linux/commit/171022c7d594c133a45f92357a2a91475edabe20"
+            }
+        ]
+    },
+    {
+        "sha": "968966c2823a4b426a1c71101cb682faa0982892",
+        "node_id": "C_kwDOACN7MtoAKDk2ODk2NmMyODIzYTRiNDI2YTFjNzExMDFjYjY4MmZhYTA5ODI4OTI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:52:16Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:52:16Z"
+            },
+            "message": "Merge tag 'x86-urgent-2026-05-31' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip\n\nPull x86 fixes from Ingo Molnar:\n\n - Make the clearcpuid= boot parameter less prominent\n   and warn about its dangers & caveats (Borislav Petkov)\n\n - Do not access the (new) PLATFORM_ID MSR when running\n   as a guest (Borislav Petkov)\n\n - x86 ftrace: Relocate %rip-relative percpu refs in dynamic\n   trampolines, to fix crash when using such trampolines\n   (Alexis Lothor\u00e9)\n\n - Fix x86-64 CFI build error (Peter Zijlstra)\n\n - Revert FPU signal return magic number check optimization,\n   because it broke CRIU and gVisor in certain FPU configurations\n   (Andrei Vagin)\n\n* tag 'x86-urgent-2026-05-31' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip:\n  Revert \"x86/fpu: Refine and simplify the magic number check during signal return\"\n  x86/kvm/vmx: Fix x86_64 CFI build\n  x86/ftrace: Relocate %rip-relative percpu refs in dynamic trampolines\n  x86/microcode: Do not access MSR_IA32_PLATFORM_ID when running as a guest\n  Documentation/arch/x86: Hide clearcpuid=",
+            "tree": {
+                "sha": "60745a176326282c90775e53a156920ad6446126",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/60745a176326282c90775e53a156920ad6446126"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/968966c2823a4b426a1c71101cb682faa0982892",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/968966c2823a4b426a1c71101cb682faa0982892",
+        "html_url": "https://github.com/torvalds/linux/commit/968966c2823a4b426a1c71101cb682faa0982892",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/968966c2823a4b426a1c71101cb682faa0982892/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "13bd441bb98e9cc91f9fb4449415e0519a0de7a9",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/13bd441bb98e9cc91f9fb4449415e0519a0de7a9",
+                "html_url": "https://github.com/torvalds/linux/commit/13bd441bb98e9cc91f9fb4449415e0519a0de7a9"
+            },
+            {
+                "sha": "44eeff9bc467bc7d1fec34fc3f6001f385fe462c",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/44eeff9bc467bc7d1fec34fc3f6001f385fe462c",
+                "html_url": "https://github.com/torvalds/linux/commit/44eeff9bc467bc7d1fec34fc3f6001f385fe462c"
+            }
+        ]
+    },
+    {
+        "sha": "13bd441bb98e9cc91f9fb4449415e0519a0de7a9",
+        "node_id": "C_kwDOACN7MtoAKDEzYmQ0NDFiYjk4ZTljYzkxZjlmYjQ0NDk0MTVlMDUxOWEwZGU3YTk",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:45:08Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:45:08Z"
+            },
+            "message": "Merge tag 'scsi-fixes' of git://git.kernel.org/pub/scm/linux/kernel/git/jejb/scsi\n\nPull SCSI fixes from James Bottomley:\n \"Two core changes, the only one of significance being the change to\n  kick queues in SDEV_CANCEL which had a small window for stuck\n  requests.\n\n  The major driver fixes are the one to the FC transport class to widen\n  the FPIN counter to counter a theoretical (and privileged) fabric\n  traffic injection attack and the other is an iscsi fix where a\n  malicious target could trick the kernel into an output buffer overrun.\n\n  Both the driver fixes were AI assisted\"\n\n* tag 'scsi-fixes' of git://git.kernel.org/pub/scm/linux/kernel/git/jejb/scsi:\n  scsi: target: iscsi: Validate CHAP_R length before base64 decode\n  scsi: target: iscsi: Bound iscsi_encode_text_output() appends to rsp_buf\n  scsi: target: iscsi: Fix CRC overread and double-free in iscsit_handle_text_cmd()\n  scsi: fcoe: Reject FIP descriptors with zero fip_dlen in CVL walker\n  scsi: scsi_transport_fc: Widen FPIN pname walker counter to u32\n  scsi: scsi_debug: Add missing newline in scsi_debug_device_reset()\n  scsi: megaraid_sas: Fix NULL pointer dereference on firmware duplicate completion\n  scsi: devinfo: Add BLIST_NO_RSOC for Promise VTrak E310f\n  scsi: core: Run queues for all non-SDEV_DEL devices from scsi_run_host_queues",
+            "tree": {
+                "sha": "25041ee4cfae04300db785d0aa69308ae4446335",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/25041ee4cfae04300db785d0aa69308ae4446335"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/13bd441bb98e9cc91f9fb4449415e0519a0de7a9",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/13bd441bb98e9cc91f9fb4449415e0519a0de7a9",
+        "html_url": "https://github.com/torvalds/linux/commit/13bd441bb98e9cc91f9fb4449415e0519a0de7a9",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/13bd441bb98e9cc91f9fb4449415e0519a0de7a9/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9cf1afe6de1dc9dfced6070328626830794bac9d",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/9cf1afe6de1dc9dfced6070328626830794bac9d",
+                "html_url": "https://github.com/torvalds/linux/commit/9cf1afe6de1dc9dfced6070328626830794bac9d"
+            },
+            {
+                "sha": "85db7391310b1304d2dc8ae3b0b12105a9567147",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/85db7391310b1304d2dc8ae3b0b12105a9567147",
+                "html_url": "https://github.com/torvalds/linux/commit/85db7391310b1304d2dc8ae3b0b12105a9567147"
+            }
+        ]
+    },
+    {
+        "sha": "9cf1afe6de1dc9dfced6070328626830794bac9d",
+        "node_id": "C_kwDOACN7MtoAKDljZjFhZmU2ZGUxZGM5ZGZjZWQ2MDcwMzI4NjI2ODMwNzk0YmFjOWQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:33:08Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:33:08Z"
+            },
+            "message": "Merge tag 'i2c-for-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/wsa/linux\n\nPull i2c fixes from Wolfram Sang:\n\n - davinci: fix fallback bus frequency on missing clock-frequency\n\n - virtio: mark device ready initially\n\n* tag 'i2c-for-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/wsa/linux:\n  i2c: virtio: mark device ready before registering the adapter\n  i2c: davinci: fix division by zero on missing clock-frequency",
+            "tree": {
+                "sha": "8368901815ce319358123ca1aae4c484592eecc7",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/8368901815ce319358123ca1aae4c484592eecc7"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/9cf1afe6de1dc9dfced6070328626830794bac9d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/9cf1afe6de1dc9dfced6070328626830794bac9d",
+        "html_url": "https://github.com/torvalds/linux/commit/9cf1afe6de1dc9dfced6070328626830794bac9d",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/9cf1afe6de1dc9dfced6070328626830794bac9d/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "227abb780c68687d6800cf9eafaff0cbeca4bf45",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/227abb780c68687d6800cf9eafaff0cbeca4bf45",
+                "html_url": "https://github.com/torvalds/linux/commit/227abb780c68687d6800cf9eafaff0cbeca4bf45"
+            },
+            {
+                "sha": "1d774589f924056b8403e271fdecaf9a803a50fc",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/1d774589f924056b8403e271fdecaf9a803a50fc",
+                "html_url": "https://github.com/torvalds/linux/commit/1d774589f924056b8403e271fdecaf9a803a50fc"
+            }
+        ]
+    },
+    {
+        "sha": "227abb780c68687d6800cf9eafaff0cbeca4bf45",
+        "node_id": "C_kwDOACN7MtoAKDIyN2FiYjc4MGM2ODY4N2Q2ODAwY2Y5ZWFmYWZmMGNiZWNhNGJmNDU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:27:18Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T15:27:18Z"
+            },
+            "message": "Merge tag 'input-for-v7.1-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/dtor/input\n\nPull input fixes from Dmitry Torokhov:\n\n - updates to Elan I2C touchpad driver to handle a new IC type and to\n   validate size of supplied firmware to prevent OOB access\n\n - updates to Xpad controller driver to recognize ASUS ROG RAIKIRI II\n   and \"Nova 2 Lite\" from GameSir controllers as well as a fix to\n   prevent a potential OOB access when handling \"Share\" button\n\n - an update to Synaptics touchpad driver to use RMI mode for touchpad\n   in Thinkpad E490\n\n - updates to Atmel MXT driver adding checks to prevent potential OOB\n   accesses\n\n - a fix to IMS PCU driver to free correct amount of memory when tearing\n   it down\n\n - a fixup to the recent change to Atlas buttons driver\n\n - a small cleanup in fm801-fp for PCI IDs table initialisation\n\n* tag 'input-for-v7.1-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/dtor/input:\n  Input: ims-pcu - fix usb_free_coherent() size in ims_pcu_buffers_free()\n  Input: synaptics - add LEN2058 to SMBus passlist for ThinkPad E490\n  Input: atlas - check ACPI_COMPANION() against NULL\n  Input: atmel_mxt_ts - check mem_size before calculating config memory size\n  Input: atmel_mxt_ts - fix boundary check in mxt_prepare_cfg_mem\n  Input: fm801-gp - simplify initialisation of pci_device_id array\n  Input: xpad - add \"Nova 2 Lite\" from GameSir\n  Input: xpad - add support for ASUS ROG RAIKIRI II\n  Input: elan_i2c - validate firmware size before use\n  Input: xpad - fix out-of-bounds access for Share button\n  Input: usbtouchscreen - clamp NEXIO data_len/x_len to URB buffer size\n  Input: elan_i2c - increase device reset wait timeout after update FW\n  Input: elan_i2c - add ic type 0x19",
+            "tree": {
+                "sha": "7d73343a34379cea7cc755fa4c964f5b150f0933",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/7d73343a34379cea7cc755fa4c964f5b150f0933"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/227abb780c68687d6800cf9eafaff0cbeca4bf45",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/227abb780c68687d6800cf9eafaff0cbeca4bf45",
+        "html_url": "https://github.com/torvalds/linux/commit/227abb780c68687d6800cf9eafaff0cbeca4bf45",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/227abb780c68687d6800cf9eafaff0cbeca4bf45/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "174914ea551314c52a61713b9c4bde9e42d48073",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/174914ea551314c52a61713b9c4bde9e42d48073",
+                "html_url": "https://github.com/torvalds/linux/commit/174914ea551314c52a61713b9c4bde9e42d48073"
+            },
+            {
+                "sha": "dab48a7e74e6a394f3aa0461a2b1fb0c7b38fcb8",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/dab48a7e74e6a394f3aa0461a2b1fb0c7b38fcb8",
+                "html_url": "https://github.com/torvalds/linux/commit/dab48a7e74e6a394f3aa0461a2b1fb0c7b38fcb8"
+            }
+        ]
+    },
+    {
+        "sha": "174914ea551314c52a61713b9c4bde9e42d48073",
+        "node_id": "C_kwDOACN7MtoAKDE3NDkxNGVhNTUxMzE0YzUyYTYxNzEzYjljNGJkZTllNDJkNDgwNzM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T00:05:58Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T00:05:58Z"
+            },
+            "message": "Merge tag 'v7.1-rc6-smb3-client-fixes' of git://git.samba.org/sfrench/cifs-2.6\n\nPull smb client fixes from Steve French:\n\n - fix uninitialized variable in smb2_writev_callback()\n\n - detect short folioq copy in cifs_copy_folioq_to_iter()\n\n* tag 'v7.1-rc6-smb3-client-fixes' of git://git.samba.org/sfrench/cifs-2.6:\n  smb: client: fix uninitialized variable in smb2_writev_callback\n  smb: client: detect short folioq copy in cifs_copy_folioq_to_iter()",
+            "tree": {
+                "sha": "c7035bc0abc5c8165911490194e52a303123633a",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/c7035bc0abc5c8165911490194e52a303123633a"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/174914ea551314c52a61713b9c4bde9e42d48073",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/174914ea551314c52a61713b9c4bde9e42d48073",
+        "html_url": "https://github.com/torvalds/linux/commit/174914ea551314c52a61713b9c4bde9e42d48073",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/174914ea551314c52a61713b9c4bde9e42d48073/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1",
+                "html_url": "https://github.com/torvalds/linux/commit/9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1"
+            },
+            {
+                "sha": "9d2491197a00acf8c423512078458c2855102b66",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/9d2491197a00acf8c423512078458c2855102b66",
+                "html_url": "https://github.com/torvalds/linux/commit/9d2491197a00acf8c423512078458c2855102b66"
+            }
+        ]
+    },
+    {
+        "sha": "9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1",
+        "node_id": "C_kwDOACN7MtoAKDlkODdkMGZjOGM4ZTBhMmEyYjUwMjZhMTY5ZGIyZjI3MGI0ODI4YzE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T22:39:47Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T22:39:47Z"
+            },
+            "message": "Merge tag 'liveupdate-fixes-2026-05-30' of git://git.kernel.org/pub/scm/linux/kernel/git/liveupdate/linux\n\nPull liveupdate fixes from Mike Rapoport:\n \"Two kexec handover regression fixes:\n\n   - fix order calculation for kho_unpreserve_pages() to make sure sure\n     that the order calculation in kho_unpreserve_pages() mathes the\n     order calculation in kho_preserve_pages().\n\n   - fix math in calculation of KHO_TREE_MAX_DEPTH to make it work with\n     16KB pages\"\n\n* tag 'liveupdate-fixes-2026-05-30' of git://git.kernel.org/pub/scm/linux/kernel/git/liveupdate/linux:\n  kho: fix order calculation for kho_unpreserve_pages()\n  kho: fix KHO_TREE_MAX_DEPTH for non-4KB page sizes",
+            "tree": {
+                "sha": "c981811edb000e4fe0481b8e21265ef809eb0972",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/c981811edb000e4fe0481b8e21265ef809eb0972"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1",
+        "html_url": "https://github.com/torvalds/linux/commit/9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/9d87d0fc8c8e0a2a2b5026a169db2f270b4828c1/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a29c0b0cafc78a45f44ac4a98efee0c11dd7996d",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/a29c0b0cafc78a45f44ac4a98efee0c11dd7996d",
+                "html_url": "https://github.com/torvalds/linux/commit/a29c0b0cafc78a45f44ac4a98efee0c11dd7996d"
+            },
+            {
+                "sha": "8fd2f26fa2a33cfe8ac043f976137ecf5b567f03",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/8fd2f26fa2a33cfe8ac043f976137ecf5b567f03",
+                "html_url": "https://github.com/torvalds/linux/commit/8fd2f26fa2a33cfe8ac043f976137ecf5b567f03"
+            }
+        ]
+    },
+    {
+        "sha": "a29c0b0cafc78a45f44ac4a98efee0c11dd7996d",
+        "node_id": "C_kwDOACN7MtoAKGEyOWMwYjBjYWZjNzhhNDVmNDRhYzRhOThlZmVlMGMxMWRkNzk5NmQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T22:37:05Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T22:37:05Z"
+            },
+            "message": "Merge tag 'fixes-2026-05-30' of git://git.kernel.org/pub/scm/linux/kernel/git/rppt/memblock\n\nPull memblock fix from Mike Rapoport:\n \"Fix regression from memblock_free_late() refactoring\n\n  After refactoring of memblock_free_late() and free_init_pages() it\n  became possible to call memblock_free() after memblock init data was\n  discarded.\n\n  Make sure memblock_free() does not touch memblock.reserved unless it\n  is called early enough or when ARCH_KEEP_MEMBLOCK is enabled\"\n\n* tag 'fixes-2026-05-30' of git://git.kernel.org/pub/scm/linux/kernel/git/rppt/memblock:\n  memblock: don't touch memblock arrays when memblock_free() is called late",
+            "tree": {
+                "sha": "23c4227493d89a0276b0331e96285982a51bae8d",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/23c4227493d89a0276b0331e96285982a51bae8d"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/a29c0b0cafc78a45f44ac4a98efee0c11dd7996d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/a29c0b0cafc78a45f44ac4a98efee0c11dd7996d",
+        "html_url": "https://github.com/torvalds/linux/commit/a29c0b0cafc78a45f44ac4a98efee0c11dd7996d",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/a29c0b0cafc78a45f44ac4a98efee0c11dd7996d/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "670b77dfebe7257adc0defbc48a4c43cfdf6c8f6",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/670b77dfebe7257adc0defbc48a4c43cfdf6c8f6",
+                "html_url": "https://github.com/torvalds/linux/commit/670b77dfebe7257adc0defbc48a4c43cfdf6c8f6"
+            },
+            {
+                "sha": "7c2eee9c136734825ff524dd8b2146438a4f8250",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/7c2eee9c136734825ff524dd8b2146438a4f8250",
+                "html_url": "https://github.com/torvalds/linux/commit/7c2eee9c136734825ff524dd8b2146438a4f8250"
+            }
+        ]
+    },
+    {
+        "sha": "171022c7d594c133a45f92357a2a91475edabe20",
+        "node_id": "C_kwDOACN7MtoAKDE3MTAyMmM3ZDU5NGMxMzNhNDVmOTIzNTdhMmE5MTQ3NWVkYWJlMjA",
+        "commit": {
+            "author": {
+                "name": "Henri A",
+                "email": "contact@henrialfonso.com",
+                "date": "2026-05-20T14:25:44Z"
+            },
+            "committer": {
+                "name": "Hans Verkuil",
+                "email": "hverkuil+cisco@kernel.org",
+                "date": "2026-05-30T16:21:47Z"
+            },
+            "message": "media: rc: igorplugusb: fix control request setup packet\n\nCommit eac69475b01f (\"media: rc: igorplugusb: heed coherency\nrules\") changed the control request storage from an embedded struct to\nan allocated pointer so it can obey DMA coherency rules.\n\nHowever, the driver still passes &ir->request to usb_fill_control_urb().\nThat points the URB setup packet at the pointer field itself rather than\nat the allocated struct usb_ctrlrequest.\n\nUSB core then interprets pointer bytes as the setup packet. This can\nproduce an invalid bRequestType and trigger the control direction warning\nreported by syzbot:\n\n  usb 2-1: BOGUS control dir, pipe 80003580 doesn't match bRequestType 0\n\nPass ir->request itself as the setup packet.\n\nFixes: eac69475b01f (\"media: rc: igorplugusb: heed coherency rules\")\nReported-by: syzbot+11f0e4f957c7c3bf3d51@syzkaller.appspotmail.com\nCloses: https://syzkaller.appspot.com/bug?extid=11f0e4f957c7c3bf3d51\nTested-by: syzbot+11f0e4f957c7c3bf3d51@syzkaller.appspotmail.com\nCc: stable@vger.kernel.org\nAssisted-by: Codex:GPT-5.5\nSigned-off-by: Henri A <contact@henrialfonso.com>\nSigned-off-by: Sean Young <sean@mess.org>\nSigned-off-by: Hans Verkuil <hverkuil+cisco@kernel.org>",
+            "tree": {
+                "sha": "87ffeb174ec8aa00c51ee37dcb3d18a079a9117d",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/87ffeb174ec8aa00c51ee37dcb3d18a079a9117d"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/171022c7d594c133a45f92357a2a91475edabe20",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/171022c7d594c133a45f92357a2a91475edabe20",
+        "html_url": "https://github.com/torvalds/linux/commit/171022c7d594c133a45f92357a2a91475edabe20",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/171022c7d594c133a45f92357a2a91475edabe20/comments",
+        "author": null,
+        "committer": null,
+        "parents": [
+            {
+                "sha": "f78073e84c800ae146ce62447e7a685a5ceeb92d",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/f78073e84c800ae146ce62447e7a685a5ceeb92d",
+                "html_url": "https://github.com/torvalds/linux/commit/f78073e84c800ae146ce62447e7a685a5ceeb92d"
+            }
+        ]
+    },
+    {
+        "sha": "670b77dfebe7257adc0defbc48a4c43cfdf6c8f6",
+        "node_id": "C_kwDOACN7MtoAKDY3MGI3N2RmZWJlNzI1N2FkYzBkZWZiYzQ4YTRjNDNjZmRmNmM4ZjY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T15:37:45Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T15:37:45Z"
+            },
+            "message": "Merge tag 'usb-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usb\n\nPull USB and Thunderbolt fixes from Greg KH:\n \"Here is a set of USB fixes and new device ids for 7.1-rc6. Nothing\n  major in here, just lots of tiny fixes for reported issues found by\n  users and some older patches found by some scanning tools. Included in\n  here are:\n\n   - typec fixes found by fuzzers that have decided to finally look at\n     that device interaction path (i.e. before a driver is bound to a\n     device)\n\n   - typec fixes for issues found by users\n\n   - thunderbolt driver fixes for reported problems\n\n   - cdns3 driver fixes\n\n   - dwc3 driver fixes\n\n   - new device quirks added\n\n   - usb serial driver fixes for broken devices\n\n   - other small driver fixes\n\n  All of these have been in linux-next for over a week with no reported\n  issues\"\n\n* tag 'usb-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usb: (54 commits)\n  USB: serial: cypress_m8: validate interrupt packet headers\n  USB: serial: safe_serial: fix memory corruption with small endpoint\n  USB: serial: omninet: fix memory corruption with small endpoint\n  USB: serial: mxuport: fix memory corruption with small endpoint\n  USB: serial: cypress_m8: fix memory corruption with small endpoint\n  USB: cdc-acm: Fix bit overlap and move quirk definitions to header\n  usb: dwc2: Fix use after free in debug code\n  usb: chipidea: core: convert ci_role_switch to local variable\n  usb: gadget: f_fs: serialize DMABUF cancel against request completion\n  usb: gadget: f_fs: copy only received bytes on short ep0 read\n  usb: gadget: dummy_hcd: Reject hub port requests for non-existent ports\n  dt-bindings: usb: Fix EIC7700 USB reset's issue\n  usbip: vudc: Fix use after free bug in vudc_remove due to race condition\n  dt-bindings: usb: ti,omap4-musb: Drop duplicate 'usb-phy' property constraints\n  usb: storage: Add quirks for PNY Elite Portable SSD\n  USB: quirks: add NO_LPM for Lenovo ThinkPad USB-C Dock Gen2 hub controllers\n  usb: usbtmc: reject interrupt endpoints with small wMaxPacketSize\n  usb: usbtmc: check URB actual_length for interrupt-IN notifications\n  xhci: tegra: Fix ghost USB device on dual-role port unplug\n  usb: gadget: uvc: hold opts->lock across XU walks in uvc_function_bind\n  ...",
+            "tree": {
+                "sha": "60f52a85ef4edabdc8a8da0dac1a453efa287386",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/60f52a85ef4edabdc8a8da0dac1a453efa287386"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/670b77dfebe7257adc0defbc48a4c43cfdf6c8f6",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/670b77dfebe7257adc0defbc48a4c43cfdf6c8f6",
+        "html_url": "https://github.com/torvalds/linux/commit/670b77dfebe7257adc0defbc48a4c43cfdf6c8f6",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/670b77dfebe7257adc0defbc48a4c43cfdf6c8f6/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "495fb8dd7f1da991c5325f4a0a50d0b042f19523",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/495fb8dd7f1da991c5325f4a0a50d0b042f19523",
+                "html_url": "https://github.com/torvalds/linux/commit/495fb8dd7f1da991c5325f4a0a50d0b042f19523"
+            },
+            {
+                "sha": "645d4eda1d0db0202ed8e4a2c3abb2ebce6b86ef",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/645d4eda1d0db0202ed8e4a2c3abb2ebce6b86ef",
+                "html_url": "https://github.com/torvalds/linux/commit/645d4eda1d0db0202ed8e4a2c3abb2ebce6b86ef"
+            }
+        ]
+    },
+    {
+        "sha": "495fb8dd7f1da991c5325f4a0a50d0b042f19523",
+        "node_id": "C_kwDOACN7MtoAKDQ5NWZiOGRkN2YxZGE5OTFjNTMyNWY0YTBhNTBkMGIwNDJmMTk1MjM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T15:34:03Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T15:34:03Z"
+            },
+            "message": "Merge tag 'tty-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/tty\n\nPull tty/serial driver fixes from Greg KH:\n \"Here are some small serial driver fixes for 7.1-rc6. Included in here\n  are:\n\n   - mips serial driver fixes to resolve some long-standing issues with\n     how they interacted with the console. That's the \"majority\" of the\n     changes in this merge request\n\n   - sh-sci driver regression fix\n\n   - 8250 driver regression fixes\n\n   - other small serial driver fixes for reported problems.\n\n  All of these have been in linux-next for over a week with no reported\n  issues\"\n\n* tag 'tty-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/tty:\n  serial: dz: Enable modular build\n  serial: zs: Convert to use a platform device\n  serial: dz: Convert to use a platform device\n  serial: zs: Switch to using channel reset\n  serial: zs: Fix bootconsole handover lockup\n  serial: dz: Fix bootconsole handover lockup\n  serial: dz: Fix bootconsole message clobbering at chip reset\n  serial: 8250_dw: dispatch SysRq character in dw8250_handle_irq()\n  serial: 8250: dispatch SysRq character in serial8250_handle_irq()\n  serial: core: introduce guard(uart_port_lock_check_sysrq_irqsave)\n  tty: serial: samsung: Remove redundant port lock acquisition in rx helpers\n  serial: altera_jtaguart: handle uart_add_one_port() failures\n  serial: qcom_geni: fix kfifo underflow when flush precedes DMA completion IRQ\n  serial: fsl_lpuart: fix rx buffer and DMA map leaks in start_rx_dma\n  tty: add missing tty_driver include to tty_port.h\n  serial: qcom-geni: fix UART_RX_PAR_EN bit position\n  serial: sh-sci: fix memory region release in error path\n  tty: serial: pch_uart: add check for dma_alloc_coherent()\n  serial: zs: Fix swapped RI/DSR modem line transition counting",
+            "tree": {
+                "sha": "becb7b0c9a08fd796a91f50ab119e33d32d11fe3",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/becb7b0c9a08fd796a91f50ab119e33d32d11fe3"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/495fb8dd7f1da991c5325f4a0a50d0b042f19523",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/495fb8dd7f1da991c5325f4a0a50d0b042f19523",
+        "html_url": "https://github.com/torvalds/linux/commit/495fb8dd7f1da991c5325f4a0a50d0b042f19523",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/495fb8dd7f1da991c5325f4a0a50d0b042f19523/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "25447851777a53bd4b501e7f2cb418332ad584cc",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/25447851777a53bd4b501e7f2cb418332ad584cc",
+                "html_url": "https://github.com/torvalds/linux/commit/25447851777a53bd4b501e7f2cb418332ad584cc"
+            },
+            {
+                "sha": "e4240d8845445d58b4b96f7066adfe175a61bd0c",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/e4240d8845445d58b4b96f7066adfe175a61bd0c",
+                "html_url": "https://github.com/torvalds/linux/commit/e4240d8845445d58b4b96f7066adfe175a61bd0c"
+            }
+        ]
+    },
+    {
+        "sha": "25447851777a53bd4b501e7f2cb418332ad584cc",
+        "node_id": "C_kwDOACN7MtoAKDI1NDQ3ODUxNzc3YTUzYmQ0YjUwMWU3ZjJjYjQxODMzMmFkNTg0Y2M",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T15:30:12Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T15:30:12Z"
+            },
+            "message": "Merge tag 'char-misc-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/char-misc\n\nPull char/misc/iio fixes from Greg KH:\n \"Here are some small char/misc/iio driver fixes for 7.1-rc6. Included\n  in here are:\n\n   - lots of small IIO driver fixes for reported problems.\n\n   - Android binder bugfixes for reported issues.\n\n   - small comedi test driver fixes\n\n   - counter driver fix\n\n   - parport driver fix (people still use this?)\n\n   - rpi driver fix\n\n   - uio driver fix\n\n  All of these have been in linux-next for over a week with no reported\n  problems\"\n\n* tag 'char-misc-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/char-misc: (41 commits)\n  Revert \"gpib: cb7210: Fix region leak when request_irq fails\"\n  misc: rp1: Send IACK on IRQ activate to fix kdump/kexec\n  gpib: cb7210: Fix region leak when request_irq fails\n  parport: Fix race between port and client registration\n  uio: uio_pci_generic_sva: fix double free of devm_kzalloc() memory\n  rust_binder: Avoid holding lock when dropping delivered_death\n  rust_binder: avoid calling pending_oneway_finished() on TF_UPDATE_TXN\n  comedi: comedi_test: fix check for valid scan_begin_src in waveform_ai_cmdtest()\n  comedi: comedi_test: Fix limiting of convert_arg in waveform_ai_cmdtest()\n  iio: adc: viperboard: Fix error handling in vprbrd_iio_read_raw\n  iio: gyro: itg3200: fix i2c read into the wrong stack location\n  iio: dac: ad5686: fix powerdown control on dual-channel devices\n  iio: dac: ad5686: acquire lock when doing powerdown control\n  iio: temperature: tsys01: fix broken PROM checksum validation\n  iio: dac: ad3530r: Fix AD3531/AD3531R powerdown mode strings\n  iio: buffer: hw-consumer: fix use-after-free in error path\n  iio: dac: ad5686: fix input raw value check\n  iio: dac: ad5686: fix ref bit initialization for single-channel parts\n  iio: ssp_sensors: cancel delayed work_refresh on remove\n  iio: adc: meson-saradc: fix calibration buffer leak on error\n  ...",
+            "tree": {
+                "sha": "df40431330ef03032ee1e68393cc6632c416156a",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/df40431330ef03032ee1e68393cc6632c416156a"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/25447851777a53bd4b501e7f2cb418332ad584cc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/25447851777a53bd4b501e7f2cb418332ad584cc",
+        "html_url": "https://github.com/torvalds/linux/commit/25447851777a53bd4b501e7f2cb418332ad584cc",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/25447851777a53bd4b501e7f2cb418332ad584cc/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1246c246d9f684599e1dd7498043062c89fb0a36",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/1246c246d9f684599e1dd7498043062c89fb0a36",
+                "html_url": "https://github.com/torvalds/linux/commit/1246c246d9f684599e1dd7498043062c89fb0a36"
+            },
+            {
+                "sha": "05d5d79440c2cc0784f91b61f2012753e66be472",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/05d5d79440c2cc0784f91b61f2012753e66be472",
+                "html_url": "https://github.com/torvalds/linux/commit/05d5d79440c2cc0784f91b61f2012753e66be472"
+            }
+        ]
+    },
+    {
+        "sha": "1d774589f924056b8403e271fdecaf9a803a50fc",
+        "node_id": "C_kwDOACN7MtoAKDFkNzc0NTg5ZjkyNDA1NmI4NDAzZTI3MWZkZWNhZjlhODAzYTUwZmM",
+        "commit": {
+            "author": {
+                "name": "Alexis Bouzigues",
+                "email": "BouziguesAlexis@JohnDeere.com",
+                "date": "2026-05-29T14:28:14Z"
+            },
+            "committer": {
+                "name": "Wolfram Sang",
+                "email": "wsa+renesas@sang-engineering.com",
+                "date": "2026-05-30T13:56:07Z"
+            },
+            "message": "i2c: virtio: mark device ready before registering the adapter\n\nvirtio_i2c_probe() synchronously probes child i2c drivers on the bus,\nbut peripherals may use the bus at probe for tasks like reading a chip\nid. The vhost-user-i2c backend stalls at such probes unless DRIVER_OK\nis already set before the virtqueue is first kicked.\n\nSet DRIVER_OK explicitly before i2c_add_adapter(), as done for the\nsame reason in commit f5866db64f34 (\"virtio_console: enable VQs\nearly\") and commit 71e4b8bf0482 (\"virtio_rpmsg: set DRIVER_OK before\nusing device\").\n\nSigned-off-by: Alexis Bouzigues <BouziguesAlexis@JohnDeere.com>\nSigned-off-by: Wolfram Sang <wsa+renesas@sang-engineering.com>",
+            "tree": {
+                "sha": "e3c4046812d76509a5c53dcfd8b4005860440dd8",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/e3c4046812d76509a5c53dcfd8b4005860440dd8"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/1d774589f924056b8403e271fdecaf9a803a50fc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/1d774589f924056b8403e271fdecaf9a803a50fc",
+        "html_url": "https://github.com/torvalds/linux/commit/1d774589f924056b8403e271fdecaf9a803a50fc",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/1d774589f924056b8403e271fdecaf9a803a50fc/comments",
+        "author": null,
+        "committer": null,
+        "parents": [
+            {
+                "sha": "e2aecff95bc6d59030332959a18f8c9f654961be",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/e2aecff95bc6d59030332959a18f8c9f654961be",
+                "html_url": "https://github.com/torvalds/linux/commit/e2aecff95bc6d59030332959a18f8c9f654961be"
+            }
+        ]
+    },
+    {
+        "sha": "e2aecff95bc6d59030332959a18f8c9f654961be",
+        "node_id": "C_kwDOACN7MtoAKGUyYWVjZmY5NWJjNmQ1OTAzMDMzMjk1OWExOGY4YzlmNjU0OTYxYmU",
+        "commit": {
+            "author": {
+                "name": "Wolfram Sang",
+                "email": "wsa+renesas@sang-engineering.com",
+                "date": "2026-05-30T13:50:41Z"
+            },
+            "committer": {
+                "name": "Wolfram Sang",
+                "email": "wsa+renesas@sang-engineering.com",
+                "date": "2026-05-30T13:50:41Z"
+            },
+            "message": "Merge tag 'i2c-host-fixes-7.1-rc6' of git://git.kernel.org/pub/scm/linux/kernel/git/andi.shyti/linux into i2c/for-current\n\ni2c-host-fixes for v7.1-rc6\n\ndavinci: fix fallback bus frequency on missing clock-frequency",
+            "tree": {
+                "sha": "6d04c27c7114441f9ab9dfa3dd2f00a17b865c29",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/6d04c27c7114441f9ab9dfa3dd2f00a17b865c29"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/e2aecff95bc6d59030332959a18f8c9f654961be",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/e2aecff95bc6d59030332959a18f8c9f654961be",
+        "html_url": "https://github.com/torvalds/linux/commit/e2aecff95bc6d59030332959a18f8c9f654961be",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/e2aecff95bc6d59030332959a18f8c9f654961be/comments",
+        "author": null,
+        "committer": null,
+        "parents": [
+            {
+                "sha": "e7ae89a0c97ce2b68b0983cd01eda67cf373517d",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/e7ae89a0c97ce2b68b0983cd01eda67cf373517d",
+                "html_url": "https://github.com/torvalds/linux/commit/e7ae89a0c97ce2b68b0983cd01eda67cf373517d"
+            },
+            {
+                "sha": "030675aa54cf757769b3db65642433d626b3ed7c",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/030675aa54cf757769b3db65642433d626b3ed7c",
+                "html_url": "https://github.com/torvalds/linux/commit/030675aa54cf757769b3db65642433d626b3ed7c"
+            }
+        ]
+    },
+    {
+        "sha": "05d5d79440c2cc0784f91b61f2012753e66be472",
+        "node_id": "C_kwDOACN7MtoAKDA1ZDVkNzk0NDBjMmNjMDc4NGY5MWI2MWYyMDEyNzUzZTY2YmU0NzI",
+        "commit": {
+            "author": {
+                "name": "Greg Kroah-Hartman",
+                "email": "gregkh@linuxfoundation.org",
+                "date": "2026-05-30T10:25:36Z"
+            },
+            "committer": {
+                "name": "Greg Kroah-Hartman",
+                "email": "gregkh@linuxfoundation.org",
+                "date": "2026-05-30T10:25:36Z"
+            },
+            "message": "Revert \"gpib: cb7210: Fix region leak when request_irq fails\"\n\nThis reverts commit 2eae90a457baa0048a96ed38ad93090ee38c8b2f.\n\nTurns out not to be correct.\n\nLink: https://lore.kernel.org/r/PpNUbGhrvT8I_KayoDvQYI2PYjmMw1QEkuVBDZz2PwBsVVgPkBXJarc2mBM0IhiH3AQG0GtgqEsDRXNj3yUKEDBaZa25u73pAjvcE6vfRsg=@protonmail.com\nReported-by: Dominik Karol Pi\u0105tkowski <dominik.karol.piatkowski@protonmail.com>\nCc: Mark Brown <broonie@kernel.org>\nCc: Hongling Zeng <zhongling0719@126.com>\nCc: Hongling Zeng <zenghongling@kylinos.cn>\nSigned-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>",
+            "tree": {
+                "sha": "5dd739fd70746f2806be734a5cc6ecbeac388ac1",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/5dd739fd70746f2806be734a5cc6ecbeac388ac1"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/05d5d79440c2cc0784f91b61f2012753e66be472",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/05d5d79440c2cc0784f91b61f2012753e66be472",
+        "html_url": "https://github.com/torvalds/linux/commit/05d5d79440c2cc0784f91b61f2012753e66be472",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/05d5d79440c2cc0784f91b61f2012753e66be472/comments",
+        "author": {
+            "login": "gregkh",
+            "id": 14953,
+            "node_id": "MDQ6VXNlcjE0OTUz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/14953?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gregkh",
+            "html_url": "https://github.com/gregkh",
+            "followers_url": "https://api.github.com/users/gregkh/followers",
+            "following_url": "https://api.github.com/users/gregkh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gregkh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gregkh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gregkh/subscriptions",
+            "organizations_url": "https://api.github.com/users/gregkh/orgs",
+            "repos_url": "https://api.github.com/users/gregkh/repos",
+            "events_url": "https://api.github.com/users/gregkh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gregkh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "gregkh",
+            "id": 14953,
+            "node_id": "MDQ6VXNlcjE0OTUz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/14953?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gregkh",
+            "html_url": "https://github.com/gregkh",
+            "followers_url": "https://api.github.com/users/gregkh/followers",
+            "following_url": "https://api.github.com/users/gregkh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gregkh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gregkh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gregkh/subscriptions",
+            "organizations_url": "https://api.github.com/users/gregkh/orgs",
+            "repos_url": "https://api.github.com/users/gregkh/repos",
+            "events_url": "https://api.github.com/users/gregkh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gregkh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "36770417153644bc88281c7284730ef1d14d8d3c",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/36770417153644bc88281c7284730ef1d14d8d3c",
+                "html_url": "https://github.com/torvalds/linux/commit/36770417153644bc88281c7284730ef1d14d8d3c"
+            }
+        ]
+    },
+    {
+        "sha": "1246c246d9f684599e1dd7498043062c89fb0a36",
+        "node_id": "C_kwDOACN7MtoAKDEyNDZjMjQ2ZDlmNjg0NTk5ZTFkZDc0OTgwNDMwNjJjODlmYjBhMzY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T04:50:56Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T04:50:56Z"
+            },
+            "message": "Merge tag 'v7.1-rc6-ksmbd-server-fixes' of git://git.samba.org/ksmbd\n\nPull smb server fixes from Steve French:\n\n - security fix for FSCTL_SET_SPARSE\n\n - fix leak in ksmbd_query_inode_status()\n\n - fix OOB read in smb_check_perm_dacl()\n\n* tag 'v7.1-rc6-ksmbd-server-fixes' of git://git.samba.org/ksmbd:\n  ksmbd: fix FSCTL permission bypass by adding a permission check for FSCTL_SET_SPARSE\n  ksmbd: release ksmbd_inode ref via ksmbd_inode_put on lookup paths\n  ksmbd: OOB read regression in smb_check_perm_dacl() ACE-walk loops",
+            "tree": {
+                "sha": "8a900b1660d4d2a93e05d8cf0431a8c3b5901918",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/8a900b1660d4d2a93e05d8cf0431a8c3b5901918"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/1246c246d9f684599e1dd7498043062c89fb0a36",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/1246c246d9f684599e1dd7498043062c89fb0a36",
+        "html_url": "https://github.com/torvalds/linux/commit/1246c246d9f684599e1dd7498043062c89fb0a36",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/1246c246d9f684599e1dd7498043062c89fb0a36/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2765233a483febb1bf56f0abdcc5aa06d25633d7",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/2765233a483febb1bf56f0abdcc5aa06d25633d7",
+                "html_url": "https://github.com/torvalds/linux/commit/2765233a483febb1bf56f0abdcc5aa06d25633d7"
+            },
+            {
+                "sha": "cc57232cae23c0df91b4a59d0f519141ce9b5b02",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/cc57232cae23c0df91b4a59d0f519141ce9b5b02",
+                "html_url": "https://github.com/torvalds/linux/commit/cc57232cae23c0df91b4a59d0f519141ce9b5b02"
+            }
+        ]
+    },
+    {
+        "sha": "2765233a483febb1bf56f0abdcc5aa06d25633d7",
+        "node_id": "C_kwDOACN7MtoAKDI3NjUyMzNhNDgzZmViYjFiZjU2ZjBhYmRjYzVhYTA2ZDI1NjMzZDc",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T02:08:20Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T02:08:20Z"
+            },
+            "message": "Merge tag 'drm-fixes-2026-05-30' of https://gitlab.freedesktop.org/drm/kernel\n\nPull drm fixes from Dave Airlie:\n \"Regular pull, doesn't seem too insane or AI owned, couple of UAF fixes\n  and another repair for an earlier fix, mostly amdgpu and i915 display\n  with xe/i915 accel, and misc core/driver fixes.\n\n  It might be a bit bigger than usual at this stage, but I'm not seeing\n  anything too scary here.\n\n  dumb-buffer:\n   - prevent overflows in dumb-buffer creation\n\n  dma-buf:\n   - fix UAF in dma_buf_fd() tracepoint\n\n  gem:\n   - fix for the fix for the fix for the change handle ioctl\n\n  i915:\n   - Fix potential UAF in TTM object purge\n   - Use polling when irqs are unavailable\n   - Fix HDR pre-CSC LUT programming loop\n   - Block DC states on vblank enable when Panel Replay supported\n   - Use DC_OFF wake reference to block DC6 on vblank enable\n\n  xe:\n   - Restore IDLEDLY regiter on engine reset\n\n  amdgpu:\n   - GEM_OP warning fix\n   - GEM_OP locking fix\n   - Userq fixes\n   - DCN 2.1 refclk fix\n   - SI fix\n   - HMM fixes\n\n  amdkfd:\n   - svm_range_set_attr locking fix\n   - CRIU restore fix\n   - KFD debugger fix\n\n  amdxdna:\n   - require IOMMU on AIE2\n\n  hyperv:\n   - improve protocol validation\n\n  ivpu:\n   - test write offset in debugfs\n\n  rocket:\n   - fix UAF in bo creation\"\n\n* tag 'drm-fixes-2026-05-30' of https://gitlab.freedesktop.org/drm/kernel: (33 commits)\n  drm/gem: fix race between change_handle and handle_delete\n  drm: prevent integer overflows in dumb buffer creation helpers\n  dma-buf: fix UAF in dma_buf_fd() tracepoint\n  drm/amdgpu: fix calling VM invalidation in amdgpu_hmm_invalidate_gfx\n  drm/amdgpu: fix amdgpu_hmm_range_get_pages\n  drm/amdgpu/userq: use array instead of list for userq_vas\n  drm/amdgpu/userq: move mqd_destroy to later stage to keep core obj valid\n  drm/amdkfd: fix a vulnerability of integer overflow in kfd debugger\n  drm/amdgpu/userq: remove amdgpu_userq_create/destroy_object wrapper\n  drm/amd/pm/si: Disregard vblank time when no displays are connected\n  drm/amdkfd: Check for pdd drm file first in CRIU restore path\n  drm/amdgpu: fix potential overflow in fs_info.debugfs_name\n  drm/amdgpu/userq: make sure queue is valid in the hang_detect_work\n  drm/amdgpu/userq: reserve root bo without interruption\n  drm/amdgpu/userq: add amdgpu_bo_unpin when amdgpu_ttm_alloc_gart fails\n  drm/amdgpu: simplify return value in amdgpu_userq_get_doorbell_index\n  drm/amdkfd: fix NULL pointer bug in svm_range_set_attr\n  drm/amd/display: Write REFCLK to 48MHz on DCN21\n  drm/amdgpu/userq: Fix the mutex_init cleanup for fence_drv_lock\n  drm/amdgpu/userq: Fix doorbell object cleanup of queue\n  ...",
+            "tree": {
+                "sha": "284f469b4544480c55fb6296ac35a15d96c77ae1",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/284f469b4544480c55fb6296ac35a15d96c77ae1"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/2765233a483febb1bf56f0abdcc5aa06d25633d7",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/2765233a483febb1bf56f0abdcc5aa06d25633d7",
+        "html_url": "https://github.com/torvalds/linux/commit/2765233a483febb1bf56f0abdcc5aa06d25633d7",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/2765233a483febb1bf56f0abdcc5aa06d25633d7/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f5e5d3509bffb95c6648eb9795f7f236852ae62d",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/f5e5d3509bffb95c6648eb9795f7f236852ae62d",
+                "html_url": "https://github.com/torvalds/linux/commit/f5e5d3509bffb95c6648eb9795f7f236852ae62d"
+            },
+            {
+                "sha": "7164d78559b0ff29931a366a840a9e5dd53d4b7c",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/7164d78559b0ff29931a366a840a9e5dd53d4b7c",
+                "html_url": "https://github.com/torvalds/linux/commit/7164d78559b0ff29931a366a840a9e5dd53d4b7c"
+            }
+        ]
+    },
+    {
+        "sha": "f5e5d3509bffb95c6648eb9795f7f236852ae62d",
+        "node_id": "C_kwDOACN7MtoAKGY1ZTVkMzUwOWJmZmI5NWM2NjQ4ZWI5Nzk1ZjdmMjM2ODUyYWU2MmQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T01:07:37Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T01:07:37Z"
+            },
+            "message": "Merge tag 'spi-fix-v7.1-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/broonie/spi\n\nPull spi fixes from Mark Brown:\n \"One substantive fix here, fixing corruption of the maximum frequency\n  for spi-mem operations which caused users to remember what should have\n  been a temporarily modified maximum frequency as the standard going\n  forward, potentially causing instability when the modification raised\n  rather than lowered the frequency.\n\n  We also have a trivial patch which just documents the correct way to\n  describe the Qualcomm IPQ5210 SNAND controller in the DT, there are no\n  code changes\"\n\n* tag 'spi-fix-v7.1-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/broonie/spi:\n  spi: spi-mem: avoid mutating op template in spi_mem_supports_op()\n  spi: dt-bindings: spi-qpic-snand: Add ipq5210 compatible",
+            "tree": {
+                "sha": "a94c864e86a17c42b663a51546ca3cfdd7badcfc",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/a94c864e86a17c42b663a51546ca3cfdd7badcfc"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/f5e5d3509bffb95c6648eb9795f7f236852ae62d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/f5e5d3509bffb95c6648eb9795f7f236852ae62d",
+        "html_url": "https://github.com/torvalds/linux/commit/f5e5d3509bffb95c6648eb9795f7f236852ae62d",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/f5e5d3509bffb95c6648eb9795f7f236852ae62d/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "230ff934f744a4c2e4b74893ccf6734f6556db90",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/230ff934f744a4c2e4b74893ccf6734f6556db90",
+                "html_url": "https://github.com/torvalds/linux/commit/230ff934f744a4c2e4b74893ccf6734f6556db90"
+            },
+            {
+                "sha": "79378db6a86c7014cce40b65252e6c18f5b8bcc2",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/79378db6a86c7014cce40b65252e6c18f5b8bcc2",
+                "html_url": "https://github.com/torvalds/linux/commit/79378db6a86c7014cce40b65252e6c18f5b8bcc2"
+            }
+        ]
+    },
+    {
+        "sha": "230ff934f744a4c2e4b74893ccf6734f6556db90",
+        "node_id": "C_kwDOACN7MtoAKDIzMGZmOTM0Zjc0NGE0YzJlNGI3NDg5M2NjZjY3MzRmNjU1NmRiOTA",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T23:39:56Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T23:39:56Z"
+            },
+            "message": "Merge tag 'regmap-fix-v7.1-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/broonie/regmap\n\nPull regmap fix from Mark Brown:\n \"Some other fixing in an API user turned up the fact that we weren't\n  correctly applying cache only mode to volatile registers in\n  regmap_update_bits(), causing us to try to access hardware that was\n  powered off or otherwise not in a state to accept I/O. This fix\n  returns an error instead, avoiding more serious consequences\"\n\n* tag 'regmap-fix-v7.1-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/broonie/regmap:\n  regmap: reject volatile update_bits() in cache-only mode",
+            "tree": {
+                "sha": "0479ce6ed10b277e82f1f0509a3781dfa2ea8498",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/0479ce6ed10b277e82f1f0509a3781dfa2ea8498"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/230ff934f744a4c2e4b74893ccf6734f6556db90",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/230ff934f744a4c2e4b74893ccf6734f6556db90",
+        "html_url": "https://github.com/torvalds/linux/commit/230ff934f744a4c2e4b74893ccf6734f6556db90",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/230ff934f744a4c2e4b74893ccf6734f6556db90/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f3be0c984ecbcb82b0bec408022c4ef738cb3843",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/f3be0c984ecbcb82b0bec408022c4ef738cb3843",
+                "html_url": "https://github.com/torvalds/linux/commit/f3be0c984ecbcb82b0bec408022c4ef738cb3843"
+            },
+            {
+                "sha": "006c66d1d52f1905e6ccfb615cf27235e4e6e745",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/006c66d1d52f1905e6ccfb615cf27235e4e6e745",
+                "html_url": "https://github.com/torvalds/linux/commit/006c66d1d52f1905e6ccfb615cf27235e4e6e745"
+            }
+        ]
+    },
+    {
+        "sha": "f3be0c984ecbcb82b0bec408022c4ef738cb3843",
+        "node_id": "C_kwDOACN7MtoAKGYzYmUwYzk4NGVjYmNiODJiMGJlYzQwODAyMmM0ZWY3MzhjYjM4NDM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T22:46:40Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T22:46:40Z"
+            },
+            "message": "Merge tag 'net-7.1-rc6-2' of git://git.kernel.org/pub/scm/linux/kernel/git/netdev/net\n\nPull more networking fixes from Jakub Kicinski:\n \"Quick follow up, nothing super urgent here. Main reason I'm sending\n  this out is because the IPsec and Bluetooth PRs did not make it\n  yesterday. I don't want to have to send you all of this + whatever\n  comes next week, for rc7. The fixes under \"Previous releases -\n  regressions\" are for real user-reported regressions from v7.0.\n\n  Previous releases - regressions:\n\n   - Revert \"ipv6: preserve insertion order for same-scope addresses\"\n\n   - xfrm: move policy_bydst RCU sync, a fix which added a sync RCU on\n     netns exit got backported to stable and was causing serious\n     accumulation of dying netns's for real workloads\n\n   - pcs-mtk-lynxi: fix bpi-r3 serdes configuration\n\n  Previous releases - always broken:\n\n   - usual grab bag of race, locking and leak fixes for Bluetooth\n\n   - handful of page handling fixes for IPsec\"\n\n* tag 'net-7.1-rc6-2' of git://git.kernel.org/pub/scm/linux/kernel/git/netdev/net: (36 commits)\n  wireguard: send: append trailer after expanding head\n  Revert \"ipv6: preserve insertion order for same-scope addresses\"\n  net: skbuff: fix pskb_carve leaking zcopy pages\n  ipv6: fix possible infinite loop in fib6_select_path()\n  ipv6: fix possible infinite loop in rt6_fill_node()\n  bpf: sockmap: fix tail fragment offset in bpf_msg_push_data\n  vsock/virtio: bind uarg before filling zerocopy skb\n  Revert \"esp: fix page frag reference leak on skb_to_sgvec failure\"\n  net: pcs: pcs-mtk-lynxi: fix bpi-r3 serdes configuration\n  sctp: fix race between sctp_wait_for_connect and peeloff\n  net: mana: Skip redundant detach on already-detached port\n  net: mana: Add NULL guards in teardown path to prevent panic on attach failure\n  Bluetooth: hci_sync: Reset device counters in hci_dev_close_sync()\n  Bluetooth: hci_sync: Set HCI_CMD_DRAIN_WORKQUEUE during device close\n  Bluetooth: hci_core: Rework hci_dev_do_reset() to use hci_sync functions\n  Bluetooth: ISO: serialize iso_sock_clear_timer with socket lock\n  Bluetooth: ISO: fix UAF in iso_recv_frame\n  Bluetooth: L2CAP: Fix possible crash on l2cap_ecred_conn_rsp\n  Bluetooth: l2cap: clear chan->ident on ECRED reconfiguration success\n  Bluetooth: hci_qca: Use 100 ms SSR delay for rampatch and NVM loading\n  ...",
+            "tree": {
+                "sha": "83120ec6d347562f899901db9e793864c398776e",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/83120ec6d347562f899901db9e793864c398776e"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/f3be0c984ecbcb82b0bec408022c4ef738cb3843",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/f3be0c984ecbcb82b0bec408022c4ef738cb3843",
+        "html_url": "https://github.com/torvalds/linux/commit/f3be0c984ecbcb82b0bec408022c4ef738cb3843",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/f3be0c984ecbcb82b0bec408022c4ef738cb3843/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "77590cacabb3bffba7e2e95c359889bc44241b68",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/77590cacabb3bffba7e2e95c359889bc44241b68",
+                "html_url": "https://github.com/torvalds/linux/commit/77590cacabb3bffba7e2e95c359889bc44241b68"
+            },
+            {
+                "sha": "78ef59e7a6459b16f8102e0ee1c718443323d1af",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/78ef59e7a6459b16f8102e0ee1c718443323d1af",
+                "html_url": "https://github.com/torvalds/linux/commit/78ef59e7a6459b16f8102e0ee1c718443323d1af"
+            }
+        ]
+    },
+    {
+        "sha": "77590cacabb3bffba7e2e95c359889bc44241b68",
+        "node_id": "C_kwDOACN7MtoAKDc3NTkwY2FjYWJiM2JmZmJhN2UyZTk1YzM1OTg4OWJjNDQyNDFiNjg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T22:17:53Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T22:17:53Z"
+            },
+            "message": "Merge tag 'clang-fixes-7.1-2' of git://git.kernel.org/pub/scm/linux/kernel/git/nathan/linux\n\nPull clang build fix from Nathan Chancellor:\n \"A small fix to disable -Wattribute-alias for clang in the few places\n  it is already disabled for GCC, now that tip of tree clang has\n  implemented -Wattribute-alias as GCC has\"\n\n* tag 'clang-fixes-7.1-2' of git://git.kernel.org/pub/scm/linux/kernel/git/nathan/linux:\n  Disable -Wattribute-alias for clang-23 and newer",
+            "tree": {
+                "sha": "70ef63a498a8e0cf4c0fbf05e354f8c44bb6ee9b",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/70ef63a498a8e0cf4c0fbf05e354f8c44bb6ee9b"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/77590cacabb3bffba7e2e95c359889bc44241b68",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/77590cacabb3bffba7e2e95c359889bc44241b68",
+        "html_url": "https://github.com/torvalds/linux/commit/77590cacabb3bffba7e2e95c359889bc44241b68",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/77590cacabb3bffba7e2e95c359889bc44241b68/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d0ee290071b475410476b4126c72da4bf6a2194c",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/d0ee290071b475410476b4126c72da4bf6a2194c",
+                "html_url": "https://github.com/torvalds/linux/commit/d0ee290071b475410476b4126c72da4bf6a2194c"
+            },
+            {
+                "sha": "175db11786bde9061db526bf1ac5107d915f5163",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/175db11786bde9061db526bf1ac5107d915f5163",
+                "html_url": "https://github.com/torvalds/linux/commit/175db11786bde9061db526bf1ac5107d915f5163"
+            }
+        ]
+    },
+    {
+        "sha": "44eeff9bc467bc7d1fec34fc3f6001f385fe462c",
+        "node_id": "C_kwDOACN7MtoAKDQ0ZWVmZjliYzQ2N2JjN2QxZmVjMzRmYzNmNjAwMWYzODVmZTQ2MmM",
+        "commit": {
+            "author": {
+                "name": "Andrei Vagin",
+                "email": "avagin@google.com",
+                "date": "2026-05-26T20:50:43Z"
+            },
+            "committer": {
+                "name": "Borislav Petkov (AMD)",
+                "email": "bp@alien8.de",
+                "date": "2026-05-29T22:05:30Z"
+            },
+            "message": "Revert \"x86/fpu: Refine and simplify the magic number check during signal return\"\n\nThis reverts\n\n  dc8aa31a7ac2 (\"x86/fpu: Refine and simplify the magic number check during signal return\").\n\nThe aforementioned commit broke applications that construct signal frames in\nuserspace (such as CRIU and gVisor) if the frame's xstate size is smaller than\nthe kernel's fpstate->user_size.\n\nFurthermore, this introduces a critical issue for checkpoint/restore tools\nlike CRIU. If a process is checkpointed while inside a signal handler, its\nstack contains a signal frame formatted according to the source host's xstate\ncapabilities.\n\nIf that process is later restored on a destination host with larger xstate\ncapabilities (e.g., a newer CPU with more features enabled, resulting in\na larger fpstate->user_size), the kernel will look for FP_XSTATE_MAGIC2 at the\ndestination host's larger user_size offset instead of the offset encoded in\nthe frame's fx_sw->xstate_size.\n\nThis causes the magic2 check to fail, forcing sigreturn to silently fall back\nto \"FX-only\" mode. Upon return from the signal handler, the process's extended\nstate is reset to initial values instead of being restored, leading to silent\ndata corruption.\n\nThe aforementioned commit cited\n\n  d877550eaf2d (\"x86/fpu: Stop relying on userspace for info to fault in xsave buffer\")\n\nas justification to stop relying on userspace for the magic number check.\n\nHowever, these two changes are fundamentally different. The last one only\nchanged how much memory the kernel ensures is paged-in before running XRSTOR\nto prevent an infinite loop. It did not change the signal frame format or how\nthe layout is validated.\n\nReverting this change restores the use of fx_sw->xstate_size for\nlocating magic2 and restores the necessary sanity checks, ensuring that\nthe signal frame remains self-describing and portable.\n\n  [ bp: Massage commit message. ]\n\nFixes: dc8aa31a7ac2 (\"x86/fpu: Refine and simplify the magic number check during signal return\")\nSigned-off-by: Andrei Vagin <avagin@google.com>\nSigned-off-by: Borislav Petkov (AMD) <bp@alien8.de>\nAcked-by: Chang S. Bae <chang.seok.bae@intel.com>\nCc: stable@vger.kernel.org\nLink: https://lore.kernel.org/all/20260429000623.3356606-1-avagin@google.com",
+            "tree": {
+                "sha": "53ac15a19f33cfdb0ee0d1a2c28e05fcdbf62056",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/53ac15a19f33cfdb0ee0d1a2c28e05fcdbf62056"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/44eeff9bc467bc7d1fec34fc3f6001f385fe462c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/44eeff9bc467bc7d1fec34fc3f6001f385fe462c",
+        "html_url": "https://github.com/torvalds/linux/commit/44eeff9bc467bc7d1fec34fc3f6001f385fe462c",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/44eeff9bc467bc7d1fec34fc3f6001f385fe462c/comments",
+        "author": {
+            "login": "avagin",
+            "id": 1049830,
+            "node_id": "MDQ6VXNlcjEwNDk4MzA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1049830?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/avagin",
+            "html_url": "https://github.com/avagin",
+            "followers_url": "https://api.github.com/users/avagin/followers",
+            "following_url": "https://api.github.com/users/avagin/following{/other_user}",
+            "gists_url": "https://api.github.com/users/avagin/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/avagin/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/avagin/subscriptions",
+            "organizations_url": "https://api.github.com/users/avagin/orgs",
+            "repos_url": "https://api.github.com/users/avagin/repos",
+            "events_url": "https://api.github.com/users/avagin/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/avagin/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "bp3tk0v",
+            "id": 73170307,
+            "node_id": "MDQ6VXNlcjczMTcwMzA3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/73170307?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bp3tk0v",
+            "html_url": "https://github.com/bp3tk0v",
+            "followers_url": "https://api.github.com/users/bp3tk0v/followers",
+            "following_url": "https://api.github.com/users/bp3tk0v/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bp3tk0v/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bp3tk0v/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bp3tk0v/subscriptions",
+            "organizations_url": "https://api.github.com/users/bp3tk0v/orgs",
+            "repos_url": "https://api.github.com/users/bp3tk0v/repos",
+            "events_url": "https://api.github.com/users/bp3tk0v/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bp3tk0v/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8aeb879baf12fe64889f019da9a4f8347c604e91",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/8aeb879baf12fe64889f019da9a4f8347c604e91",
+                "html_url": "https://github.com/torvalds/linux/commit/8aeb879baf12fe64889f019da9a4f8347c604e91"
+            }
+        ]
+    },
+    {
+        "sha": "7164d78559b0ff29931a366a840a9e5dd53d4b7c",
+        "node_id": "C_kwDOACN7MtoAKDcxNjRkNzg1NTliMGZmMjk5MzFhMzY2YTg0MGE5ZTVkZDUzZDRiN2M",
+        "commit": {
+            "author": {
+                "name": "Zhenghang Xiao",
+                "email": "kipreyyy@gmail.com",
+                "date": "2026-05-26T08:53:13Z"
+            },
+            "committer": {
+                "name": "Dave Airlie",
+                "email": "airlied@redhat.com",
+                "date": "2026-05-29T21:01:39Z"
+            },
+            "message": "drm/gem: fix race between change_handle and handle_delete\n\ndrm_gem_change_handle_ioctl leaves the old handle live in the IDR\nduring the window between spin_unlock(table_lock) and the final\nspin_lock(table_lock). A concurrent drm_gem_handle_delete on the old\nhandle succeeds in this window, decrements handle_count to 0, and frees\nthe GEM object while the new handle's IDR entry still references it.\n\nNULL the old handle's IDR entry before dropping table_lock so that any\nconcurrent GEM_CLOSE on the old handle sees NULL and returns -EINVAL.\nRestore the old entry on the prime-bookkeeping error path.\n\nFixes: 5e28b7b94408 (\"drm: Set old handle to NULL before prime swap in change_handle\")\nSigned-off-by: Zhenghang Xiao <kipreyyy@gmail.com>\nCc: stable@vger.kernel.org\nSigned-off-by: Dave Airlie <airlied@redhat.com>\nLink: https://patch.msgid.link/20260526085313.26791-1-kipreyyy@gmail.com",
+            "tree": {
+                "sha": "d3e48551711e666c87e29e29cc2fb17867a7a4ee",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/d3e48551711e666c87e29e29cc2fb17867a7a4ee"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/7164d78559b0ff29931a366a840a9e5dd53d4b7c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/7164d78559b0ff29931a366a840a9e5dd53d4b7c",
+        "html_url": "https://github.com/torvalds/linux/commit/7164d78559b0ff29931a366a840a9e5dd53d4b7c",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/7164d78559b0ff29931a366a840a9e5dd53d4b7c/comments",
+        "author": {
+            "login": "reyn-osec",
+            "id": 213029468,
+            "node_id": "U_kgDODLKSXA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/213029468?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reyn-osec",
+            "html_url": "https://github.com/reyn-osec",
+            "followers_url": "https://api.github.com/users/reyn-osec/followers",
+            "following_url": "https://api.github.com/users/reyn-osec/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reyn-osec/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reyn-osec/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reyn-osec/subscriptions",
+            "organizations_url": "https://api.github.com/users/reyn-osec/orgs",
+            "repos_url": "https://api.github.com/users/reyn-osec/repos",
+            "events_url": "https://api.github.com/users/reyn-osec/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reyn-osec/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "airlied",
+            "id": 4900660,
+            "node_id": "MDQ6VXNlcjQ5MDA2NjA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4900660?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/airlied",
+            "html_url": "https://github.com/airlied",
+            "followers_url": "https://api.github.com/users/airlied/followers",
+            "following_url": "https://api.github.com/users/airlied/following{/other_user}",
+            "gists_url": "https://api.github.com/users/airlied/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/airlied/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/airlied/subscriptions",
+            "organizations_url": "https://api.github.com/users/airlied/orgs",
+            "repos_url": "https://api.github.com/users/airlied/repos",
+            "events_url": "https://api.github.com/users/airlied/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/airlied/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6e40c937893338ed0b627c08f712ce7d66ddcf84",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/6e40c937893338ed0b627c08f712ce7d66ddcf84",
+                "html_url": "https://github.com/torvalds/linux/commit/6e40c937893338ed0b627c08f712ce7d66ddcf84"
+            }
+        ]
+    },
+    {
+        "sha": "d0ee290071b475410476b4126c72da4bf6a2194c",
+        "node_id": "C_kwDOACN7MtoAKGQwZWUyOTAwNzFiNDc1NDEwNDc2YjQxMjZjNzJkYTRiZjZhMjE5NGM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T20:47:55Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T20:47:55Z"
+            },
+            "message": "Merge tag 'for-linus' of git://git.kernel.org/pub/scm/virt/kvm/kvm\n\nPull kvm fixes from Paolo Bonzini:\n \"arm64:\n\n   - Restore CONFIG_PKVM_DISABLE_STAGE2_ON_PANIC to its former glory by\n     making sure the config symbol is correctly spelled out in the code\n\n   - Don't reset the AArch32 view of the PMU counters to zero when the\n     guest is writing to them\n\n   - Fix an assorted collection of memory leaks in the newly added\n     tracing code\n\n   - Fix the capping of ZCR_EL2 which could be used in an unsanitised\n     way by an L2 guest\n\n  x86:\n\n   - Include the kernel's linux/mman.h in KVM selftests to ensure\n     MADV_COLLAPSE is defined, as older libc versions may not provide\n     it.\n\n   - Include execinfo.h if and only if KVM selftests are building\n     against glibc, and provide a test_dump_stack() for non-glibc\n     builds.\n\n   - Silence an annoying RCU splat on (even non-KVM-related) panics.\n\n     The splat is technically legit, but in practice not an issue. To\n     have a race, you would need to unload the KVM modules at exactly\n     the time a panic happens; and speaking of incredibly rare races,\n     taking the locks risks introducing a deadlock if the module unload\n     code took the lock on a CPU that has been halted. Which seems\n     possibly more likely than the RCU grace period issue, so just shut\n     it up. This code used to be in KVM but is now outside it; but the\n     x86 maintainers haven't picked it up, so here we are.\n\n   - Rate-limit global clock updates once again (but without delayed\n     work), as KVM was subtly relying on the old rate-limiting for NPT\n     correction to guard against \"update storms\" when running without a\n     master clock on systems with overcommitted CPUs.\n\n   - Fix a brown paper bag goof where KVM checked if ERAPS is \"dirty\"\n     instead of marking it dirty when emulating INVPCID.\n\n   - Flush the TLB when transitioning from xAVIC => x2AVIC to ensure the\n     CPU TLB doesn't contain AVIC-tagged entries for the APIC base GPA.\n\n   - The top 10 commits fix buffer overflow (and potential TOC/TOU)\n     flaws in the page state change protocol for encrypted VMs. AI\n     models find it quite easily given it was reported three times, but\n     aren't as good at writing a comprehensive fix. There's more to\n     clean up in the area, which will come in 7.2\"\n\n* tag 'for-linus' of git://git.kernel.org/pub/scm/virt/kvm/kvm: (22 commits)\n  KVM: SEV: Use READ_ONCE() when reading entries/indices from PSC buffer\n  KVM: SEV: Check PSC request indices against the actual size of the buffer\n  KVM: SEV: Don't explicitly pass PSC buffer to snp_begin_psc()\n  KVM: SEV: WARN if KVM attempts to setup scratch area with min_len==0\n  KVM: SEV: Compute the correct max length of the in-GHCB scratch area\n  KVM: SEV: Use the size of the PSC header as the minimum size for PSC requests\n  KVM: SEV: Ignore Port I/O requests of length '0'\n  KVM: SEV: Reject MMIO requests larger than 8 bytes with GHCB v2+\n  KVM: SEV: Ignore MMIO requests of length '0'\n  KVM: SEV: Require in-GHCB scratch area if GHCB v2+ is in use\n  KVM: arm64: Correctly cap ZCR_EL2 provided by a guest hypervisor\n  KVM: arm64: Fix memory leak in hyp_trace_unload()\n  KVM: arm64: Fix rollback in hyp_trace_buffer_share_hyp()\n  KVM: arm64: Fix meta-page unsharing in pKVM hyp tracing\n  KVM: arm64: PMU: Preserve AArch32 counter low bits\n  KVM: SVM: Flush the current TLB when transitioning from xAVIC => x2AVIC\n  KVM: x86: Fix ERAPS RAP clear on INVPCID single-context invalidation\n  KVM: arm64: Fix CONFIG_PKVM_DISABLE_STAGE2_ON_PANIC\n  KVM: selftests: Guard execinfo.h inclusion for non-glibc builds\n  KVM: x86: Rate-limit global clock updates on vCPU load\n  ...",
+            "tree": {
+                "sha": "82001265fdeda5056a72d53871b8f73c6dd4abea",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/82001265fdeda5056a72d53871b8f73c6dd4abea"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/d0ee290071b475410476b4126c72da4bf6a2194c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/d0ee290071b475410476b4126c72da4bf6a2194c",
+        "html_url": "https://github.com/torvalds/linux/commit/d0ee290071b475410476b4126c72da4bf6a2194c",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/d0ee290071b475410476b4126c72da4bf6a2194c/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9215e74f228f2b239f41271da9e5076ee3439d1b",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/9215e74f228f2b239f41271da9e5076ee3439d1b",
+                "html_url": "https://github.com/torvalds/linux/commit/9215e74f228f2b239f41271da9e5076ee3439d1b"
+            },
+            {
+                "sha": "713074d53be5c8684cb31fa7a8f09ffb679338d9",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/713074d53be5c8684cb31fa7a8f09ffb679338d9",
+                "html_url": "https://github.com/torvalds/linux/commit/713074d53be5c8684cb31fa7a8f09ffb679338d9"
+            }
+        ]
+    },
+    {
+        "sha": "6e40c937893338ed0b627c08f712ce7d66ddcf84",
+        "node_id": "C_kwDOACN7MtoAKDZlNDBjOTM3ODkzMzM4ZWQwYjYyN2MwOGY3MTJjZTdkNjZkZGNmODQ",
+        "commit": {
+            "author": {
+                "name": "Dave Airlie",
+                "email": "airlied@redhat.com",
+                "date": "2026-05-29T20:39:58Z"
+            },
+            "committer": {
+                "name": "Dave Airlie",
+                "email": "airlied@redhat.com",
+                "date": "2026-05-29T20:40:28Z"
+            },
+            "message": "Merge tag 'drm-misc-fixes-2026-05-29' of https://gitlab.freedesktop.org/drm/misc/kernel into drm-fixes\n\nShort summary of fixes pull:\n\namdxdna:\n- require IOMMU on AIE2\n\ndumb-buffer:\n- prevent overflows in dumb-buffer creation\n\ndma-buf:\n- fix UAF in dma_buf_fd() tracepoint\n\nhyperv:\n- improve protocol validation\n\nivpu:\n- test write offset in debugfs\n\nrocket:\n- fix UAF in bo creation\n\nSigned-off-by: Dave Airlie <airlied@redhat.com>\n\nFrom: Thomas Zimmermann <tzimmermann@suse.de>\nLink: https://patch.msgid.link/20260529070009.GA313534@linux.fritz.box",
+            "tree": {
+                "sha": "e97796af5ff2b9d72193a4edaad4b446395f708c",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/e97796af5ff2b9d72193a4edaad4b446395f708c"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/6e40c937893338ed0b627c08f712ce7d66ddcf84",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/6e40c937893338ed0b627c08f712ce7d66ddcf84",
+        "html_url": "https://github.com/torvalds/linux/commit/6e40c937893338ed0b627c08f712ce7d66ddcf84",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/6e40c937893338ed0b627c08f712ce7d66ddcf84/comments",
+        "author": {
+            "login": "airlied",
+            "id": 4900660,
+            "node_id": "MDQ6VXNlcjQ5MDA2NjA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4900660?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/airlied",
+            "html_url": "https://github.com/airlied",
+            "followers_url": "https://api.github.com/users/airlied/followers",
+            "following_url": "https://api.github.com/users/airlied/following{/other_user}",
+            "gists_url": "https://api.github.com/users/airlied/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/airlied/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/airlied/subscriptions",
+            "organizations_url": "https://api.github.com/users/airlied/orgs",
+            "repos_url": "https://api.github.com/users/airlied/repos",
+            "events_url": "https://api.github.com/users/airlied/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/airlied/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "airlied",
+            "id": 4900660,
+            "node_id": "MDQ6VXNlcjQ5MDA2NjA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4900660?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/airlied",
+            "html_url": "https://github.com/airlied",
+            "followers_url": "https://api.github.com/users/airlied/followers",
+            "following_url": "https://api.github.com/users/airlied/following{/other_user}",
+            "gists_url": "https://api.github.com/users/airlied/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/airlied/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/airlied/subscriptions",
+            "organizations_url": "https://api.github.com/users/airlied/orgs",
+            "repos_url": "https://api.github.com/users/airlied/repos",
+            "events_url": "https://api.github.com/users/airlied/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/airlied/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "e81d3b59f7288a7ffa81175586c2148dfa9d7dd9",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/e81d3b59f7288a7ffa81175586c2148dfa9d7dd9",
+                "html_url": "https://github.com/torvalds/linux/commit/e81d3b59f7288a7ffa81175586c2148dfa9d7dd9"
+            },
+            {
+                "sha": "5ab62dd3687bcc2cc542b99385aabac5c996db6f",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/5ab62dd3687bcc2cc542b99385aabac5c996db6f",
+                "html_url": "https://github.com/torvalds/linux/commit/5ab62dd3687bcc2cc542b99385aabac5c996db6f"
+            }
+        ]
+    },
+    {
+        "sha": "78ef59e7a6459b16f8102e0ee1c718443323d1af",
+        "node_id": "C_kwDOACN7MtoAKDc4ZWY1OWU3YTY0NTliMTZmODEwMmUwZWUxYzcxODQ0MzMyM2QxYWY",
+        "commit": {
+            "author": {
+                "name": "Jakub Kicinski",
+                "email": "kuba@kernel.org",
+                "date": "2026-05-29T20:01:31Z"
+            },
+            "committer": {
+                "name": "Jakub Kicinski",
+                "email": "kuba@kernel.org",
+                "date": "2026-05-29T20:01:31Z"
+            },
+            "message": "Merge branch 'wireguard-fixes-for-7-1-rc6'\n\nJason A. Donenfeld says:\n\n====================\nWireGuard fixes for 7.1-rc6\n\nPlease find one small patch, fixing the order of adding padding onto a\npacket, to ensure padding bytes get zeroed properly.\n====================\n\nLink: https://patch.msgid.link/20260529173134.3080773-1-Jason@zx2c4.com\nSigned-off-by: Jakub Kicinski <kuba@kernel.org>",
+            "tree": {
+                "sha": "f0fbbe0162be13360b5e09262b90a2fcf5d0389b",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/f0fbbe0162be13360b5e09262b90a2fcf5d0389b"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/78ef59e7a6459b16f8102e0ee1c718443323d1af",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/78ef59e7a6459b16f8102e0ee1c718443323d1af",
+        "html_url": "https://github.com/torvalds/linux/commit/78ef59e7a6459b16f8102e0ee1c718443323d1af",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/78ef59e7a6459b16f8102e0ee1c718443323d1af/comments",
+        "author": {
+            "login": "kuba-moo",
+            "id": 6732289,
+            "node_id": "MDQ6VXNlcjY3MzIyODk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6732289?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kuba-moo",
+            "html_url": "https://github.com/kuba-moo",
+            "followers_url": "https://api.github.com/users/kuba-moo/followers",
+            "following_url": "https://api.github.com/users/kuba-moo/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kuba-moo/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kuba-moo/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kuba-moo/subscriptions",
+            "organizations_url": "https://api.github.com/users/kuba-moo/orgs",
+            "repos_url": "https://api.github.com/users/kuba-moo/repos",
+            "events_url": "https://api.github.com/users/kuba-moo/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kuba-moo/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "kuba-moo",
+            "id": 6732289,
+            "node_id": "MDQ6VXNlcjY3MzIyODk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6732289?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kuba-moo",
+            "html_url": "https://github.com/kuba-moo",
+            "followers_url": "https://api.github.com/users/kuba-moo/followers",
+            "following_url": "https://api.github.com/users/kuba-moo/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kuba-moo/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kuba-moo/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kuba-moo/subscriptions",
+            "organizations_url": "https://api.github.com/users/kuba-moo/orgs",
+            "repos_url": "https://api.github.com/users/kuba-moo/repos",
+            "events_url": "https://api.github.com/users/kuba-moo/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kuba-moo/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "072aa0f5c3d8f11f3159037418ec45edce7440b8",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/072aa0f5c3d8f11f3159037418ec45edce7440b8",
+                "html_url": "https://github.com/torvalds/linux/commit/072aa0f5c3d8f11f3159037418ec45edce7440b8"
+            },
+            {
+                "sha": "f75e3eb08fe31d30a9af6ed80cdd22e6772837e2",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/f75e3eb08fe31d30a9af6ed80cdd22e6772837e2",
+                "html_url": "https://github.com/torvalds/linux/commit/f75e3eb08fe31d30a9af6ed80cdd22e6772837e2"
+            }
+        ]
+    },
+    {
+        "sha": "f75e3eb08fe31d30a9af6ed80cdd22e6772837e2",
+        "node_id": "C_kwDOACN7MtoAKGY3NWUzZWIwOGZlMzFkMzBhOWFmNmVkODBjZGQyMmU2NzcyODM3ZTI",
+        "commit": {
+            "author": {
+                "name": "Jason A. Donenfeld",
+                "email": "Jason@zx2c4.com",
+                "date": "2026-05-29T17:31:34Z"
+            },
+            "committer": {
+                "name": "Jakub Kicinski",
+                "email": "kuba@kernel.org",
+                "date": "2026-05-29T20:01:27Z"
+            },
+            "message": "wireguard: send: append trailer after expanding head\n\nWith how this is currently written, we add the trailer, zero it out, and\nthen add the header space on. If that header space requires a\nreallocation + copy, the zeros in the trailer aren't copied, because the\nskb len hasn't actually been yet expanded to cover that. Instead add the\npadding at the end of the process rather than at the beginning.\n\nFixes: e7096c131e51 (\"net: WireGuard secure network tunnel\")\nCc: stable@vger.kernel.org\nSigned-off-by: Jason A. Donenfeld <Jason@zx2c4.com>\nLink: https://patch.msgid.link/20260529173134.3080773-2-Jason@zx2c4.com\nSigned-off-by: Jakub Kicinski <kuba@kernel.org>",
+            "tree": {
+                "sha": "f0fbbe0162be13360b5e09262b90a2fcf5d0389b",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/f0fbbe0162be13360b5e09262b90a2fcf5d0389b"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/f75e3eb08fe31d30a9af6ed80cdd22e6772837e2",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/f75e3eb08fe31d30a9af6ed80cdd22e6772837e2",
+        "html_url": "https://github.com/torvalds/linux/commit/f75e3eb08fe31d30a9af6ed80cdd22e6772837e2",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/f75e3eb08fe31d30a9af6ed80cdd22e6772837e2/comments",
+        "author": {
+            "login": "zx2c4",
+            "id": 10643,
+            "node_id": "MDQ6VXNlcjEwNjQz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10643?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zx2c4",
+            "html_url": "https://github.com/zx2c4",
+            "followers_url": "https://api.github.com/users/zx2c4/followers",
+            "following_url": "https://api.github.com/users/zx2c4/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zx2c4/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zx2c4/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zx2c4/subscriptions",
+            "organizations_url": "https://api.github.com/users/zx2c4/orgs",
+            "repos_url": "https://api.github.com/users/zx2c4/repos",
+            "events_url": "https://api.github.com/users/zx2c4/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zx2c4/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "kuba-moo",
+            "id": 6732289,
+            "node_id": "MDQ6VXNlcjY3MzIyODk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6732289?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kuba-moo",
+            "html_url": "https://github.com/kuba-moo",
+            "followers_url": "https://api.github.com/users/kuba-moo/followers",
+            "following_url": "https://api.github.com/users/kuba-moo/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kuba-moo/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kuba-moo/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kuba-moo/subscriptions",
+            "organizations_url": "https://api.github.com/users/kuba-moo/orgs",
+            "repos_url": "https://api.github.com/users/kuba-moo/repos",
+            "events_url": "https://api.github.com/users/kuba-moo/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kuba-moo/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "072aa0f5c3d8f11f3159037418ec45edce7440b8",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/072aa0f5c3d8f11f3159037418ec45edce7440b8",
+                "html_url": "https://github.com/torvalds/linux/commit/072aa0f5c3d8f11f3159037418ec45edce7440b8"
+            }
+        ]
+    },
+    {
+        "sha": "072aa0f5c3d8f11f3159037418ec45edce7440b8",
+        "node_id": "C_kwDOACN7MtoAKDA3MmFhMGY1YzNkOGYxMWYzMTU5MDM3NDE4ZWM0NWVkY2U3NDQwYjg",
+        "commit": {
+            "author": {
+                "name": "Fernando Fernandez Mancera",
+                "email": "fmancera@suse.de",
+                "date": "2026-05-29T11:23:57Z"
+            },
+            "committer": {
+                "name": "Jakub Kicinski",
+                "email": "kuba@kernel.org",
+                "date": "2026-05-29T20:00:54Z"
+            },
+            "message": "Revert \"ipv6: preserve insertion order for same-scope addresses\"\n\nChris Adams reported that preserving insertion order for same-scope\naddresses is causing SSH connections to be dropped after stopping a VM\nwhile running NetworkManager.\n\nNetworkManager caches the IPv6 address configuration, when a RA arrives,\nit determines the list of addresses to configure and checks if the\naddresses are already in the right order in the kernel. If they aren't,\nNetworkManager removes and re-adds them to achieve the desired order.\n\nAs the order changes, NetworkManager is confused and reconfigures the\naddresses on every update. In addition, this would also affect to cloud\ntooling that relies on IPv6 addresses order to identify primary and\nsecondaries addresses.\n\nThis reverts commit cb3de96eea66f5e4a580086c6a1be46e765f97f4.\n\nFixes: cb3de96eea66 (\"ipv6: preserve insertion order for same-scope addresses\")\nReported-by: Chris Adams <linux@cmadams.net>\nCloses: https://lore.kernel.org/netdev/20260521135310.GC977@cmadams.net/\nSigned-off-by: Fernando Fernandez Mancera <fmancera@suse.de>\nLink: https://patch.msgid.link/20260529112357.5079-1-fmancera@suse.de\nSigned-off-by: Jakub Kicinski <kuba@kernel.org>",
+            "tree": {
+                "sha": "9a5d7dc6df6c5c76679fe5b676c7a1c994ca0a01",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/9a5d7dc6df6c5c76679fe5b676c7a1c994ca0a01"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/072aa0f5c3d8f11f3159037418ec45edce7440b8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/072aa0f5c3d8f11f3159037418ec45edce7440b8",
+        "html_url": "https://github.com/torvalds/linux/commit/072aa0f5c3d8f11f3159037418ec45edce7440b8",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/072aa0f5c3d8f11f3159037418ec45edce7440b8/comments",
+        "author": {
+            "login": "ffmancera",
+            "id": 25457779,
+            "node_id": "MDQ6VXNlcjI1NDU3Nzc5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/25457779?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ffmancera",
+            "html_url": "https://github.com/ffmancera",
+            "followers_url": "https://api.github.com/users/ffmancera/followers",
+            "following_url": "https://api.github.com/users/ffmancera/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ffmancera/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ffmancera/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ffmancera/subscriptions",
+            "organizations_url": "https://api.github.com/users/ffmancera/orgs",
+            "repos_url": "https://api.github.com/users/ffmancera/repos",
+            "events_url": "https://api.github.com/users/ffmancera/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ffmancera/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "kuba-moo",
+            "id": 6732289,
+            "node_id": "MDQ6VXNlcjY3MzIyODk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6732289?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kuba-moo",
+            "html_url": "https://github.com/kuba-moo",
+            "followers_url": "https://api.github.com/users/kuba-moo/followers",
+            "following_url": "https://api.github.com/users/kuba-moo/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kuba-moo/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kuba-moo/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kuba-moo/subscriptions",
+            "organizations_url": "https://api.github.com/users/kuba-moo/orgs",
+            "repos_url": "https://api.github.com/users/kuba-moo/repos",
+            "events_url": "https://api.github.com/users/kuba-moo/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kuba-moo/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c84ff04def255edb51e57c9f969efdfade0da16a",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/c84ff04def255edb51e57c9f969efdfade0da16a",
+                "html_url": "https://github.com/torvalds/linux/commit/c84ff04def255edb51e57c9f969efdfade0da16a"
+            }
+        ]
+    },
+    {
+        "sha": "c84ff04def255edb51e57c9f969efdfade0da16a",
+        "node_id": "C_kwDOACN7MtoAKGM4NGZmMDRkZWYyNTVlZGI1MWU1N2M5Zjk2OWVmZGZhZGUwZGExNmE",
+        "commit": {
+            "author": {
+                "name": "Jakub Kicinski",
+                "email": "kuba@kernel.org",
+                "date": "2026-05-29T19:57:22Z"
+            },
+            "committer": {
+                "name": "Jakub Kicinski",
+                "email": "kuba@kernel.org",
+                "date": "2026-05-29T19:57:23Z"
+            },
+            "message": "Merge tag 'ipsec-2026-05-29' of git://git.kernel.org/pub/scm/linux/kernel/git/klassert/ipsec\n\nSteffen Klassert says:\n\n====================\npull request (net): ipsec 2026-05-29\n\n1) xfrm: route MIGRATE notifications to caller's netns\n   Thread the caller's netns through km_migrate() so that\n   MIGRATE notifications go to the issuing netns, fixing both the\n   init_net listener leak and MOBIKE notifications inside\n   non-init netns. From Maoyi Xie.\n\n2) xfrm: ipcomp: Free destination pages on acomp errors\n   Move the out_free_req label up so that allocated destination\n   pages are released on decompression errors, not only on success.\n   From Herbert Xu.\n\n3) xfrm: Check for underflow in xfrm_state_mtu\n   Reject configurations that cause xfrm_state_mtu() to underflow,\n   preventing a negative TFCPAD value from becoming a memset size\n   that triggers an out-of-bounds write of several terabytes.\n   From David Ahern.\n\n4) xfrm: ah: use skb_to_full_sk in async output callbacks\n   Convert the possibly-incomplete skb->sk to a full socket pointer\n   in async AH callbacks so that a request_sock or timewait_sock\n   never reaches xfrm_output_resume() downstream consumers.\n   From Michael Bommarito.\n\n5) Add and revert: esp: fix page frag reference leak on skb_to_sgvec failure\n   The patch does not fix te issue completely.\n\n6) xfrm: esp: restore combined single-frag length gate\n   Check the aligned post-trailer combined length against a page limit\n   in the fast path, preventing skb_page_frag_refill() from falling\n   back to a page too small for the destination scatterlist.\n   From Jingguo Tan.\n\n7) xfrm: iptfs: reset runtime state when cloning SAs\n   Reinitialise the clone's mode_data runtime objects before\n   publishing it, preventing queued skbs from being freed with\n   list state copied from the original SA when migration fails.\n   From Shaomin Chen.\n\n8) xfrm: move policy_bydst RCU sync from per-netns .exit to .pre_exit\n   Flush policy tables and drain the workqueue in a .pre_exit handler\n   so that cleanup_net() pays one RCU grace period per batch instead\n   of one per namespace, fixing stalls at high CLONE_NEWNET rates.\n   From Usama Arif.\n\n9) xfrm: input: hold netns during deferred transport reinjection\n   Take a netns reference when queueing deferred transport reinjection\n   work and drop it after the callback completes, keeping the skb->cb\n   net pointer valid until the deferred work runs.\n   From Zhengchuan Liang.\n\n* tag 'ipsec-2026-05-29' of git://git.kernel.org/pub/scm/linux/kernel/git/klassert/ipsec:\n  Revert \"esp: fix page frag reference leak on skb_to_sgvec failure\"\n  xfrm: input: hold netns during deferred transport reinjection\n  xfrm: move policy_bydst RCU sync from per-netns .exit to .pre_exit\n  xfrm: iptfs: reset runtime state when cloning SAs\n  xfrm: esp: restore combined single-frag length gate\n  esp: fix page frag reference leak on skb_to_sgvec failure\n  xfrm: ah: use skb_to_full_sk in async output callbacks\n  xfrm: Check for underflow in xfrm_state_mtu\n  xfrm: ipcomp: Free destination pages on acomp errors\n  xfrm: route MIGRATE notifications to caller's netns\n====================\n\nLink: https://patch.msgid.link/20260529092648.3878973-1-steffen.klassert@secunet.com\nSigned-off-by: Jakub Kicinski <kuba@kernel.org>",
+            "tree": {
+                "sha": "d9d91746256c5170bf2ac70b129abcfc3c887c2e",
+                "url": "https://api.github.com/repos/torvalds/linux/git/trees/d9d91746256c5170bf2ac70b129abcfc3c887c2e"
+            },
+            "url": "https://api.github.com/repos/torvalds/linux/git/commits/c84ff04def255edb51e57c9f969efdfade0da16a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/linux/commits/c84ff04def255edb51e57c9f969efdfade0da16a",
+        "html_url": "https://github.com/torvalds/linux/commit/c84ff04def255edb51e57c9f969efdfade0da16a",
+        "comments_url": "https://api.github.com/repos/torvalds/linux/commits/c84ff04def255edb51e57c9f969efdfade0da16a/comments",
+        "author": {
+            "login": "kuba-moo",
+            "id": 6732289,
+            "node_id": "MDQ6VXNlcjY3MzIyODk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6732289?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kuba-moo",
+            "html_url": "https://github.com/kuba-moo",
+            "followers_url": "https://api.github.com/users/kuba-moo/followers",
+            "following_url": "https://api.github.com/users/kuba-moo/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kuba-moo/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kuba-moo/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kuba-moo/subscriptions",
+            "organizations_url": "https://api.github.com/users/kuba-moo/orgs",
+            "repos_url": "https://api.github.com/users/kuba-moo/repos",
+            "events_url": "https://api.github.com/users/kuba-moo/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kuba-moo/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "kuba-moo",
+            "id": 6732289,
+            "node_id": "MDQ6VXNlcjY3MzIyODk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6732289?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kuba-moo",
+            "html_url": "https://github.com/kuba-moo",
+            "followers_url": "https://api.github.com/users/kuba-moo/followers",
+            "following_url": "https://api.github.com/users/kuba-moo/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kuba-moo/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kuba-moo/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kuba-moo/subscriptions",
+            "organizations_url": "https://api.github.com/users/kuba-moo/orgs",
+            "repos_url": "https://api.github.com/users/kuba-moo/repos",
+            "events_url": "https://api.github.com/users/kuba-moo/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kuba-moo/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ff6e798c2eac3ebd0501ad7e796f583fab928de8",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/ff6e798c2eac3ebd0501ad7e796f583fab928de8",
+                "html_url": "https://github.com/torvalds/linux/commit/ff6e798c2eac3ebd0501ad7e796f583fab928de8"
+            },
+            {
+                "sha": "6851161feb01cea41358c9ec304bd2f981fc8505",
+                "url": "https://api.github.com/repos/torvalds/linux/commits/6851161feb01cea41358c9ec304bd2f981fc8505",
+                "html_url": "https://github.com/torvalds/linux/commit/6851161feb01cea41358c9ec304bd2f981fc8505"
+            }
+        ]
+    }
+]

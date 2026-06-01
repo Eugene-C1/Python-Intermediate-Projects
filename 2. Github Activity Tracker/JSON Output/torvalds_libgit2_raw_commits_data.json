@@ -1,0 +1,2522 @@
+[
+    {
+        "sha": "cf326948b13e066db18f86d3ea8a68916f972a2d",
+        "node_id": "C_kwDOHvWMNtoAKGNmMzI2OTQ4YjEzZTA2NmRiMThmODZkM2VhOGE2ODkxNmY5NzJhMmQ",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-16T22:02:22Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-19T09:07:16Z"
+            },
+            "message": "clone: test for cloning a repo with namespace scope\n\nTest that we can successfully clone a repository that is namespace\nscoped on the remote and does not advertise a HEAD. To do this, we must\nspecify the branch to checkout.",
+            "tree": {
+                "sha": "86c9a5e6464ffaf77c1838544cd54b9a40546814",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/86c9a5e6464ffaf77c1838544cd54b9a40546814"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/cf326948b13e066db18f86d3ea8a68916f972a2d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/cf326948b13e066db18f86d3ea8a68916f972a2d",
+        "html_url": "https://github.com/torvalds/libgit2/commit/cf326948b13e066db18f86d3ea8a68916f972a2d",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/cf326948b13e066db18f86d3ea8a68916f972a2d/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9d9a90ad3d64d54948b736f6866a82c6670b61c1",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/9d9a90ad3d64d54948b736f6866a82c6670b61c1",
+                "html_url": "https://github.com/torvalds/libgit2/commit/9d9a90ad3d64d54948b736f6866a82c6670b61c1"
+            }
+        ]
+    },
+    {
+        "sha": "9d9a90ad3d64d54948b736f6866a82c6670b61c1",
+        "node_id": "C_kwDOHvWMNtoAKDlkOWE5MGFkM2Q2NGQ1NDk0OGI3MzZmNjg2NmE4MmM2NjcwYjYxYzE",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-16T18:27:13Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-19T09:07:16Z"
+            },
+            "message": "clone: test bare clone namespaced repo with no HEAD\n\nTest that we can successfully clone a repository that is namespace\nscoped to a bare repository locally. We need not specify a checkout\nbranch in this case (obviously, since we do not check anything out in a\nbare clone).",
+            "tree": {
+                "sha": "178e4a322179fdf37331f5d9b40a8701d55e6a35",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/178e4a322179fdf37331f5d9b40a8701d55e6a35"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/9d9a90ad3d64d54948b736f6866a82c6670b61c1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/9d9a90ad3d64d54948b736f6866a82c6670b61c1",
+        "html_url": "https://github.com/torvalds/libgit2/commit/9d9a90ad3d64d54948b736f6866a82c6670b61c1",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/9d9a90ad3d64d54948b736f6866a82c6670b61c1/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c928d96ea40a83713aaac523cd6e6bd5b5fb7490",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/c928d96ea40a83713aaac523cd6e6bd5b5fb7490",
+                "html_url": "https://github.com/torvalds/libgit2/commit/c928d96ea40a83713aaac523cd6e6bd5b5fb7490"
+            }
+        ]
+    },
+    {
+        "sha": "c928d96ea40a83713aaac523cd6e6bd5b5fb7490",
+        "node_id": "C_kwDOHvWMNtoAKGM5MjhkOTZlYTQwYTgzNzEzYWFhYzUyM2NkNmU2YmQ1YjVmYjc0OTA",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-08-22T01:55:25Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-19T09:07:16Z"
+            },
+            "message": "clone: narrow success tests on HEAD-less remotes\n\nOnly allow the remote default branch checking to fail when the remote\ndefault branch doesn't exist (`git_remote__default_branch` returns\n`GIT_ENOTFOUND`). If there was any other type of error - for example, an\nallocation failure - we should not swallow that and continue to fail.\n\nThis allows us to support the case when a remote has not advertised a\nHEAD -- this is possible, for example, when the remote has constrained\nthe caller to a particular namespace. But other remote failures remain\nas failures.",
+            "tree": {
+                "sha": "a54ac960d58e897b5c4e5e42e8ff7c1332f70e9e",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/a54ac960d58e897b5c4e5e42e8ff7c1332f70e9e"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/c928d96ea40a83713aaac523cd6e6bd5b5fb7490",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/c928d96ea40a83713aaac523cd6e6bd5b5fb7490",
+        "html_url": "https://github.com/torvalds/libgit2/commit/c928d96ea40a83713aaac523cd6e6bd5b5fb7490",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/c928d96ea40a83713aaac523cd6e6bd5b5fb7490/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ed27768458eceb576c6a1b15d1f01f67b5f43bd0",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/ed27768458eceb576c6a1b15d1f01f67b5f43bd0",
+                "html_url": "https://github.com/torvalds/libgit2/commit/ed27768458eceb576c6a1b15d1f01f67b5f43bd0"
+            }
+        ]
+    },
+    {
+        "sha": "ed27768458eceb576c6a1b15d1f01f67b5f43bd0",
+        "node_id": "C_kwDOHvWMNtoAKGVkMjc3Njg0NThlY2ViNTc2YzZhMWIxNWQxZjAxZjY3YjVmNDNiZDA",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-19T07:41:11Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-19T09:07:12Z"
+            },
+            "message": "Merge remote-tracking branch 'origin/main' into clone_namespace",
+            "tree": {
+                "sha": "e48a6ecef850002aacd2a22a463d1afae0bc85a9",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/e48a6ecef850002aacd2a22a463d1afae0bc85a9"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/ed27768458eceb576c6a1b15d1f01f67b5f43bd0",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/ed27768458eceb576c6a1b15d1f01f67b5f43bd0",
+        "html_url": "https://github.com/torvalds/libgit2/commit/ed27768458eceb576c6a1b15d1f01f67b5f43bd0",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/ed27768458eceb576c6a1b15d1f01f67b5f43bd0/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a",
+                "html_url": "https://github.com/torvalds/libgit2/commit/bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a"
+            },
+            {
+                "sha": "71071360e1d4cbf2b615c2f593f8d049606e6122",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/71071360e1d4cbf2b615c2f593f8d049606e6122",
+                "html_url": "https://github.com/torvalds/libgit2/commit/71071360e1d4cbf2b615c2f593f8d049606e6122"
+            }
+        ]
+    },
+    {
+        "sha": "71071360e1d4cbf2b615c2f593f8d049606e6122",
+        "node_id": "C_kwDOHvWMNtoAKDcxMDcxMzYwZTFkNGNiZjJiNjE1YzJmNTkzZjhkMDQ5NjA2ZTYxMjI",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-16T15:21:00Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-09-16T15:21:00Z"
+            },
+            "message": "Merge pull request #6403 from libgit2/ethomson/ci\n\nCI Improvements",
+            "tree": {
+                "sha": "7891db05e3fdcaca993ff6ac6bc3e3c143826cf8",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/7891db05e3fdcaca993ff6ac6bc3e3c143826cf8"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/71071360e1d4cbf2b615c2f593f8d049606e6122",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJjJJRcCRBK7hj4Ov3rIwAAi0gIAHdrQvtvmlap1QEuYsIPvmPU\nqidPPgQQsKbt4ER5+MCWpzfRy7TTOfYvQYoW0cH86+eium5q7P7WkK8t8egSF84/\n+/DAznhNbqeE/l+o+UywnrZzrR+zpO/Uk6qV/3GBooEtb/qAenKEid5sQmrzdFc3\nZnmuS6PRlR6yTaM4u4mvtanWiyK/Y5LBaz0jmAkVPJLZwPt6iddyGubJaymXmUiN\nQkieZ7wrd0vmik6bFP1Xl0Ktyb6+AiwBfKzJ3YCw2IuVhbIT7h9ajPJrXv13Kimo\n1tFnxLWZtKjXY/rMxPe8Itn09gRGKFaeWZeGib+lfZpIMs0EetUtGOP6UvPyJUw=\n=wpHa\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 7891db05e3fdcaca993ff6ac6bc3e3c143826cf8\nparent 22f382539d78f69aa91721ad62bbd7229750a043\nparent ebb0830c65b97b971f5e2bc80647f7386d3e88df\nauthor Edward Thomson <ethomson@edwardthomson.com> 1663341660 +0100\ncommitter GitHub <noreply@github.com> 1663341660 +0100\n\nMerge pull request #6403 from libgit2/ethomson/ci\n\nCI Improvements",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/71071360e1d4cbf2b615c2f593f8d049606e6122",
+        "html_url": "https://github.com/torvalds/libgit2/commit/71071360e1d4cbf2b615c2f593f8d049606e6122",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/71071360e1d4cbf2b615c2f593f8d049606e6122/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "22f382539d78f69aa91721ad62bbd7229750a043",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/22f382539d78f69aa91721ad62bbd7229750a043",
+                "html_url": "https://github.com/torvalds/libgit2/commit/22f382539d78f69aa91721ad62bbd7229750a043"
+            },
+            {
+                "sha": "ebb0830c65b97b971f5e2bc80647f7386d3e88df",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/ebb0830c65b97b971f5e2bc80647f7386d3e88df",
+                "html_url": "https://github.com/torvalds/libgit2/commit/ebb0830c65b97b971f5e2bc80647f7386d3e88df"
+            }
+        ]
+    },
+    {
+        "sha": "ebb0830c65b97b971f5e2bc80647f7386d3e88df",
+        "node_id": "C_kwDOHvWMNtoAKGViYjA4MzBjNjViOTdiOTcxZjVlMmJjODA2NDdmNzM4NmQzZTg4ZGY",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-08-22T02:58:04Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-16T14:46:18Z"
+            },
+            "message": "ci: clean up daemon processes on exit\n\nWe previously (correctly) cleaned up the git daemon and SSH server, but\nfailed to clean up our bespoke HTTP server and HTTP proxies. Capture\ntheir PIDs on process creation and kill them when we shut down.",
+            "tree": {
+                "sha": "7891db05e3fdcaca993ff6ac6bc3e3c143826cf8",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/7891db05e3fdcaca993ff6ac6bc3e3c143826cf8"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/ebb0830c65b97b971f5e2bc80647f7386d3e88df",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/ebb0830c65b97b971f5e2bc80647f7386d3e88df",
+        "html_url": "https://github.com/torvalds/libgit2/commit/ebb0830c65b97b971f5e2bc80647f7386d3e88df",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/ebb0830c65b97b971f5e2bc80647f7386d3e88df/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3",
+                "html_url": "https://github.com/torvalds/libgit2/commit/ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3"
+            }
+        ]
+    },
+    {
+        "sha": "ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3",
+        "node_id": "C_kwDOHvWMNtoAKGVjMWFlYzM2YjNkNDdjNzg5NWVlNjU0M2E0ZTZlM2ZmMGEzYjdhZTM",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-16T14:24:35Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-09-16T14:24:35Z"
+            },
+            "message": "ci: move to macos-11\n\nGitHub has deprecated macOS 10.15; move to their new macOS 11 build\nservers.",
+            "tree": {
+                "sha": "f91b6744f761f14510a140ad849d75db7204e674",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/f91b6744f761f14510a140ad849d75db7204e674"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3",
+        "html_url": "https://github.com/torvalds/libgit2/commit/ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/ec1aec36b3d47c7895ee6543a4e6e3ff0a3b7ae3/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "22f382539d78f69aa91721ad62bbd7229750a043",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/22f382539d78f69aa91721ad62bbd7229750a043",
+                "html_url": "https://github.com/torvalds/libgit2/commit/22f382539d78f69aa91721ad62bbd7229750a043"
+            }
+        ]
+    },
+    {
+        "sha": "bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a",
+        "node_id": "C_kwDOHvWMNtoAKGJmODBjYjYzYTUwZTVhMzk1OWM3ZDE0OTkxMGJmMGY2ZTFmMmJkMGE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-07-30T03:24:59Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-07-30T03:24:59Z"
+            },
+            "message": "Don't fail the whole clone if you can't find a default branch\n\nIn commit 6bb358786 (\"clone: set refs/remotes/origin/HEAD to default\nbranch when branch is specified, attempt 2\") libgit2 was changed to set\nthe default remote branch when one was copied.\n\nBut it makes update_head_to_branch() return an error if the origin\ndoesn't even *have* a HEAD in the first place, since\ngit_remote_default_branch() will fail.\n\nThat's entirely wrong, and means that you cannot do \"git_clone()\" of a\nparticular branch on a remote repository when that remote doesn't have a\ndefault branch at all.\n\nSo don't set the error code.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "aa86b704f0bc8e0385b2601278804c6051cac40b",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/aa86b704f0bc8e0385b2601278804c6051cac40b"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a",
+        "html_url": "https://github.com/torvalds/libgit2/commit/bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/bf80cb63a50e5a3959c7d149910bf0f6e1f2bd0a/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "22f382539d78f69aa91721ad62bbd7229750a043",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/22f382539d78f69aa91721ad62bbd7229750a043",
+                "html_url": "https://github.com/torvalds/libgit2/commit/22f382539d78f69aa91721ad62bbd7229750a043"
+            }
+        ]
+    },
+    {
+        "sha": "22f382539d78f69aa91721ad62bbd7229750a043",
+        "node_id": "C_kwDOHvWMNtoAKDIyZjM4MjUzOWQ3OGY2OWFhOTE3MjFhZDYyYmJkNzIyOTc1MGEwNDM",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-19T01:47:03Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-19T01:47:03Z"
+            },
+            "message": "Merge pull request #6357 from boretrk/testutil\n\nclar: remove ftrunacte from libgit2 tests",
+            "tree": {
+                "sha": "4463b92a63e0da42568f86ae85db8afd989033a4",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/4463b92a63e0da42568f86ae85db8afd989033a4"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/22f382539d78f69aa91721ad62bbd7229750a043",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJi1g0XCRBK7hj4Ov3rIwAAdYAIAEyxblubk1UlTnikTx8NRab7\nsbBJQ7wXFy09oDd2CD3FTCfoPRWuJH71HjIw1sntptHZtEsrd+0ir4b5lI8UGc2p\n9NTSa1zpG2qIXECip1w7CywYfRNbR7TKXfbHXtAnLapedbZp0WgoTb0cAJEEVq6S\nGUKA7SAr277IkGZRKH17egkrOYneQgBjOzdK1PxK2DEUTeXX3bu7URg+MIzaIbLs\n2kOuoXLjF6+63VUjLhWbXnjUmjn0ZBvvzjXUGgEDM2fVSVODoKXNsROeSQX7h8aT\n28uQMStstV/kHsVIr6tESO+0hJ4kQMW4DKt983/42nzmSZvszrhOmZHSEjQyUv0=\n=bsAE\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 4463b92a63e0da42568f86ae85db8afd989033a4\nparent ac0f2245510f6c75db1b1e7af7ca01c15dec26bc\nparent 12d73c418253a5c396465079c2808e07de17a1db\nauthor Edward Thomson <ethomson@edwardthomson.com> 1658195223 -0400\ncommitter GitHub <noreply@github.com> 1658195223 -0400\n\nMerge pull request #6357 from boretrk/testutil\n\nclar: remove ftrunacte from libgit2 tests",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/22f382539d78f69aa91721ad62bbd7229750a043",
+        "html_url": "https://github.com/torvalds/libgit2/commit/22f382539d78f69aa91721ad62bbd7229750a043",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/22f382539d78f69aa91721ad62bbd7229750a043/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+                "html_url": "https://github.com/torvalds/libgit2/commit/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc"
+            },
+            {
+                "sha": "12d73c418253a5c396465079c2808e07de17a1db",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/12d73c418253a5c396465079c2808e07de17a1db",
+                "html_url": "https://github.com/torvalds/libgit2/commit/12d73c418253a5c396465079c2808e07de17a1db"
+            }
+        ]
+    },
+    {
+        "sha": "12d73c418253a5c396465079c2808e07de17a1db",
+        "node_id": "C_kwDOHvWMNtoAKDEyZDczYzQxODI1M2E1YzM5NjQ2NTA3OWMyODA4ZTA3ZGUxN2ExZGI",
+        "commit": {
+            "author": {
+                "name": "Peter Pettersson",
+                "email": "boretrk@hotmail.com",
+                "date": "2022-07-14T16:28:58Z"
+            },
+            "committer": {
+                "name": "Peter Pettersson",
+                "email": "boretrk@hotmail.com",
+                "date": "2022-07-15T10:24:18Z"
+            },
+            "message": "clar: remove ftrunacte from libgit2 tests",
+            "tree": {
+                "sha": "4463b92a63e0da42568f86ae85db8afd989033a4",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/4463b92a63e0da42568f86ae85db8afd989033a4"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/12d73c418253a5c396465079c2808e07de17a1db",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/12d73c418253a5c396465079c2808e07de17a1db",
+        "html_url": "https://github.com/torvalds/libgit2/commit/12d73c418253a5c396465079c2808e07de17a1db",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/12d73c418253a5c396465079c2808e07de17a1db/comments",
+        "author": {
+            "login": "boretrk",
+            "id": 85582231,
+            "node_id": "MDQ6VXNlcjg1NTgyMjMx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/85582231?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/boretrk",
+            "html_url": "https://github.com/boretrk",
+            "followers_url": "https://api.github.com/users/boretrk/followers",
+            "following_url": "https://api.github.com/users/boretrk/following{/other_user}",
+            "gists_url": "https://api.github.com/users/boretrk/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/boretrk/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/boretrk/subscriptions",
+            "organizations_url": "https://api.github.com/users/boretrk/orgs",
+            "repos_url": "https://api.github.com/users/boretrk/repos",
+            "events_url": "https://api.github.com/users/boretrk/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/boretrk/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "boretrk",
+            "id": 85582231,
+            "node_id": "MDQ6VXNlcjg1NTgyMjMx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/85582231?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/boretrk",
+            "html_url": "https://github.com/boretrk",
+            "followers_url": "https://api.github.com/users/boretrk/followers",
+            "following_url": "https://api.github.com/users/boretrk/following{/other_user}",
+            "gists_url": "https://api.github.com/users/boretrk/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/boretrk/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/boretrk/subscriptions",
+            "organizations_url": "https://api.github.com/users/boretrk/orgs",
+            "repos_url": "https://api.github.com/users/boretrk/repos",
+            "events_url": "https://api.github.com/users/boretrk/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/boretrk/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+                "html_url": "https://github.com/torvalds/libgit2/commit/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc"
+            }
+        ]
+    },
+    {
+        "sha": "ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+        "node_id": "C_kwDOHvWMNtoAKGFjMGYyMjQ1NTEwZjZjNzVkYjFiMWU3YWY3Y2EwMWMxNWRlYzI2YmM",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T03:12:42Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-14T03:12:42Z"
+            },
+            "message": "Merge pull request #6353 from libgit2/ethomson/flaky_googlesource\n\ntests: skip flaky-ass googlesource tests",
+            "tree": {
+                "sha": "ceee3236cabf16c80bc552660a194062775b25a1",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/ceee3236cabf16c80bc552660a194062775b25a1"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiz4mqCRBK7hj4Ov3rIwAAHKQIAAFbJB3WwyRoCmaTfMjIJrAo\nd2dRL4LG3RqmITLCsGzxIMAjcOhrMNE+rgAOogi7Ce9t5ZIbIOETeM1lcDcZd919\nR8s4d8uJH8e4L/cD2ZIYKwAZbrNj/QABC/GDekgk3+fDaOqXUh4xzoBapxZxOQ2X\nYUZm21OwSWWYfTNj/EduuNpC3Bz6Aj8xXzUVU3yOn5K0LwCpsKbcrHXLY2SLhlLp\nWO0hphq+44rUcipIO4YQdv3NZyYJ8FCFp8vr82Yt+UiVjgEZNZ1wwQIbvFa5b3Hw\nzEAu8Rm3n2N6qoFN9fMzYVWgYPk6f1hEuudu5vgY+ym29eXnPrGABsglCI3QV9c=\n=Sxb3\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree ceee3236cabf16c80bc552660a194062775b25a1\nparent 46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc\nparent cbd5319f505fd066a6bcb10c7c649be20d525061\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657768362 -0400\ncommitter GitHub <noreply@github.com> 1657768362 -0400\n\nMerge pull request #6353 from libgit2/ethomson/flaky_googlesource\n\ntests: skip flaky-ass googlesource tests",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+        "html_url": "https://github.com/torvalds/libgit2/commit/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/ac0f2245510f6c75db1b1e7af7ca01c15dec26bc/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc",
+                "html_url": "https://github.com/torvalds/libgit2/commit/46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc"
+            },
+            {
+                "sha": "cbd5319f505fd066a6bcb10c7c649be20d525061",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/cbd5319f505fd066a6bcb10c7c649be20d525061",
+                "html_url": "https://github.com/torvalds/libgit2/commit/cbd5319f505fd066a6bcb10c7c649be20d525061"
+            }
+        ]
+    },
+    {
+        "sha": "46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc",
+        "node_id": "C_kwDOHvWMNtoAKDQ2Y2UxMGYwNjJlNGFjNjgxYzNmMWUxNGUyZTg3MWJiNmU0YzA5YmM",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T03:12:26Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-14T03:12:26Z"
+            },
+            "message": "Merge pull request #6354 from libgit2/ethomson/sha256_experimental\n\nsha256: indirection for experimental functions",
+            "tree": {
+                "sha": "ee84020f9f2c9f53a1f11656e2cd1205502cda48",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/ee84020f9f2c9f53a1f11656e2cd1205502cda48"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiz4maCRBK7hj4Ov3rIwAAoawIADkaTcLdtoZCGVTUBtZLMjd1\nsQRCYAf7viDN+xAh5xN3EPN9vqzTE0LmPVlQmIZQg7sTUwhFyrByvsrizhIet/R4\nQLJBovFEUofjTUqhvcFG4+C78iLBth8oloF23APgteResfZJHXMvG0Ehzge/d0ep\nNoTvFTF1wOu2do23uvPMLsytrHzROTrZqSzzZyzdUJCOsASGb8G9EpzBsDPIP/+p\nKev8nfAxVDxK+jpcHvo/xPfvz+HAnPCtt6K4aSIv2kUmfGj/U58QVSsNWr8ihoP/\nHxm3u2/ckbilXbLn1cJ/My4wB3UvbYvVVjR9aBgGNVJfhZ9akWGHMiyUOxPkmvI=\n=duc5\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree ee84020f9f2c9f53a1f11656e2cd1205502cda48\nparent 433a133402fae298f8ee7613bcfd997c2712d269\nparent b43567d655b6fbc562a165095a6980d19c4ae278\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657768346 -0400\ncommitter GitHub <noreply@github.com> 1657768346 -0400\n\nMerge pull request #6354 from libgit2/ethomson/sha256_experimental\n\nsha256: indirection for experimental functions",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc",
+        "html_url": "https://github.com/torvalds/libgit2/commit/46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/46ce10f062e4ac681c3f1e14e2e871bb6e4c09bc/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "433a133402fae298f8ee7613bcfd997c2712d269",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/433a133402fae298f8ee7613bcfd997c2712d269",
+                "html_url": "https://github.com/torvalds/libgit2/commit/433a133402fae298f8ee7613bcfd997c2712d269"
+            },
+            {
+                "sha": "b43567d655b6fbc562a165095a6980d19c4ae278",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/b43567d655b6fbc562a165095a6980d19c4ae278",
+                "html_url": "https://github.com/torvalds/libgit2/commit/b43567d655b6fbc562a165095a6980d19c4ae278"
+            }
+        ]
+    },
+    {
+        "sha": "b43567d655b6fbc562a165095a6980d19c4ae278",
+        "node_id": "C_kwDOHvWMNtoAKGI0MzU2N2Q2NTViNmZiYzU2MmExNjUwOTVhNjk4MGQxOWM0YWUyNzg",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T02:25:11Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T02:50:33Z"
+            },
+            "message": "sha256: indirection for experimental functions\n\nThe experimental function signature is only available when\n`GIT_EXPERIMENTAL_SHA256` is enabled.",
+            "tree": {
+                "sha": "ee84020f9f2c9f53a1f11656e2cd1205502cda48",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/ee84020f9f2c9f53a1f11656e2cd1205502cda48"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/b43567d655b6fbc562a165095a6980d19c4ae278",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/b43567d655b6fbc562a165095a6980d19c4ae278",
+        "html_url": "https://github.com/torvalds/libgit2/commit/b43567d655b6fbc562a165095a6980d19c4ae278",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/b43567d655b6fbc562a165095a6980d19c4ae278/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "433a133402fae298f8ee7613bcfd997c2712d269",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/433a133402fae298f8ee7613bcfd997c2712d269",
+                "html_url": "https://github.com/torvalds/libgit2/commit/433a133402fae298f8ee7613bcfd997c2712d269"
+            }
+        ]
+    },
+    {
+        "sha": "433a133402fae298f8ee7613bcfd997c2712d269",
+        "node_id": "C_kwDOHvWMNtoAKDQzM2ExMzM0MDJmYWUyOThmOGVlNzYxM2JjZmQ5OTdjMjcxMmQyNjk",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T01:08:04Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-14T01:08:04Z"
+            },
+            "message": "Merge pull request #6191 from libgit2/ethomson/sha256_poc\n\nRFC: SHA256 proof of concept",
+            "tree": {
+                "sha": "17c4d0c86faaeae71f65d28cc0ba0d60b481a2ea",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/17c4d0c86faaeae71f65d28cc0ba0d60b481a2ea"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/433a133402fae298f8ee7613bcfd997c2712d269",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiz2x0CRBK7hj4Ov3rIwAATwsIADy60DLyhea1cGw6z2In6UoS\n8i/41YlsA/Xr2fvcStSBvpsdAD8AQsQTv4uEleBT5dAnH5BK1HRsFX7aP+MTzpF1\nqnEMW9RIt1RlWKOgJyfIFQDYuLhbZ1N9yCl6TbM23WlRlBLapPDxQr1qcfAFhNT/\n/z5XEp/9xmO4ntcRU55xsozS/kPbZp5LeGDqyz5EeVdZvaGndDrDYSm6ryPYBovG\nZ0VrsSU0OUCOF7NnVeTa0bgnMuwebzftcl7xqJgYP0xO9b+YNPa9X+cGD+eRNDN7\n0qQg7Ti9oy6V6kcOCMkahKKRnZGAZ3Nc7tvAku4zApunMgD9aa/G5xsiIvWI6wQ=\n=IPjY\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 17c4d0c86faaeae71f65d28cc0ba0d60b481a2ea\nparent 21b70f09b4e3db188bf5e5813a9912ae89de355d\nparent 6013b6a0dc5897386bfc8db6e07447c055f2fd94\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657760884 -0400\ncommitter GitHub <noreply@github.com> 1657760884 -0400\n\nMerge pull request #6191 from libgit2/ethomson/sha256_poc\n\nRFC: SHA256 proof of concept",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/433a133402fae298f8ee7613bcfd997c2712d269",
+        "html_url": "https://github.com/torvalds/libgit2/commit/433a133402fae298f8ee7613bcfd997c2712d269",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/433a133402fae298f8ee7613bcfd997c2712d269/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "21b70f09b4e3db188bf5e5813a9912ae89de355d",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/21b70f09b4e3db188bf5e5813a9912ae89de355d",
+                "html_url": "https://github.com/torvalds/libgit2/commit/21b70f09b4e3db188bf5e5813a9912ae89de355d"
+            },
+            {
+                "sha": "6013b6a0dc5897386bfc8db6e07447c055f2fd94",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/6013b6a0dc5897386bfc8db6e07447c055f2fd94",
+                "html_url": "https://github.com/torvalds/libgit2/commit/6013b6a0dc5897386bfc8db6e07447c055f2fd94"
+            }
+        ]
+    },
+    {
+        "sha": "cbd5319f505fd066a6bcb10c7c649be20d525061",
+        "node_id": "C_kwDOHvWMNtoAKGNiZDUzMTlmNTA1ZmQwNjZhNmJjYjEwYzdjNjQ5YmUyMGQ1MjUwNjE",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T00:56:03Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T00:56:03Z"
+            },
+            "message": "tests: skip flaky-ass googlesource tests",
+            "tree": {
+                "sha": "bf1e36b269122db2374dc5977561a92837ebdf00",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/bf1e36b269122db2374dc5977561a92837ebdf00"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/cbd5319f505fd066a6bcb10c7c649be20d525061",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/cbd5319f505fd066a6bcb10c7c649be20d525061",
+        "html_url": "https://github.com/torvalds/libgit2/commit/cbd5319f505fd066a6bcb10c7c649be20d525061",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/cbd5319f505fd066a6bcb10c7c649be20d525061/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "21b70f09b4e3db188bf5e5813a9912ae89de355d",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/21b70f09b4e3db188bf5e5813a9912ae89de355d",
+                "html_url": "https://github.com/torvalds/libgit2/commit/21b70f09b4e3db188bf5e5813a9912ae89de355d"
+            }
+        ]
+    },
+    {
+        "sha": "21b70f09b4e3db188bf5e5813a9912ae89de355d",
+        "node_id": "C_kwDOHvWMNtoAKDIxYjcwZjA5YjRlM2RiMTg4YmY1ZTU4MTNhOTkxMmFlODlkZTM1NWQ",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T00:48:04Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-14T00:48:04Z"
+            },
+            "message": "Merge pull request #6352 from libgit2/ethomson/post_1.5.0\n\nmeta: update version number to v1.6.0-alpha",
+            "tree": {
+                "sha": "683437f0cfebb3f164bf257e8f717f61e361c6be",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/683437f0cfebb3f164bf257e8f717f61e361c6be"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/21b70f09b4e3db188bf5e5813a9912ae89de355d",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiz2fECRBK7hj4Ov3rIwAAKWwIAGcVmxsTtN9e8cCtcMSoWwTZ\nHhXTcFw3b0butu+CjD9w05VV8sKPNG1KBQotvPyeludSOn7oE4D5PquoVapureI0\nA8x4eLGM20y92wLzIkYbijQcpLiXVN4RvCQx027XgOPFEGtANNPYZj9WsOQwm2Hz\n4FzuVQwgueBj7vGfS5A7p9v7u1br0T6Mn0hah30y6zSx6HhE/QR41rqqQV4+/ALt\ndqdkfZO/trWqmR5zQxFpmsFStITspLN/CkPwEIcyXIYH+/AMTneTDfglt1IbYhCI\nEt8xLZ/SnCBpoV/yNW1u9tMI2PUxG5K+3r0b9iHkC1Dl4ftMTnAxfvGCTAfSE4g=\n=nZSP\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 683437f0cfebb3f164bf257e8f717f61e361c6be\nparent fbea439d4b6fc91c6b619d01b85ab3b7746e4c19\nparent 43dd3700a2940679d15ea351f8394928f74510e4\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657759684 -0400\ncommitter GitHub <noreply@github.com> 1657759684 -0400\n\nMerge pull request #6352 from libgit2/ethomson/post_1.5.0\n\nmeta: update version number to v1.6.0-alpha",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/21b70f09b4e3db188bf5e5813a9912ae89de355d",
+        "html_url": "https://github.com/torvalds/libgit2/commit/21b70f09b4e3db188bf5e5813a9912ae89de355d",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/21b70f09b4e3db188bf5e5813a9912ae89de355d/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+                "html_url": "https://github.com/torvalds/libgit2/commit/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19"
+            },
+            {
+                "sha": "43dd3700a2940679d15ea351f8394928f74510e4",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/43dd3700a2940679d15ea351f8394928f74510e4",
+                "html_url": "https://github.com/torvalds/libgit2/commit/43dd3700a2940679d15ea351f8394928f74510e4"
+            }
+        ]
+    },
+    {
+        "sha": "43dd3700a2940679d15ea351f8394928f74510e4",
+        "node_id": "C_kwDOHvWMNtoAKDQzZGQzNzAwYTI5NDA2NzlkMTVlYTM1MWY4Mzk0OTI4Zjc0NTEwZTQ",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T00:17:27Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T00:19:35Z"
+            },
+            "message": "meta: update version number to v1.6.0-alpha",
+            "tree": {
+                "sha": "683437f0cfebb3f164bf257e8f717f61e361c6be",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/683437f0cfebb3f164bf257e8f717f61e361c6be"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/43dd3700a2940679d15ea351f8394928f74510e4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/43dd3700a2940679d15ea351f8394928f74510e4",
+        "html_url": "https://github.com/torvalds/libgit2/commit/43dd3700a2940679d15ea351f8394928f74510e4",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/43dd3700a2940679d15ea351f8394928f74510e4/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+                "html_url": "https://github.com/torvalds/libgit2/commit/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19"
+            }
+        ]
+    },
+    {
+        "sha": "fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+        "node_id": "C_kwDOHvWMNtoAKGZiZWE0MzlkNGI2ZmM5MWM2YjYxOWQwMWI4NWFiM2I3NzQ2ZTRjMTk",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-14T00:06:59Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-14T00:06:59Z"
+            },
+            "message": "Merge pull request #6351 from libgit2/ethomson/v1.5.0\n\nv1.5.0",
+            "tree": {
+                "sha": "f53b5a3652e12a31fd885a6233a574059e863077",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/f53b5a3652e12a31fd885a6233a574059e863077"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiz14jCRBK7hj4Ov3rIwAA+2EIAAn1nqcyThrKGf2zNMQyiVN+\n+qRd9uJ1mb7O4afDP2ZOdGxoXWulCUMOooCofhsnOfEpYqP4onPqu7s3LXgKz8sd\nMespNe2zi/BOt2LF71R1zVMV42aGrotvKR7uKsjwjoJ65krKfqjK/BNub9x6gpJl\njsXaiO7+LBVtjJmz2lGyGxO21J6SgOkKRVH3SCccYCmsGdrH9m3DDBAhB7gd98V5\nQTHfqwgZ6Q8dV1YcCVcYrXg1b72TTxhEUKhov3M+pySJneN/Q7GIW0fNvkT7XN33\nfIS9gyL8MwWgDv5d/50kzmIJDoyBgU5kLI0tniiN6hCrsP5hBUj4w+ONoFNazrc=\n=ILMD\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree f53b5a3652e12a31fd885a6233a574059e863077\nparent fb02e339fe4b38628aea7625d76d5e336d732a0c\nparent 2be53a5da7022bc7b36f4172fa199f5fcecc3089\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657757219 -0400\ncommitter GitHub <noreply@github.com> 1657757219 -0400\n\nMerge pull request #6351 from libgit2/ethomson/v1.5.0\n\nv1.5.0",
+                "verified_at": "2024-11-07T18:53:06Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+        "html_url": "https://github.com/torvalds/libgit2/commit/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/fbea439d4b6fc91c6b619d01b85ab3b7746e4c19/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fb02e339fe4b38628aea7625d76d5e336d732a0c",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/fb02e339fe4b38628aea7625d76d5e336d732a0c",
+                "html_url": "https://github.com/torvalds/libgit2/commit/fb02e339fe4b38628aea7625d76d5e336d732a0c"
+            },
+            {
+                "sha": "2be53a5da7022bc7b36f4172fa199f5fcecc3089",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/2be53a5da7022bc7b36f4172fa199f5fcecc3089",
+                "html_url": "https://github.com/torvalds/libgit2/commit/2be53a5da7022bc7b36f4172fa199f5fcecc3089"
+            }
+        ]
+    },
+    {
+        "sha": "2be53a5da7022bc7b36f4172fa199f5fcecc3089",
+        "node_id": "C_kwDOHvWMNtoAKDJiZTUzYTVkYTcwMjJiYzdiMzZmNDE3MmZhMTk5ZjVmY2VjYzMwODk",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-08T03:13:23Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T16:50:01Z"
+            },
+            "message": "v1.5: update version numbers",
+            "tree": {
+                "sha": "f53b5a3652e12a31fd885a6233a574059e863077",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/f53b5a3652e12a31fd885a6233a574059e863077"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/2be53a5da7022bc7b36f4172fa199f5fcecc3089",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/2be53a5da7022bc7b36f4172fa199f5fcecc3089",
+        "html_url": "https://github.com/torvalds/libgit2/commit/2be53a5da7022bc7b36f4172fa199f5fcecc3089",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/2be53a5da7022bc7b36f4172fa199f5fcecc3089/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2030358070662fbe3730fbd577c68747d172fd9a",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/2030358070662fbe3730fbd577c68747d172fd9a",
+                "html_url": "https://github.com/torvalds/libgit2/commit/2030358070662fbe3730fbd577c68747d172fd9a"
+            }
+        ]
+    },
+    {
+        "sha": "2030358070662fbe3730fbd577c68747d172fd9a",
+        "node_id": "C_kwDOHvWMNtoAKDIwMzAzNTgwNzA2NjJmYmUzNzMwZmJkNTc3YzY4NzQ3ZDE3MmZkOWE",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-08T03:11:36Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T16:50:01Z"
+            },
+            "message": "v1.5: update the changelog",
+            "tree": {
+                "sha": "656157ee844b87bdb10c425fa0b857ec8dc8ea3a",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/656157ee844b87bdb10c425fa0b857ec8dc8ea3a"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/2030358070662fbe3730fbd577c68747d172fd9a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/2030358070662fbe3730fbd577c68747d172fd9a",
+        "html_url": "https://github.com/torvalds/libgit2/commit/2030358070662fbe3730fbd577c68747d172fd9a",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/2030358070662fbe3730fbd577c68747d172fd9a/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fb02e339fe4b38628aea7625d76d5e336d732a0c",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/fb02e339fe4b38628aea7625d76d5e336d732a0c",
+                "html_url": "https://github.com/torvalds/libgit2/commit/fb02e339fe4b38628aea7625d76d5e336d732a0c"
+            }
+        ]
+    },
+    {
+        "sha": "fb02e339fe4b38628aea7625d76d5e336d732a0c",
+        "node_id": "C_kwDOHvWMNtoAKGZiMDJlMzM5ZmU0YjM4NjI4YWVhNzYyNWQ3NmQ1ZTMzNmQ3MzJhMGM",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T16:27:43Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-13T16:27:43Z"
+            },
+            "message": "meta: update release.yml for security information",
+            "tree": {
+                "sha": "2b2237f8ac5182da2aa0545aa31bde16c6a4e574",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/2b2237f8ac5182da2aa0545aa31bde16c6a4e574"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/fb02e339fe4b38628aea7625d76d5e336d732a0c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJizvJ/CRBK7hj4Ov3rIwAAAxUIACyQ5u/qG7OIVeT6SzJhD6sD\nDF8l4k+aCd7YrKq9zFfAv5CO4DicBuDinvA1lcnOl4KRZtchuyES1YOejgwkxl8b\nszx7jCfgUNOEZmPDpJ43p/GINAXMiLYTCnGT4DI7iQRNCHziZvZ3X0lzBA/uf1AP\ncKxLvfO2hl9XKAbHLIiy1fASWMxElibr1WxEu6MHrFZGogk54REYCIlNPkLGCGPs\nzcsajcer/G5u2U5qaJX63TrqJ67Ll+Fjk1uBzhgUlNkYKhGgKJ8qF9tg6pOtyK5E\njZotX8lJKch7RKQB5GUbjF3DnD3zWVkyvsYTx4xz8rCcFVJ24bYjrs+bhemV3sY=\n=99QJ\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 2b2237f8ac5182da2aa0545aa31bde16c6a4e574\nparent 3c8a860df4dd1dfe1aad74c884529184b7d932b2\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657729663 -0400\ncommitter GitHub <noreply@github.com> 1657729663 -0400\n\nmeta: update release.yml for security information",
+                "verified_at": "2024-11-08T18:59:37Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/fb02e339fe4b38628aea7625d76d5e336d732a0c",
+        "html_url": "https://github.com/torvalds/libgit2/commit/fb02e339fe4b38628aea7625d76d5e336d732a0c",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/fb02e339fe4b38628aea7625d76d5e336d732a0c/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3c8a860df4dd1dfe1aad74c884529184b7d932b2",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/3c8a860df4dd1dfe1aad74c884529184b7d932b2",
+                "html_url": "https://github.com/torvalds/libgit2/commit/3c8a860df4dd1dfe1aad74c884529184b7d932b2"
+            }
+        ]
+    },
+    {
+        "sha": "3c8a860df4dd1dfe1aad74c884529184b7d932b2",
+        "node_id": "C_kwDOHvWMNtoAKDNjOGE4NjBkZjRkZDFkZmUxYWFkNzRjODg0NTI5MTg0YjdkOTMyYjI",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T14:19:14Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-13T14:19:14Z"
+            },
+            "message": "Merge pull request #6348 from lya001/fix-invalid-branch-name\n\nFix creation of branches and tags with invalid names",
+            "tree": {
+                "sha": "0f629e3479cf4abcf182e47c7690a84f67b94852",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/0f629e3479cf4abcf182e47c7690a84f67b94852"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/3c8a860df4dd1dfe1aad74c884529184b7d932b2",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiztRiCRBK7hj4Ov3rIwAAXKcIADQ6yBSGeUE0ltcqR7BC/dKP\nnepbQRw/KYm0LgQCEn6hPDqv//HN8dybkpO84dbVqOdH68vOM2l7Iu5bxJoR7BQi\nv/ewGW8HacLYeJSDV6tRk0uxLG5L0327ZS2+ZMZ1DAxNNk8R2osiSyw3UP6krrlI\nCSO8GQSkicCvEJT95ZIl+MV/ynbWyjOOU/Sexk3NmgsKU1KzSwWMYJBIhqOOfPd4\n+8X1aITYa35ez95aJTFnKLcAPY+JLVox3qYzxfoGEcO2T8Eh0Kh1qyJ+U0/hmlGc\nES5sEwYhKzvEK4KbTIBucPZm9Qtz9q62cgTFeWt/debHoJgT8PL+/mW+Z353Upk=\n=dAmt\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 0f629e3479cf4abcf182e47c7690a84f67b94852\nparent b70dbaa2f295e5878c965835caf054b50faa9f41\nparent be08ef7fd7d045a4bd0e3dfc059b32c1590b5016\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657721954 -0400\ncommitter GitHub <noreply@github.com> 1657721954 -0400\n\nMerge pull request #6348 from lya001/fix-invalid-branch-name\n\nFix creation of branches and tags with invalid names",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/3c8a860df4dd1dfe1aad74c884529184b7d932b2",
+        "html_url": "https://github.com/torvalds/libgit2/commit/3c8a860df4dd1dfe1aad74c884529184b7d932b2",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/3c8a860df4dd1dfe1aad74c884529184b7d932b2/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b70dbaa2f295e5878c965835caf054b50faa9f41",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/b70dbaa2f295e5878c965835caf054b50faa9f41",
+                "html_url": "https://github.com/torvalds/libgit2/commit/b70dbaa2f295e5878c965835caf054b50faa9f41"
+            },
+            {
+                "sha": "be08ef7fd7d045a4bd0e3dfc059b32c1590b5016",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/be08ef7fd7d045a4bd0e3dfc059b32c1590b5016",
+                "html_url": "https://github.com/torvalds/libgit2/commit/be08ef7fd7d045a4bd0e3dfc059b32c1590b5016"
+            }
+        ]
+    },
+    {
+        "sha": "be08ef7fd7d045a4bd0e3dfc059b32c1590b5016",
+        "node_id": "C_kwDOHvWMNtoAKGJlMDhlZjdmZDdkMDQ1YTRiZDBlM2RmYzA1OWIzMmMxNTkwYjUwMTY",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T02:39:25Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-13T02:39:25Z"
+            },
+            "message": "Update src/libgit2/tag.c",
+            "tree": {
+                "sha": "a9f6f0467a75108b151bf9f04028b99a71a0d82b",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/a9f6f0467a75108b151bf9f04028b99a71a0d82b"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/be08ef7fd7d045a4bd0e3dfc059b32c1590b5016",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJizjBdCRBK7hj4Ov3rIwAAGGQIAAUBUuk3ItSixzZbNfAHVrbN\nEiBtaXS8q4WsgkoiMemb3YwPpwyGIKUG7Yi0pn4v7EPQ+U3kdVpiqvrHAdly0J/C\nldvoz2iZVe8FUVeN18YZHdZJVZSb3zl8En/jVrkeg7nAm46uCNaOdU5H46weNLdg\n5Km+zqb0TyfMIOcbvoQvRuEt1tvFc23foAsBkflsy4ybKVPGCZ4d1PUxQfQFy4dq\nh4EmGRbRcypKgLqccyT5KPRuLSZ3GdI7z2xAeN7qF17xBX9+wPusGcTS7Ngdeo68\noK3RcRB2FzKhQrCa4Xf90zd91T8VY/ZL/X/5dFT/C8TCf7Cpf56sa6WX7xqsVfc=\n=SskG\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree a9f6f0467a75108b151bf9f04028b99a71a0d82b\nparent f6be8c2697724688eae780eb63ac4dc97423858b\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657679965 -0400\ncommitter GitHub <noreply@github.com> 1657679965 -0400\n\nUpdate src/libgit2/tag.c",
+                "verified_at": "2024-11-09T11:34:56Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/be08ef7fd7d045a4bd0e3dfc059b32c1590b5016",
+        "html_url": "https://github.com/torvalds/libgit2/commit/be08ef7fd7d045a4bd0e3dfc059b32c1590b5016",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/be08ef7fd7d045a4bd0e3dfc059b32c1590b5016/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f6be8c2697724688eae780eb63ac4dc97423858b",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/f6be8c2697724688eae780eb63ac4dc97423858b",
+                "html_url": "https://github.com/torvalds/libgit2/commit/f6be8c2697724688eae780eb63ac4dc97423858b"
+            }
+        ]
+    },
+    {
+        "sha": "b70dbaa2f295e5878c965835caf054b50faa9f41",
+        "node_id": "C_kwDOHvWMNtoAKGI3MGRiYWEyZjI5NWU1ODc4Yzk2NTgzNWNhZjA1NGI1MGZhYTlmNDE",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T02:12:36Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-13T02:12:36Z"
+            },
+            "message": "Merge pull request #6347 from libgit2/ethomson/no_pack_v3\n\npack: don't pretend we support pack files v3",
+            "tree": {
+                "sha": "29dcd13e38b7212d2c97040dc4791ddd79e6e7be",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/29dcd13e38b7212d2c97040dc4791ddd79e6e7be"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/b70dbaa2f295e5878c965835caf054b50faa9f41",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJizioUCRBK7hj4Ov3rIwAA6wAIAKHV5WN3qq8lrlGFYeUJJYno\nrClkMymrrtRSMtiIaqzwTwOTWbF2sW+Rm3WJ8wFbBTs/1hpOP+e0e7OurdcdRDIZ\n2qrcnMQ4hyVcTbHZTK5/CLJVGY6aSDnHmI4G8GlyDxqxT5DMM7Ic46qkY1h03Bm8\nS2hVTfd46AkAFFfazKPaExt+bcLRBYUVlsQA68kcbk3vxMGQkvU653al+j/1G2c7\nqlYzLbapYXKNAgLz8/qy7syURcYCo68psG5hU5OPLlsUmBpL428I79/JoxaTKrUe\n7+tig5bnQ6wmvnJ52e8QEWhM7m1qaKmwBZJEksT7lVvnWl0TIwOd/VBE5LGKe7g=\n=A/mV\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 29dcd13e38b7212d2c97040dc4791ddd79e6e7be\nparent 53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b\nparent 4597b869f7b2d5bba07e3feab166cb1db63e8b9c\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657678356 -0400\ncommitter GitHub <noreply@github.com> 1657678356 -0400\n\nMerge pull request #6347 from libgit2/ethomson/no_pack_v3\n\npack: don't pretend we support pack files v3",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/b70dbaa2f295e5878c965835caf054b50faa9f41",
+        "html_url": "https://github.com/torvalds/libgit2/commit/b70dbaa2f295e5878c965835caf054b50faa9f41",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/b70dbaa2f295e5878c965835caf054b50faa9f41/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b",
+                "html_url": "https://github.com/torvalds/libgit2/commit/53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b"
+            },
+            {
+                "sha": "4597b869f7b2d5bba07e3feab166cb1db63e8b9c",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/4597b869f7b2d5bba07e3feab166cb1db63e8b9c",
+                "html_url": "https://github.com/torvalds/libgit2/commit/4597b869f7b2d5bba07e3feab166cb1db63e8b9c"
+            }
+        ]
+    },
+    {
+        "sha": "f6be8c2697724688eae780eb63ac4dc97423858b",
+        "node_id": "C_kwDOHvWMNtoAKGY2YmU4YzI2OTc3MjQ2ODhlYWU3ODBlYjYzYWM0ZGM5NzQyMzg1OGI",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-13T02:09:25Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-13T02:09:25Z"
+            },
+            "message": "Apply suggestions from code review",
+            "tree": {
+                "sha": "e89e569634545d668129f62986a238625bb662cb",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/e89e569634545d668129f62986a238625bb662cb"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/f6be8c2697724688eae780eb63ac4dc97423858b",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJizilVCRBK7hj4Ov3rIwAAvNwIAAKBNNIGM3dFfUl+aOT0EdI0\n07UBR4Xm2ExADV9yMYubXo8AMIICDPeiSe2uoVaCNazrl4+oyXQkgVSlQVW3XaKr\njJtjjqxHERn76Kgfy3WKn5CpsC1Evjr/rr7yUrE69Jfnyz4pWQ0h3yZz8i8okuDs\nkxQEXzXCujSzOoTE4LKQj3JxD/nHZhiPWvuCvpS6IWCV55pNWzemU7GthNVvzU2g\n9Lg5mkaDGhWeVQT0wrhohFYf0xtrPqBlqg/94j8KK2/wePHM6sd1bo3AWlKhkivS\nipZnU54WIumUw26ikx1Eg6XcvaQLvqV27suj2zHkAk+2ERywvbqPx9Uzk0rZHyM=\n=Vm1H\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree e89e569634545d668129f62986a238625bb662cb\nparent 760a5acc73c8da3780fcbc4b5de6f4397e22191e\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657678165 -0400\ncommitter GitHub <noreply@github.com> 1657678165 -0400\n\nApply suggestions from code review",
+                "verified_at": "2024-11-09T11:34:56Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/f6be8c2697724688eae780eb63ac4dc97423858b",
+        "html_url": "https://github.com/torvalds/libgit2/commit/f6be8c2697724688eae780eb63ac4dc97423858b",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/f6be8c2697724688eae780eb63ac4dc97423858b/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "760a5acc73c8da3780fcbc4b5de6f4397e22191e",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/760a5acc73c8da3780fcbc4b5de6f4397e22191e",
+                "html_url": "https://github.com/torvalds/libgit2/commit/760a5acc73c8da3780fcbc4b5de6f4397e22191e"
+            }
+        ]
+    },
+    {
+        "sha": "53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b",
+        "node_id": "C_kwDOHvWMNtoAKDUzY2ZhZDllNGIwZmFlYjRlMmY2Mzg1Y2FmZDUyOThjYmI4MWI4MmI",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-12T19:07:11Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-12T19:07:11Z"
+            },
+            "message": "Merge pull request #6350 from libgit2/ethomson/zlib\n\nzlib: update bundled zlib to v1.2.12",
+            "tree": {
+                "sha": "64b460d8fe1e9f1498d37e9dc73ff5ca40c27b7c",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/64b460d8fe1e9f1498d37e9dc73ff5ca40c27b7c"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJizcZfCRBK7hj4Ov3rIwAAD70IAEMwXuuFrzo9aG3OHieuFHxi\nGClLowW16GtjyDQIHROK1+RZ6vYRJCHIJHCYAhkSJfe8ICD+Mb/BASE+pB90ncwg\nsoBMZIq0u12rRe4k5XDjRWteJ6laVb6Dk7uaor6Nnzifpd0tHLlUKTSrbhoRP0sh\nTl7/aiCFaa9hnXuT1ckEISd0Imsq0+NOXtYuWToGzUo737WoZLHRZ2GAv4YdD8/L\nbhKWDV+pB713c9zIjrsqvN7bgyI0nwwyWwQLK9b6qwT10mYQ//G9+lQtIf4By+KZ\nZEB60T/f3lOzmg7qtAkc8G0TDjTHEeboLgQvRhjdaeWIwSGLgvUUaK3Jaqjk780=\n=jUm6\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 64b460d8fe1e9f1498d37e9dc73ff5ca40c27b7c\nparent 4ae8704b9f4a53d4125e9195812890cbf64177c5\nparent af76267ad7a5fae5a8214ab587302dfc54c329d2\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657652831 -0400\ncommitter GitHub <noreply@github.com> 1657652831 -0400\n\nMerge pull request #6350 from libgit2/ethomson/zlib\n\nzlib: update bundled zlib to v1.2.12",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b",
+        "html_url": "https://github.com/torvalds/libgit2/commit/53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/53cfad9e4b0faeb4e2f6385cafd5298cbb81b82b/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4ae8704b9f4a53d4125e9195812890cbf64177c5",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/4ae8704b9f4a53d4125e9195812890cbf64177c5",
+                "html_url": "https://github.com/torvalds/libgit2/commit/4ae8704b9f4a53d4125e9195812890cbf64177c5"
+            },
+            {
+                "sha": "af76267ad7a5fae5a8214ab587302dfc54c329d2",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/af76267ad7a5fae5a8214ab587302dfc54c329d2",
+                "html_url": "https://github.com/torvalds/libgit2/commit/af76267ad7a5fae5a8214ab587302dfc54c329d2"
+            }
+        ]
+    },
+    {
+        "sha": "4ae8704b9f4a53d4125e9195812890cbf64177c5",
+        "node_id": "C_kwDOHvWMNtoAKDRhZTg3MDRiOWY0YTUzZDQxMjVlOTE5NTgxMjg5MGNiZjY0MTc3YzU",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-12T18:42:50Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-07-12T18:42:50Z"
+            },
+            "message": "Merge pull request #6349 from libgit2/ethomson/cve-2022-29187\n\nFixes for CVE 2022-29187",
+            "tree": {
+                "sha": "4faad93c0dd9f8e0e14d0a111b3229456b2b2176",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/4faad93c0dd9f8e0e14d0a111b3229456b2b2176"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/4ae8704b9f4a53d4125e9195812890cbf64177c5",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJizcCqCRBK7hj4Ov3rIwAAm8kIAGq8wJbA0n18Rrz/nFYlin8X\nRFpOPl/RhmyJ44aGaHCK3mDxmr41CTcu1naxd5OtqA8qun0bKPpGUpqS9EjAcn8X\nY4iN4ldcvMNYb6RIXfLjutNg2ClochgSGbw/AFvdaNEypHtRESEpHR8lO8CHpdJN\nTc6GGNt8lANjbpV/4LOO5mKvUCPVoTp/zOKsBYxh+Sf6fS9dVn5O7l+2LvyqyF8A\nh5Y6TAwcs4ayyRyHLgeREsxltcPN+NJIdsfN2G6JI8DYp8YEy11pY9+59kcRCT9C\nwUBfcI5t9PN5Dk+HBqwjp/pox/Uc4Im/Nb92Huv2bgebrosCPEn28wK2lmCnzt8=\n=RKHe\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 4faad93c0dd9f8e0e14d0a111b3229456b2b2176\nparent d1001fd05bd20b92b7568d93b0471feb3547035b\nparent ed24b8bacc739b072a789ca7396e46bd751ca2ec\nauthor Edward Thomson <ethomson@edwardthomson.com> 1657651370 -0400\ncommitter GitHub <noreply@github.com> 1657651370 -0400\n\nMerge pull request #6349 from libgit2/ethomson/cve-2022-29187\n\nFixes for CVE 2022-29187",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/4ae8704b9f4a53d4125e9195812890cbf64177c5",
+        "html_url": "https://github.com/torvalds/libgit2/commit/4ae8704b9f4a53d4125e9195812890cbf64177c5",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/4ae8704b9f4a53d4125e9195812890cbf64177c5/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d1001fd05bd20b92b7568d93b0471feb3547035b",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/d1001fd05bd20b92b7568d93b0471feb3547035b",
+                "html_url": "https://github.com/torvalds/libgit2/commit/d1001fd05bd20b92b7568d93b0471feb3547035b"
+            },
+            {
+                "sha": "ed24b8bacc739b072a789ca7396e46bd751ca2ec",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/ed24b8bacc739b072a789ca7396e46bd751ca2ec",
+                "html_url": "https://github.com/torvalds/libgit2/commit/ed24b8bacc739b072a789ca7396e46bd751ca2ec"
+            }
+        ]
+    },
+    {
+        "sha": "af76267ad7a5fae5a8214ab587302dfc54c329d2",
+        "node_id": "C_kwDOHvWMNtoAKGFmNzYyNjdhZDdhNWZhZTVhODIxNGFiNTg3MzAyZGZjNTRjMzI5ZDI",
+        "commit": {
+            "author": {
+                "name": "Mark Adler",
+                "email": "madler@alumni.caltech.edu",
+                "date": "2022-03-28T17:50:16Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-12T18:27:46Z"
+            },
+            "message": "zlib: Silence some warnings from Visual Studio C.",
+            "tree": {
+                "sha": "a7c90cc15ac4242b4c6d2f5fbfa51a72b9922d95",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/a7c90cc15ac4242b4c6d2f5fbfa51a72b9922d95"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/af76267ad7a5fae5a8214ab587302dfc54c329d2",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/af76267ad7a5fae5a8214ab587302dfc54c329d2",
+        "html_url": "https://github.com/torvalds/libgit2/commit/af76267ad7a5fae5a8214ab587302dfc54c329d2",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/af76267ad7a5fae5a8214ab587302dfc54c329d2/comments",
+        "author": {
+            "login": "madler",
+            "id": 240717,
+            "node_id": "MDQ6VXNlcjI0MDcxNw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/240717?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madler",
+            "html_url": "https://github.com/madler",
+            "followers_url": "https://api.github.com/users/madler/followers",
+            "following_url": "https://api.github.com/users/madler/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madler/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madler/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madler/subscriptions",
+            "organizations_url": "https://api.github.com/users/madler/orgs",
+            "repos_url": "https://api.github.com/users/madler/repos",
+            "events_url": "https://api.github.com/users/madler/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madler/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "39ba0ee6045a68e657e074d8290b4b77baae72c0",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/39ba0ee6045a68e657e074d8290b4b77baae72c0",
+                "html_url": "https://github.com/torvalds/libgit2/commit/39ba0ee6045a68e657e074d8290b4b77baae72c0"
+            }
+        ]
+    },
+    {
+        "sha": "39ba0ee6045a68e657e074d8290b4b77baae72c0",
+        "node_id": "C_kwDOHvWMNtoAKDM5YmEwZWU2MDQ1YTY4ZTY1N2UwNzRkODI5MGI0Yjc3YmFhZTcyYzA",
+        "commit": {
+            "author": {
+                "name": "Andrzej Hunt",
+                "email": "andrzej@ahunt.org",
+                "date": "2021-06-04T16:25:19Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-12T18:27:46Z"
+            },
+            "message": "zlib: slide_hash: add MSAN annotation to suppress known read from uninitialised memory\n\nslide_hash knowingly reads (possibly) uninitialised memory, see comment\nlower down about prev[n] potentially being garbage. In this case, the\nresult is never used - so we don't care about MSAN complaining about\nthis read.\n\nBy adding the no_sanitize(\"memory\") attribute, clients of zlib won't\nsee this (unnecessary) error when building and running with\nMemorySanitizer. An alternative approach is for clients to build zlib\nwith -fsanitize-ignorelist=... where the ignorelist contains something\nlike 'fun:slide_hash'. But that's more work and needs to be redone\nfor any and all CI systems running a given project with MSAN. Adding\nthis annotation to zlib's sources is overall more convenient - but\nalso won't affect non-MSAN builds.\n\nThis specific issue was found while running git's test suite, but has\nalso been reported by other clients, see e.g. #518.",
+            "tree": {
+                "sha": "7c579ccd17fcbd6c2e6d1f6339582a81a9488288",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/7c579ccd17fcbd6c2e6d1f6339582a81a9488288"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/39ba0ee6045a68e657e074d8290b4b77baae72c0",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/39ba0ee6045a68e657e074d8290b4b77baae72c0",
+        "html_url": "https://github.com/torvalds/libgit2/commit/39ba0ee6045a68e657e074d8290b4b77baae72c0",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/39ba0ee6045a68e657e074d8290b4b77baae72c0/comments",
+        "author": {
+            "login": "ahunt",
+            "id": 1546915,
+            "node_id": "MDQ6VXNlcjE1NDY5MTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1546915?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ahunt",
+            "html_url": "https://github.com/ahunt",
+            "followers_url": "https://api.github.com/users/ahunt/followers",
+            "following_url": "https://api.github.com/users/ahunt/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ahunt/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ahunt/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ahunt/subscriptions",
+            "organizations_url": "https://api.github.com/users/ahunt/orgs",
+            "repos_url": "https://api.github.com/users/ahunt/repos",
+            "events_url": "https://api.github.com/users/ahunt/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ahunt/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6febb7d7670cc1f2b112c1f1540cd872cb208f37",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/6febb7d7670cc1f2b112c1f1540cd872cb208f37",
+                "html_url": "https://github.com/torvalds/libgit2/commit/6febb7d7670cc1f2b112c1f1540cd872cb208f37"
+            }
+        ]
+    },
+    {
+        "sha": "6febb7d7670cc1f2b112c1f1540cd872cb208f37",
+        "node_id": "C_kwDOHvWMNtoAKDZmZWJiN2Q3NjcwY2MxZjJiMTEyYzFmMTU0MGNkODcyY2IyMDhmMzc",
+        "commit": {
+            "author": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-06T13:52:22Z"
+            },
+            "committer": {
+                "name": "Edward Thomson",
+                "email": "ethomson@edwardthomson.com",
+                "date": "2022-07-12T18:27:46Z"
+            },
+            "message": "zlib: declare prototypes for new functions\n\nThe `crc32_combine_gen64` missed a prototype in our define path.\nAdd one.",
+            "tree": {
+                "sha": "33cf235332e907e22adbcbdbf44ad2314d7b04b9",
+                "url": "https://api.github.com/repos/torvalds/libgit2/git/trees/33cf235332e907e22adbcbdbf44ad2314d7b04b9"
+            },
+            "url": "https://api.github.com/repos/torvalds/libgit2/git/commits/6febb7d7670cc1f2b112c1f1540cd872cb208f37",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libgit2/commits/6febb7d7670cc1f2b112c1f1540cd872cb208f37",
+        "html_url": "https://github.com/torvalds/libgit2/commit/6febb7d7670cc1f2b112c1f1540cd872cb208f37",
+        "comments_url": "https://api.github.com/repos/torvalds/libgit2/commits/6febb7d7670cc1f2b112c1f1540cd872cb208f37/comments",
+        "author": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ethomson",
+            "id": 1130014,
+            "node_id": "MDQ6VXNlcjExMzAwMTQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1130014?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ethomson",
+            "html_url": "https://github.com/ethomson",
+            "followers_url": "https://api.github.com/users/ethomson/followers",
+            "following_url": "https://api.github.com/users/ethomson/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ethomson/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ethomson/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ethomson/subscriptions",
+            "organizations_url": "https://api.github.com/users/ethomson/orgs",
+            "repos_url": "https://api.github.com/users/ethomson/repos",
+            "events_url": "https://api.github.com/users/ethomson/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ethomson/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2db6cdcd662a4e882a36551374f5d642a1515899",
+                "url": "https://api.github.com/repos/torvalds/libgit2/commits/2db6cdcd662a4e882a36551374f5d642a1515899",
+                "html_url": "https://github.com/torvalds/libgit2/commit/2db6cdcd662a4e882a36551374f5d642a1515899"
+            }
+        ]
+    }
+]

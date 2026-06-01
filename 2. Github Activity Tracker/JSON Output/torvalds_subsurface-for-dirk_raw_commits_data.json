@@ -1,0 +1,2462 @@
+[
+    {
+        "sha": "724527bc3b660a9d54aab8e4dff50430450f1643",
+        "node_id": "C_kwDOBLBVPdoAKDcyNDUyN2JjM2I2NjBhOWQ1NGFhYjhlNGRmZjUwNDMwNDUwZjE2NDM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-09-12T20:38:22Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-09-12T20:58:59Z"
+            },
+            "message": "Fix the dc sensor index fixup\n\nfixup_dc_sample_sensors() would make sure that any pressure sensor\nindexes were in range of the cylinders by just clearing the pressure\ndata if the sensor index was larger than the number of cylinders in the\ndive.\n\nThat certainly makes the sensor index data consistent, but at the cost\nof just dropping the sensor data entirely.\n\nDirk had some cases of odd sensor data (probably because of an older\nversion of subsurface, but possibly due to removing cylinders manually\nor because of oddities with the downloader for the Atomic Aquatics\nCobalt dive computer he used), and when re-saving the dive, the pressure\ndata would magically just get removed due to this.\n\nSo rewrite the sensor data fixup to strive very hard to avoid throwing\npressure sensor data away.\n\nWe do this by:\n\n (a) generating a mask of sensor numbers seen\n\n (b) checking if that mask is a subset of the cylinders we have, in\n     which case everything is fine.\n\n (c) if it's not a subset, \"compress\" the sensor indexes to the minimal\n     range (ie if you had sensor indexes 3 and 6, rename 3 to 0, and 6\n     to 1).\n\n (d) if it now fits in the cylinder mask we have, everything is fine\n\n (e) if we still have more sensors than we have cylinders, leave the\n     data alone, but complain about it with SSRF_INFO() so that the user\n     is notified.\n\nThat final (e) case might be for dive computers that allow reporting\npressure data for your buddy's cylinder too.  So it's odd, but not\nentirely crazy, and we now will keep the data.  You may have to add a\nfake cylinder to your dive to make it all make sense and avoid the\ninformational warning.\n\nThis whole \"we clear the pressure data\" was at least partly hidden by\ntwo things:\n\n (1) in the git save format, we don't rewrite dives unless you've\n     changed the dive some way, so old dives stay around with old data\n     in the save until explicitly changed.\n\n (2) if you had multiple dive computers, and one dive computer does not\n     have any pressure data but another one does, our profile will use\n     that \"other\" dive computer pressure data (because often times you\n     might have only one dive computer that is air integrated, but you\n     still want to see the tank pressure when you look at other dive\n     computers - or you have one dive computer give pressure data for\n     your deco bottle, and another for your travel gas etc).\n\nSo those two facts hid the reality that we had actually cleared the tank\nsensor data for Dirk's dive with the Atomic Aquatics dive computer,\nbecause we'd still see pressure data in the profile, and the git data\nwould still be the old one.\n\nUntil Dirk renumbered his dives, and the data was rewritten.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "e71c88e10ab82bca15aa7a820c1d5f1feaeb80fd",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/e71c88e10ab82bca15aa7a820c1d5f1feaeb80fd"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/724527bc3b660a9d54aab8e4dff50430450f1643",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/724527bc3b660a9d54aab8e4dff50430450f1643",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/724527bc3b660a9d54aab8e4dff50430450f1643",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/724527bc3b660a9d54aab8e4dff50430450f1643/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3446dd512597d538c1c1f337a85225700c965a25",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/3446dd512597d538c1c1f337a85225700c965a25",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/3446dd512597d538c1c1f337a85225700c965a25"
+            }
+        ]
+    },
+    {
+        "sha": "3446dd512597d538c1c1f337a85225700c965a25",
+        "node_id": "C_kwDOBLBVPdoAKDM0NDZkZDUxMjU5N2Q1MzhjMWMxZjMzN2E4NTIyNTcwMGM5NjVhMjU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-09-12T20:07:57Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-09-12T20:58:59Z"
+            },
+            "message": "fix up sample sensor indexes before fixing up cylinder pressures\n\nThe cylinder pressure fixup depends on the sample sensors indexes having\nbeen fixed.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "80386ac3afd722d74a8a0d39809ba9c407a413fa",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/80386ac3afd722d74a8a0d39809ba9c407a413fa"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/3446dd512597d538c1c1f337a85225700c965a25",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/3446dd512597d538c1c1f337a85225700c965a25",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/3446dd512597d538c1c1f337a85225700c965a25",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/3446dd512597d538c1c1f337a85225700c965a25/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "77a5ca42340db6a19bc65c87bb640bd8aac531c4",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/77a5ca42340db6a19bc65c87bb640bd8aac531c4",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/77a5ca42340db6a19bc65c87bb640bd8aac531c4"
+            }
+        ]
+    },
+    {
+        "sha": "77a5ca42340db6a19bc65c87bb640bd8aac531c4",
+        "node_id": "C_kwDOBLBVPdoAKDc3YTVjYTQyMzQwZGI2YTE5YmM2NWM4N2JiNjQwYmQ4YWFjNTMxYzQ",
+        "commit": {
+            "author": {
+                "name": "Robert C. Helling",
+                "email": "helling@atdotde.de",
+                "date": "2022-09-11T17:54:28Z"
+            },
+            "committer": {
+                "name": "Robert C. Helling",
+                "email": "helling@atdotde.de",
+                "date": "2022-09-12T17:30:31Z"
+            },
+            "message": "For warnings, show icon in infobox\n\nRender a warning sign in front of the event string\nin the infobox. This is done in rich text.\n\nNote: This shows the warning sign for all events,\nnot just warnings.\n\nSigned-off-by: Robert C. Helling <helling@atdotde.de>",
+            "tree": {
+                "sha": "76fc79d1ab8107af68e4d12a058863e7f73f66db",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/76fc79d1ab8107af68e4d12a058863e7f73f66db"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/77a5ca42340db6a19bc65c87bb640bd8aac531c4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/77a5ca42340db6a19bc65c87bb640bd8aac531c4",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/77a5ca42340db6a19bc65c87bb640bd8aac531c4",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/77a5ca42340db6a19bc65c87bb640bd8aac531c4/comments",
+        "author": {
+            "login": "atdotde",
+            "id": 863957,
+            "node_id": "MDQ6VXNlcjg2Mzk1Nw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/863957?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/atdotde",
+            "html_url": "https://github.com/atdotde",
+            "followers_url": "https://api.github.com/users/atdotde/followers",
+            "following_url": "https://api.github.com/users/atdotde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/atdotde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/atdotde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/atdotde/subscriptions",
+            "organizations_url": "https://api.github.com/users/atdotde/orgs",
+            "repos_url": "https://api.github.com/users/atdotde/repos",
+            "events_url": "https://api.github.com/users/atdotde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/atdotde/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "atdotde",
+            "id": 863957,
+            "node_id": "MDQ6VXNlcjg2Mzk1Nw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/863957?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/atdotde",
+            "html_url": "https://github.com/atdotde",
+            "followers_url": "https://api.github.com/users/atdotde/followers",
+            "following_url": "https://api.github.com/users/atdotde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/atdotde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/atdotde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/atdotde/subscriptions",
+            "organizations_url": "https://api.github.com/users/atdotde/orgs",
+            "repos_url": "https://api.github.com/users/atdotde/repos",
+            "events_url": "https://api.github.com/users/atdotde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/atdotde/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d306ba9b38a358cc46053138a1bb7aa29c79392a",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/d306ba9b38a358cc46053138a1bb7aa29c79392a",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/d306ba9b38a358cc46053138a1bb7aa29c79392a"
+            }
+        ]
+    },
+    {
+        "sha": "d306ba9b38a358cc46053138a1bb7aa29c79392a",
+        "node_id": "C_kwDOBLBVPdoAKGQzMDZiYTliMzhhMzU4Y2M0NjA1MzEzOGExYmI3YWEyOWM3OTM5MmE",
+        "commit": {
+            "author": {
+                "name": "Captain Junk",
+                "email": "captainjunk@gmail.com",
+                "date": "2022-09-03T22:38:47Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T22:49:00Z"
+            },
+            "message": "Update INSTALL\n\nAdd instructions for building on Raspberry Pi OS (64-bit) Released\nApril 4, 2022.\n\nSigned-off-by: Captain Junk <captainjunk@gmail.com>",
+            "tree": {
+                "sha": "989f179fee38fba007839cf006f9698c5fde3a36",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/989f179fee38fba007839cf006f9698c5fde3a36"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/d306ba9b38a358cc46053138a1bb7aa29c79392a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/d306ba9b38a358cc46053138a1bb7aa29c79392a",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/d306ba9b38a358cc46053138a1bb7aa29c79392a",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/d306ba9b38a358cc46053138a1bb7aa29c79392a/comments",
+        "author": {
+            "login": "captainjunk",
+            "id": 112781843,
+            "node_id": "U_kgDOBrjqEw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/112781843?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/captainjunk",
+            "html_url": "https://github.com/captainjunk",
+            "followers_url": "https://api.github.com/users/captainjunk/followers",
+            "following_url": "https://api.github.com/users/captainjunk/following{/other_user}",
+            "gists_url": "https://api.github.com/users/captainjunk/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/captainjunk/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/captainjunk/subscriptions",
+            "organizations_url": "https://api.github.com/users/captainjunk/orgs",
+            "repos_url": "https://api.github.com/users/captainjunk/repos",
+            "events_url": "https://api.github.com/users/captainjunk/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/captainjunk/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "50d83ab188db2b26bf2059956cbedf97f447c43f",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/50d83ab188db2b26bf2059956cbedf97f447c43f",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/50d83ab188db2b26bf2059956cbedf97f447c43f"
+            }
+        ]
+    },
+    {
+        "sha": "50d83ab188db2b26bf2059956cbedf97f447c43f",
+        "node_id": "C_kwDOBLBVPdoAKDUwZDgzYWIxODhkYjJiMjZiZjIwNTk5NTZjYmVkZjk3ZjQ0N2M0M2Y",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-29T06:03:18Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T20:51:01Z"
+            },
+            "message": "profile: show closed-hand cursor while panning\n\nTo give visual feedback.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "0cc3eb22c3795b2e8cb95d458778973157c2b78f",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/0cc3eb22c3795b2e8cb95d458778973157c2b78f"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/50d83ab188db2b26bf2059956cbedf97f447c43f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/50d83ab188db2b26bf2059956cbedf97f447c43f",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/50d83ab188db2b26bf2059956cbedf97f447c43f",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/50d83ab188db2b26bf2059956cbedf97f447c43f/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "edf2a2f4f43778d7573fb017ea2ca138fe86a0c3",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/edf2a2f4f43778d7573fb017ea2ca138fe86a0c3",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/edf2a2f4f43778d7573fb017ea2ca138fe86a0c3"
+            }
+        ]
+    },
+    {
+        "sha": "edf2a2f4f43778d7573fb017ea2ca138fe86a0c3",
+        "node_id": "C_kwDOBLBVPdoAKGVkZjJhMmY0ZjQzNzc4ZDc1NzNmYjAxN2VhMmNhMTM4ZmU4NmEwYzM",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-28T20:42:54Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T20:51:00Z"
+            },
+            "message": "profile: implement panning of profile\n\nWhen zoomed in, the profile position was moved by hovering with\nthe mouse. What a horrible user experience. This is especially\nuseless if we want to implement an interactive profile on mobile.\n\nInstead, let the user start the panning with a mouse click. The\ncode is somewhat nasty, because the position is given as a\nreal in the [0,1] range, which represents all possible positions\nfrom completely to the left to completely to the right.\n\nThis commit also removes the restriction that the planner handles\ncan only be moved when fully zoomed out. It is not completely\nclear what the implications are. Let's see.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "b2e5ce04e5a2bca7ecefbb571d5db5157d509b54",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/b2e5ce04e5a2bca7ecefbb571d5db5157d509b54"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/edf2a2f4f43778d7573fb017ea2ca138fe86a0c3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/edf2a2f4f43778d7573fb017ea2ca138fe86a0c3",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/edf2a2f4f43778d7573fb017ea2ca138fe86a0c3",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/edf2a2f4f43778d7573fb017ea2ca138fe86a0c3/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0d92ef28355898c81bdcc0187736580e4f094b91",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0d92ef28355898c81bdcc0187736580e4f094b91",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/0d92ef28355898c81bdcc0187736580e4f094b91"
+            }
+        ]
+    },
+    {
+        "sha": "0d92ef28355898c81bdcc0187736580e4f094b91",
+        "node_id": "C_kwDOBLBVPdoAKDBkOTJlZjI4MzU1ODk4YzgxYmRjYzAxODc3MzY1ODBlNGYwOTRiOTE",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-09-03T11:54:52Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T20:49:02Z"
+            },
+            "message": "cleanup: remove unused variable\n\nA QVariant was initialized but never used.\n\nWhile doing so, remove construct/assign pairs of a number of\nQStrings. Directly construct the QStrings with the desired\nvalues.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "aff687561d11110ca7f8cb704e61274807917561",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/aff687561d11110ca7f8cb704e61274807917561"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/0d92ef28355898c81bdcc0187736580e4f094b91",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0d92ef28355898c81bdcc0187736580e4f094b91",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/0d92ef28355898c81bdcc0187736580e4f094b91",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0d92ef28355898c81bdcc0187736580e4f094b91/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4a7ee872f3c7bc6703773023832e333af4d8672a",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/4a7ee872f3c7bc6703773023832e333af4d8672a",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/4a7ee872f3c7bc6703773023832e333af4d8672a"
+            }
+        ]
+    },
+    {
+        "sha": "4a7ee872f3c7bc6703773023832e333af4d8672a",
+        "node_id": "C_kwDOBLBVPdoAKDRhN2VlODcyZjNjN2JjNjcwMzc3MzAyMzgzMmUzMzNhZjRkODY3MmE",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-09-03T08:37:58Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T20:49:02Z"
+            },
+            "message": "cleanup: move minute formating to format-string.cpp\n\nThe get_minutes() function formats a time as m:ss\nand returns a static C-string. Since all callers are\nC++ anyway and transform directly into QString, let us\nmove this to the other string formatting function.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "69df952779bb89612a4eb79acc95853c80fe3af9",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/69df952779bb89612a4eb79acc95853c80fe3af9"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/4a7ee872f3c7bc6703773023832e333af4d8672a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/4a7ee872f3c7bc6703773023832e333af4d8672a",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/4a7ee872f3c7bc6703773023832e333af4d8672a",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/4a7ee872f3c7bc6703773023832e333af4d8672a/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "104793719779f8aaf26e2991b8671c3b6b557235",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/104793719779f8aaf26e2991b8671c3b6b557235",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/104793719779f8aaf26e2991b8671c3b6b557235"
+            }
+        ]
+    },
+    {
+        "sha": "104793719779f8aaf26e2991b8671c3b6b557235",
+        "node_id": "C_kwDOBLBVPdoAKDEwNDc5MzcxOTc3OWY4YWFmMjZlMjk5MWI4NjcxYzNiNmI1NTcyMzU",
+        "commit": {
+            "author": {
+                "name": "Michael Andreen",
+                "email": "michael@andreen.dev",
+                "date": "2022-09-03T08:46:03Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T20:38:34Z"
+            },
+            "message": "user-manual: Update documentation on fixing sensor data\n\nSigned-off-by: Michael Andreen <michael@andreen.dev>",
+            "tree": {
+                "sha": "d4171d989e29392363114cb784218e1900c42f68",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/d4171d989e29392363114cb784218e1900c42f68"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/104793719779f8aaf26e2991b8671c3b6b557235",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/104793719779f8aaf26e2991b8671c3b6b557235",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/104793719779f8aaf26e2991b8671c3b6b557235",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/104793719779f8aaf26e2991b8671c3b6b557235/comments",
+        "author": {
+            "login": "michaelandreen",
+            "id": 48176078,
+            "node_id": "MDQ6VXNlcjQ4MTc2MDc4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48176078?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/michaelandreen",
+            "html_url": "https://github.com/michaelandreen",
+            "followers_url": "https://api.github.com/users/michaelandreen/followers",
+            "following_url": "https://api.github.com/users/michaelandreen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/michaelandreen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/michaelandreen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/michaelandreen/subscriptions",
+            "organizations_url": "https://api.github.com/users/michaelandreen/orgs",
+            "repos_url": "https://api.github.com/users/michaelandreen/repos",
+            "events_url": "https://api.github.com/users/michaelandreen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/michaelandreen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a39e69c497b695d0c45f63af31a1f899376b62cc",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/a39e69c497b695d0c45f63af31a1f899376b62cc",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/a39e69c497b695d0c45f63af31a1f899376b62cc"
+            }
+        ]
+    },
+    {
+        "sha": "a39e69c497b695d0c45f63af31a1f899376b62cc",
+        "node_id": "C_kwDOBLBVPdoAKGEzOWU2OWM0OTdiNjk1ZDBjNDVmNjNhZjMxYTFmODk5Mzc2YjYyY2M",
+        "commit": {
+            "author": {
+                "name": "Michael Andreen",
+                "email": "michael@andreen.dev",
+                "date": "2022-09-02T20:51:19Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-09-03T20:38:34Z"
+            },
+            "message": "Use combo box for moving sensor data\n\nAlso allow editing sensor on a cylinder with already attached sensor.\nThis will swap the sensor data with the cylinder that it is taking the\nsensor data from, removing the need for adding an extra temporary\ncylinder when swapping two sensors.\n\nSigned-off-by: Michael Andreen <michael@andreen.dev>",
+            "tree": {
+                "sha": "c54f7258ccf9d01497f6ef1fb872e35c56ddb9fd",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/c54f7258ccf9d01497f6ef1fb872e35c56ddb9fd"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/a39e69c497b695d0c45f63af31a1f899376b62cc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/a39e69c497b695d0c45f63af31a1f899376b62cc",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/a39e69c497b695d0c45f63af31a1f899376b62cc",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/a39e69c497b695d0c45f63af31a1f899376b62cc/comments",
+        "author": {
+            "login": "michaelandreen",
+            "id": 48176078,
+            "node_id": "MDQ6VXNlcjQ4MTc2MDc4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48176078?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/michaelandreen",
+            "html_url": "https://github.com/michaelandreen",
+            "followers_url": "https://api.github.com/users/michaelandreen/followers",
+            "following_url": "https://api.github.com/users/michaelandreen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/michaelandreen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/michaelandreen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/michaelandreen/subscriptions",
+            "organizations_url": "https://api.github.com/users/michaelandreen/orgs",
+            "repos_url": "https://api.github.com/users/michaelandreen/repos",
+            "events_url": "https://api.github.com/users/michaelandreen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/michaelandreen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "70e43d13a01d1639bcb0394ff8a53f207b4801f2",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/70e43d13a01d1639bcb0394ff8a53f207b4801f2",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/70e43d13a01d1639bcb0394ff8a53f207b4801f2"
+            }
+        ]
+    },
+    {
+        "sha": "70e43d13a01d1639bcb0394ff8a53f207b4801f2",
+        "node_id": "C_kwDOBLBVPdoAKDcwZTQzZDEzYTAxZDE2MzliY2IwMzk0ZmY4YTUzZjIwN2I0ODAxZjI",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T21:32:35Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T21:32:38Z"
+            },
+            "message": "cleanup: show the correct build badges\n\nThis way the github.com/subsurface/subsurface no longer shows incorrect\nbuild failures.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "485df68b682ad0acb864cd68293a378139900d7b",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/485df68b682ad0acb864cd68293a378139900d7b"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/70e43d13a01d1639bcb0394ff8a53f207b4801f2",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/70e43d13a01d1639bcb0394ff8a53f207b4801f2",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/70e43d13a01d1639bcb0394ff8a53f207b4801f2",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/70e43d13a01d1639bcb0394ff8a53f207b4801f2/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "34e169aace73fa2e3851869855818cd8e9e97216",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/34e169aace73fa2e3851869855818cd8e9e97216",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/34e169aace73fa2e3851869855818cd8e9e97216"
+            }
+        ]
+    },
+    {
+        "sha": "34e169aace73fa2e3851869855818cd8e9e97216",
+        "node_id": "C_kwDOBLBVPdoAKDM0ZTE2OWFhY2U3M2ZhMmUzODUxODY5ODU1ODE4Y2Q4ZTllOTcyMTY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2022-08-30T16:48:46Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T20:58:34Z"
+            },
+            "message": "clean up logging, and add error reports to it too\n\nThe SSRF_INFO() macro is widely used, and there's a lot of confusion\nabout whether the newline at the end should be done by the SSRF_INFO or\nbe in the format string passed to it.  End result: we end up doing both,\nand there are empty lines in the output as a result.\n\nClean this up by just using our existing 'strip_mb()' to strip any\nwhitespace at the end of the generated string, and then adding one final\nnewline when logging it.\n\nAlso, make sure to log our 'report_error()' messages, which apparently\nonly used to be showin in the red error bar on the display.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "f5433db3e96dd74830af94847c1b2003cd0b004f",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/f5433db3e96dd74830af94847c1b2003cd0b004f"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/34e169aace73fa2e3851869855818cd8e9e97216",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/34e169aace73fa2e3851869855818cd8e9e97216",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/34e169aace73fa2e3851869855818cd8e9e97216",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/34e169aace73fa2e3851869855818cd8e9e97216/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "42da08df20161bc533a9175fa974ed20ac3939df",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/42da08df20161bc533a9175fa974ed20ac3939df",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/42da08df20161bc533a9175fa974ed20ac3939df"
+            }
+        ]
+    },
+    {
+        "sha": "42da08df20161bc533a9175fa974ed20ac3939df",
+        "node_id": "C_kwDOBLBVPdoAKDQyZGEwOGRmMjAxNjFiYzUzM2E5MTc1ZmE5NzRlZDIwYWMzOTM5ZGY",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T18:54:25Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T20:58:22Z"
+            },
+            "message": "mobile: enable sharing via email\n\nInstead of using the save file dialog (which creates a horrendous user\nexperience - and isn't even supported on Android), simply allow the user\nto email the file in question to a recipient of their choice, e.g.,\nthemselves.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "89b26d96577f3e6577126ac6cdc57d087740d637",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/89b26d96577f3e6577126ac6cdc57d087740d637"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/42da08df20161bc533a9175fa974ed20ac3939df",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/42da08df20161bc533a9175fa974ed20ac3939df",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/42da08df20161bc533a9175fa974ed20ac3939df",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/42da08df20161bc533a9175fa974ed20ac3939df/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f144fa0a1b021713cc34c4840986129f4cb63fda",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/f144fa0a1b021713cc34c4840986129f4cb63fda",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/f144fa0a1b021713cc34c4840986129f4cb63fda"
+            }
+        ]
+    },
+    {
+        "sha": "f144fa0a1b021713cc34c4840986129f4cb63fda",
+        "node_id": "C_kwDOBLBVPdoAKGYxNDRmYTBhMWIwMjE3MTNjYzM0YzQ4NDA5ODYxMjlmNGNiNjNmZGE",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T18:53:02Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T20:58:22Z"
+            },
+            "message": "mobile: allow sharing files via email\n\nThis will allow the user of the mobile app to export dive and dive site\ndata from their mobile device without using the Subsurface cloud.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "18dcab51cebd891328a0324fcb0c19e39b7af1de",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/18dcab51cebd891328a0324fcb0c19e39b7af1de"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/f144fa0a1b021713cc34c4840986129f4cb63fda",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/f144fa0a1b021713cc34c4840986129f4cb63fda",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/f144fa0a1b021713cc34c4840986129f4cb63fda",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/f144fa0a1b021713cc34c4840986129f4cb63fda/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ead15f622a3891794e68bb48974f593d0e767ac5",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/ead15f622a3891794e68bb48974f593d0e767ac5",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/ead15f622a3891794e68bb48974f593d0e767ac5"
+            }
+        ]
+    },
+    {
+        "sha": "ead15f622a3891794e68bb48974f593d0e767ac5",
+        "node_id": "C_kwDOBLBVPdoAKGVhZDE1ZjYyMmEzODkxNzk0ZTY4YmI0ODk3NGY1OTNkMGU3NjdhYzU",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T19:38:40Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T20:58:22Z"
+            },
+            "message": "mobile: remove export as UDDF\n\nThe export functionality is horridly poorly implemented, and the UDDF export\nisn't actually functional on mobile. And why would we support this in the first\nplace? That's not a reasonable expectation for the mobile app.\n\nSo let's just completely remove that and good riddance.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "b733ee5f6c60f7bca28a565f09fa1cc3c06f63e4",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/b733ee5f6c60f7bca28a565f09fa1cc3c06f63e4"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/ead15f622a3891794e68bb48974f593d0e767ac5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/ead15f622a3891794e68bb48974f593d0e767ac5",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/ead15f622a3891794e68bb48974f593d0e767ac5",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/ead15f622a3891794e68bb48974f593d0e767ac5/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "173093d3148445f42ec8ff8f91e648f53b232d46",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/173093d3148445f42ec8ff8f91e648f53b232d46",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/173093d3148445f42ec8ff8f91e648f53b232d46"
+            }
+        ]
+    },
+    {
+        "sha": "173093d3148445f42ec8ff8f91e648f53b232d46",
+        "node_id": "C_kwDOBLBVPdoAKDE3MzA5M2QzMTQ4NDQ1ZjQyZWM4ZmY4ZjkxZTY0OGY1M2IyMzJkNDY",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T20:46:01Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T20:58:22Z"
+            },
+            "message": "Android: correctly check for empty path\n\nThe comparison against the empty string caused things to error out\nwhen only one file was given.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "f0d3f674e5d44c4ae1a3d6bcc9fd94452f592a45",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/f0d3f674e5d44c4ae1a3d6bcc9fd94452f592a45"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/173093d3148445f42ec8ff8f91e648f53b232d46",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/173093d3148445f42ec8ff8f91e648f53b232d46",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/173093d3148445f42ec8ff8f91e648f53b232d46",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/173093d3148445f42ec8ff8f91e648f53b232d46/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6d77d814a877e72e4b9542387d339a8b61feedb4",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/6d77d814a877e72e4b9542387d339a8b61feedb4",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/6d77d814a877e72e4b9542387d339a8b61feedb4"
+            }
+        ]
+    },
+    {
+        "sha": "6d77d814a877e72e4b9542387d339a8b61feedb4",
+        "node_id": "C_kwDOBLBVPdoAKDZkNzdkODE0YTg3N2U3MmU0Yjk1NDIzODdkMzM5YThiNjFmZWVkYjQ",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-29T05:25:21Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-31T20:56:04Z"
+            },
+            "message": "parser: allow import of dive sites without UUID\n\nFixes #3493.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "1f1297b6a52c0704ad67fce6c1b4058d0ba9bae2",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/1f1297b6a52c0704ad67fce6c1b4058d0ba9bae2"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/6d77d814a877e72e4b9542387d339a8b61feedb4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/6d77d814a877e72e4b9542387d339a8b61feedb4",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/6d77d814a877e72e4b9542387d339a8b61feedb4",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/6d77d814a877e72e4b9542387d339a8b61feedb4/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "aa4b48f440e2b5cafaadc821633b128e7e96688e",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/aa4b48f440e2b5cafaadc821633b128e7e96688e",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/aa4b48f440e2b5cafaadc821633b128e7e96688e"
+            }
+        ]
+    },
+    {
+        "sha": "aa4b48f440e2b5cafaadc821633b128e7e96688e",
+        "node_id": "C_kwDOBLBVPdoAKGFhNGI0OGY0NDBlMmI1Y2FmYWFkYzgyMTYzM2IxMjhlN2U5NjY4OGU",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-30T16:13:13Z"
+            },
+            "committer": {
+                "name": "Robert C. Helling",
+                "email": "helling@atdotde.de",
+                "date": "2022-08-30T20:34:38Z"
+            },
+            "message": "core: move floating point functions to own header file\n\nThis were in subsurface-string.h for unknown reasons.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "7df50d724dfd305b1b835ac93658fa7b2286ce6b",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/7df50d724dfd305b1b835ac93658fa7b2286ce6b"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/aa4b48f440e2b5cafaadc821633b128e7e96688e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/aa4b48f440e2b5cafaadc821633b128e7e96688e",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/aa4b48f440e2b5cafaadc821633b128e7e96688e",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/aa4b48f440e2b5cafaadc821633b128e7e96688e/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "atdotde",
+            "id": 863957,
+            "node_id": "MDQ6VXNlcjg2Mzk1Nw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/863957?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/atdotde",
+            "html_url": "https://github.com/atdotde",
+            "followers_url": "https://api.github.com/users/atdotde/followers",
+            "following_url": "https://api.github.com/users/atdotde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/atdotde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/atdotde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/atdotde/subscriptions",
+            "organizations_url": "https://api.github.com/users/atdotde/orgs",
+            "repos_url": "https://api.github.com/users/atdotde/repos",
+            "events_url": "https://api.github.com/users/atdotde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/atdotde/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "61701509b01e805bc262176b53982d8302a85c80",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/61701509b01e805bc262176b53982d8302a85c80",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/61701509b01e805bc262176b53982d8302a85c80"
+            }
+        ]
+    },
+    {
+        "sha": "61701509b01e805bc262176b53982d8302a85c80",
+        "node_id": "C_kwDOBLBVPdoAKDYxNzAxNTA5YjAxZTgwNWJjMjYyMTc2YjUzOTgyZDgzMDJhODVjODA",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-30T15:55:43Z"
+            },
+            "committer": {
+                "name": "Robert C. Helling",
+                "email": "helling@atdotde.de",
+                "date": "2022-08-30T20:34:38Z"
+            },
+            "message": "core: replace IS_FP_SAME macro by inline function\n\nNo reason to keep this as a macro - a function is easier to\nread, type safe and easier to debug. Moreover, give it the\nmore appropriate name \"nearly_equal()\". After all, it precisely\ndoes NOT check floating points for equality.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "931bca6b94502a89b42f02d4ef259f022e6e960f",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/931bca6b94502a89b42f02d4ef259f022e6e960f"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/61701509b01e805bc262176b53982d8302a85c80",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/61701509b01e805bc262176b53982d8302a85c80",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/61701509b01e805bc262176b53982d8302a85c80",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/61701509b01e805bc262176b53982d8302a85c80/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "atdotde",
+            "id": 863957,
+            "node_id": "MDQ6VXNlcjg2Mzk1Nw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/863957?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/atdotde",
+            "html_url": "https://github.com/atdotde",
+            "followers_url": "https://api.github.com/users/atdotde/followers",
+            "following_url": "https://api.github.com/users/atdotde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/atdotde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/atdotde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/atdotde/subscriptions",
+            "organizations_url": "https://api.github.com/users/atdotde/orgs",
+            "repos_url": "https://api.github.com/users/atdotde/repos",
+            "events_url": "https://api.github.com/users/atdotde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/atdotde/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5db4a95a269da3ab85077132ce6bcc17432495b8",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/5db4a95a269da3ab85077132ce6bcc17432495b8",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/5db4a95a269da3ab85077132ce6bcc17432495b8"
+            }
+        ]
+    },
+    {
+        "sha": "5db4a95a269da3ab85077132ce6bcc17432495b8",
+        "node_id": "C_kwDOBLBVPdoAKDVkYjRhOTVhMjY5ZGEzYWI4NTA3NzEzMmNlNmJjYzE3NDMyNDk1Yjg",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-30T15:47:31Z"
+            },
+            "committer": {
+                "name": "Robert C. Helling",
+                "email": "helling@atdotde.de",
+                "date": "2022-08-30T20:34:38Z"
+            },
+            "message": "core: don't use relative precision when comparing to 0\n\nThe FP_IS_SAME macro uses a relative precision to compare\nfloating points. This fails when comparing to 0. Therefore,\nuse an absolute precision in this case. Implement as an\ninline function.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "8481390b64be01fa5bc0d1163bd2c05485840cc1",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/8481390b64be01fa5bc0d1163bd2c05485840cc1"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/5db4a95a269da3ab85077132ce6bcc17432495b8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/5db4a95a269da3ab85077132ce6bcc17432495b8",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/5db4a95a269da3ab85077132ce6bcc17432495b8",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/5db4a95a269da3ab85077132ce6bcc17432495b8/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "atdotde",
+            "id": 863957,
+            "node_id": "MDQ6VXNlcjg2Mzk1Nw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/863957?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/atdotde",
+            "html_url": "https://github.com/atdotde",
+            "followers_url": "https://api.github.com/users/atdotde/followers",
+            "following_url": "https://api.github.com/users/atdotde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/atdotde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/atdotde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/atdotde/subscriptions",
+            "organizations_url": "https://api.github.com/users/atdotde/orgs",
+            "repos_url": "https://api.github.com/users/atdotde/repos",
+            "events_url": "https://api.github.com/users/atdotde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/atdotde/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2ae7f3cf6c9ed1558267b9d137e6467ff5714882",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/2ae7f3cf6c9ed1558267b9d137e6467ff5714882",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/2ae7f3cf6c9ed1558267b9d137e6467ff5714882"
+            }
+        ]
+    },
+    {
+        "sha": "2ae7f3cf6c9ed1558267b9d137e6467ff5714882",
+        "node_id": "C_kwDOBLBVPdoAKDJhZTdmM2NmNmM5ZWQxNTU4MjY3YjlkMTM3ZTY0NjdmZjU3MTQ4ODI",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T17:06:37Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T18:55:54Z"
+            },
+            "message": "Android: make support email API consistent with iOS\n\nWe have two different API endpoints. supportEmail() which adds the\ndefault subject, recipient, and message body, and the generic\nshareViaEmail() which takes all of these as arguments.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "153528384e4200225e0a48555d0586d7feb88fc8",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/153528384e4200225e0a48555d0586d7feb88fc8"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/2ae7f3cf6c9ed1558267b9d137e6467ff5714882",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/2ae7f3cf6c9ed1558267b9d137e6467ff5714882",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/2ae7f3cf6c9ed1558267b9d137e6467ff5714882",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/2ae7f3cf6c9ed1558267b9d137e6467ff5714882/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "87387b7e7ed0bcf177376b3f5b02072f4e0ed096",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/87387b7e7ed0bcf177376b3f5b02072f4e0ed096",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/87387b7e7ed0bcf177376b3f5b02072f4e0ed096"
+            }
+        ]
+    },
+    {
+        "sha": "87387b7e7ed0bcf177376b3f5b02072f4e0ed096",
+        "node_id": "C_kwDOBLBVPdoAKDg3Mzg3YjdlN2VkMGJjZjE3NzM3NmIzZjViMDIwNzJmNGUwZWQwOTY",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T23:46:58Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T16:18:06Z"
+            },
+            "message": "mobile: send logfiles as attachments on iOS as well\n\nThis was added for Android a while ago, but now this works on iOS as well which\nis a very welcome addition for the recipient of these support emails (i.e. me).\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "56211c06ec15fd6e3739ce0ae602a5b898854161",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/56211c06ec15fd6e3739ce0ae602a5b898854161"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/87387b7e7ed0bcf177376b3f5b02072f4e0ed096",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/87387b7e7ed0bcf177376b3f5b02072f4e0ed096",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/87387b7e7ed0bcf177376b3f5b02072f4e0ed096",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/87387b7e7ed0bcf177376b3f5b02072f4e0ed096/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8164ca56ec6ae25fac6a8adaa0001891f2e4eded",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/8164ca56ec6ae25fac6a8adaa0001891f2e4eded",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/8164ca56ec6ae25fac6a8adaa0001891f2e4eded"
+            }
+        ]
+    },
+    {
+        "sha": "8164ca56ec6ae25fac6a8adaa0001891f2e4eded",
+        "node_id": "C_kwDOBLBVPdoAKDgxNjRjYTU2ZWM2YWUyNWZhYzZhOGFkYWEwMDAxODkxZjJlNGVkZWQ",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T23:40:04Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T16:18:06Z"
+            },
+            "message": "iOS: add infrastructure to natively send email\n\nThis will allow us to send attachments, just like we do on Android.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "13e500a4666e7ccf57d9df7e401ab0f60d1cda0d",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/13e500a4666e7ccf57d9df7e401ab0f60d1cda0d"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/8164ca56ec6ae25fac6a8adaa0001891f2e4eded",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/8164ca56ec6ae25fac6a8adaa0001891f2e4eded",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/8164ca56ec6ae25fac6a8adaa0001891f2e4eded",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/8164ca56ec6ae25fac6a8adaa0001891f2e4eded/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0af410d6ced2eb19f35af1d82f08b284cf96a4ca",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0af410d6ced2eb19f35af1d82f08b284cf96a4ca",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/0af410d6ced2eb19f35af1d82f08b284cf96a4ca"
+            }
+        ]
+    },
+    {
+        "sha": "0af410d6ced2eb19f35af1d82f08b284cf96a4ca",
+        "node_id": "C_kwDOBLBVPdoAKDBhZjQxMGQ2Y2VkMmViMTlmMzVhZjFkODJmMDhiMjg0Y2Y5NmE0Y2E",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T23:09:46Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T16:18:06Z"
+            },
+            "message": "iOS: update minimum iOS version to 12.0\n\nNone of the tools we use work with older versions, anyway.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "9cfa9e191ba5848b13c13999bf64f87e79e16c5c",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/9cfa9e191ba5848b13c13999bf64f87e79e16c5c"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/0af410d6ced2eb19f35af1d82f08b284cf96a4ca",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0af410d6ced2eb19f35af1d82f08b284cf96a4ca",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/0af410d6ced2eb19f35af1d82f08b284cf96a4ca",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0af410d6ced2eb19f35af1d82f08b284cf96a4ca/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7801b0c28a51e8e960f854c1e24d909589a0b0f1",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/7801b0c28a51e8e960f854c1e24d909589a0b0f1",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/7801b0c28a51e8e960f854c1e24d909589a0b0f1"
+            }
+        ]
+    },
+    {
+        "sha": "7801b0c28a51e8e960f854c1e24d909589a0b0f1",
+        "node_id": "C_kwDOBLBVPdoAKDc4MDFiMGMyOGE1MWU4ZTk2MGY4NTRjMWUyNGQ5MDk1ODlhMGIwZjE",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T22:39:54Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T16:18:06Z"
+            },
+            "message": "build-system: small changes to the iOS build script\n\nThis makes it marginally easier to deal with debug builds and release builds in\nparallel. The quick builds work most of the time, but not always.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "7f1039b88b05a64d3796c01c25095d6346129794",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/7f1039b88b05a64d3796c01c25095d6346129794"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/7801b0c28a51e8e960f854c1e24d909589a0b0f1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/7801b0c28a51e8e960f854c1e24d909589a0b0f1",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/7801b0c28a51e8e960f854c1e24d909589a0b0f1",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/7801b0c28a51e8e960f854c1e24d909589a0b0f1/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0a4689c2e68df58b3dfc54aeca513af696bc3b26",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0a4689c2e68df58b3dfc54aeca513af696bc3b26",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/0a4689c2e68df58b3dfc54aeca513af696bc3b26"
+            }
+        ]
+    },
+    {
+        "sha": "0a4689c2e68df58b3dfc54aeca513af696bc3b26",
+        "node_id": "C_kwDOBLBVPdoAKDBhNDY4OWMyZTY4ZGY1OGIzZGZjNTRhZWNhNTEzYWY2OTZiYzNiMjY",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T16:51:56Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-30T14:20:33Z"
+            },
+            "message": "Ratio BLE detection fix\n\nFor Ratio dive computers we can't tell by the Bluetooth name which model it is.\nThere are BT only models and BLE only models. The failure case here was a user\non iOS (BLE only) with a BLE only dive computer which we didn't recognize\nbecause previously we returned a BT only device (which isn't supported on an\niPhone), and the lookup won't return a valid descriptor if the transport needed\nisn't available.\n\nThese days BLE is far more common, so return a BLE enabled name by default, but\ntry a BT only name just in case.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "cea1ce38c68cad24f7347f9347a349256054d916",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/cea1ce38c68cad24f7347f9347a349256054d916"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/0a4689c2e68df58b3dfc54aeca513af696bc3b26",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0a4689c2e68df58b3dfc54aeca513af696bc3b26",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/0a4689c2e68df58b3dfc54aeca513af696bc3b26",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/0a4689c2e68df58b3dfc54aeca513af696bc3b26/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8c644547fb7b7ae86aceba58721d8fc69dddfad0",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/8c644547fb7b7ae86aceba58721d8fc69dddfad0",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/8c644547fb7b7ae86aceba58721d8fc69dddfad0"
+            }
+        ]
+    },
+    {
+        "sha": "8c644547fb7b7ae86aceba58721d8fc69dddfad0",
+        "node_id": "C_kwDOBLBVPdoAKDhjNjQ0NTQ3ZmI3YjdhZTg2YWNlYmE1ODcyMWQ4ZmM2OWRkZGZhZDA",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-27T22:18:37Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T02:51:03Z"
+            },
+            "message": "mobile: fix reading of cache dir\n\nFor some reason the flag to exclude . and .. breaks this functionality.\nIt works just fine without that flag, so let's just remove it.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "8e97bfc2c9fbaece624b651cce03fa7944a9066f",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/8e97bfc2c9fbaece624b651cce03fa7944a9066f"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/8c644547fb7b7ae86aceba58721d8fc69dddfad0",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/8c644547fb7b7ae86aceba58721d8fc69dddfad0",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/8c644547fb7b7ae86aceba58721d8fc69dddfad0",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/8c644547fb7b7ae86aceba58721d8fc69dddfad0/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d257a623fa53161369b5b865002a2df6967d6c5a",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/d257a623fa53161369b5b865002a2df6967d6c5a",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/d257a623fa53161369b5b865002a2df6967d6c5a"
+            }
+        ]
+    },
+    {
+        "sha": "d257a623fa53161369b5b865002a2df6967d6c5a",
+        "node_id": "C_kwDOBLBVPdoAKGQyNTdhNjIzZmE1MzE2MTM2OWI1Yjg2NTAwMmEyZGY2OTY3ZDZjNWE",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-27T22:27:29Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-29T02:51:03Z"
+            },
+            "message": "mobile: update version to 3.4.7\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "a0b42eaeafa1c4bd81cd21757f438977c418b31e",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/a0b42eaeafa1c4bd81cd21757f438977c418b31e"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/d257a623fa53161369b5b865002a2df6967d6c5a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/d257a623fa53161369b5b865002a2df6967d6c5a",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/d257a623fa53161369b5b865002a2df6967d6c5a",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/d257a623fa53161369b5b865002a2df6967d6c5a/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7d87815c6907471583553f10ac51e6147b3c014f",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/7d87815c6907471583553f10ac51e6147b3c014f",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/7d87815c6907471583553f10ac51e6147b3c014f"
+            }
+        ]
+    },
+    {
+        "sha": "7d87815c6907471583553f10ac51e6147b3c014f",
+        "node_id": "C_kwDOBLBVPdoAKDdkODc4MTVjNjkwNzQ3MTU4MzU1M2YxMGFjNTFlNjE0N2IzYzAxNGY",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-28T16:02:14Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-28T20:34:13Z"
+            },
+            "message": "cleanup: remove BOOST_FOREACH from list of foreach-macros\n\nNot a single use of that and if there was - it should be removed.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "1498a327b885cc1e69237db9aa22eb0e8b3f967d",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/1498a327b885cc1e69237db9aa22eb0e8b3f967d"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/7d87815c6907471583553f10ac51e6147b3c014f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/7d87815c6907471583553f10ac51e6147b3c014f",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/7d87815c6907471583553f10ac51e6147b3c014f",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/7d87815c6907471583553f10ac51e6147b3c014f/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f3221c69653b5c97093fa04d38954ce8230f88f7",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/f3221c69653b5c97093fa04d38954ce8230f88f7",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/f3221c69653b5c97093fa04d38954ce8230f88f7"
+            }
+        ]
+    },
+    {
+        "sha": "f3221c69653b5c97093fa04d38954ce8230f88f7",
+        "node_id": "C_kwDOBLBVPdoAKGYzMjIxYzY5NjUzYjVjOTcwOTNmYTA0ZDM4OTU0Y2U4MjMwZjg4Zjc",
+        "commit": {
+            "author": {
+                "name": "Berthold Stoeger",
+                "email": "bstoeger@mail.tuwien.ac.at",
+                "date": "2022-08-28T15:44:49Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2022-08-28T20:34:13Z"
+            },
+            "message": "cleanup: remove unused function set_dive_nr_for_current_dive()\n\nLast caller was removed in a6fa6cdb41.\n\nSigned-off-by: Berthold Stoeger <bstoeger@mail.tuwien.ac.at>",
+            "tree": {
+                "sha": "d5ab15661292ae2317e4b817bc8a585df0e4fee8",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/trees/d5ab15661292ae2317e4b817bc8a585df0e4fee8"
+            },
+            "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/git/commits/f3221c69653b5c97093fa04d38954ce8230f88f7",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/f3221c69653b5c97093fa04d38954ce8230f88f7",
+        "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/f3221c69653b5c97093fa04d38954ce8230f88f7",
+        "comments_url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/f3221c69653b5c97093fa04d38954ce8230f88f7/comments",
+        "author": {
+            "login": "bstoeger",
+            "id": 32835590,
+            "node_id": "MDQ6VXNlcjMyODM1NTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32835590?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bstoeger",
+            "html_url": "https://github.com/bstoeger",
+            "followers_url": "https://api.github.com/users/bstoeger/followers",
+            "following_url": "https://api.github.com/users/bstoeger/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bstoeger/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bstoeger/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bstoeger/subscriptions",
+            "organizations_url": "https://api.github.com/users/bstoeger/orgs",
+            "repos_url": "https://api.github.com/users/bstoeger/repos",
+            "events_url": "https://api.github.com/users/bstoeger/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bstoeger/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6a2b7cc924a4b6e0120112dffeeb9158f5739170",
+                "url": "https://api.github.com/repos/torvalds/subsurface-for-dirk/commits/6a2b7cc924a4b6e0120112dffeeb9158f5739170",
+                "html_url": "https://github.com/torvalds/subsurface-for-dirk/commit/6a2b7cc924a4b6e0120112dffeeb9158f5739170"
+            }
+        ]
+    }
+]

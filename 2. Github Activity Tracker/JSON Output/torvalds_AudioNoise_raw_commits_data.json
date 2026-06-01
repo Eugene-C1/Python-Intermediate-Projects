@@ -1,0 +1,2462 @@
+[
+    {
+        "sha": "55561561d85d947e434b6e8d5205cb8e9a38cd10",
+        "node_id": "C_kwDOQ2ZvzNoAKDU1NTYxNTYxZDg1ZDk0N2U0MzRiNmU4ZDUyMDVjYjhlOWEzOGNkMTA",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-07T16:16:35Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-08T17:16:00Z"
+            },
+            "message": "Effect interface update\n\nThis updates the effects to the form my microcontroller project is\ncurrently using:\n\n - move the effects headers into a 'audio' subdirectory\n\n - use a more complete 'struct effect' model with pot descriptors\n\n - updated and extended math helper routines\n\nThis updates a few core effects, brings a few others in from the\nmicrocontroller code (boost / pitch), and removes some others that were\neither pointless (fm/am signal generation) or didn't sound great or\nweren't very educational (pll / growlingbass / distortion / tube).\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c403012e26319e2080749f7466f2910f7071a5ae",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/c403012e26319e2080749f7466f2910f7071a5ae"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/55561561d85d947e434b6e8d5205cb8e9a38cd10",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/55561561d85d947e434b6e8d5205cb8e9a38cd10",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/55561561d85d947e434b6e8d5205cb8e9a38cd10",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/55561561d85d947e434b6e8d5205cb8e9a38cd10/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6a6daef2f4d724f5f36a610f66db9644c0173771",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/6a6daef2f4d724f5f36a610f66db9644c0173771",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/6a6daef2f4d724f5f36a610f66db9644c0173771"
+            }
+        ]
+    },
+    {
+        "sha": "6a6daef2f4d724f5f36a610f66db9644c0173771",
+        "node_id": "C_kwDOQ2ZvzNoAKDZhNmRhZWYyZjRkNzI0ZjVmMzZhNjEwZjY2ZGI5NjQ0YzAxNzM3NzE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-02-26T18:49:12Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-02-26T18:49:12Z"
+            },
+            "message": "Add \"chasing tone\" effect\n\nAll great guitarists have at some point wondered \"what would it sound\nlike if I was accompanied by a scurry of insane chipmunks - with tiny\ntiny bagpipes?\"\n\nJimi Hendrix wondered.  The closest he ever came was the Roger Mayer\nOctavia together with the Univox Uni-Vibe, and he turned to drugs to\nfill that empty spot in his soul from never having found that perfect\ntone.\n\nAnd Plato spent five years in a cave - it wasn't an allegory - together\nwith a family of chipmunks, trying to teach them to play the bagpipes in\norder to find true knowledge and understanding.  He too failed in his\nsearch for that perfect tone, and ended up giving up on electric guitar\nentirely.  Today known mainly for his philosophy, with few sources even\nmentioning his bloody hands from trying to sew tiny tiny bagpipes.\n\nWonder no more.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "698d3e1f95c810ebadbbb589db361b17b492e779",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/698d3e1f95c810ebadbbb589db361b17b492e779"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/6a6daef2f4d724f5f36a610f66db9644c0173771",
+            "comment_count": 2,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/6a6daef2f4d724f5f36a610f66db9644c0173771",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/6a6daef2f4d724f5f36a610f66db9644c0173771",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/6a6daef2f4d724f5f36a610f66db9644c0173771/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3a6b51032da587e5d2e269515f3dc21c96da15c4",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/3a6b51032da587e5d2e269515f3dc21c96da15c4",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/3a6b51032da587e5d2e269515f3dc21c96da15c4"
+            }
+        ]
+    },
+    {
+        "sha": "3a6b51032da587e5d2e269515f3dc21c96da15c4",
+        "node_id": "C_kwDOQ2ZvzNoAKDNhNmI1MTAzMmRhNTg3ZTVkMmUyNjk1MTVmM2RjMjFjOTZkYTE1YzQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-25T11:07:56Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-25T17:38:39Z"
+            },
+            "message": "growlingbass: fix abs() confusion, use fabsf()\n\nI've made the mistake of using abs instead of fabs, here is a quick fix.\n\n[ Updated to fix both places, and also to use 'fabsf()' which is the\n  proper one that avoids double conversions - not relevant on a real\n  computer, but visible on microcontrollers with hardware support only\n  for 32-bit floats  - Linus ]\n\nSigned-off-by: Philippe Strauss <catseyechandra@proton.me>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "4f6b9cd9ac7a6cf5f3dd12faaeb42ca60a224b82",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/4f6b9cd9ac7a6cf5f3dd12faaeb42ca60a224b82"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/3a6b51032da587e5d2e269515f3dc21c96da15c4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/3a6b51032da587e5d2e269515f3dc21c96da15c4",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/3a6b51032da587e5d2e269515f3dc21c96da15c4",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/3a6b51032da587e5d2e269515f3dc21c96da15c4/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4c8b6fae7cf144b9fdf093d7faf13c160718fb02",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/4c8b6fae7cf144b9fdf093d7faf13c160718fb02",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/4c8b6fae7cf144b9fdf093d7faf13c160718fb02"
+            }
+        ]
+    },
+    {
+        "sha": "4c8b6fae7cf144b9fdf093d7faf13c160718fb02",
+        "node_id": "C_kwDOQ2ZvzNoAKDRjOGI2ZmFlN2NmMTQ0YjlmZGYwOTNkN2ZhZjEzYzE2MDcxOGZiMDI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-25T17:26:14Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-25T17:26:14Z"
+            },
+            "message": "warn about implicit floating point to integer conversions\n\nThis got disabled when I had to disable '-Wdouble-promotion' due to it\nbeing practically unavoidable with variadic functions.\n\nBut while '-Wdouble-promotion' wasn't practical, I should have kept\n'-Wfloat-conversion' around.\n\nYes, it requires a few manual casts for out hacky 'pow()' usage that\nI'll need to fix for the actual real-time microcontroller case, but\nthose are good to have anyway, not the unavoidable issue with the\ncalling conventions.\n\nThat makes a couple of bugs in the growlingbass implementation obvious.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "92311e86b5ed4f0b281ad70885d813af7eb2348f",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/92311e86b5ed4f0b281ad70885d813af7eb2348f"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/4c8b6fae7cf144b9fdf093d7faf13c160718fb02",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/4c8b6fae7cf144b9fdf093d7faf13c160718fb02",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/4c8b6fae7cf144b9fdf093d7faf13c160718fb02",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/4c8b6fae7cf144b9fdf093d7faf13c160718fb02/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "e5593818ba670ae21b87dac7c53a06c40b3676c2",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/e5593818ba670ae21b87dac7c53a06c40b3676c2",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/e5593818ba670ae21b87dac7c53a06c40b3676c2"
+            }
+        ]
+    },
+    {
+        "sha": "e5593818ba670ae21b87dac7c53a06c40b3676c2",
+        "node_id": "C_kwDOQ2ZvzNoAKGU1NTkzODE4YmE2NzBhZTIxYjg3ZGFjN2M1M2EwNmM0MGIzNjc2YzI",
+        "commit": {
+            "author": {
+                "name": "Philippe Strauss",
+                "email": "catseyechandra@proton.me",
+                "date": "2026-01-22T18:54:07Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-22T19:36:37Z"
+            },
+            "message": "Add 'growlingbass' effect\n\nA growling/purring bass effect with a sign flip one period over two for\nsubharmonic generation and split odd/even order distorsion.\n\nSimpler than what has been discussed on github repos and very effective.\n\nSigned-off-by: Philippe Strauss <catseyechandra@proton.me>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "826ee671257b937c559995f1e285e54012f83a53",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/826ee671257b937c559995f1e285e54012f83a53"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/e5593818ba670ae21b87dac7c53a06c40b3676c2",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/e5593818ba670ae21b87dac7c53a06c40b3676c2",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/e5593818ba670ae21b87dac7c53a06c40b3676c2",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/e5593818ba670ae21b87dac7c53a06c40b3676c2/comments",
+        "author": {
+            "login": "phstrauss",
+            "id": 19881509,
+            "node_id": "MDQ6VXNlcjE5ODgxNTA5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19881509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/phstrauss",
+            "html_url": "https://github.com/phstrauss",
+            "followers_url": "https://api.github.com/users/phstrauss/followers",
+            "following_url": "https://api.github.com/users/phstrauss/following{/other_user}",
+            "gists_url": "https://api.github.com/users/phstrauss/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/phstrauss/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/phstrauss/subscriptions",
+            "organizations_url": "https://api.github.com/users/phstrauss/orgs",
+            "repos_url": "https://api.github.com/users/phstrauss/repos",
+            "events_url": "https://api.github.com/users/phstrauss/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/phstrauss/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f434a0e28a64664b7281fd99b21109ff562eefaa",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/f434a0e28a64664b7281fd99b21109ff562eefaa",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/f434a0e28a64664b7281fd99b21109ff562eefaa"
+            }
+        ]
+    },
+    {
+        "sha": "f434a0e28a64664b7281fd99b21109ff562eefaa",
+        "node_id": "C_kwDOQ2ZvzNoAKGY0MzRhMGUyOGE2NDY2NGI3MjgxZmQ5OWIyMTEwOWZmNTYyZWVmYWE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-22T19:33:07Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-22T19:33:07Z"
+            },
+            "message": "Add random 'tube' model\n\nIt's broken and has only a very fleeting association with anything that\nwould be a tube, but I'm committing it just as an example and 'something\nlike this'.  I'm pretty sure I'm doing very wrong things with the FIR\nfilter, but it works (modulo that random multiplier hack) with at least\none amplifier impulse file (converted to raw format).\n\nAnd when I say \"works\", I mean \"makes something that sounds like\nguitar\".  I'm not sure the sound actually matches what it should sound\nlike, and how much that FIR thing really matters.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "7af94a8660758785ad6ebc25dfd463cfade4085f",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/7af94a8660758785ad6ebc25dfd463cfade4085f"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/f434a0e28a64664b7281fd99b21109ff562eefaa",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/f434a0e28a64664b7281fd99b21109ff562eefaa",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/f434a0e28a64664b7281fd99b21109ff562eefaa",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/f434a0e28a64664b7281fd99b21109ff562eefaa/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ea71138dee02b17df108889acbd7e686ba645b78",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ea71138dee02b17df108889acbd7e686ba645b78",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/ea71138dee02b17df108889acbd7e686ba645b78"
+            }
+        ]
+    },
+    {
+        "sha": "ea71138dee02b17df108889acbd7e686ba645b78",
+        "node_id": "C_kwDOQ2ZvzNoAKGVhNzExMzhkZWUwMmIxN2RmMTA4ODg5YWNiZDdlNjg2YmE2NDViNzg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-18T03:18:26Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-18T03:18:26Z"
+            },
+            "message": "convert: add somewhat realtime control interface\n\nThis is pretty raw and stupid, but I wanted to try changing the\nconversion parameters on the fly with a \"control file descriptor\".\n\nThis is currently very limited, and doesn't have an interface for\nswitching the effect itself at runtime (like I do on the hardware:\nlong-press the foot-switch for one second), but at least allows for\nsending \"pot commands\" to change the pot values dynamically.\n\nThe format is a five-byte ASCII packet of 'pXYY\\n', which sets put X to\nvalue YY (X being in the range '0'..'3', and YY being '00'..'99').\n\nWhy that format? Because right now the only testing I've done is from\nthe terminal, doing something like this:\n\n    $ ./convert --control=0 phaser input.raw |\n                aplay -c1 -r 48000 -f s32 -B 100\n\nand then you can just type in those commands at the terminal by hand:\nthe \"--control=0\" is the magic that says that fd 0 is a control channel.\n\nVery combersome, very stupid, but hey, it works.\n\nNote that I'm back to using 'aplay' for this, because with ffplay the\nlatency is absolutely horrible.  Something like three seconds of audio\nlater does any pot command take effect, because ffplay has slurped in a\nlot of data into its input buffers.\n\nIn contrast, with 'aplay', the effect is basically instantaneous,\nparticularly with that \"-B 100\" that keeps the buffering to a very\nreasonable 100ms.\n\nIf there is a flag for ffplay that makes it not buffer input very much,\nI haven't found it (and yes, I tried the obvious ones, but no, I didn't\ndo any exhaustive search since aplay works fine for me).\n\nIt should be very possible to wrap a UI around this, and I should also\nadd some command to switch the effect at runtime too.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "a1818f0f194e58092778e6381fd5cc3d890eb643",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/a1818f0f194e58092778e6381fd5cc3d890eb643"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/ea71138dee02b17df108889acbd7e686ba645b78",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ea71138dee02b17df108889acbd7e686ba645b78",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/ea71138dee02b17df108889acbd7e686ba645b78",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ea71138dee02b17df108889acbd7e686ba645b78/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431"
+            }
+        ]
+    },
+    {
+        "sha": "4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431",
+        "node_id": "C_kwDOQ2ZvzNoAKDRjZmJiMDRjYmJjMWUzMGMzNmJhYjMzMzFmM2ZhOTVhMDdiOWI0MzE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T23:46:30Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T23:46:30Z"
+            },
+            "message": "convert: start parsing arguments more flexibly\n\nIn particular, allow default pot values (all at noon), and specifying\ninput and output files rather than always doing stdin/stdout.\n\nAnd no, this is still not all that smart, but it is at least a tiny bit\nmore flexible than it used to be, and the Makefile has been updated\naccordingly.\n\nAlso, when F_SETPIPE_SZ is available, use it to limit the buffering of\nthe output if it's a pipe.  That, together with the very limited\nbuffering by 'make_one_noise()' should make this somewhat real-time if\nthe target i sreading a pipe and doesn't have huge input buffers.\n\nPut another way: if I add interfaces to modify the pots concurrently,\nthat hopefully actually takes effect in a timely way.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "1988a27e330836376575e6c62e03f3de4a4cdfa6",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/1988a27e330836376575e6c62e03f3de4a4cdfa6"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/4cfbb04cbbc1e30c36bab3331f3fa95a07b9b431/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "316f25590aedd94bbc1d0855d5d6c135251c4503",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/316f25590aedd94bbc1d0855d5d6c135251c4503",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/316f25590aedd94bbc1d0855d5d6c135251c4503"
+            }
+        ]
+    },
+    {
+        "sha": "316f25590aedd94bbc1d0855d5d6c135251c4503",
+        "node_id": "C_kwDOQ2ZvzNoAKDMxNmYyNTU5MGFlZGQ5NGJiYzFkMDg1NWQ1ZDZjMTM1MjUxYzQ1MDM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T22:55:42Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T22:55:42Z"
+            },
+            "message": "Update effect definition interface\n\nAdd a 'description' callback for printing pot meaning, and pass the pot\nvalues as an array to it and to the init function.\n\nThis makes the interface a bit cleaner, but also means that we can now\nuse the same structure as the RP2354A hardware does: call the '->init'\nfunction multiple times as the pots may change during playback.\n\nThe pots don't actually change during playback - yet - but this starts\nthe restructuring.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "15623053ee0c8848eb3060e03c3e61417d52d477",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/15623053ee0c8848eb3060e03c3e61417d52d477"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/316f25590aedd94bbc1d0855d5d6c135251c4503",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/316f25590aedd94bbc1d0855d5d6c135251c4503",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/316f25590aedd94bbc1d0855d5d6c135251c4503",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/316f25590aedd94bbc1d0855d5d6c135251c4503/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1d00ac1a92caf4d134bfe7aa0e6559747877e351",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/1d00ac1a92caf4d134bfe7aa0e6559747877e351",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/1d00ac1a92caf4d134bfe7aa0e6559747877e351"
+            }
+        ]
+    },
+    {
+        "sha": "1d00ac1a92caf4d134bfe7aa0e6559747877e351",
+        "node_id": "C_kwDOQ2ZvzNoAKDFkMDBhYzFhOTJjYWY0ZDEzNGJmZTdhYTBlNjU1OTc0Nzg3N2UzNTE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T21:12:54Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T21:12:54Z"
+            },
+            "message": "Refactor visualize.py to use native sample units and improve slider\n\nDynamically visualize the X axis in different modes, making the raw\nsample data the core internal data.  This is similar to how we format\nthe Y axis.\n\n - Switch internal logic (view updates, data loading, panning) from\n   seconds to sample indices (integers) to match the underlying data\n   structure\n\n - Add 'Samples' vs 'Time' X-axis mode toggle using RadioButtons\n\n - Update X-axis FuncFormatter to display either integer samples or\n   seconds based on selected mode\n\n - Overhaul slider logic to dynamically switch ranges and formats:\n    - In Time mode: Range [0, Duration Seconds], Format '%.3f s'\n    - In Samples mode: Range [0, Max Samples], Format '%d'\n\n - Make the slider be a range slider rather than just showing where the\n   current audio window plot starts\n\nThis was more antigravity with hand-holding and some manual edits.\n\nAlso just update the initial window size to the full audio size (ok,\nstill limited to one hour), since it's now no longer a performance issue\nat least with the test file I have.  Knock wood.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "269c40ca0373743a59e4c9e59749a5774c028f81",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/269c40ca0373743a59e4c9e59749a5774c028f81"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/1d00ac1a92caf4d134bfe7aa0e6559747877e351",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/1d00ac1a92caf4d134bfe7aa0e6559747877e351",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/1d00ac1a92caf4d134bfe7aa0e6559747877e351",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/1d00ac1a92caf4d134bfe7aa0e6559747877e351/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ed2e0c158af2f9fa572e667378e89cecb2fb9561",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ed2e0c158af2f9fa572e667378e89cecb2fb9561",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/ed2e0c158af2f9fa572e667378e89cecb2fb9561"
+            }
+        ]
+    },
+    {
+        "sha": "ed2e0c158af2f9fa572e667378e89cecb2fb9561",
+        "node_id": "C_kwDOQ2ZvzNoAKGVkMmUwYzE1OGFmMmY5ZmE1NzJlNjY3Mzc4ZTg5Y2VjYjJmYjk1NjE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T19:16:14Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T19:16:14Z"
+            },
+            "message": "Optimize visualize.py for large datasets\n\nSpeed up plotting (courtesy of antigravity) to the point where you can\nreasonably zoom out to fairly long audio files:\n\n - Implement downsampling based on MAX_PLOT_POINTS to avoid\n   over-plotting massive datasets\n\n - Pre-allocate time axis and index buffers to eliminate transient\n   float allocations during zoom/scroll operations\n\n - Use in-place numpy operations for coordinate generation\n\n - Remove arbitrary MAX_WIDTH_SEC limit and instead clamp zoom\n   to the actual data duration\n\n - Fix backwards compatibility issue with np.linspace by using\n   np.copyto and a pre-computed index buffer\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "51495dd14c4432acd16fba6e57ba75895087f39b",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/51495dd14c4432acd16fba6e57ba75895087f39b"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/ed2e0c158af2f9fa572e667378e89cecb2fb9561",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ed2e0c158af2f9fa572e667378e89cecb2fb9561",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/ed2e0c158af2f9fa572e667378e89cecb2fb9561",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ed2e0c158af2f9fa572e667378e89cecb2fb9561/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "33b66fa9084bfbf1787f4663b72dc0652d831697",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/33b66fa9084bfbf1787f4663b72dc0652d831697",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/33b66fa9084bfbf1787f4663b72dc0652d831697"
+            }
+        ]
+    },
+    {
+        "sha": "33b66fa9084bfbf1787f4663b72dc0652d831697",
+        "node_id": "C_kwDOQ2ZvzNoAKDMzYjY2ZmE5MDg0YmZiZjE3ODdmNDY2M2I3MmRjMDY1MmQ4MzE2OTc",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T19:11:15Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T19:11:15Z"
+            },
+            "message": "tests: clean up naming and update gitignore file\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "a59d2739d1903841477430fc020537174cf58ec3",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/a59d2739d1903841477430fc020537174cf58ec3"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/33b66fa9084bfbf1787f4663b72dc0652d831697",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/33b66fa9084bfbf1787f4663b72dc0652d831697",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/33b66fa9084bfbf1787f4663b72dc0652d831697",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/33b66fa9084bfbf1787f4663b72dc0652d831697/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6"
+            }
+        ]
+    },
+    {
+        "sha": "c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6",
+        "node_id": "C_kwDOQ2ZvzNoAKGMwNWIwM2NkZjNkYTBkMDA1YmNjYTEwNmUxZTNiYjRkNjI0ZmMyYTY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T18:08:33Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T18:08:33Z"
+            },
+            "message": "Get rid of too random \"helper\" functions, tweak pot behavior\n\nLet's avoid the fastpow() helpers as much as possible, because they end\nup acting too randomly outside their proper ranges.\n\nI'll have to come up with something better for actual hardware, but for\nnow, let's pretend that we have a good \"pow2()\" function, and make it do\nthe exact thing for simulation for now.\n\nAnd for frequencies, where we don't want a linear function (because\nhuman hearing response is basically logarithmic) let's use a helper\nmacro that gives reasonable values: 220Hz to 6.5kHz with the pot\ncentered giving exactly 1kHz.  A simple cubic function gives a somewhat\nreasonable curve.\n\nThis all makes the pot values much less random.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "574a48d343f6d5bd7e0342a09c7324088583b771",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/574a48d343f6d5bd7e0342a09c7324088583b771"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/c05b03cdf3da0d005bcca106e1e3bb4d624fc2a6/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ca23617ddd4879c84aa65228891f0a25a3e6e21f",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ca23617ddd4879c84aa65228891f0a25a3e6e21f",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/ca23617ddd4879c84aa65228891f0a25a3e6e21f"
+            }
+        ]
+    },
+    {
+        "sha": "ca23617ddd4879c84aa65228891f0a25a3e6e21f",
+        "node_id": "C_kwDOQ2ZvzNoAKGNhMjM2MTdkZGQ0ODc5Yzg0YWE2NTIyODg5MWYwYTI1YTNlNmUyMWY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T01:29:29Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T01:29:29Z"
+            },
+            "message": "Add verification of fastsincos() results\n\nSince I noticed I had gotten the cos part wrong, let's just make sure it\ndoesn't happen again.\n\nAlso a good idea to verify the conversion to fixed point.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "236a9685a0dbf04e849bf8d4aa0e7e6f6b733b8b",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/236a9685a0dbf04e849bf8d4aa0e7e6f6b733b8b"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/ca23617ddd4879c84aa65228891f0a25a3e6e21f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ca23617ddd4879c84aa65228891f0a25a3e6e21f",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/ca23617ddd4879c84aa65228891f0a25a3e6e21f",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ca23617ddd4879c84aa65228891f0a25a3e6e21f/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "677ff907685b564beb5cbc1be3d70f4e51a5a8c7",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/677ff907685b564beb5cbc1be3d70f4e51a5a8c7",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/677ff907685b564beb5cbc1be3d70f4e51a5a8c7"
+            }
+        ]
+    },
+    {
+        "sha": "677ff907685b564beb5cbc1be3d70f4e51a5a8c7",
+        "node_id": "C_kwDOQ2ZvzNoAKDY3N2ZmOTA3Njg1YjU2NGJlYjVjYmMxYmUzZDcwZjRlNTFhNWE4Yzc",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T00:04:49Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-17T00:04:49Z"
+            },
+            "message": "Fix the 'cos' part of fastsincos\n\nThe linear interpolation was just broken, and I had never noticed.  It\ninterpolates between the wrong indexes when it reverses the phase for\nthe cosine part.  I had tested the code, but the errors were small\nenough to not be glaringly obvious because this is all just \"fix the\nvalues in between the table lookup entries\".\n\nFixing it takes the max error down from 4.5 digits to 5.3 digits (so\naccuracy goes from about 15 to about 18 bits), and _maybe_ that might\nshow in some instability in the biquad calculations, but it's likely all\nentirely in the noise.\n\nNoticed not because of any numerical errors, but when going \"Hmm\" when\nconverting this all to pure fixed point math.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "5d7e2f3893ce15b4b3c7617f8322a0c118fb7818",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/5d7e2f3893ce15b4b3c7617f8322a0c118fb7818"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/677ff907685b564beb5cbc1be3d70f4e51a5a8c7",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/677ff907685b564beb5cbc1be3d70f4e51a5a8c7",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/677ff907685b564beb5cbc1be3d70f4e51a5a8c7",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/677ff907685b564beb5cbc1be3d70f4e51a5a8c7/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "60f199a1eb40e76649dff0d5db65ec5cf9a763c5",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/60f199a1eb40e76649dff0d5db65ec5cf9a763c5",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/60f199a1eb40e76649dff0d5db65ec5cf9a763c5"
+            }
+        ]
+    },
+    {
+        "sha": "60f199a1eb40e76649dff0d5db65ec5cf9a763c5",
+        "node_id": "C_kwDOQ2ZvzNoAKDYwZjE5OWExZWI0MGU3NjY0OWRmZjBkNWRiNjVlYzVjZjlhNzYzYzU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-16T17:33:31Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-16T17:33:31Z"
+            },
+            "message": "Fix bad phaser pot ranges\n\nThe phaser pot ranges were bad, and resulted in attempting a max\nfrequency of 100kHz at the extreme range, which obviously doesn't work\nat all for audio.  It was a combination of \"extreme octave range for\ntesting on a noisy airplane\" and just not thinking too much about the\ncenter frequency in the first place.\n\nMake the pot ranges less crazy.  They are still entirely arbitrary, but\nat least the extreme frequencies should now be within the audio range.\n\nFixes #59\n\nReported-by: Akihiko Shirai (@kaitas)\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "85503d74f8cfd2b2c22949f268eff111a6fcf444",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/85503d74f8cfd2b2c22949f268eff111a6fcf444"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/60f199a1eb40e76649dff0d5db65ec5cf9a763c5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/60f199a1eb40e76649dff0d5db65ec5cf9a763c5",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/60f199a1eb40e76649dff0d5db65ec5cf9a763c5",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/60f199a1eb40e76649dff0d5db65ec5cf9a763c5/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4"
+            }
+        ]
+    },
+    {
+        "sha": "745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4",
+        "node_id": "C_kwDOQ2ZvzNoAKDc0NWU3OWIwZWYyNzlkOThhZThmMmVmNDUwYmY3ZDdiOWFiYjEzZjQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T23:12:32Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T23:12:32Z"
+            },
+            "message": "Update visualize.py: use raw int32 data, just scale the Y axis\n\nNot only should this be more efficient by not unnecessarily converting\nthe underlying data, but it makes it easy to visualize the data any\nwhich way you want.\n\nAdd a radio button to pick between \"Raw\" data (hex representation),\n\"Scaled\" (the -1 ..  1 floating point range that we use interally) or\n\"Volt\" (for an approximation of the actual signal level voltage).\n\nThe \"Volt\" mode is now the default, and assumes that the signal we're\nviewing is basically a line level signal at 1 Vrms (aka \"0 dBV\").\nThat's what the TAC5112 unbalanced full-range input is (and my signal\ngenerator and oscilloscope agrees).\n\n[ This was a mix of Google Antigravity and me ]\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "4ed29f305f2809174ab72e48c325191d9c3ba6ed",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/4ed29f305f2809174ab72e48c325191d9c3ba6ed"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/745e79b0ef279d98ae8f2ef450bf7d7b9abb13f4/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d76b3178cd87b5b689671f4fb4b2d504fe716072",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/d76b3178cd87b5b689671f4fb4b2d504fe716072",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/d76b3178cd87b5b689671f4fb4b2d504fe716072"
+            }
+        ]
+    },
+    {
+        "sha": "d76b3178cd87b5b689671f4fb4b2d504fe716072",
+        "node_id": "C_kwDOQ2ZvzNoAKGQ3NmIzMTc4Y2Q4N2I1YjY4OTY3MWY0ZmI0YjJkNTA0ZmU3MTYwNzI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T18:49:32Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T18:49:32Z"
+            },
+            "message": "Clean up integer type system a bit, and prep for extensions\n\nI had started out using 'uint' because that came from the pico sdk and\nseemed to be common there, but it's a horrible type that doesn't really\nspecify the size and is just a lazy form of the standard types.\n\nAnd for historical reasons I despise 'uint32_t' and friends: it may be\nuniversal now, but it used to be one of those things where system\nheaders didn't reliably have them, so you ended up with #ifdef's to do\nyour own versions anyway, and it was all just unnecessarily painful.\n\nSo I'm ornery, but I'm used to the kernel types that are nice and short\nand simple: 'u32' and friends.  Let's just use them.\n\nAnd because the target hardware (RP2354A with dual Cortex-M33 cores)\nshould have a fast 32x32->64 integer multiply with accumulate, I'm\nconsidering doing some fixed-point ops in paths where the 32-bit floats\naren't necessary, and would avoid the type conversion overheads.\n\nSo I'm adding the s64/u64 types too in preparation for that.  It's\npossible that I should just do all of the LFO as 32-bit fractional\nintegers (it already largely is).\n\nMaybe even use fixed-point for the biquad code, which is what the\nTAC5112 does internally.  That would give higher precision than using\nfloats thanks to a bigger mantissa, but with the caveat that the range\nwould be very limited and would require a lot of care.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "1c234a78f97fab040dbba4d3628909b4e36f8ca0",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/1c234a78f97fab040dbba4d3628909b4e36f8ca0"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/d76b3178cd87b5b689671f4fb4b2d504fe716072",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/d76b3178cd87b5b689671f4fb4b2d504fe716072",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/d76b3178cd87b5b689671f4fb4b2d504fe716072",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/d76b3178cd87b5b689671f4fb4b2d504fe716072/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f"
+            }
+        ]
+    },
+    {
+        "sha": "2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f",
+        "node_id": "C_kwDOQ2ZvzNoAKDJhNGYxOTEwMmUyYWY5YjY3YjM2Zjk2YjBiNmMzODM5ZDBjMWZlOWY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T01:21:24Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T01:21:24Z"
+            },
+            "message": "Add first cut at some noise gate logic\n\nIt's hardcoded in order to not depend on pots that are then used for the\nreal effects.\n\nPut another way: this is more a conceptual thing that a real proper\nnoise gate.  But I have ported this to the RP2354A board and tested it\non real hardware with a guitar, and it doesn't cause popping for me and\ndoes do something.\n\nBut that's obviously because it's been tuned for that setup, so YMMV.\nPopping noises were definitely heard with an earlier broken approach.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "664e64ba674284c589d37dd0cf139852f68d94ce",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/664e64ba674284c589d37dd0cf139852f68d94ce"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/2a4f19102e2af9b67b36f96b0b6c3839d0c1fe9f/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6c5947a3029770494a230987d364b13cf2578e43",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/6c5947a3029770494a230987d364b13cf2578e43",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/6c5947a3029770494a230987d364b13cf2578e43"
+            }
+        ]
+    },
+    {
+        "sha": "6c5947a3029770494a230987d364b13cf2578e43",
+        "node_id": "C_kwDOQ2ZvzNoAKDZjNTk0N2EzMDI5NzcwNDk0YTIzMDk4N2QzNjRiMTNjZjI1NzhlNDM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T01:13:11Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-15T01:13:11Z"
+            },
+            "message": "Abstract out the initial and final integer sample processing\n\nThis is partly just to clean the code up, but partly to also do the\nsignal magnitude processing independently of the 'magnitude' effect, and\ndo it using cheap integer operations at the initial sample processing\nstage.\n\nThe reason for that is that I'll do at least a noise gate.  Maybe a\ncompressor.\n\n[ NOTE! This decay is intentionally much more aggressive than the\n  previous random decay was, so the 'magnitude' effect is *not*\n  identical to the old one.\n\n  Both old and new decays are just random values, they don't have any\n  real meaning, this new 60ms one was what I picked when I was testing\n  some noise gating. The noise gate part I'm still thinking about ]\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "904534e06c7d3294797771431ff06ccc2f66a6c4",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/904534e06c7d3294797771431ff06ccc2f66a6c4"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/6c5947a3029770494a230987d364b13cf2578e43",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/6c5947a3029770494a230987d364b13cf2578e43",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/6c5947a3029770494a230987d364b13cf2578e43",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/6c5947a3029770494a230987d364b13cf2578e43/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "cc47b99f07dbf371db02d289b543c29dc17dc088",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/cc47b99f07dbf371db02d289b543c29dc17dc088",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/cc47b99f07dbf371db02d289b543c29dc17dc088"
+            }
+        ]
+    },
+    {
+        "sha": "cc47b99f07dbf371db02d289b543c29dc17dc088",
+        "node_id": "C_kwDOQ2ZvzNoAKGNjNDdiOTlmMDdkYmYzNzFkYjAyZDI4OWI1NDNjMjlkYzE3ZGMwODg",
+        "commit": {
+            "author": {
+                "name": "The Hand",
+                "email": "nikolaiflaukowski@gmail.com",
+                "date": "2026-01-12T18:21:52Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T16:41:55Z"
+            },
+            "message": "Add a distortion/overdrive effect with clipping modes and tone control\n\nParameters:\n\n - pot1: drive/gain (1x - 50x)\n - pot2: tone filter cutoff (1kHz - 10kHz)\n - pot3: output level (0 - 100%)\n - pot4: mode (0-0.33 = soft, 0.33-0.66 = hard, 0.66-1 = asymmetric)\n\nUses the existing biquad LPF for tone control.  Asymmetric mode\napproximates tube-amp even-harmonic distortion.\n\nSigned-off-by: The Hand <nikolaiflaukowski@gmail.com>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "b1cca22bbfe71baef319cc943785b391036b9b76",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/b1cca22bbfe71baef319cc943785b391036b9b76"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/cc47b99f07dbf371db02d289b543c29dc17dc088",
+            "comment_count": 1,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/cc47b99f07dbf371db02d289b543c29dc17dc088",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/cc47b99f07dbf371db02d289b543c29dc17dc088",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/cc47b99f07dbf371db02d289b543c29dc17dc088/comments",
+        "author": {
+            "login": "flaukowski",
+            "id": 41301908,
+            "node_id": "MDQ6VXNlcjQxMzAxOTA4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41301908?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/flaukowski",
+            "html_url": "https://github.com/flaukowski",
+            "followers_url": "https://api.github.com/users/flaukowski/followers",
+            "following_url": "https://api.github.com/users/flaukowski/following{/other_user}",
+            "gists_url": "https://api.github.com/users/flaukowski/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/flaukowski/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/flaukowski/subscriptions",
+            "organizations_url": "https://api.github.com/users/flaukowski/orgs",
+            "repos_url": "https://api.github.com/users/flaukowski/repos",
+            "events_url": "https://api.github.com/users/flaukowski/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/flaukowski/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "14d82b4a372f62e7f19cb57de856ac1901f94d08",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/14d82b4a372f62e7f19cb57de856ac1901f94d08",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/14d82b4a372f62e7f19cb57de856ac1901f94d08"
+            }
+        ]
+    },
+    {
+        "sha": "14d82b4a372f62e7f19cb57de856ac1901f94d08",
+        "node_id": "C_kwDOQ2ZvzNoAKDE0ZDgyYjRhMzcyZjYyZTdmMTljYjU3ZGU4NTZhYzE5MDFmOTRkMDg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T07:03:43Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T07:03:43Z"
+            },
+            "message": "Fix flanger debug output printing wrong values\n\nBoth the delay and feedback printouts were wrong due to excessive\ncut-and-paste and some random changes over time.\n\n@NickFlach reported the feedback case, but apparently missed that\nthe delay value printout was also wrong ;)\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2187ad0dc6d255b9abb77be5e26cca3aba84d423",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/2187ad0dc6d255b9abb77be5e26cca3aba84d423"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/14d82b4a372f62e7f19cb57de856ac1901f94d08",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/14d82b4a372f62e7f19cb57de856ac1901f94d08",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/14d82b4a372f62e7f19cb57de856ac1901f94d08",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/14d82b4a372f62e7f19cb57de856ac1901f94d08/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "384d05685966fae1d8eb3e39b32ad58b959c42ed",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/384d05685966fae1d8eb3e39b32ad58b959c42ed",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/384d05685966fae1d8eb3e39b32ad58b959c42ed"
+            }
+        ]
+    },
+    {
+        "sha": "384d05685966fae1d8eb3e39b32ad58b959c42ed",
+        "node_id": "C_kwDOQ2ZvzNoAKDM4NGQwNTY4NTk2NmZhZTFkOGViM2UzOWIzMmFkNThiOTU5YzQyZWQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T06:59:43Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T06:59:43Z"
+            },
+            "message": "Don't use the \"canonical\" biquad direct form 2\n\nIt may be canonical, and use less state, but testing does seem to show\nthat the floating point instability is a very real issue.  When testing\na low-pass filter on some loads, DF2 caused nasty extra noise.\n\nMaybe there are mitigations for it, but since DF1 worked better for the\nphaser too, let's just give up entirely on supporting both forms and\npurely use DF1.  It's not really noticeably more expensive, and clearly\nbehaves better.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "4cdc1beab706e25abb285262ba4a6885e7f34c0a",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/4cdc1beab706e25abb285262ba4a6885e7f34c0a"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/384d05685966fae1d8eb3e39b32ad58b959c42ed",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/384d05685966fae1d8eb3e39b32ad58b959c42ed",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/384d05685966fae1d8eb3e39b32ad58b959c42ed",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/384d05685966fae1d8eb3e39b32ad58b959c42ed/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f5fab490ef4b3ce60aa158837b3cf7999cf38fae",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/f5fab490ef4b3ce60aa158837b3cf7999cf38fae",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/f5fab490ef4b3ce60aa158837b3cf7999cf38fae"
+            }
+        ]
+    },
+    {
+        "sha": "f5fab490ef4b3ce60aa158837b3cf7999cf38fae",
+        "node_id": "C_kwDOQ2ZvzNoAKGY1ZmFiNDkwZWY0YjNjZTYwYWExNTg4MzdiM2NmNzk5OWNmMzhmYWU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T06:58:49Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T06:58:49Z"
+            },
+            "message": "Fix final float -> int conversion overflow\n\nThe final conversion from float to s32 does\n\n\tsample = (int)(out * 0x80000000);\n\nand that overflows for 1.0, turning it into the most negative integer\nnumber.\n\nI could just make the thing multiply by 0x7ffffffff instead, and miss\nout on turning -1 to that most negative number, but I think the best\nmodel is to just explicitly check for overflow by testing the sign of\nthe float vs the resulting integer.\n\nThat deals with any small overflow outside the [-1,1] range too, which\nallows the effects to be a bit lazy if they want to (although gross\noverflow could then result in the sign overflowing \"twice\" and not be\ncaught, so effects shouldn't be *too* lazy).\n\nThis may explain some crackling in anything that ended up doing the full\nFP range (although you really should try to avoid that anyway).\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "601da50d60589f4f6b419d06c3d146246edadf6d",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/601da50d60589f4f6b419d06c3d146246edadf6d"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/f5fab490ef4b3ce60aa158837b3cf7999cf38fae",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/f5fab490ef4b3ce60aa158837b3cf7999cf38fae",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/f5fab490ef4b3ce60aa158837b3cf7999cf38fae",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/f5fab490ef4b3ce60aa158837b3cf7999cf38fae/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ca5a27447cfe6373f608242b60936e1be6abf378",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ca5a27447cfe6373f608242b60936e1be6abf378",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/ca5a27447cfe6373f608242b60936e1be6abf378"
+            }
+        ]
+    },
+    {
+        "sha": "ca5a27447cfe6373f608242b60936e1be6abf378",
+        "node_id": "C_kwDOQ2ZvzNoAKGNhNWEyNzQ0N2NmZTYzNzNmNjA4MjQyYjYwOTM2ZTFiZTZhYmYzNzg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T06:57:08Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-14T06:57:08Z"
+            },
+            "message": "Add LFO sinewave verification test\n\nIt's slow, so don't run it unless you change the implementation.  It\nsingle-steps the LFO, so a cycle is the full 2**32 steps, and checks out\nsinewave approximation against the proper math.h sin() values.\n\nThe 256-entry lookup table with linear interpolation is good to about 16\nbits of precision.  None of the users really care about it being a\nperfect sinusoid, so that's more than good enough.  But let's at least\nverify it.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "93c6f6dccadb891e77242cfa8e870c4f199fb2b1",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/93c6f6dccadb891e77242cfa8e870c4f199fb2b1"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/ca5a27447cfe6373f608242b60936e1be6abf378",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ca5a27447cfe6373f608242b60936e1be6abf378",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/ca5a27447cfe6373f608242b60936e1be6abf378",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ca5a27447cfe6373f608242b60936e1be6abf378/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2865c62810323030691c642f9980c63aba9bfdb9",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/2865c62810323030691c642f9980c63aba9bfdb9",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/2865c62810323030691c642f9980c63aba9bfdb9"
+            }
+        ]
+    },
+    {
+        "sha": "2865c62810323030691c642f9980c63aba9bfdb9",
+        "node_id": "C_kwDOQ2ZvzNoAKDI4NjVjNjI4MTAzMjMwMzA2OTFjNjQyZjk5ODBjNjNhYmE5YmZkYjk",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T20:39:59Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T20:39:59Z"
+            },
+            "message": "Add amplitude-modulation signal generator\n\nThis is exactly the same as the fm effect, just for amplitude modulation\ninstead.  And like the fm effect, it ignores its input and just acts as\na signal generator, mainly to generate test-cases for other effects.\n\n[ Side note: I think I've successfully picked a super-annoying AM sound.\n  Making dissonant sounds seems to be my super power ]\n\nPut another way: this is useless, except I'm still thinking about doing\na noise gate / compressor thing, and I want to have an input signal for\nthat.\n\nPlus I'm reading a paper [1] about spice models for vacuum tube\namplifiers, and am possibly considering some kind of vacuum tube pre-amp\nemulation thing.  Ridiculous, I know, but that's kind of the point of\nthis whole project.  I'm not doing this for any *sane* reasons.\n\nLink: https://leachlegacy.ece.gatech.edu/papers/tubeamp/tubeamp.pdf [1]\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "19e5e8d2fdbd2fbde022f16e495c424d23901987",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/19e5e8d2fdbd2fbde022f16e495c424d23901987"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/2865c62810323030691c642f9980c63aba9bfdb9",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/2865c62810323030691c642f9980c63aba9bfdb9",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/2865c62810323030691c642f9980c63aba9bfdb9",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/2865c62810323030691c642f9980c63aba9bfdb9/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "42910d66336602c76a2e31043b9fc0529e79ef2f",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/42910d66336602c76a2e31043b9fc0529e79ef2f",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/42910d66336602c76a2e31043b9fc0529e79ef2f"
+            }
+        ]
+    },
+    {
+        "sha": "42910d66336602c76a2e31043b9fc0529e79ef2f",
+        "node_id": "C_kwDOQ2ZvzNoAKDQyOTEwZDY2MzM2NjAyYzc2YTJlMzEwNDNiOWZjMDUyOWU3OWVmMmY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T18:38:14Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T18:38:14Z"
+            },
+            "message": "Fix 'discont' effect potentiometer behavior\n\nI messed up when I imported the discont effect from the RP2354A code: I\nhad gone back-and-forth in that repo on just how much you could change\nthe pitch, alternating between \"arbitrary\", \"by semitones\" and \"fixed to\nfourths, fifths and octaves\".\n\nWhen I then moved the code over to this simulation repo, I decided to go\nback to \"arbitrary\", and that people could just make the pot value\nnegative, so that you could just go down an octave by doing\n\n    ./discont -1 ....\n\nThat was technically true, but it means that now if I want to test\nthings on the RP2354A hardware after being happy with it in simulation,\nI'll always have to mess with this potentiometer mapping.\n\nSo go back to the assumption that the pot values should primarily be\nfloating point values in the range [0,1], and that 0 means \"one octave\ndown\" and 1 means \"one octave up\" (approximately, because we're using\nthat quick-and-dirty very inexact fastpow2_m1() function).\n\nSo now it takes the pot value, and multiplies it by two and subtracts\none to get the \"power of two\". Thus turning [0,1] into [-1,1].\n\nIn simulations, you can still use negative values if you want, so that\n(if we had a better 'pow2()' approximation) you could do\n\n    ./discont -0.5 ...\n\nto go down two octaves, or use '2' to go up three octaves).\n\nThe actual pitch shifting does actually work for those kinds of ranges,\nbut fastpow2_m1() does not, so currently a pot value outside 0..1 gives\npretty nonsensical actual step values.  Replace 'fastpow2_m1(x)' with\n'pow(2.0,x)-1' if you want to play silly games with a silly effect.\n\n[ And again, just to clarify: the \"pitch shifting\" of the discont.h\n  effect is really not anything like a real pitch shift. It's walking\n  the delay line at non-unity speeds to speed up or slow down the\n  signal, and then abruptly jumping back or forward to catch up to real\n  time.\n\n  It then tries to hide those discontinuities from the jumping around by\n  using two different delays and mixing them together with the\n  discontinuity points faded away, which is why the effect is called\n  \"discont\" ]\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "9721545452395d373327f66c825b87cdcc1e1e5c",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/9721545452395d373327f66c825b87cdcc1e1e5c"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/42910d66336602c76a2e31043b9fc0529e79ef2f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/42910d66336602c76a2e31043b9fc0529e79ef2f",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/42910d66336602c76a2e31043b9fc0529e79ef2f",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/42910d66336602c76a2e31043b9fc0529e79ef2f/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8ed0acc8e25713a7268847050e7cecb6b8bdc7b6",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/8ed0acc8e25713a7268847050e7cecb6b8bdc7b6",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/8ed0acc8e25713a7268847050e7cecb6b8bdc7b6"
+            }
+        ]
+    },
+    {
+        "sha": "8ed0acc8e25713a7268847050e7cecb6b8bdc7b6",
+        "node_id": "C_kwDOQ2ZvzNoAKDhlZDBhY2M4ZTI1NzEzYTcyNjg4NDcwNTBlN2NlY2I2YjhiZGM3YjY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T03:00:38Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T03:00:38Z"
+            },
+            "message": "Use ffplay instead of aplay, and allow python override\n\n'aplay' may be the simple - and very traditional and old - way to play\naudio files on Linux, but if you are on some other platform it's\napparently odd.  Fair enough.\n\nSo let's use 'ffplay' by default instead, since we already use 'ffmpeg'\nfor the format conversion.  It may be a more complex command line, but\nit's related to the tool we already use.\n\nFor similar reasons, make the python interpreter a variable that can be\neasily overridden.\n\nReported-by: @zeelsheladiya\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "23752cdb3b18dd1fa0227a46d23db9c3b17c3808",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/23752cdb3b18dd1fa0227a46d23db9c3b17c3808"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/8ed0acc8e25713a7268847050e7cecb6b8bdc7b6",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/8ed0acc8e25713a7268847050e7cecb6b8bdc7b6",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/8ed0acc8e25713a7268847050e7cecb6b8bdc7b6",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/8ed0acc8e25713a7268847050e7cecb6b8bdc7b6/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3202fdf917633c69760f7a6a1342f669fbeefd8f",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/3202fdf917633c69760f7a6a1342f669fbeefd8f",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/3202fdf917633c69760f7a6a1342f669fbeefd8f"
+            }
+        ]
+    },
+    {
+        "sha": "3202fdf917633c69760f7a6a1342f669fbeefd8f",
+        "node_id": "C_kwDOQ2ZvzNoAKDMyMDJmZGY5MTc2MzNjNjk3NjBmN2E2YTEzNDJmNjY5ZmJlZWZkOGY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T01:54:42Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-13T01:54:42Z"
+            },
+            "message": "Fix math library linking causing link errors for 'gensin'\n\nThe Makefile used LDFLAGS to set \"-lm\" to link in the math library for\nthe 'sin()' function use in gensin.c.  That is wrong, and causes the\n'-lm' to be too early in the implicit executable rule, resulting in\npotentially undefined references at link time.\n\nIt just happened to work for me even with the wrong placement of the\nlinker flag.  The reason is simply that my build environment used\ndynamic linking for the math library, which brings in all of libm.so\nregardless of what functions you use.\n\nA static link that only brings in the actually used functions would then\nnot have seen the use of 'sin()' (yet) and then the wrong placement\ncauses\n\n    gensin.c: undefined reference to `sin'\n\nFix it by using the proper Makefile variable for the math library:\nLDLIBS.\n\nReported-by: Max McEvoy <maxmcevoy@gmail.com>\nReported-by: Thomas <thomas.blakely@gmx.com>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "504045a297849f7ff3eabbef9639fd47a9606ef3",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/504045a297849f7ff3eabbef9639fd47a9606ef3"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/3202fdf917633c69760f7a6a1342f669fbeefd8f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/3202fdf917633c69760f7a6a1342f669fbeefd8f",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/3202fdf917633c69760f7a6a1342f669fbeefd8f",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/3202fdf917633c69760f7a6a1342f669fbeefd8f/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "71b256a7fcb0aa1250625f79838ab71b2b77b9ff",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/71b256a7fcb0aa1250625f79838ab71b2b77b9ff",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/71b256a7fcb0aa1250625f79838ab71b2b77b9ff"
+            }
+        ]
+    },
+    {
+        "sha": "71b256a7fcb0aa1250625f79838ab71b2b77b9ff",
+        "node_id": "C_kwDOQ2ZvzNoAKDcxYjI1NmE3ZmNiMGFhMTI1MDYyNWY3OTgzOGFiNzFiMmI3N2I5ZmY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-09T02:29:05Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-09T02:29:05Z"
+            },
+            "message": "Add README and LICENSE file\n\nI'm pushing it out to github not because it needs to be public, but\nbecause of my policy of using the internet as my backups.  And because\nit makes it so much easier to just sync between machines.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "534c0a0587879feaf191a91741411a229f32f14a",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/git/trees/534c0a0587879feaf191a91741411a229f32f14a"
+            },
+            "url": "https://api.github.com/repos/torvalds/AudioNoise/git/commits/71b256a7fcb0aa1250625f79838ab71b2b77b9ff",
+            "comment_count": 1,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/71b256a7fcb0aa1250625f79838ab71b2b77b9ff",
+        "html_url": "https://github.com/torvalds/AudioNoise/commit/71b256a7fcb0aa1250625f79838ab71b2b77b9ff",
+        "comments_url": "https://api.github.com/repos/torvalds/AudioNoise/commits/71b256a7fcb0aa1250625f79838ab71b2b77b9ff/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ccee991ac88ecc2373667a43251d4e384403a52b",
+                "url": "https://api.github.com/repos/torvalds/AudioNoise/commits/ccee991ac88ecc2373667a43251d4e384403a52b",
+                "html_url": "https://github.com/torvalds/AudioNoise/commit/ccee991ac88ecc2373667a43251d4e384403a52b"
+            }
+        ]
+    }
+]

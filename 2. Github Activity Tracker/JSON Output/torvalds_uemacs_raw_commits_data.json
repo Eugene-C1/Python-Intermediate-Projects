@@ -1,0 +1,2467 @@
+[
+    {
+        "sha": "1c1b25ef723c952ca557cb5ff6d8db159ef1d4bc",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjFjMWIyNWVmNzIzYzk1MmNhNTU3Y2I1ZmY2ZDhkYjE1OWVmMWQ0YmM=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2021-03-30T16:53:34Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2021-03-30T16:53:34Z"
+            },
+            "message": "increase size of lock table\n\nWhen editing lots of files, the lock table size can become a limit.\n\nIncrease it to be HUGE.\n\nNobody should *ever* use this silly editor in this day and age any more.\nI just can't seem to unlearn my finger memory, and it's easier for me to\ndo these stupid small fixes than it is to figure out how to do key\nremapping in some saner editor.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "803539adb4bef2efa955516d9e8c2beb18f407a6",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/803539adb4bef2efa955516d9e8c2beb18f407a6"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/1c1b25ef723c952ca557cb5ff6d8db159ef1d4bc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/1c1b25ef723c952ca557cb5ff6d8db159ef1d4bc",
+        "html_url": "https://github.com/torvalds/uemacs/commit/1c1b25ef723c952ca557cb5ff6d8db159ef1d4bc",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/1c1b25ef723c952ca557cb5ff6d8db159ef1d4bc/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1cdcf9df88144049750116e36fe20c8c39fa2517",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/1cdcf9df88144049750116e36fe20c8c39fa2517",
+                "html_url": "https://github.com/torvalds/uemacs/commit/1cdcf9df88144049750116e36fe20c8c39fa2517"
+            }
+        ]
+    },
+    {
+        "sha": "1cdcf9df88144049750116e36fe20c8c39fa2517",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjFjZGNmOWRmODgxNDQwNDk3NTAxMTZlMzZmZTIwYzhjMzlmYTI1MTc=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-07-19T18:00:13Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-07-19T18:05:23Z"
+            },
+            "message": "Allow bigger filenames\n\nNot that I know why. 80-character filename limits are kind of cute.\n\nJoerg suggested _POSIX_PATH_MAX, which is almost certainly the right\nvalue.  But that's bigger than HUGE:\n\n   #define HUGE    1000           /* Huge number                  */\n\nwhich obviously means we shouldn't go quite *that* extreme.\n\nRemember, we come from the days when it was hard to do allocations\nlarger than 64kB.   We have limits, dammit.\n\n\"256 bytes is enough for anybody\"\n\nReported-by: Joerg Scheurich <mufti11@web.de>\nSigned-off-by: Linus Torvalds <torvalds@linux-coundation.org>",
+            "tree": {
+                "sha": "50c1e6a066fb2e0bbdcd0560825ba534cbd040b8",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/50c1e6a066fb2e0bbdcd0560825ba534cbd040b8"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/1cdcf9df88144049750116e36fe20c8c39fa2517",
+            "comment_count": 2,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/1cdcf9df88144049750116e36fe20c8c39fa2517",
+        "html_url": "https://github.com/torvalds/uemacs/commit/1cdcf9df88144049750116e36fe20c8c39fa2517",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/1cdcf9df88144049750116e36fe20c8c39fa2517/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5a28f14096c3f2e548cdf6bcfd008930e6a4e733",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/5a28f14096c3f2e548cdf6bcfd008930e6a4e733",
+                "html_url": "https://github.com/torvalds/uemacs/commit/5a28f14096c3f2e548cdf6bcfd008930e6a4e733"
+            }
+        ]
+    },
+    {
+        "sha": "5a28f14096c3f2e548cdf6bcfd008930e6a4e733",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjVhMjhmMTQwOTZjM2YyZTU0OGNkZjZiY2ZkMDA4OTMwZTZhNGU3MzM=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-07-19T17:55:19Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-07-19T17:57:30Z"
+            },
+            "message": "Use _GNU_SOURCE instead of _BSD_SOURCE and _SYSV_SOURCE\n\nuemacs uses a lot of legacy stuff, which causes warnings with newer\ntoolchains.\n\nThis makes it build reasonably warning-free.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "a2bc970321b267b58fbac6dd0024b05ad32dc030",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/a2bc970321b267b58fbac6dd0024b05ad32dc030"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/5a28f14096c3f2e548cdf6bcfd008930e6a4e733",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/5a28f14096c3f2e548cdf6bcfd008930e6a4e733",
+        "html_url": "https://github.com/torvalds/uemacs/commit/5a28f14096c3f2e548cdf6bcfd008930e6a4e733",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/5a28f14096c3f2e548cdf6bcfd008930e6a4e733/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9be85a9b60677acc8f8c6da048a0c08e67e172f8",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/9be85a9b60677acc8f8c6da048a0c08e67e172f8",
+                "html_url": "https://github.com/torvalds/uemacs/commit/9be85a9b60677acc8f8c6da048a0c08e67e172f8"
+            }
+        ]
+    },
+    {
+        "sha": "9be85a9b60677acc8f8c6da048a0c08e67e172f8",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjliZTg1YTliNjA2NzdhY2M4ZjhjNmRhMDQ4YTBjMDhlNjdlMTcyZjg=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-07-19T17:44:44Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-07-19T17:57:30Z"
+            },
+            "message": "Do some valgrind cleanup\n\nJoerg Scheurich reported that there's a buffer overflow in readin() for\nlong path component names. He's not wrong.\n\nWhen fixing that, and then checking there's nothing else obviously wrong\nwith valgrind, I also noticed it complains about overlapping strcpy().\n\nSo add a hacky version of strscpy(), which (a) handles overlapping, and\n(b) has the proper strscpy() semantics.\n\nJust say no to strncpy and strlcpy, both of which are terminally broken\ninterfaces.\n\nAnd stop stripping the binary.  The time when the size of the uemacs\nbinary was a big deal is long past, and it made valgrind harder.\n\nReported-by: Joerg Scheurich <mufti11@web.de>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2b4c9a8129ac8d3921196f553905a0008fd49d0c",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/2b4c9a8129ac8d3921196f553905a0008fd49d0c"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/9be85a9b60677acc8f8c6da048a0c08e67e172f8",
+            "comment_count": 2,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/9be85a9b60677acc8f8c6da048a0c08e67e172f8",
+        "html_url": "https://github.com/torvalds/uemacs/commit/9be85a9b60677acc8f8c6da048a0c08e67e172f8",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/9be85a9b60677acc8f8c6da048a0c08e67e172f8/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "31a16c0ccab9a4b69c79920244b9c623bee7bffe",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/31a16c0ccab9a4b69c79920244b9c623bee7bffe",
+                "html_url": "https://github.com/torvalds/uemacs/commit/31a16c0ccab9a4b69c79920244b9c623bee7bffe"
+            }
+        ]
+    },
+    {
+        "sha": "31a16c0ccab9a4b69c79920244b9c623bee7bffe",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjMxYTE2YzBjY2FiOWE0YjY5Yzc5OTIwMjQ0YjljNjIzYmVlN2JmZmU=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-01-17T22:28:13Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-01-17T22:28:13Z"
+            },
+            "message": "Merge branch 'experimental'\n\nI'm not entirely happy with the new paragraph heuristics, but I've been\nusing them for a while and have grown used to them and have grown to\nrely on the behavior.  Since there probably aren't all that many other\npeople who use uemacs, let's just merge that behavior and see if anybody\nelse even notices.\n\nThe \"NBSP to SP on keyboard input\" is similarly convenient to me, and\nmight be offensive to others.  Let's see.\n\n* experimental:\n  Turn NBSP into regular SP on input\n  Try updated rule for \"is new paragraph\"\n  Make some minor code legibility changes",
+            "tree": {
+                "sha": "e40c375a5191a36e24bf5e4408e2edba440ab012",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/e40c375a5191a36e24bf5e4408e2edba440ab012"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/31a16c0ccab9a4b69c79920244b9c623bee7bffe",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/31a16c0ccab9a4b69c79920244b9c623bee7bffe",
+        "html_url": "https://github.com/torvalds/uemacs/commit/31a16c0ccab9a4b69c79920244b9c623bee7bffe",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/31a16c0ccab9a4b69c79920244b9c623bee7bffe/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8841922689769960fa074fbb053cb8507f2f3ed9",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/8841922689769960fa074fbb053cb8507f2f3ed9",
+                "html_url": "https://github.com/torvalds/uemacs/commit/8841922689769960fa074fbb053cb8507f2f3ed9"
+            },
+            {
+                "sha": "59df78a7806764586e084eafd0842f43a741037a",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/59df78a7806764586e084eafd0842f43a741037a",
+                "html_url": "https://github.com/torvalds/uemacs/commit/59df78a7806764586e084eafd0842f43a741037a"
+            }
+        ]
+    },
+    {
+        "sha": "59df78a7806764586e084eafd0842f43a741037a",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjU5ZGY3OGE3ODA2NzY0NTg2ZTA4NGVhZmQwODQyZjQzYTc0MTAzN2E=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2017-03-18T01:23:04Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2017-03-18T01:23:04Z"
+            },
+            "message": "Turn NBSP into regular SP on input\n\nParticularly pasting from a web browser, I get a lot of 'space' +\n'non-breaking space' noise, and keeping the &nbsp as an actual unicode\ncharacter ends up being a major pain.\n\nNote: this is only done on input.  If the file contains the unicode\ncharacter U+00A0, we'll keep it that way.  But you can't enter it from\nthe keyboard (or cut-and-paste, which ends up looking like keyboard\ninput).\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "e40c375a5191a36e24bf5e4408e2edba440ab012",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/e40c375a5191a36e24bf5e4408e2edba440ab012"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/59df78a7806764586e084eafd0842f43a741037a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/59df78a7806764586e084eafd0842f43a741037a",
+        "html_url": "https://github.com/torvalds/uemacs/commit/59df78a7806764586e084eafd0842f43a741037a",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/59df78a7806764586e084eafd0842f43a741037a/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b",
+                "html_url": "https://github.com/torvalds/uemacs/commit/34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b"
+            }
+        ]
+    },
+    {
+        "sha": "34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjM0ZmFhMTRlMzRjM2ViMmRmZTNmZDJjYWQwMjgyNmYxMmYwMGVjNWI=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2016-10-02T23:07:57Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2016-10-02T23:07:57Z"
+            },
+            "message": "Try updated rule for \"is new paragraph\"\n\nThis makes non-alphabetic characters at the beginning be a mark of a\nparagraph.  That's probably bogus, but let's try how it works.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "33e10f6aea81f131c4a225ebb7b14bf552806a9d",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/33e10f6aea81f131c4a225ebb7b14bf552806a9d"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b",
+        "html_url": "https://github.com/torvalds/uemacs/commit/34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/34faa14e34c3eb2dfe3fd2cad02826f12f00ec5b/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d861ad1bd06f20f505c99314c8d9004d13cb6625",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/d861ad1bd06f20f505c99314c8d9004d13cb6625",
+                "html_url": "https://github.com/torvalds/uemacs/commit/d861ad1bd06f20f505c99314c8d9004d13cb6625"
+            }
+        ]
+    },
+    {
+        "sha": "d861ad1bd06f20f505c99314c8d9004d13cb6625",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmQ4NjFhZDFiZDA2ZjIwZjUwNWM5OTMxNGM4ZDkwMDRkMTNjYjY2MjU=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2016-10-02T19:41:51Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2016-10-02T23:07:14Z"
+            },
+            "message": "Make some minor code legibility changes\n\nI'm going to play around with the whole \"paragraph ends here\" logic, but\nthe way it used to be written made that hard.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "d2e98a74c34ab261966d8c360c42cd1cd178c08b",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/d2e98a74c34ab261966d8c360c42cd1cd178c08b"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/d861ad1bd06f20f505c99314c8d9004d13cb6625",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/d861ad1bd06f20f505c99314c8d9004d13cb6625",
+        "html_url": "https://github.com/torvalds/uemacs/commit/d861ad1bd06f20f505c99314c8d9004d13cb6625",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/d861ad1bd06f20f505c99314c8d9004d13cb6625/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8841922689769960fa074fbb053cb8507f2f3ed9",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/8841922689769960fa074fbb053cb8507f2f3ed9",
+                "html_url": "https://github.com/torvalds/uemacs/commit/8841922689769960fa074fbb053cb8507f2f3ed9"
+            }
+        ]
+    },
+    {
+        "sha": "8841922689769960fa074fbb053cb8507f2f3ed9",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1Ojg4NDE5MjI2ODk3Njk5NjBmYTA3NGZiYjA1M2NiODUwN2YyZjNlZDk=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2014-12-08T22:53:04Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2014-12-08T22:53:04Z"
+            },
+            "message": "Don't use 'char' for number of lines\n\nHeh.  My new UHD monitor makes it easy to have more than 127 lines of\ntext.  I guess the 'char' could be an unsigned char, but quite frankly,\ntrying to save a couple of bytes per open editor window seems a bit\nexcessive these days.  So just make it 'int'.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "65f97aec1079a6814d48198fea787f51cb77e83b",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/65f97aec1079a6814d48198fea787f51cb77e83b"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/8841922689769960fa074fbb053cb8507f2f3ed9",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/8841922689769960fa074fbb053cb8507f2f3ed9",
+        "html_url": "https://github.com/torvalds/uemacs/commit/8841922689769960fa074fbb053cb8507f2f3ed9",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/8841922689769960fa074fbb053cb8507f2f3ed9/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fa00fe882f719351fdf7a4c4100baf4f3eab4d61",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/fa00fe882f719351fdf7a4c4100baf4f3eab4d61",
+                "html_url": "https://github.com/torvalds/uemacs/commit/fa00fe882f719351fdf7a4c4100baf4f3eab4d61"
+            }
+        ]
+    },
+    {
+        "sha": "fa00fe882f719351fdf7a4c4100baf4f3eab4d61",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmZhMDBmZTg4MmY3MTkzNTFmZGY3YTRjNDEwMGJhZjRmM2VhYjRkNjE=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2013-02-22T22:32:16Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2013-02-22T22:32:16Z"
+            },
+            "message": "Stop using 'short' for line and allocation sizes\n\nYes, yes, it probably made sense 30 years ago as a way to save a tiny\namount of memory, but especially when interspersed in structures that\nhave pointers (aligned to 64 bits these days), it's not even saving\nmemory today.  And it makes us fail in nasty ways when looking at files\nwith long lines.\n\nSo just make them 'int'.  And if you have a line that is longer than\n2GB, you only have yourself to blame.  I no longer care.\n\nIn case anybody care, the \"test-case\" for this was a lovely UDDF file\nwith a binary divecomputer dump encoded as an XML element.  Resulting in\na lovely 41kB single line.  Not what poor micro-emacs was designed for,\nI'm afraid.\n\nI really should just learn another editor, rather than continue to\npolish this turd.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "8ea97ceb12328399fbb48bc8769f050376c4703a",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/8ea97ceb12328399fbb48bc8769f050376c4703a"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/fa00fe882f719351fdf7a4c4100baf4f3eab4d61",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/fa00fe882f719351fdf7a4c4100baf4f3eab4d61",
+        "html_url": "https://github.com/torvalds/uemacs/commit/fa00fe882f719351fdf7a4c4100baf4f3eab4d61",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/fa00fe882f719351fdf7a4c4100baf4f3eab4d61/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "25f0141df133f3522c6d23ddd96ae341813b9638",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/25f0141df133f3522c6d23ddd96ae341813b9638",
+                "html_url": "https://github.com/torvalds/uemacs/commit/25f0141df133f3522c6d23ddd96ae341813b9638"
+            }
+        ]
+    },
+    {
+        "sha": "25f0141df133f3522c6d23ddd96ae341813b9638",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjI1ZjAxNDFkZjEzM2YzNTIyYzZkMjNkZGQ5NmFlMzQxODEzYjk2Mzg=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2013-02-22T22:29:43Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2013-02-22T22:29:43Z"
+            },
+            "message": "Avoid memory access errors if llength() overflows\n\nllength() is currently a 'short' which can overflow and result in signed\nnumbers if line lengths are larger than 32k.  We'll fix the overflow\nseparately, but before we do that, just use a signed int to hold the\nvalue so that we don't overrun memory allocations when we converted that\nnegative number to a large positive unsigned integer.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c4036efca6e2a437275886d9408d11b0fa9a7f3a",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/c4036efca6e2a437275886d9408d11b0fa9a7f3a"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/25f0141df133f3522c6d23ddd96ae341813b9638",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/25f0141df133f3522c6d23ddd96ae341813b9638",
+        "html_url": "https://github.com/torvalds/uemacs/commit/25f0141df133f3522c6d23ddd96ae341813b9638",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/25f0141df133f3522c6d23ddd96ae341813b9638/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8899ed4e1f076d6f3c400731992210513bb629d3",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/8899ed4e1f076d6f3c400731992210513bb629d3",
+                "html_url": "https://github.com/torvalds/uemacs/commit/8899ed4e1f076d6f3c400731992210513bb629d3"
+            }
+        ]
+    },
+    {
+        "sha": "8899ed4e1f076d6f3c400731992210513bb629d3",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1Ojg4OTllZDRlMWYwNzZkNmYzYzQwMDczMTk5MjIxMDUxM2JiNjI5ZDM=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-09-25T02:44:21Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-09-25T02:44:21Z"
+            },
+            "message": "Fix the unicode character limit (0 .. 0x10ffff)\n\nFor some reason I had limited things to 0xffff, it really should be 0x10ffff.\n\nWe don't actually support a full 32-bit unicode model anyway, since we\nuse the high bits for the control/meta/^X/special bits, but there was no\nreason to limit things to 16 bits when we had 28 bits available.  And\nthe real limit for real Unicode characters is 0x10ffff.\n\nAdd a silly example character past the 16-bit range to the UTF8 demo\nfile:\n  'SMILING FACE WITH HALO' (U+1F607)\nfrom the 'emoticons' block.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2a317b54d2e9ff3f2b41b847689bd96fb303ffa5",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/2a317b54d2e9ff3f2b41b847689bd96fb303ffa5"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/8899ed4e1f076d6f3c400731992210513bb629d3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/8899ed4e1f076d6f3c400731992210513bb629d3",
+        "html_url": "https://github.com/torvalds/uemacs/commit/8899ed4e1f076d6f3c400731992210513bb629d3",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/8899ed4e1f076d6f3c400731992210513bb629d3/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0",
+                "html_url": "https://github.com/torvalds/uemacs/commit/dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0"
+            }
+        ]
+    },
+    {
+        "sha": "dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmRiZjFhMDE0YTdiMDM4ZjU5ZmJiMWJlYTZmOTNiMTA1ZjI1YWQzYTA=",
+        "commit": {
+            "author": {
+                "name": "Pekka Enberg",
+                "email": "penberg@kernel.org",
+                "date": "2012-08-15T06:27:21Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-08-16T18:30:06Z"
+            },
+            "message": "uemacs: Remove unused 'lflag' variables from file.c\n\nGCC spotted the following unused variable:\n\n    CC       file.o\n  file.c: In function \u2018readin\u2019:\n  file.c:225:6: warning: variable \u2018lflag\u2019 set but not used [-Wunused-but-set-variable]\n  file.c: In function \u2018ifile\u2019:\n  file.c:553:6: warning: variable \u2018lflag\u2019 set but not used [-Wunused-but-set-variable]\n\nSigned-off-by: Pekka Enberg <penberg@kernel.org>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "abf1eb38fb003d3bd7920bfb00b258ca83a93c60",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/abf1eb38fb003d3bd7920bfb00b258ca83a93c60"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0",
+        "html_url": "https://github.com/torvalds/uemacs/commit/dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/dbf1a014a7b038f59fbb1bea6f93b105f25ad3a0/comments",
+        "author": {
+            "login": "penberg",
+            "id": 81939,
+            "node_id": "MDQ6VXNlcjgxOTM5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/81939?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/penberg",
+            "html_url": "https://github.com/penberg",
+            "followers_url": "https://api.github.com/users/penberg/followers",
+            "following_url": "https://api.github.com/users/penberg/following{/other_user}",
+            "gists_url": "https://api.github.com/users/penberg/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/penberg/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/penberg/subscriptions",
+            "organizations_url": "https://api.github.com/users/penberg/orgs",
+            "repos_url": "https://api.github.com/users/penberg/repos",
+            "events_url": "https://api.github.com/users/penberg/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/penberg/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ddd45dbff17f4fc30c66404331f6b8f0c05cdd82",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/ddd45dbff17f4fc30c66404331f6b8f0c05cdd82",
+                "html_url": "https://github.com/torvalds/uemacs/commit/ddd45dbff17f4fc30c66404331f6b8f0c05cdd82"
+            }
+        ]
+    },
+    {
+        "sha": "ddd45dbff17f4fc30c66404331f6b8f0c05cdd82",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmRkZDQ1ZGJmZjE3ZjRmYzMwYzY2NDA0MzMxZjZiOGYwYzA1Y2RkODI=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-15T21:36:38Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-15T21:36:38Z"
+            },
+            "message": "Fix 'getccol()' and 'getgoal()' functions for multibyte UTF-8 characters\n\nThese functions convert the byte offset into the column number\n(getccol()) and vice versa (getgoal()).\n\nGetting this right means that moving up and down the text gets us the\nright columns, rather than moving randomly left and right when you move\nup and down.  We also won't end up in the middle of a utf-8 character,\nbecause we're not just moving into some random byte offset, we're moving\ninto a proper column.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "f9d1d8156efcac6ae65edd363f88ba90b8ea36cb",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/f9d1d8156efcac6ae65edd363f88ba90b8ea36cb"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/ddd45dbff17f4fc30c66404331f6b8f0c05cdd82",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/ddd45dbff17f4fc30c66404331f6b8f0c05cdd82",
+        "html_url": "https://github.com/torvalds/uemacs/commit/ddd45dbff17f4fc30c66404331f6b8f0c05cdd82",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/ddd45dbff17f4fc30c66404331f6b8f0c05cdd82/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1edeced67c1cacefe83444e5fd403dab73529ebf",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/1edeced67c1cacefe83444e5fd403dab73529ebf",
+                "html_url": "https://github.com/torvalds/uemacs/commit/1edeced67c1cacefe83444e5fd403dab73529ebf"
+            }
+        ]
+    },
+    {
+        "sha": "1edeced67c1cacefe83444e5fd403dab73529ebf",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjFlZGVjZWQ2N2MxY2FjZWZlODM0NDRlNWZkNDAzZGFiNzM1MjllYmY=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T18:23:32Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T18:23:32Z"
+            },
+            "message": "Fix vtputc() and simplify show_line by using it again\n\nThis re-introduces vtputc() as the way to show characters, which\nreinstates the control character handing, and simplifies show_line() in\nthe process.\n\nvtputc now takes an \"int\" that is either a unicode character or a signed\nchar (so negative values in the range [-1, -128] are considered to be\nthe same as [128, 255]).  This allows us to use it regardless of what\nthe source of data is.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "57842df35d29fc2281bd8b0eb98b8337204281c7",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/57842df35d29fc2281bd8b0eb98b8337204281c7"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/1edeced67c1cacefe83444e5fd403dab73529ebf",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/1edeced67c1cacefe83444e5fd403dab73529ebf",
+        "html_url": "https://github.com/torvalds/uemacs/commit/1edeced67c1cacefe83444e5fd403dab73529ebf",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/1edeced67c1cacefe83444e5fd403dab73529ebf/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0a8b429059b47bca13307967ff0dabf0b79fb1d5",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/0a8b429059b47bca13307967ff0dabf0b79fb1d5",
+                "html_url": "https://github.com/torvalds/uemacs/commit/0a8b429059b47bca13307967ff0dabf0b79fb1d5"
+            }
+        ]
+    },
+    {
+        "sha": "0a8b429059b47bca13307967ff0dabf0b79fb1d5",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjBhOGI0MjkwNTliNDdiY2ExMzMwNzk2N2ZmMGRhYmYwYjc5ZmIxZDU=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T17:43:16Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T17:43:16Z"
+            },
+            "message": "Start doing character removal properly\n\nThis makes actual basic editing work.  Including things like\njustify-paragraph etc, so lines get justified by number of UTF8\ncharacters rather than bytes.\n\nThere are probably tons of broken stuff left, but this actually seems to\nget the basics working right.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "666fe3cd8e0651297080a94bec12a100e526febb",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/666fe3cd8e0651297080a94bec12a100e526febb"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/0a8b429059b47bca13307967ff0dabf0b79fb1d5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/0a8b429059b47bca13307967ff0dabf0b79fb1d5",
+        "html_url": "https://github.com/torvalds/uemacs/commit/0a8b429059b47bca13307967ff0dabf0b79fb1d5",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/0a8b429059b47bca13307967ff0dabf0b79fb1d5/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0e9fc2be15b0926dfee08846c906cd3b2668878a",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/0e9fc2be15b0926dfee08846c906cd3b2668878a",
+                "html_url": "https://github.com/torvalds/uemacs/commit/0e9fc2be15b0926dfee08846c906cd3b2668878a"
+            }
+        ]
+    },
+    {
+        "sha": "0e9fc2be15b0926dfee08846c906cd3b2668878a",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjBlOWZjMmJlMTViMDkyNmRmZWUwODg0NmM5MDZjZDNiMjY2ODg3OGE=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T09:21:36Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T09:21:36Z"
+            },
+            "message": "Start actually inserting full utf8 sequences\n\nThis makes it possible to cut-and-paste the UTF8 testfile into a new\nbuffer, and the end result looks correct.\n\nNOTE! We still do various things wrong while editing.  For example,\nwhile the cursor movements were fixed, simple things like deleting a\ncharacter still work on single bytes, rather than utf8 characters.\n\nSo while this is getting much closer to actually editing UTF-8 data,\nit's not there yet.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "7a44b1e123a1f8ec710a1e7067dc0aead6413a70",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/7a44b1e123a1f8ec710a1e7067dc0aead6413a70"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/0e9fc2be15b0926dfee08846c906cd3b2668878a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/0e9fc2be15b0926dfee08846c906cd3b2668878a",
+        "html_url": "https://github.com/torvalds/uemacs/commit/0e9fc2be15b0926dfee08846c906cd3b2668878a",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/0e9fc2be15b0926dfee08846c906cd3b2668878a/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4bccfab6324c8c8bc8106e65c4aec076f5d121be",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/4bccfab6324c8c8bc8106e65c4aec076f5d121be",
+                "html_url": "https://github.com/torvalds/uemacs/commit/4bccfab6324c8c8bc8106e65c4aec076f5d121be"
+            }
+        ]
+    },
+    {
+        "sha": "4bccfab6324c8c8bc8106e65c4aec076f5d121be",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjRiY2NmYWI2MzI0YzhjOGJjODEwNmU2NWM0YWVjMDc2ZjVkMTIxYmU=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T08:22:32Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T08:22:32Z"
+            },
+            "message": "Make 'show_line()' do proper TAB handling\n\nThe TAB handling got broken by commit cee00b0efb86 (\"Show UTF-8 input as\nUTF-8 output\") when it stopped doing things one byte at a time.\n\nI'm sure the other special character cases are broken too.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "e8d801331da867dbfcbb5ee1b1c1bd1b51aaf04d",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/e8d801331da867dbfcbb5ee1b1c1bd1b51aaf04d"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/4bccfab6324c8c8bc8106e65c4aec076f5d121be",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/4bccfab6324c8c8bc8106e65c4aec076f5d121be",
+        "html_url": "https://github.com/torvalds/uemacs/commit/4bccfab6324c8c8bc8106e65c4aec076f5d121be",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/4bccfab6324c8c8bc8106e65c4aec076f5d121be/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "42d9cb33a555d113897b5decb29c099b4d47a164",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/42d9cb33a555d113897b5decb29c099b4d47a164",
+                "html_url": "https://github.com/torvalds/uemacs/commit/42d9cb33a555d113897b5decb29c099b4d47a164"
+            }
+        ]
+    },
+    {
+        "sha": "42d9cb33a555d113897b5decb29c099b4d47a164",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjQyZDljYjMzYTU1NWQxMTM4OTdiNWRlY2IyOWMwOTliNGQ0N2ExNjQ=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T01:14:02Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T01:14:02Z"
+            },
+            "message": "Expand keycode to 'int' from 'short'\n\nThis uses the four high bits for the meta and control key sequences.\nThis means that we will be limiting our Unicode space to 28 bits, but\nthat's more than we really need.\n\nIt *would* be nicer if we just used the sign bit to mark \"we have meta\ncharacter information\") but that would require bigger changes.  And we\nreally don't need to worry about 30-bit unicode.  Small steps, remember.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "65f85132f3158bdc68aff1638cf49bd37da35a64",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/65f85132f3158bdc68aff1638cf49bd37da35a64"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/42d9cb33a555d113897b5decb29c099b4d47a164",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/42d9cb33a555d113897b5decb29c099b4d47a164",
+        "html_url": "https://github.com/torvalds/uemacs/commit/42d9cb33a555d113897b5decb29c099b4d47a164",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/42d9cb33a555d113897b5decb29c099b4d47a164/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6e4a45c0050ed8eacdd2426b971e263cbdcca0ae",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/6e4a45c0050ed8eacdd2426b971e263cbdcca0ae",
+                "html_url": "https://github.com/torvalds/uemacs/commit/6e4a45c0050ed8eacdd2426b971e263cbdcca0ae"
+            }
+        ]
+    },
+    {
+        "sha": "6e4a45c0050ed8eacdd2426b971e263cbdcca0ae",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjZlNGE0NWMwMDUwZWQ4ZWFjZGQyNDI2Yjk3MWUyNjNjYmRjY2EwYWU=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T01:11:30Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T01:11:30Z"
+            },
+            "message": "character input: make sure we have enough bytes for a full utf8 character\n\n.. but we do have that 0.1s delay, so if somebody feeds us non-utf8\nsequences, we won't delay forever.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "62f0a4337cf050e1df8b4ed62ecf978c0c10a7a7",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/62f0a4337cf050e1df8b4ed62ecf978c0c10a7a7"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/6e4a45c0050ed8eacdd2426b971e263cbdcca0ae",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/6e4a45c0050ed8eacdd2426b971e263cbdcca0ae",
+        "html_url": "https://github.com/torvalds/uemacs/commit/6e4a45c0050ed8eacdd2426b971e263cbdcca0ae",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/6e4a45c0050ed8eacdd2426b971e263cbdcca0ae/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3abd3dba424450401ca0bb34c043d0331f1c1abe",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/3abd3dba424450401ca0bb34c043d0331f1c1abe",
+                "html_url": "https://github.com/torvalds/uemacs/commit/3abd3dba424450401ca0bb34c043d0331f1c1abe"
+            }
+        ]
+    },
+    {
+        "sha": "3abd3dba424450401ca0bb34c043d0331f1c1abe",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjNhYmQzZGJhNDI0NDUwNDAxY2EwYmIzNGMwNDNkMDMzMWYxYzFhYmU=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T00:56:53Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T00:56:53Z"
+            },
+            "message": "utf8: make sure to honor the array length properly\n\nRight now the input side can give partial utf8 input, and that showed\nthat we didn't properly handle that case.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "ed7f53eff62907d5deb11de97c2a0d1056d394f4",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/ed7f53eff62907d5deb11de97c2a0d1056d394f4"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/3abd3dba424450401ca0bb34c043d0331f1c1abe",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/3abd3dba424450401ca0bb34c043d0331f1c1abe",
+        "html_url": "https://github.com/torvalds/uemacs/commit/3abd3dba424450401ca0bb34c043d0331f1c1abe",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/3abd3dba424450401ca0bb34c043d0331f1c1abe/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3c7bd9a7d294ed9f34e952fab792644c5caf6c18",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/3c7bd9a7d294ed9f34e952fab792644c5caf6c18",
+                "html_url": "https://github.com/torvalds/uemacs/commit/3c7bd9a7d294ed9f34e952fab792644c5caf6c18"
+            }
+        ]
+    },
+    {
+        "sha": "3c7bd9a7d294ed9f34e952fab792644c5caf6c18",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjNjN2JkOWE3ZDI5NGVkOWYzNGU5NTJmYWI3OTI2NDRjNWNhZjZjMTg=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T00:42:19Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T00:42:19Z"
+            },
+            "message": "Make kbd macro save area use 'int' instead of short\n\nI'm starting to expand the input value from 'short' (with flags in the\nupper eight bytes) to 'int' (with negative values having flags).\n\nSmall baby steps.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "a9d87e74443c8ec36bf19d19d1d2f7ecce7960f4",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/a9d87e74443c8ec36bf19d19d1d2f7ecce7960f4"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/3c7bd9a7d294ed9f34e952fab792644c5caf6c18",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/3c7bd9a7d294ed9f34e952fab792644c5caf6c18",
+        "html_url": "https://github.com/torvalds/uemacs/commit/3c7bd9a7d294ed9f34e952fab792644c5caf6c18",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/3c7bd9a7d294ed9f34e952fab792644c5caf6c18/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ec6f4f36ec679a9434c71915f22c45b165cd227a",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/ec6f4f36ec679a9434c71915f22c45b165cd227a",
+                "html_url": "https://github.com/torvalds/uemacs/commit/ec6f4f36ec679a9434c71915f22c45b165cd227a"
+            }
+        ]
+    },
+    {
+        "sha": "ec6f4f36ec679a9434c71915f22c45b165cd227a",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmVjNmY0ZjM2ZWM2NzlhOTQzNGM3MTkxNWYyMmM0NWIxNjVjZDIyN2E=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T00:36:30Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-11T00:36:30Z"
+            },
+            "message": "Use utf8 helper functions for keyboard input\n\nttgetc() used some homebrew utf8 to unicode translation, limited to just\nthe normal latin1 characters.  Use the utf8 helper functions to get it\nright for the more complex cases.\n\nNOTE! We don't actually handle characters > 0xff right anyway.  And we\nstill end up doing Latin1 in the buffers on input.  One small step at a\ntime.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "b5c8f2c3bd2908446be767c23b0ae9dee48a7563",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/b5c8f2c3bd2908446be767c23b0ae9dee48a7563"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/ec6f4f36ec679a9434c71915f22c45b165cd227a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/ec6f4f36ec679a9434c71915f22c45b165cd227a",
+        "html_url": "https://github.com/torvalds/uemacs/commit/ec6f4f36ec679a9434c71915f22c45b165cd227a",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/ec6f4f36ec679a9434c71915f22c45b165cd227a/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6b793211c2aec69115dd2769892be0524801f7d8",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/6b793211c2aec69115dd2769892be0524801f7d8",
+                "html_url": "https://github.com/torvalds/uemacs/commit/6b793211c2aec69115dd2769892be0524801f7d8"
+            }
+        ]
+    },
+    {
+        "sha": "6b793211c2aec69115dd2769892be0524801f7d8",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjZiNzkzMjExYzJhZWM2OTExNWRkMjc2OTg5MmJlMDUyNDgwMWY3ZDg=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T23:40:36Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T23:40:36Z"
+            },
+            "message": "Make cursor movement (largely) understand UTF-8 character boundaries\n\nOk, so it may do odd things if it's not truly utf-8, and when moving up\nand down lines that have utf-8 the cursor moves oddly (because the byte\noffset within the line stays constant, rather than the character\noffset), but with this you can actually open the UTF8 example file and\nmove around it, and at least some of the movement makes sense.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "4a9cab1b1a97c7c66ab90353ad6aab56abad30e0",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/4a9cab1b1a97c7c66ab90353ad6aab56abad30e0"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/6b793211c2aec69115dd2769892be0524801f7d8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/6b793211c2aec69115dd2769892be0524801f7d8",
+        "html_url": "https://github.com/torvalds/uemacs/commit/6b793211c2aec69115dd2769892be0524801f7d8",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/6b793211c2aec69115dd2769892be0524801f7d8/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "e62cdf04cff63381121364cd6ef077f00d72307a",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/e62cdf04cff63381121364cd6ef077f00d72307a",
+                "html_url": "https://github.com/torvalds/uemacs/commit/e62cdf04cff63381121364cd6ef077f00d72307a"
+            }
+        ]
+    },
+    {
+        "sha": "e62cdf04cff63381121364cd6ef077f00d72307a",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmU2MmNkZjA0Y2ZmNjMzODExMjEzNjRjZDZlZjA3N2YwMGQ3MjMwN2E=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T23:21:35Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T23:21:35Z"
+            },
+            "message": "Split up the utf8 helper functions into a file of their own\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "54f971d3553ca036daab8bf2f7b7d001e68e9ad0",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/54f971d3553ca036daab8bf2f7b7d001e68e9ad0"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/e62cdf04cff63381121364cd6ef077f00d72307a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/e62cdf04cff63381121364cd6ef077f00d72307a",
+        "html_url": "https://github.com/torvalds/uemacs/commit/e62cdf04cff63381121364cd6ef077f00d72307a",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/e62cdf04cff63381121364cd6ef077f00d72307a/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "12e4647debb6016da2063feed7516ad835fffd08",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/12e4647debb6016da2063feed7516ad835fffd08",
+                "html_url": "https://github.com/torvalds/uemacs/commit/12e4647debb6016da2063feed7516ad835fffd08"
+            }
+        ]
+    },
+    {
+        "sha": "12e4647debb6016da2063feed7516ad835fffd08",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjEyZTQ2NDdkZWJiNjAxNmRhMjA2M2ZlZWQ3NTE2YWQ4MzVmZmZkMDg=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T22:09:31Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T22:09:31Z"
+            },
+            "message": "Remove the old utf8_mode thing.\n\nLet's just plan on being fully utf8 some day.  We're not there yet, and\nmaybe we'll never be, but having the halfway mode is not useful either.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "0ec62a9466b640f60de2ecb9be3ff94d94fdc553",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/0ec62a9466b640f60de2ecb9be3ff94d94fdc553"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/12e4647debb6016da2063feed7516ad835fffd08",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/12e4647debb6016da2063feed7516ad835fffd08",
+        "html_url": "https://github.com/torvalds/uemacs/commit/12e4647debb6016da2063feed7516ad835fffd08",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/12e4647debb6016da2063feed7516ad835fffd08/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "cee00b0efb86c583a10f478a1d7d5b4b5a530a88",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/cee00b0efb86c583a10f478a1d7d5b4b5a530a88",
+                "html_url": "https://github.com/torvalds/uemacs/commit/cee00b0efb86c583a10f478a1d7d5b4b5a530a88"
+            }
+        ]
+    },
+    {
+        "sha": "cee00b0efb86c583a10f478a1d7d5b4b5a530a88",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmNlZTAwYjBlZmI4NmM1ODNhMTBmNDc4YTFkN2Q1YjRiNWE1MzBhODg=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T22:08:17Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T22:08:17Z"
+            },
+            "message": "Show UTF-8 input as UTF-8 output\n\n.. by doing the stupid \"convert to unicode value and back\" model.\n\nThis actually populates the 'struct video' array with the unicode\nvalues, so UTF8 input actually shows correctly.  In particular, the nice\ntest-file (UTF-8-demo.txt) shows up not as garbage, but as the UTF-8 it\nis.\n\nHOWEVER!\n\nSince the *editing* doesn't know about UTF-8, and considers it just a\nstream of bytes, the end result is not actually a usable utf-8 editor.\nSo don't get too excited yet: this is just a partial step to \"actually\nedit utf8 data\"\n\nNOTE NOTE NOTE! If the character buffer contains Latin1, we will\ntransform that Latin1 to unicode, and then output it as UTF8.  And we\nwill edit it correctly as the character-by-character data.  Also, we\nstill do the \"UTF8 to Latin1\" translation on *input*, so with this\ncommit we can actually continue to *edit* Latin1 text.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "78ec343fca3369f432bc34319b62aed2cd7a05d7",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/78ec343fca3369f432bc34319b62aed2cd7a05d7"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/cee00b0efb86c583a10f478a1d7d5b4b5a530a88",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/cee00b0efb86c583a10f478a1d7d5b4b5a530a88",
+        "html_url": "https://github.com/torvalds/uemacs/commit/cee00b0efb86c583a10f478a1d7d5b4b5a530a88",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/cee00b0efb86c583a10f478a1d7d5b4b5a530a88/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d",
+                "html_url": "https://github.com/torvalds/uemacs/commit/e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d"
+            }
+        ]
+    },
+    {
+        "sha": "e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OmU4Zjk4NGExYjBkYzRmNTE2MGJjOGNjZjE2YWU3ZGY1NWFjNzU2M2Q=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T21:24:23Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T21:24:23Z"
+            },
+            "message": "Make the 'struct video' contain an array of unicode characters rather than bytes\n\nThis is disgusting.  And quite frankly, it's debatable whether this will\never work.  The \"line\" structure is still just an array of characters,\nso that has to work with utf-8.\n\nBut the 'struct video' thing is what represents the actual screen\nrectangle, and is fixed-size by the size of the screen.  So making it\ncontain actual 32-bit unicode characters *may* make sense.\n\nRight now we translate things the same way we always used to, though, so\nutf-8 in 'struct line' will not be translated to the proper unicode\narray, but to the bytes of the utf-8 representation.  So this really\ndoesn't improve anything per se yet, just expands the memory use of the\nvideo array.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "215c509817e07a3814b3fa47241ed0c14d263af4",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/215c509817e07a3814b3fa47241ed0c14d263af4"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d",
+        "html_url": "https://github.com/torvalds/uemacs/commit/e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/e8f984a1b0dc4f5160bc8ccf16ae7df55ac7563d/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2dddd4f970e9dd7aa415ec6b4f646273c5c92211",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/2dddd4f970e9dd7aa415ec6b4f646273c5c92211",
+                "html_url": "https://github.com/torvalds/uemacs/commit/2dddd4f970e9dd7aa415ec6b4f646273c5c92211"
+            }
+        ]
+    },
+    {
+        "sha": "2dddd4f970e9dd7aa415ec6b4f646273c5c92211",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjJkZGRkNGY5NzBlOWRkN2FhNDE1ZWM2YjRmNjQ2MjczYzVjOTIyMTE=",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T20:38:41Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-07-10T20:38:41Z"
+            },
+            "message": "Show lines with a single helper function, not one byte at a time\n\nLet's see how hard it is to show UTF-8 characters properly.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c1913383a5c58714ac0b98ba25188f7466ed8e6d",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/c1913383a5c58714ac0b98ba25188f7466ed8e6d"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/2dddd4f970e9dd7aa415ec6b4f646273c5c92211",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/2dddd4f970e9dd7aa415ec6b4f646273c5c92211",
+        "html_url": "https://github.com/torvalds/uemacs/commit/2dddd4f970e9dd7aa415ec6b4f646273c5c92211",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/2dddd4f970e9dd7aa415ec6b4f646273c5c92211/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1d0cfd02760c39c0c1ae0790d69391f29e19271e",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/1d0cfd02760c39c0c1ae0790d69391f29e19271e",
+                "html_url": "https://github.com/torvalds/uemacs/commit/1d0cfd02760c39c0c1ae0790d69391f29e19271e"
+            }
+        ]
+    },
+    {
+        "sha": "1d0cfd02760c39c0c1ae0790d69391f29e19271e",
+        "node_id": "MDY6Q29tbWl0MTE3OTAwODA1OjFkMGNmZDAyNzYwYzM5YzBjMWFlMDc5MGQ2OTM5MWYyOWUxOTI3MWU=",
+        "commit": {
+            "author": {
+                "name": "Naohiro Aota",
+                "email": "naota@gentoo.org",
+                "date": "2012-05-26T14:06:28Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2012-05-26T18:50:23Z"
+            },
+            "message": "Make uemacs build on FreeBSD.\n\nSee <https://bugs.gentoo.org/show_bug.cgi?id=387135>.\n\nSigned-off-by: Ulrich M\u00fcller <ulm@gentoo.org>\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "7dd90a4239668b67fabe357f591d3a5fd61eb73b",
+                "url": "https://api.github.com/repos/torvalds/uemacs/git/trees/7dd90a4239668b67fabe357f591d3a5fd61eb73b"
+            },
+            "url": "https://api.github.com/repos/torvalds/uemacs/git/commits/1d0cfd02760c39c0c1ae0790d69391f29e19271e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/uemacs/commits/1d0cfd02760c39c0c1ae0790d69391f29e19271e",
+        "html_url": "https://github.com/torvalds/uemacs/commit/1d0cfd02760c39c0c1ae0790d69391f29e19271e",
+        "comments_url": "https://api.github.com/repos/torvalds/uemacs/commits/1d0cfd02760c39c0c1ae0790d69391f29e19271e/comments",
+        "author": {
+            "login": "naota",
+            "id": 146676,
+            "node_id": "MDQ6VXNlcjE0NjY3Ng==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/146676?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/naota",
+            "html_url": "https://github.com/naota",
+            "followers_url": "https://api.github.com/users/naota/followers",
+            "following_url": "https://api.github.com/users/naota/following{/other_user}",
+            "gists_url": "https://api.github.com/users/naota/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/naota/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/naota/subscriptions",
+            "organizations_url": "https://api.github.com/users/naota/orgs",
+            "repos_url": "https://api.github.com/users/naota/repos",
+            "events_url": "https://api.github.com/users/naota/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/naota/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "12ba84c8dd6173b710e14d735e1576f09e7c9825",
+                "url": "https://api.github.com/repos/torvalds/uemacs/commits/12ba84c8dd6173b710e14d735e1576f09e7c9825",
+                "html_url": "https://github.com/torvalds/uemacs/commit/12ba84c8dd6173b710e14d735e1576f09e7c9825"
+            }
+        ]
+    }
+]

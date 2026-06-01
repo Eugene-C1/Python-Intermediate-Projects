@@ -1,0 +1,2467 @@
+[
+    {
+        "sha": "57ea74003002096e0a0d046ece9e8dcf1247c93b",
+        "node_id": "C_kwDOOBVydNoAKDU3ZWE3NDAwMzAwMjA5NmUwYTBkMDQ2ZWNlOWU4ZGNmMTI0N2M5M2I",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-19T02:53:53Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-19T02:53:53Z"
+            },
+            "message": "Merge branch 'archive-note' of https://github.com/GNUfault/1590A\n\n* 'archive-note' of https://github.com/GNUfault/1590A:\n  Add archive message",
+            "tree": {
+                "sha": "bfc66b2059d3b3629814099b94c8a4b73a01e18d",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/bfc66b2059d3b3629814099b94c8a4b73a01e18d"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/57ea74003002096e0a0d046ece9e8dcf1247c93b",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/57ea74003002096e0a0d046ece9e8dcf1247c93b",
+        "html_url": "https://github.com/torvalds/1590A/commit/57ea74003002096e0a0d046ece9e8dcf1247c93b",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/57ea74003002096e0a0d046ece9e8dcf1247c93b/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a3a39a8cf8bd6cf8194adf909f906f5513a8a216",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/a3a39a8cf8bd6cf8194adf909f906f5513a8a216",
+                "html_url": "https://github.com/torvalds/1590A/commit/a3a39a8cf8bd6cf8194adf909f906f5513a8a216"
+            },
+            {
+                "sha": "953bc61c694b6a2c32f9724ef7d060d075bfc2f1",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/953bc61c694b6a2c32f9724ef7d060d075bfc2f1",
+                "html_url": "https://github.com/torvalds/1590A/commit/953bc61c694b6a2c32f9724ef7d060d075bfc2f1"
+            }
+        ]
+    },
+    {
+        "sha": "a3a39a8cf8bd6cf8194adf909f906f5513a8a216",
+        "node_id": "C_kwDOOBVydNoAKGEzYTM5YThjZjhiZDZjZjgxOTRhZGY5MDlmOTA2ZjU1MTNhOGEyMTY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-19T02:47:09Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-19T02:47:09Z"
+            },
+            "message": "Update very incomplete STM32 board\n\nI'm committing this partial work just to have the history, and because I\nmight use this as a starting point if I take up the mixed-mode thing in\nthe new GuitarPedal project.\n\nIt's almost certainly not worth saving, but you never know...\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "8c7a4ad26517bc5d5c4c9e066ab82b6a2e064824",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/8c7a4ad26517bc5d5c4c9e066ab82b6a2e064824"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/a3a39a8cf8bd6cf8194adf909f906f5513a8a216",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/a3a39a8cf8bd6cf8194adf909f906f5513a8a216",
+        "html_url": "https://github.com/torvalds/1590A/commit/a3a39a8cf8bd6cf8194adf909f906f5513a8a216",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/a3a39a8cf8bd6cf8194adf909f906f5513a8a216/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "eb0d867ae46c630faa2603d698cbefd03c9f4825",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/eb0d867ae46c630faa2603d698cbefd03c9f4825",
+                "html_url": "https://github.com/torvalds/1590A/commit/eb0d867ae46c630faa2603d698cbefd03c9f4825"
+            }
+        ]
+    },
+    {
+        "sha": "953bc61c694b6a2c32f9724ef7d060d075bfc2f1",
+        "node_id": "C_kwDOOBVydNoAKDk1M2JjNjFjNjk0YjZhMmMzMmY5NzI0ZWY3ZDA2MGQwNzViZmMyZjE",
+        "commit": {
+            "author": {
+                "name": "GNUfault",
+                "email": "blumatrikz@gmail.com",
+                "date": "2025-09-18T23:30:45Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2025-09-18T23:30:45Z"
+            },
+            "message": "Add archive message\n\nAdd archive message \n\nSigned-off-by: GNUfault <blumatrikz@gmail.com>",
+            "tree": {
+                "sha": "6eb44e41426fa44a5423ed4a89d9fc1928e53bf3",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/6eb44e41426fa44a5423ed4a89d9fc1928e53bf3"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/953bc61c694b6a2c32f9724ef7d060d075bfc2f1",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJozJYmCRC1aQ7uu5UhlAAACD8QAHHBZrVWWyM1OKQDQc0mFIjt\ne/NROE5xJN1O/k7V+zIcleeVtyLttwC+DYLyriPwSp08G8Z17Nz6XGVvx2n7AQmq\ndT+iasguFPu0Ngz1oOBUsqLWXq3eewd7cvCZIhSLwHHCo7duQ6gS8/9OBX0jiOFC\nCzQe+hN3/vqr41TXXWCPq2yc65MCIOLR5wXK9awCgBeFm8vwywtm6747mG0iWlds\n/lNkym39jGvX4F+fnMdHRqLS1uU+RG4R5SvQhos46TrP5oKBzICnRHFRUdhukvAZ\nyx4uI5ueRKd7PVTBnGo4l7oLe2yzvetY1ZCpcN7BMNx40ggUuJrBHfJOaXaKgVza\n9VLpwNEr/8GsLJKXQAPdzeiJ6vrMSfQF0vnMnBSKBtHweFfG8woNayMM3jeED4D5\nvzGxYVzeR3MDF285NoFL9xf9Hzb1gmyUUl7IQqBInghE9wNtJkHF7B3letnPl+QT\nAcSNeO6aDAY50eqEH/HrB694/0elghSAJ7v1+DY+2Sfsv3bIJPmCqVjcWfsiQlQZ\nfzWdcDuVpuvUsA35Uysvf3wBaMCBFxrvqsLwHHVszR1WBea+9Wi+eXYy0jt5os9N\nzcYnRKxmimZZXucZwiZXu4kLqN/IAhBjgxv48Xfp8hmZ3M0/FrQOTUhkMa9+K8a4\nWebobW8xl3AlqY362Jav\n=3nFS\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 6eb44e41426fa44a5423ed4a89d9fc1928e53bf3\nparent eb0d867ae46c630faa2603d698cbefd03c9f4825\nauthor GNUfault <blumatrikz@gmail.com> 1758238245 -0700\ncommitter GitHub <noreply@github.com> 1758238245 -0700\n\nAdd archive message\n\nAdd archive message \n\nSigned-off-by: GNUfault <blumatrikz@gmail.com>",
+                "verified_at": "2025-09-18T23:30:46Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/953bc61c694b6a2c32f9724ef7d060d075bfc2f1",
+        "html_url": "https://github.com/torvalds/1590A/commit/953bc61c694b6a2c32f9724ef7d060d075bfc2f1",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/953bc61c694b6a2c32f9724ef7d060d075bfc2f1/comments",
+        "author": {
+            "login": "GNUfault-is-on-repo-or-cz-cuz-dis-sux",
+            "id": 288819524,
+            "node_id": "U_kgDOETcJRA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/288819524?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux",
+            "html_url": "https://github.com/GNUfault-is-on-repo-or-cz-cuz-dis-sux",
+            "followers_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/followers",
+            "following_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/following{/other_user}",
+            "gists_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/subscriptions",
+            "organizations_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/orgs",
+            "repos_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/repos",
+            "events_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/GNUfault-is-on-repo-or-cz-cuz-dis-sux/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "eb0d867ae46c630faa2603d698cbefd03c9f4825",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/eb0d867ae46c630faa2603d698cbefd03c9f4825",
+                "html_url": "https://github.com/torvalds/1590A/commit/eb0d867ae46c630faa2603d698cbefd03c9f4825"
+            }
+        ]
+    },
+    {
+        "sha": "eb0d867ae46c630faa2603d698cbefd03c9f4825",
+        "node_id": "C_kwDOOBVydNoAKGViMGQ4NjdhZTQ2YzYzMGZhYTI2MDNkNjk4Y2JlZmQwM2M5ZjQ4MjU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-09T20:57:18Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-09T20:57:18Z"
+            },
+            "message": "Add aggressive low-pass filter to the Daisy Seed base board output\n\nThis is from me looking at the HF noise from the Daisy Seed on the\noscilloscope, and then checking what the Hothouse padal looks like.\n\nThe Hothouse actually looks really clean - kudos to Ricky Sheaves.  The\nreason seems to be a rather aggressive low-pass filter with the 3dB\npoint at 22kHz.  That will attenuate some of the audio band too, but\nlooks like it's the right thing to do considering the noise.\n\n(Of course, the Hothouse also does an op-amp to buffer the end result.\nMy silly discrete component board does not.  That will affect the end\nresult too, but the output impedance should already be pretty low for a\nguitar pedal even without the extra output buffer).\n\nChange the sim to have a simulated 100 Ohm impedance signal output from\nthe Daisy Seed so that the AC simulation makes sense.  Without that this\njust resulted in nonsensical output filtering.\n\nWhile looking at the AC response, also change the input caps to 4.7uF -\nI think that's what I used for the test board, and you definitely want\nsomething bigger than 0.47uF for bass response.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "5e7396ab142052d7e9683dcbeadd272210c3419b",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/5e7396ab142052d7e9683dcbeadd272210c3419b"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/eb0d867ae46c630faa2603d698cbefd03c9f4825",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/eb0d867ae46c630faa2603d698cbefd03c9f4825",
+        "html_url": "https://github.com/torvalds/1590A/commit/eb0d867ae46c630faa2603d698cbefd03c9f4825",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/eb0d867ae46c630faa2603d698cbefd03c9f4825/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c",
+                "html_url": "https://github.com/torvalds/1590A/commit/5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c"
+            }
+        ]
+    },
+    {
+        "sha": "5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c",
+        "node_id": "C_kwDOOBVydNoAKDVjNmMyMzBmYmZmZGM2Mzc3ZmNkZjliNzZkZDc2YzE4ZmViOTdmNWM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-09T20:00:45Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-09T20:00:45Z"
+            },
+            "message": "Add very incomplete and broken stm32 board\n\nThe potential plan is to maybe try to actually recreate a subset of what\nthe Daisy Seed does, and have it populated at jlcpcb.\n\nBecause I'm not excited about hand-soldering the kinds of components\nthis will need (although so far I've picked stuff that should be doable,\nso maybe I change my mind and just go for a stencil).\n\nThis is probably all kinds of broken garbage.  And it's very incomplete.\nI've done a MCU board before, but that was years ago.  I've never done\none of the stm32 ones.\n\nNot yet done: SWD, proper USB, and the PCM3060.  And whatever else I'm\nmissing and haven't even thought of yet.\n\nAlso, since I've picked a stm32 part that I could maybe solder at home,\nit's one that doesn't have enough pins brought out for SDRAM.  So I'd be\nlimited to the internal 1MB of RAM.\n\nPut another way: don't for a moment think that this replaces a real\nDaisy Seed.  That board works, was designed by somebody who knew what\nthey were doing, and is clearly superior.\n\nIn contrast, this is me doing silly things again, in the name of trying\nto learn something new.\n\nIn other and more uplifting news: the dual-JFET LS844 input circuit on\nthe base board actually does work, and seems to work very well indeed.\n\nI've only built one board, but that one looked very linear and clean on\na triangle wave all the way between 10mVp-p to 4Vp-p in the whole\n20Hz-20kHz band.\n\nIn fact I checked it from 10Hz all the way up to 1Mhz.\n\nAnd yes, it was recognizably a signal even at 1MHz.  Admittedly at that\npoint it looked much more like a sine-wave and had attenuated quite a\nlot.  There's an intentional RF filter in the input path, so that's\nbasically expected.\n\nIn fact that signal looked *so* good that I'm suspicious that I did\nsomething wrong.  But at 4Vp-p I followed the input and the output on\nthe oscillosope all the way from 20Hz to 20kHz, and they looked visually\nindistinguishable and the signals were on top of each other from 70Hz up\n(20-70Hz you'd see the triangle wave bowing a bit due to AC coupling).\n\nAt 10mVp-p, you could definitely see noise, but I'm not sure how much of\nit comes from the actual circuits, and how much of it is from cables (ie\ncomparing a nice direct BNC cable from the signal generator to the\noscilloscope with one that goes through two guitar patch cables and the\n1/4\" jacks: not exactly equivalent signal integrity).\n\nThe HF noise is maybe 2mVp-p (looks like ~1mV if I limit the scope\nbandwidth to 20MHz), so it's a noticeable fraction of the 10mV signal,\nbut on the whole this still looks like my best input path by far.\n\nThe 10mVp-p signal still looks good at 100kHz (and also still\nrecognizably a signal at 1MHz).\n\nNOTE! That's just the input signal path when jumpered directly to the\noutput.  When adding the Daisy Seed on the test board into the path it\nis a different thing entirely, of course.  *That* noise looks more like\n100mVp-p, and I have to look at a 1Vp-p signal to make it really\nrecognizable.\n\nThe Daisy Seed still *sounds* pretty good, because the noise seems to be\nmainly HF noise at 450kHz or something - I suspect it ends up being the\n3.3V switching power supply on the Daisy Seed that presumably changes\nfrequency based on load.\n\nIt just looks horrible on the oscilloscope, but sounds way better than\nany of my analog effects did.\n\nAlso, looking at the waveform, the Daisy Seed delay - without any effect\nactive - is about 5.2ms.  That's with the Hothouse \"ShimmerVerb\" effect\nloaded, it might depend on some setup.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c53ae1de2c7333edffcfcb0301c535151b0f28b3",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/c53ae1de2c7333edffcfcb0301c535151b0f28b3"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c",
+        "html_url": "https://github.com/torvalds/1590A/commit/5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/5c6c230fbffdc6377fcdf9b76dd76c18feb97f5c/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8e248bd5dfee98bd94c61d2bfd7cc15928679e92",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/8e248bd5dfee98bd94c61d2bfd7cc15928679e92",
+                "html_url": "https://github.com/torvalds/1590A/commit/8e248bd5dfee98bd94c61d2bfd7cc15928679e92"
+            }
+        ]
+    },
+    {
+        "sha": "8e248bd5dfee98bd94c61d2bfd7cc15928679e92",
+        "node_id": "C_kwDOOBVydNoAKDhlMjQ4YmQ1ZGZlZTk4YmQ5NGM2MWQyYmZkN2NjMTU5Mjg2NzllOTI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-08T15:41:47Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-08T15:41:47Z"
+            },
+            "message": "Fix pcb layerselection on Daisy Seed board\n\nI have no idea what happened, but I think this got corrupted as part of\nthe KiCad 9.0 downgrade.  Or me just fat-finger things randomly.\n\nRegardless, this really confused me when generating some rather invalid\ngerbers. It's hopefully right now.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c29277c3b78a8f40a378c19df02adfb8c49864db",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/c29277c3b78a8f40a378c19df02adfb8c49864db"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/8e248bd5dfee98bd94c61d2bfd7cc15928679e92",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/8e248bd5dfee98bd94c61d2bfd7cc15928679e92",
+        "html_url": "https://github.com/torvalds/1590A/commit/8e248bd5dfee98bd94c61d2bfd7cc15928679e92",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/8e248bd5dfee98bd94c61d2bfd7cc15928679e92/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "95ff521c845aef6d8ce714510ea99adb58806dbd",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/95ff521c845aef6d8ce714510ea99adb58806dbd",
+                "html_url": "https://github.com/torvalds/1590A/commit/95ff521c845aef6d8ce714510ea99adb58806dbd"
+            }
+        ]
+    },
+    {
+        "sha": "95ff521c845aef6d8ce714510ea99adb58806dbd",
+        "node_id": "C_kwDOOBVydNoAKDk1ZmY1MjFjODQ1YWVmNmQ4Y2U3MTQ1MTBlYTk5YWRiNTg4MDZkYmQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-07T20:58:46Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-07T20:58:46Z"
+            },
+            "message": "Try attaching the Daisy Seed directly on the base board\n\nOk, so to fit this thing, I needed to play some games, and also get rid\nof the third potentiometer.\n\nSo now it only has two pots, and the Daisy Seed needs to be the\nunsoldered kind, where you solder low-profile pin headers to the \"wrong\"\nside of the board.\n\nIOW, the Daisy Seed gets mounted upside down on the top of the base\nboard, and then it kind of fits.\n\nI say \"kind of\", because this is all without a stomp switch.  I haven't\ndecided on what I want to do about that.  The switch connector is just\nholes for a pin header - or more likely, two wires.\n\nI do think I should just give up on the 1950A form factor, which would\nmake all these games a complete non-issue.  But it's not like the whole\nthing makes any sense to begin with, so why start being sensible now?\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "22497812596e7c5cdae64873efbef54189c6a5d3",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/22497812596e7c5cdae64873efbef54189c6a5d3"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/95ff521c845aef6d8ce714510ea99adb58806dbd",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/95ff521c845aef6d8ce714510ea99adb58806dbd",
+        "html_url": "https://github.com/torvalds/1590A/commit/95ff521c845aef6d8ce714510ea99adb58806dbd",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/95ff521c845aef6d8ce714510ea99adb58806dbd/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "76e609119b7c69a8c7908b6b478f9b20d5b83971",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/76e609119b7c69a8c7908b6b478f9b20d5b83971",
+                "html_url": "https://github.com/torvalds/1590A/commit/76e609119b7c69a8c7908b6b478f9b20d5b83971"
+            }
+        ]
+    },
+    {
+        "sha": "76e609119b7c69a8c7908b6b478f9b20d5b83971",
+        "node_id": "C_kwDOOBVydNoAKDc2ZTYwOTExOWI3YzY5YThjNzkwOGI2YjQ3OGY5YjIwZDViODM5NzE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T19:19:09Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T19:19:09Z"
+            },
+            "message": "Add input signal re-biasing to the Daisy Seed after all\n\nYes, the Daisy Seed ends up AC-coupling the input, and will re-bias it\nto the mid-point of the analog voltage range for the audio codec.\n\nBut thinking some more about it, I started worrying about the capacitor\nused. In particular, it might very well be a low-voltage one, and the\ndual JFET input will have a buffered output voltage in the 5V+ range.\n\nSimulation puts the signal level centered at 7.4V, but who knows what an\nactual LS844 will be.  For all I know the dual JFET thing really would\nwant more of a voltage range than a 9V positive supply and it will not\nwork very well in real life, but we'll see.\n\n[ I can always go back to the single MMBF5103 as an input buffer, that\n  worked fine and is more than sufficient for a guitar pedal -\n  particularly one of my design.\n\n  The whole \"let's used two matched JFET's\" is really me being rather\n  silly, after having seen reports of it having particularly good THD by\n  Rod Elliott (ESP) [1] and Erno Borbely [2].\n\n  ESP uses the matched JFET as a current source, Erno Borbely as a\n  current sink. Mostly it shouldn't make any difference, but I randomly\n  did the current sink thing. And that does end up with the signal at a\n  higher voltage ]\n\nRegardless, it's entirely possible that the AC coupling on the Daisy\nSeed uses a capacitor that is rated for something like 6.3V, which is\ncommon for smaller SMT caps.  That would make sense, since the\nassumption is an incoming signal around ground, with the center of the\nanalog voltage at 1.6V.\n\nSo my assumption that the AC coupling of the Daisy Seed would make it\nunnecessary to do any AC coupling on the base board signal was clearly\nhorribly flawed.  Let's fix it.\n\nI wonder what the next horribly flawed idea is?\n\nLink: https://sound-au.com/articles/jfet-design.htm#s5 [1]\nLink: https://pearl-hifi.com/06_Lit_Archive/14_Books_Tech_Papers/Borbely_Erno/JFETS_The_New_Frontier.pdf [2]\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "43ecba2ca2d1dd72f3dd4d6ce86c61faf0eab1c9",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/43ecba2ca2d1dd72f3dd4d6ce86c61faf0eab1c9"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/76e609119b7c69a8c7908b6b478f9b20d5b83971",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/76e609119b7c69a8c7908b6b478f9b20d5b83971",
+        "html_url": "https://github.com/torvalds/1590A/commit/76e609119b7c69a8c7908b6b478f9b20d5b83971",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/76e609119b7c69a8c7908b6b478f9b20d5b83971/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f2c7e65ae59234427a1f6a8b001d42d090d7c1e1",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/f2c7e65ae59234427a1f6a8b001d42d090d7c1e1",
+                "html_url": "https://github.com/torvalds/1590A/commit/f2c7e65ae59234427a1f6a8b001d42d090d7c1e1"
+            }
+        ]
+    },
+    {
+        "sha": "f2c7e65ae59234427a1f6a8b001d42d090d7c1e1",
+        "node_id": "C_kwDOOBVydNoAKGYyYzdlNjVhZTU5MjM0NDI3YTFmNmE4YjAwMWQ0MmQwOTBkN2MxZTE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T18:21:50Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T18:21:50Z"
+            },
+            "message": "Finish down-converting a couple of the old boards to KiCad 9.0\n\nThis just does the \"load into kicad, fix up, save\" dance for the plain\nbase board.  Also do the Octaver and compressor effects boards to check.\n\nThis finishes the conversion back to KiCad 9.0.\n\nI think I'll just leave the other boards alone: I think I'm done with\nthem anyway, and we'll just leave them in that zombie state for\nposterity.  I just wanted to check that the scripted conversion seems to\nmostly work for these things.\n\nYou do want to do some manual fixups for this stage: removing the use of\nreal sound files from simulation (since it doesn't exist in released\nkicad/ngspice versions), updating symbols and footprints from the\nlibraries, things like that.\n\nThen refill the PCBs and run all the checks to make sure it all seems\nsane.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "f2d8e779e5aea1bbd6e3c522c220c371dfc38b37",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/f2d8e779e5aea1bbd6e3c522c220c371dfc38b37"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/f2c7e65ae59234427a1f6a8b001d42d090d7c1e1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/f2c7e65ae59234427a1f6a8b001d42d090d7c1e1",
+        "html_url": "https://github.com/torvalds/1590A/commit/f2c7e65ae59234427a1f6a8b001d42d090d7c1e1",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/f2c7e65ae59234427a1f6a8b001d42d090d7c1e1/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9d07a70cf1501c6241a09753b022f54142530fb5",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/9d07a70cf1501c6241a09753b022f54142530fb5",
+                "html_url": "https://github.com/torvalds/1590A/commit/9d07a70cf1501c6241a09753b022f54142530fb5"
+            }
+        ]
+    },
+    {
+        "sha": "9d07a70cf1501c6241a09753b022f54142530fb5",
+        "node_id": "C_kwDOOBVydNoAKDlkMDdhNzBjZjE1MDFjNjI0MWEwOTc1M2IwMjJmNTQxNDI1MzBmYjU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T18:20:32Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T18:20:32Z"
+            },
+            "message": "Scripted down-conversion of the rest of the files to kicad 9.0 format\n\nThis just does the minimal conversion to make kicad-9 almost happy with\nthe down-conversion.  It was done with this very hacky script:\n\n  files=$(git grep -l '\"9.99\"')\n  sed -i 's/(version [0-9]*)/(version 20231212)/' $files\n  sed -i 's/(generator_version \"9.99\")/(generator_version \"9.0\")/' $files\n  sed -i 's/(power global)/(power)/' $files\n  sed -i '/(capping [a-z]*)/ d' $files\n  sed -i '/(filling [a-z]*)/ d' $files\n  sed -i '/duplicate_p[ia][nd]_numbers_are_jumpers/ d' $files\n  perl -0777 -i -pe 's/\\t*\\(((tenting)|(covering)|(plugging))\\s*\\(front\\s*\\w*\\)\\s*\\(back\\s*\\w*\\)\\s*\\)\\s//gs' $files\n\nplease don't use that on anything you care about without checking things\nextensively (and not on any repo with whitespace or other special\ncharacters in filenames, there's no quoting or anything: this was very\nmuch ad-hoc hacky stuff).\n\nNote: this only makes kicad-9 able to load the files, so that they can\nthen be properly converted by saving them from kicad 9 after doing some\ncleanups (synchronizing symbols, refilling pcb, yadda yadda).\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "5936deb83b8f122c64970a324d015540341098e3",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/5936deb83b8f122c64970a324d015540341098e3"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/9d07a70cf1501c6241a09753b022f54142530fb5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/9d07a70cf1501c6241a09753b022f54142530fb5",
+        "html_url": "https://github.com/torvalds/1590A/commit/9d07a70cf1501c6241a09753b022f54142530fb5",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/9d07a70cf1501c6241a09753b022f54142530fb5/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "09dfed07065545df6ba2ac18958142d4be2d87fc",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/09dfed07065545df6ba2ac18958142d4be2d87fc",
+                "html_url": "https://github.com/torvalds/1590A/commit/09dfed07065545df6ba2ac18958142d4be2d87fc"
+            }
+        ]
+    },
+    {
+        "sha": "09dfed07065545df6ba2ac18958142d4be2d87fc",
+        "node_id": "C_kwDOOBVydNoAKDA5ZGZlZDA3MDY1NTQ1ZGY2YmEyYWMxODk1ODE0MmQ0YmUyZDg3ZmM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T04:01:20Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-04T04:01:20Z"
+            },
+            "message": "Downgrade Daisy Seed boards to kicad v9.0\n\nSince I don't do audio signal simulation with the Daisy Seed boards,\nlet's try to downcovert to the standard kicad version to make it easier\nto use without having to have a self-compiled version.\n\nKicad doesn't make this particularly easy, I'm afraid.  Let's hope this\ndidn't do anything bad.  It still simulates, and looks superficially ok.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "8413d75f56928e445af5325b24bc833fabd3a052",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/8413d75f56928e445af5325b24bc833fabd3a052"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/09dfed07065545df6ba2ac18958142d4be2d87fc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/09dfed07065545df6ba2ac18958142d4be2d87fc",
+        "html_url": "https://github.com/torvalds/1590A/commit/09dfed07065545df6ba2ac18958142d4be2d87fc",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/09dfed07065545df6ba2ac18958142d4be2d87fc/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2e5d557485637438dab0454d1d9a78cedf380de4",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/2e5d557485637438dab0454d1d9a78cedf380de4",
+                "html_url": "https://github.com/torvalds/1590A/commit/2e5d557485637438dab0454d1d9a78cedf380de4"
+            }
+        ]
+    },
+    {
+        "sha": "2e5d557485637438dab0454d1d9a78cedf380de4",
+        "node_id": "C_kwDOOBVydNoAKDJlNWQ1NTc0ODU2Mzc0MzhkYWIwNDU0ZDFkOWE3OGNlZGYzODBkZTQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-03T20:30:54Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-09-03T20:30:54Z"
+            },
+            "message": "Create a pedal design based on the Electrosmith Daisy Seed platform\n\nThis tries to make the pedal actually useful by making the audio side\nuse the Daisy Seed from Electrosmith [1]\n\nI've had the board for the last six months, but up until now didn't feel\nready to use it.\n\nI even built the Hothouse pedal kit around it, and exchanged some emails\nwith both Andrew Ikenberry (Electrosmith) and Ricky Sheaves (of Hothouse\npedal from Cleveland Music Co), but never even flashed it up to test.\n\nBut now that I'm getting bored with trying variations of the basic\nanalog base board, let's switch things up a bit and do a base board for\nthe Daisy Seed instead.\n\nBecause assuming I don't mess anything up, it's obviously going to sound\nmuch better and be a lot more flexible than some silly analog distortion\ncircuit from half a century ago.\n\n[ This is just a worse version of the Hothouse pedal, using a crazy dual\n  JFET thing for input buffering just because the sane thing that the\n  Hothouse does - using a much cheaper and more capable op-amp - feels a\n  bit boring.\n\n  So unlike the Hothouse, this is a mono board and objectively less\n  useful. Go get the real thing from [2]. This is just another board in\n  the endless series called \"Linus is trying new ways to do pointless\n  things\" ]\n\nSo this takes my traditional base board, turns it around so that the\npower and audio connectors go on the bottom of the board, and puts the\ncontrol pots on the top side.\n\nThat way all the mechanical hardware is on the base board.\n\nI think this is what I probably should have done originally, but it\nforces a fixed layout for pots and switches, which didn't appeal to me\nin the original design, because the pot connections depend on the\neffect.\n\nHowever, since the enclosures are such a pain, a fixed layout is\nactually probably a good thing, and with the Electrosmith Daisy Seed,\nthe pots are all connected the same way - as resistor diviers to ADC\ninputs.\n\nAnd since this puts all the mechanicals on that base, the effect board\nnow has a lot more space.\n\nWhich wasn't an issue with the original trivial effects, but now that\nI'm trying to fit the whole Daisy Seed on that thing, it suddenly\nbecomes a major issue.\n\nWill it fit? Naah - the Daisy Seed board is just too high in the Z\ndimension. But I'm thinking about it. There's a distant plan.\n\nThis also updates the 1590A footprint for the new fixed 3-pot layout and\nfor the new board connector placement. And incidentally also fixes the\nlocation for the LED and the switch that had been moved in a long time\nago.\n\nThe effects board then pretty much just connects the pin headers from\nthe connector board to the Daisy Seed. There's a capacitor in there too,\nbut that's literally it.\n\nThis does it all with a custom Daisy Seed symbol and footprint.\n\nThere were already versions of that in the KiCad libraries, but I'm not\na fan. The standard KiCad version has the whole Daisy seed as a keep-out\narea, and I want to be able to put low-profile things under the board\nwithout DRC complaints.\n\nMy custom one also ends up just using the Hothouse pin names (so \"POT1\"\nfor the first potentiometer, rather than GPIO16/ADC1). So it's a bit\nclearer what is going on by being specific to my particular use.\n\nLink: https://electro-smith.com/ [1]\nLink: https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/ [2]\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "813145800ed40760349dca79669962e92c27681c",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/813145800ed40760349dca79669962e92c27681c"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/2e5d557485637438dab0454d1d9a78cedf380de4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/2e5d557485637438dab0454d1d9a78cedf380de4",
+        "html_url": "https://github.com/torvalds/1590A/commit/2e5d557485637438dab0454d1d9a78cedf380de4",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/2e5d557485637438dab0454d1d9a78cedf380de4/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f5717f48f6fcf7092f570a550e214178bfe3bfa5",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/f5717f48f6fcf7092f570a550e214178bfe3bfa5",
+                "html_url": "https://github.com/torvalds/1590A/commit/f5717f48f6fcf7092f570a550e214178bfe3bfa5"
+            }
+        ]
+    },
+    {
+        "sha": "f5717f48f6fcf7092f570a550e214178bfe3bfa5",
+        "node_id": "C_kwDOOBVydNoAKGY1NzE3ZjQ4ZjZmY2Y3MDkyZjU3MGE1NTBlMjE0MTc4YmZlM2JmYTU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-29T01:48:11Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-29T01:48:11Z"
+            },
+            "message": "Try LDO for positive voltage rail cleaning\n\nAs mentioned, I don't think I'll actually build this, because it seems\npointlessly complicated.  But I did the basic design and layout for it\njust in case.\n\nI think I'll go back to the single-rail design and keep the MOSFET\nswitching.\n\nI also think I need to come up with a new project.  I'm kind of running\nout of ideas of small projects to do that I can build and test.  I like\nthe switching circuit, but I'm losing interest in the effects board side\nsince I still can't actually play guitar.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "f216ff9e62f551761e0284e2e43a11ad7de3b01f",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/f216ff9e62f551761e0284e2e43a11ad7de3b01f"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/f5717f48f6fcf7092f570a550e214178bfe3bfa5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/f5717f48f6fcf7092f570a550e214178bfe3bfa5",
+        "html_url": "https://github.com/torvalds/1590A/commit/f5717f48f6fcf7092f570a550e214178bfe3bfa5",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/f5717f48f6fcf7092f570a550e214178bfe3bfa5/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3ff47dcfd40d67184148e9249fa4d7128b0b92bc",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/3ff47dcfd40d67184148e9249fa4d7128b0b92bc",
+                "html_url": "https://github.com/torvalds/1590A/commit/3ff47dcfd40d67184148e9249fa4d7128b0b92bc"
+            }
+        ]
+    },
+    {
+        "sha": "3ff47dcfd40d67184148e9249fa4d7128b0b92bc",
+        "node_id": "C_kwDOOBVydNoAKDNmZjQ3ZGNmZDQwZDY3MTg0MTQ4ZTkyNDlmYTRkNzEyOGIwYjkyYmM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-28T22:48:18Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-28T22:48:18Z"
+            },
+            "message": "Add AP2202-ADJ LDO symbol to my parts library\n\nI don't think I'll actually end up using this, because the negative\nvoltage generation just ends up being more pain than it is worth, but I\nthink I'll do one last test-run of things with a nice linear voltage\nregulator to make that positive rail more solid.\n\nI've been here before: I'd like to have a dual rail voltage for so many\nreasons, but the end result is just rather noisy.  Not just on the\nactual negative rail, but on the incoming positive rail too.  The dual\ninductor thing does seem less noisy than most, but it still requires\njust more work.\n\nEven the traditional charge pump wasn't great.\n\nIt's all fixable, but the fixes tend to end up making things more\ncomplicated than simply rebiasing the signal to the middle of the\npositive rail.\n\nThis is made much worse by the whole \"modular base and effects board\"\napproach I have taken: it means that the base board then always ends up\nbeing overly complicated, when the effect board may not need a negative\nrail at all, or may not need very much power at all.\n\nIn fact, it might not need the signal being re-bias back to ground\nbecause in many cases the effects board will rebias the signal anyway.\n\nSo this is all self-inflicted pain.  But I'll continue doing this simply\nbecause I'm trying things out, and certainly learning things in the\nprocess.\n\nI do note that my plain base board is very simple and works really quite\nwell, but does rely on clean power input.  So it wants a good low-noise\nguitar pedal power supply.  Which is admittedly not that hard to find,\nand kind of expected for most guitar pedals.  I then mess things up with\nmy own power supply games.\n\nBut here we are: add a LDO to allow cleaning up the mess that generating\nthat negative rail results in.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "b78891e979151022fd66cb1c8d2b0fcf549cb687",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/b78891e979151022fd66cb1c8d2b0fcf549cb687"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/3ff47dcfd40d67184148e9249fa4d7128b0b92bc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/3ff47dcfd40d67184148e9249fa4d7128b0b92bc",
+        "html_url": "https://github.com/torvalds/1590A/commit/3ff47dcfd40d67184148e9249fa4d7128b0b92bc",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/3ff47dcfd40d67184148e9249fa4d7128b0b92bc/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "245f7595e13c3b63c0932ca9b03752df6ab3114d",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/245f7595e13c3b63c0932ca9b03752df6ab3114d",
+                "html_url": "https://github.com/torvalds/1590A/commit/245f7595e13c3b63c0932ca9b03752df6ab3114d"
+            }
+        ]
+    },
+    {
+        "sha": "245f7595e13c3b63c0932ca9b03752df6ab3114d",
+        "node_id": "C_kwDOOBVydNoAKDI0NWY3NTk1ZTEzYzNiNjNjMDkzMmNhOWIwMzc1MmRmNmFiMzExNGQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-27T18:43:17Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-27T18:43:17Z"
+            },
+            "message": "Update the buffered base board\n\nThe JFET switching worked fine, but since this all started as an\nexercise in using MOSFETs, let's just go all in on that, and use the\nMOSFETs for switching the signal too.\n\nDue to the body diode, you need two MOSFETs in series for the signal\nswitching, so it's four MOSFETs instead of two JFETs, but despite that\nthe end result is actually simpler.  And those dual MOSFET things are\ncommon and dirt cheap, unlike the special matched JFET package.\n\nSince I can just continue to use the dual complementary MOSFETs, I can\nuse PMOS for one signal and NMOS for the other, and share all the gate\ncircuit.  Plus no need for a diode to protect the gate current messing\nwith the signal.\n\nAlso update the resistor value in the switching circuit and make the\ntime constant be 100ms.  That seems to make it more reliable in testing,\nalthough I'm not convinced my testing with the original value was all\nthat great.  The soft-switch circuit does seem to work, though.\n\nAlso, since the LED pin on the board connectors has never been used,\nlet's just re-purpose that as a negative voltage pin for the effect\nboard.  If some effect board wants to touch the LED status, it might as\nwell just connect to the LED itself.  Having access to a dual voltage\nrail would seem to be a lot more important.\n\nFinally - and probably most importantly for actual sound and current\neffects boards - add a low-pass filter on the voltage lines.  Because as\nexpected, the negative power supply did add a lot of noise to the VIN\nline.\n\nThe base board itself doesn't actually care, but the effects boards do.\n\nAn actual LDO would be better, but I don't have any simple fixed ones in\nmy parts library (except for the 5V one, which seems a bit sad).\nCurrent effects boards don't use a lot of current and only care about\nthe voltage being stable, so let's try this simple model.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "02945e522d4f50b0fcb5ff69ed8b4482647bd262",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/02945e522d4f50b0fcb5ff69ed8b4482647bd262"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/245f7595e13c3b63c0932ca9b03752df6ab3114d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/245f7595e13c3b63c0932ca9b03752df6ab3114d",
+        "html_url": "https://github.com/torvalds/1590A/commit/245f7595e13c3b63c0932ca9b03752df6ab3114d",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/245f7595e13c3b63c0932ca9b03752df6ab3114d/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "88673d25073955f30435f737563a38ea9d4aead8",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/88673d25073955f30435f737563a38ea9d4aead8",
+                "html_url": "https://github.com/torvalds/1590A/commit/88673d25073955f30435f737563a38ea9d4aead8"
+            }
+        ]
+    },
+    {
+        "sha": "88673d25073955f30435f737563a38ea9d4aead8",
+        "node_id": "C_kwDOOBVydNoAKDg4NjczZDI1MDczOTU1ZjMwNDM1ZjczNzU2M2EzOGVhOWQ0YWVhZDg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-20T17:20:47Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-20T17:20:47Z"
+            },
+            "message": "Buffered base: use negative rail for JFET switching\n\nThis _still_ doesn't do any actual buffering, but with the negative\nrail, we now no longer need to rebase the signals to some mid-point\nvoltage, and we can just leave the signals ground-references and use the\nnegative rail for switching.\n\nThat streamlines the signal path, and will make it easier to just insert\nan opamp or two in there too.  But I remain more interested in getting\nthe switching side sorted out properly, so that's the primary goal here.\n\nThis tweaks the push-on push-off circuit a bit too, since taht one now\nneeds to switch between positive and negative voltages rather than VIN\nand ground.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2fa5464635d90f71d9e0c5de99aea3e5176923dd",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/2fa5464635d90f71d9e0c5de99aea3e5176923dd"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/88673d25073955f30435f737563a38ea9d4aead8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/88673d25073955f30435f737563a38ea9d4aead8",
+        "html_url": "https://github.com/torvalds/1590A/commit/88673d25073955f30435f737563a38ea9d4aead8",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/88673d25073955f30435f737563a38ea9d4aead8/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0b63442c4bea3f725743b49470d860dca25431ac",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/0b63442c4bea3f725743b49470d860dca25431ac",
+                "html_url": "https://github.com/torvalds/1590A/commit/0b63442c4bea3f725743b49470d860dca25431ac"
+            }
+        ]
+    },
+    {
+        "sha": "0b63442c4bea3f725743b49470d860dca25431ac",
+        "node_id": "C_kwDOOBVydNoAKDBiNjM0NDJjNGJlYTNmNzI1NzQzYjQ5NDcwZDg2MGRjYTI1NDMxYWM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-19T18:43:04Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-19T18:43:04Z"
+            },
+            "message": "Add negative power rail to the buffered base design\n\nThe negative voltage isn't actually _used_ anywhere yet, but this is\nprep-work for making that buffered base board do the long promised\nbuffering, as I'm currently leaning towards opamps.\n\nThe LT3462A is very easy to use, but in a probably completely misguided\nattempt at keeping any stray ground return currents on the power supply\nside, I added a ground plane keepout.  No isolation, but an attempt to\nat least make the easy path for any return currents to stay in that\n\"power supply area\" and hopefully not show up around the analog parts.\n\nSomebody who knows what they are about would probably tell me I'm just\nmaking things worse.  But I'm a sw engineer, so pretty much by\ndefinition I don't know anybody who knows what they are doing.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "994f39933beb15d43941366d247a9c6420b27ebf",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/994f39933beb15d43941366d247a9c6420b27ebf"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/0b63442c4bea3f725743b49470d860dca25431ac",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/0b63442c4bea3f725743b49470d860dca25431ac",
+        "html_url": "https://github.com/torvalds/1590A/commit/0b63442c4bea3f725743b49470d860dca25431ac",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/0b63442c4bea3f725743b49470d860dca25431ac/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d",
+                "html_url": "https://github.com/torvalds/1590A/commit/4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d"
+            }
+        ]
+    },
+    {
+        "sha": "4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d",
+        "node_id": "C_kwDOOBVydNoAKDRiZGE3YmNiM2RlNjUxM2UyY2I5MGI0ZDMwMWI4ZmEyMmUxZjhiMGQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-19T18:05:35Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-19T18:05:35Z"
+            },
+            "message": "Add LT3462A symbol\n\nI'm going to experiment with a negative power rail one more time, and in\nthe LT3462A I found a DC/DC converter that looks a lot more pleasant\nthan the ones I've tried before.\n\nNot only is it a nice TSOT-23-6 footprint, but it has an integrated\nschottky diode so it's easy to use.  And it's a fixed frequency dual\ninductor inverter design, so it should be reasonably quiet in the audio\nfrequency.\n\nI'm not planning to bother with LDOs to clean up the power rails,\nbecause the reason for the power rail would be the op-amp for buffering,\nand the PSRR of any quality opamp should make it all irrelevant.\n\nI dunno.  Every time I've tried this, it's just been noise hell, so this\nis probably a bad idea.  Even when you can't actually _hear_ the noise,\nit ends up just messing with the signal on the scope and making it\nharder to judge whether the circuit is doing well or not.  But I keep\ntrying.\n\nWhat was the definition of insanity again? I forget.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "d40c0e40f89841f8aef2c36d81f3444260510a2f",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/d40c0e40f89841f8aef2c36d81f3444260510a2f"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d",
+        "html_url": "https://github.com/torvalds/1590A/commit/4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/4bda7bcb3de6513e2cb90b4d301b8fa22e1f8b0d/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "17f58eb621068fc07604c08a67e96cacadbc6b5c",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/17f58eb621068fc07604c08a67e96cacadbc6b5c",
+                "html_url": "https://github.com/torvalds/1590A/commit/17f58eb621068fc07604c08a67e96cacadbc6b5c"
+            }
+        ]
+    },
+    {
+        "sha": "17f58eb621068fc07604c08a67e96cacadbc6b5c",
+        "node_id": "C_kwDOOBVydNoAKDE3ZjU4ZWI2MjEwNjhmYzA3NjA0YzA4YTY3ZTk2Y2FjYWRiYzZiNWM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-18T16:21:11Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-18T16:21:11Z"
+            },
+            "message": "Split the buffered base over multiple schematic pages, do PCB layout\n\nSo this thing is still mis-named, in that it doesn't actually buffer the\nsignal at all, it only does the transistor soft-switching.  But I _will_\nadd buffering at some point, it's just not the interesting part of this\nall, since I've done that part before.\n\nBut because I wrote explanations for the push-on / push-off circuit, and\nbecause I split things up into small parts, the schematic was getting\npretty crowded.  So I decided to split up the actually interesting part\nof the schematic - the switching side - onto a schematic page of its\nown.\n\nAnd while doing that, I moved the simulation infrastructure to its own\npage too.\n\nThat leaves the toplevel page pretty empty with mainly just the\nconnectors and the basic signal and power filtering, but that's where\nthe buffers will go eventually.\n\nAnd because it simulates fine, I want to actually see if it works in\nreality.  So this also does the PCB layout.  There's tons of room left\nfor any future buffering circuit, whether I then do it with discrete\nJFETs or decide that op-amps are the sane thing here.\n\nI used a random regular tactile switch - which I don't actually have in\nmy parts library.  I'll just wire up two wires and test it that way (and\nI do have some momentary SPDT stomp switches around that I can attach to\nthe wires).\n\nBut longer-term, one of the points of this kind of electronic switching\nis that you can do it multiple ways, and aren't limited to a physical\nswitch - or indeed just a single one.  So maybe I'll do some remote\nswitching thing, or play around with using a hall effect sensor and a\nmagnet, or whatever.\n\nThere are always new things to learn about...  But let's make sure the\nbasics of this thing actually works first.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "e6b432a20b03b29b45be5948625c91dd4da3f7d4",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/e6b432a20b03b29b45be5948625c91dd4da3f7d4"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/17f58eb621068fc07604c08a67e96cacadbc6b5c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/17f58eb621068fc07604c08a67e96cacadbc6b5c",
+        "html_url": "https://github.com/torvalds/1590A/commit/17f58eb621068fc07604c08a67e96cacadbc6b5c",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/17f58eb621068fc07604c08a67e96cacadbc6b5c/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2161ab88ca723f17d29b7abdb9856e0c2723675e",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/2161ab88ca723f17d29b7abdb9856e0c2723675e",
+                "html_url": "https://github.com/torvalds/1590A/commit/2161ab88ca723f17d29b7abdb9856e0c2723675e"
+            }
+        ]
+    },
+    {
+        "sha": "2161ab88ca723f17d29b7abdb9856e0c2723675e",
+        "node_id": "C_kwDOOBVydNoAKDIxNjFhYjg4Y2E3MjNmMTdkMjliN2FiZGI5ODU2ZTBjMjcyMzY3NWU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-17T22:02:00Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-17T22:02:00Z"
+            },
+            "message": "Buffered base: add RF filter after JFET switches\n\nIt turns out that getting rid of the switching pop seems to be as simple\nas that.\n\nMaybe time to do PCB layout and see if reality matches simulation?\n\nI do think I should do the buffer that this doesn't do despite the name.\nThat was the intent, but then it worked so well without it..  An op-amp\nwould be the sane thing to do, but since I've been on a \"discrete\ncomponents\" tear, I suspect I'd just do a JFET voltage follower.\n\nBut then I feel like I should make up for the inevitable signal loss.\nOr use a common source thing that does a phase reversal? That seems\nwrong too.  Perhaps do another dual JFET for a common source both at\ninput and output?\n\nDecisions, decisions.\n\nAnyway, this doesn't do any of that.  This just gets rid of the\nswitching pop in simulation.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "5415037016f367e2014cfcb364699edf305fd437",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/5415037016f367e2014cfcb364699edf305fd437"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/2161ab88ca723f17d29b7abdb9856e0c2723675e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/2161ab88ca723f17d29b7abdb9856e0c2723675e",
+        "html_url": "https://github.com/torvalds/1590A/commit/2161ab88ca723f17d29b7abdb9856e0c2723675e",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/2161ab88ca723f17d29b7abdb9856e0c2723675e/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "e7c38a0b4187543798f6b8ab08c4f36af1a91542",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/e7c38a0b4187543798f6b8ab08c4f36af1a91542",
+                "html_url": "https://github.com/torvalds/1590A/commit/e7c38a0b4187543798f6b8ab08c4f36af1a91542"
+            }
+        ]
+    },
+    {
+        "sha": "e7c38a0b4187543798f6b8ab08c4f36af1a91542",
+        "node_id": "C_kwDOOBVydNoAKGU3YzM4YTBiNDE4NzU0Mzc5OGY2YjhhYjA4YzRmMzZhZjFhOTE1NDI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-17T17:34:49Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-17T17:34:49Z"
+            },
+            "message": "Wire the soft-switch up to actually switch signal and LED\n\nSurprisingly, this actually seems to work fine.  In simulation only, of\ncourse.\n\nAnd not surprisingly, according to the same simulation, it has an\nimpressively horrible pop at switching time.  This very much reminds me\nof the broken \"Tremolo doubling as a metronome\" thing, which was due to\nthe exact same thing: very harsh and sudden driving of the JFET gate.\n\nIt's made worse by the MOSFET switching having the same thing.  Big\nvoltage spike when turning off, presumably due to capacitive parasitics\nor whatever.\n\nPossibly helped by adding a resistor at the gate or something, but\nunlike the tremolo, the switching event is rare.  So right now I simply\ndon't care.  I'm just _simulating_ switching things at a 5Hz rate, so it\nshows up like a sore thumb.\n\nI haven't done layout, and I haven't added a real switch yet, so this is\nall just simulation.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "65fe66e4f6da1b61ef3ad3c0b691541306f8a543",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/65fe66e4f6da1b61ef3ad3c0b691541306f8a543"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/e7c38a0b4187543798f6b8ab08c4f36af1a91542",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/e7c38a0b4187543798f6b8ab08c4f36af1a91542",
+        "html_url": "https://github.com/torvalds/1590A/commit/e7c38a0b4187543798f6b8ab08c4f36af1a91542",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/e7c38a0b4187543798f6b8ab08c4f36af1a91542/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b9552bb1129fca7fc325262b58d88be0a891a7f3",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/b9552bb1129fca7fc325262b58d88be0a891a7f3",
+                "html_url": "https://github.com/torvalds/1590A/commit/b9552bb1129fca7fc325262b58d88be0a891a7f3"
+            }
+        ]
+    },
+    {
+        "sha": "b9552bb1129fca7fc325262b58d88be0a891a7f3",
+        "node_id": "C_kwDOOBVydNoAKGI5NTUyYmIxMTI5ZmNhN2ZjMzI1MjYyYjU4ZDg4YmUwYTg5MWE3ZjM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-17T14:58:31Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-17T14:58:31Z"
+            },
+            "message": "Add the beginnings of a dubious buffered base board\n\nAs part of looking at what I should try to use my MOSFETs for, I decided\nI should finally look at a soft-switch buffered base board.\n\nThis is not it, but it starts with a very dubious push-on push-off\nMOSFET circuit.  I doubt it really works, even if it simulates\nbeautifully.  But I don't simulate any debounce issues etc, although I\ndon't see why it wouldn't deal with that too.\n\nAll the real push-on push-off circuits I've seen are more complex than\nthis, which is the main reason why I doubt that my simple circuit really\nworks.  It's a bit *too* simple.  Everybody uses some flip-flop and/or\nschmitt trigger or other fancier things.\n\nBut hey, maybe my google-fu is weak and I just didn't find the right\nthing and there are even simpler ways to do this.  Plus I admittedly\ncame at this from an odd direction of \"what can I do with discrete\nMOSFETs\".  Sane people don't do that.\n\nAnyway, the basic of the push-on push-off circuit is - as always - a\ncapacitor that alternates between being discharged and charged up.  Then\ntwo transistors that reinforce each other's state.\n\nIn this case, the capacitor is connected to the gate of the PMOSFET\nthrough the momentary switch.  So if you press the switch and the\ncapacitor was discharged, the PMOSFET starts conducting, while if you\npress the switch and the capacitor was charged, the PMOSFET turns off.\n\nThe rest of the circuit is just the complementary NMOSFET that then\nfollows the PMOSFET state and re-inforces whatever state it was in, and\nthe resistors to make it all work sanely.  The only important thing is\nto make sure the resistors have sane values to not do bad things while\nthe switch is pressed.\n\nIt all simulates ok, and I don't see why it wouldn't work.\n\nAnyway, this *only* does that silly push-on push-off logic.  It isn't\nactually hooked up any way yet.  Not even the LED to show the state,\nmuch less any JFETs to switch the actual signal around.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "ddb1675a26e0b6edf8c605f419a5cf08b7911341",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/ddb1675a26e0b6edf8c605f419a5cf08b7911341"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/b9552bb1129fca7fc325262b58d88be0a891a7f3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/b9552bb1129fca7fc325262b58d88be0a891a7f3",
+        "html_url": "https://github.com/torvalds/1590A/commit/b9552bb1129fca7fc325262b58d88be0a891a7f3",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/b9552bb1129fca7fc325262b58d88be0a891a7f3/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2755a4e06e3bacd9916b67b1d7e4c6f3c399c423",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/2755a4e06e3bacd9916b67b1d7e4c6f3c399c423",
+                "html_url": "https://github.com/torvalds/1590A/commit/2755a4e06e3bacd9916b67b1d7e4c6f3c399c423"
+            }
+        ]
+    },
+    {
+        "sha": "2755a4e06e3bacd9916b67b1d7e4c6f3c399c423",
+        "node_id": "C_kwDOOBVydNoAKDI3NTVhNGUwNmUzYmFjZDk5MTZiNjdiMWQ3ZTRjNmYzYzM5OWM0MjM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-15T20:45:30Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-15T20:45:30Z"
+            },
+            "message": "Add a few dual MOSFET symbols\n\nSo I think I mostly understand JFETs, and I did BJT's earlier, so now\nit's time for some MOSFET love.  Sure, I've used a P-channel MOSFET for\nthe high-side power thing, but that's still just trivial switching.  I\nneed to learn the whole small-signal AC thing and biasing etc.\n\nAnd since I like the dual transistor form factors, and TSOT-23-6 is\nabout the right size for me, here's three different ones:\n\n - DMN3060LVT: dual N-channel MOSFET\n - DMP3164LVT: dual P-channel MOSFET\n - DMC3071LVT: dual complementary MOSFET\n\nall three are fairly similar: 30V breakdown voltages, capable of a\ncouple of amps.  The complementary one is a bit beefier and has slightly\nhigher V_{TH} values, but we're still looking at roughly the same kind\nof thing.\n\nLet's see what I can do with these.  I didn't actually pick these based\non any sane and deep characteristics, they may be entirely the wrong\nthing, but that's what we're going to find out.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "79e91dfabdbed30b84d5434c4aea1936a51c226c",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/79e91dfabdbed30b84d5434c4aea1936a51c226c"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/2755a4e06e3bacd9916b67b1d7e4c6f3c399c423",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/2755a4e06e3bacd9916b67b1d7e4c6f3c399c423",
+        "html_url": "https://github.com/torvalds/1590A/commit/2755a4e06e3bacd9916b67b1d7e4c6f3c399c423",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/2755a4e06e3bacd9916b67b1d7e4c6f3c399c423/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ef2035e7ea8add16c300c4e625d2bc0302478158",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/ef2035e7ea8add16c300c4e625d2bc0302478158",
+                "html_url": "https://github.com/torvalds/1590A/commit/ef2035e7ea8add16c300c4e625d2bc0302478158"
+            }
+        ]
+    },
+    {
+        "sha": "ef2035e7ea8add16c300c4e625d2bc0302478158",
+        "node_id": "C_kwDOOBVydNoAKGVmMjAzNWU3ZWE4YWRkMTZjMzAwYzRlNjI1ZDJiYzAzMDI0NzgxNTg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-15T15:00:11Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-15T15:00:11Z"
+            },
+            "message": "Update compressor PCB layout too\n\nThis does the new trial matches JFET thing as a board layout too.  I'm\nreally not convinced this was worth it, and the routing and layout are a\nbit of a mess, but it's all part of the whole learnign experience, and I\ndo want to see if the self-biasing thing actually works in real life or\nit just happens to look ok in simulation with the particular simulation\nvalues.\n\n.. and the usual noise from KiCad inexplicably changing randon things\nwhen looking at files.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "250b4aba6945481b74daf16b898f50ea7ed65206",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/250b4aba6945481b74daf16b898f50ea7ed65206"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/ef2035e7ea8add16c300c4e625d2bc0302478158",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/ef2035e7ea8add16c300c4e625d2bc0302478158",
+        "html_url": "https://github.com/torvalds/1590A/commit/ef2035e7ea8add16c300c4e625d2bc0302478158",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/ef2035e7ea8add16c300c4e625d2bc0302478158/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "cc0a4e7f40660a5f8846436fdd00e37ccf6699bf",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/cc0a4e7f40660a5f8846436fdd00e37ccf6699bf",
+                "html_url": "https://github.com/torvalds/1590A/commit/cc0a4e7f40660a5f8846436fdd00e37ccf6699bf"
+            }
+        ]
+    },
+    {
+        "sha": "cc0a4e7f40660a5f8846436fdd00e37ccf6699bf",
+        "node_id": "C_kwDOOBVydNoAKGNjMGE0ZTdmNDA2NjBhNWY4ODQ2NDM2ZmRkMDBlMzdjY2Y2Njk5YmY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T23:14:25Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T23:14:25Z"
+            },
+            "message": "Compressor: base the compressor level voltage on matched JFET\n\nThis is an attempt at basing the compression level voltage on the\nmatched JFET, making the level knob hopefully more reliably sane in the\nface of different JFET characteristics.\n\nI'm not entirely convinced I shouldn't just use a trim pot, but I do\nthink this is a more interesting approach.  It basically picks the base\nvoltage from the self-biasing voltage of the matched JFET, guaranteeing\nthat the level voltage pot starts close to V_{GSOFF}.  The level pot is\nthen basically controlling the DC bias on top of that.\n\nThis also tries to make the actual attentuation circuit clearer and\nhopefully better.  Both the JFET drain and source are biased to the\ncompression level voltage, while the base is biased to the signal peak\ndetector (the somewhat mis-named \"RECT\" net).\n\nThe source then also gets the signal, and when V_{GS} gets close to zero\n(ie RECT gets close to LEVEL) the JFET starts conducting and the AC\nsignal is attenuated through the JFET to the capacitor to ground at the\ndrain.\n\nThe base gets half the AC signal (on top of the DC peak bias) as before\nto minimize distortion (ie the AC signal at the base is halfway between\nthe AC signal at source and the lack of AC signal at drain).\n\nThis all seems to still simulate well, and the behavior of the level pot\nseems to mostly make sense.  How well it works with actual random JFET\ncharacteristics and whether the matching model works, I don't know.\n\nI still need to actually lay out the PCB, but I think the schematic is\ngetting closer.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "7d9667bac3cc728283fb287c86211e9a024f703c",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/7d9667bac3cc728283fb287c86211e9a024f703c"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/cc0a4e7f40660a5f8846436fdd00e37ccf6699bf",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/cc0a4e7f40660a5f8846436fdd00e37ccf6699bf",
+        "html_url": "https://github.com/torvalds/1590A/commit/cc0a4e7f40660a5f8846436fdd00e37ccf6699bf",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/cc0a4e7f40660a5f8846436fdd00e37ccf6699bf/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "56cb0992694644a17913754557ccb86417a59515",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/56cb0992694644a17913754557ccb86417a59515",
+                "html_url": "https://github.com/torvalds/1590A/commit/56cb0992694644a17913754557ccb86417a59515"
+            }
+        ]
+    },
+    {
+        "sha": "56cb0992694644a17913754557ccb86417a59515",
+        "node_id": "C_kwDOOBVydNoAKDU2Y2IwOTkyNjk0NjQ0YTE3OTEzNzU0NTU3Y2NiODY0MTdhNTk1MTU",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T17:06:51Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T17:06:51Z"
+            },
+            "message": "Update compressor for the LS844 dual JFET\n\nThis is just a quick conversion, not using the matching, just using the\nLS844 as two independent JFETs.\n\nBecause I_{DSS} is lower, the source resistor on the input buffer is\nbigger, so that if I_{DSS} is just 1.5mA the voltage drop over the\nresistor can go up to 3.5V.\n\nSimilarly, tweak the limit resistor values to give a bigger limit\nvoltage range for the bigger V_{GSOFF} range of the LS844, and make the\nnegative feedback resistor divider bigger to account for higher R_{DSON}\nof the LS844.\n\nAlso remove the partial bypassing of the amplification emitter resistor,\nsince the high-frequency damping of the plain base is no more.  Although\nmaybe it wants a brighter sound?\n\nThis seems to simulate ok, although the compression is certainly not\nidentical to the version with the MMBF5103.  That may be real, or may be\njust different spice model default values and swamped by JFET\nvariations.\n\nAnyway, I'll eventually try the \"use self-biasing using the matching\nJFETs to do automatic levels\" eventually, but first I wanted to do the\nminimal conversion and verify that at least the LS844 model seems to be\nok before doing any bigger surgery.\n\nNOTE! This doesn't update the PCB layout for the changes.  Just doing\nthe schematic and simulation checks.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "99c119d5dbc9e096b09a18a8b99fa6496d46221f",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/99c119d5dbc9e096b09a18a8b99fa6496d46221f"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/56cb0992694644a17913754557ccb86417a59515",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/56cb0992694644a17913754557ccb86417a59515",
+        "html_url": "https://github.com/torvalds/1590A/commit/56cb0992694644a17913754557ccb86417a59515",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/56cb0992694644a17913754557ccb86417a59515/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b",
+                "html_url": "https://github.com/torvalds/1590A/commit/136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b"
+            }
+        ]
+    },
+    {
+        "sha": "136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b",
+        "node_id": "C_kwDOOBVydNoAKDEzNmI2MWNlZmZiMWMwMmQ1ZWY5YWVhNzRmOGFjOWNlNjEyNmYyOGI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T16:48:01Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T16:48:01Z"
+            },
+            "message": "Update the plain base to have a 1k RF resistor\n\nThat's what the text on the silkscreen said, but I had tested with a 10k\nresistor (for a 72kHz low pass filter).  But I think it's safer to\nreally only filter out RF (3dB at 723kHz), so make it actually match the\ntext.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2c5fff1519461d3519705f8e6fc225983ef2a6c5",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/2c5fff1519461d3519705f8e6fc225983ef2a6c5"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b",
+        "html_url": "https://github.com/torvalds/1590A/commit/136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/136b61ceffb1c02d5ef9aea74f8ac9ce6126f28b/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "30463a9e9332bffd9202bd0554d3df4879b09521",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/30463a9e9332bffd9202bd0554d3df4879b09521",
+                "html_url": "https://github.com/torvalds/1590A/commit/30463a9e9332bffd9202bd0554d3df4879b09521"
+            }
+        ]
+    },
+    {
+        "sha": "30463a9e9332bffd9202bd0554d3df4879b09521",
+        "node_id": "C_kwDOOBVydNoAKDMwNDYzYTllOTMzMmJmZmQ5MjAyYmQwNTU0ZDNkZjQ4NzliMDk1MjE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T16:06:24Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-14T16:06:24Z"
+            },
+            "message": "Add LS844 dual matched JFET symbol\n\nI'm not loving the JFET level tuning in the compressor pedal, so I have\nthe glimmers of a plan.  Using a dual matched JFET I think I can use\nself-biasing on one of the JFETs to get it into the interesting region,\nand then use the resulting source voltage as the level voltage.\n\nWill that work? Who knows, but this adds the symbol and the simulation\ndata for it so that I can try it out.\n\nIt sounds a bit wasteful to use one JFET just for that, but I've liked\nthe other dual transistor parts, so maybe I'll use this one for other\nthings too where I just want two JFETs even if I don't care about the\nmatching.\n\nThe LS844 seems like a perfectly cromulent JFET to use in general, with\na reasonable V_{GSOFF} range (-1...-3.5V) and I_{DSS} (1.5...15mA).\n\nCompared to the MMBF5103, it has lower I_{DSS} and a slightly larger\nV_{GSOFF} range, but if the matching helps with the variation the latter\nshould be fine.\n\nIf I read the datasheets right, the on-resistance of the LS844 seems to\nbe rather higher in the 100-200 Ohm range.  That too seems ok, but may\nneed tweaking when converting a circuit.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "af250ff9374a575837c26a4dcd1756e17843db78",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/af250ff9374a575837c26a4dcd1756e17843db78"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/30463a9e9332bffd9202bd0554d3df4879b09521",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/30463a9e9332bffd9202bd0554d3df4879b09521",
+        "html_url": "https://github.com/torvalds/1590A/commit/30463a9e9332bffd9202bd0554d3df4879b09521",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/30463a9e9332bffd9202bd0554d3df4879b09521/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "44cd79c051989394d5529a2a4ec4d6562956a6fd",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/44cd79c051989394d5529a2a4ec4d6562956a6fd",
+                "html_url": "https://github.com/torvalds/1590A/commit/44cd79c051989394d5529a2a4ec4d6562956a6fd"
+            }
+        ]
+    },
+    {
+        "sha": "44cd79c051989394d5529a2a4ec4d6562956a6fd",
+        "node_id": "C_kwDOOBVydNoAKDQ0Y2Q3OWMwNTE5ODkzOTRkNTUyOWEyYTRlYzRkNjU2Mjk1NmE2ZmQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-13T22:11:36Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-13T22:11:36Z"
+            },
+            "message": "Compressor: More kicad file noise\n\nThis just re-annotates the schematic and undoes the workaround for the\nkicad bug with crossed wires that has now been fixed.\n\nLink: https://gitlab.com/kicad/code/kicad/-/issues/21480\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "dbcf5188fae549573e4d40091dac9bfea18da1b1",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/dbcf5188fae549573e4d40091dac9bfea18da1b1"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/44cd79c051989394d5529a2a4ec4d6562956a6fd",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/44cd79c051989394d5529a2a4ec4d6562956a6fd",
+        "html_url": "https://github.com/torvalds/1590A/commit/44cd79c051989394d5529a2a4ec4d6562956a6fd",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/44cd79c051989394d5529a2a4ec4d6562956a6fd/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "dc92304617b7654d93333e5080c75c6db7fd6112",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/dc92304617b7654d93333e5080c75c6db7fd6112",
+                "html_url": "https://github.com/torvalds/1590A/commit/dc92304617b7654d93333e5080c75c6db7fd6112"
+            }
+        ]
+    },
+    {
+        "sha": "dc92304617b7654d93333e5080c75c6db7fd6112",
+        "node_id": "C_kwDOOBVydNoAKGRjOTIzMDQ2MTdiNzY1NGQ5MzMzM2U1MDgwYzc1YzZkYjdmZDYxMTI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-12T22:44:42Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2025-08-12T22:44:42Z"
+            },
+            "message": "Octaver: file noise due to kicad version update\n\nThis also works around a bug in this pre-release of kicad: four wires in\nthe schematic that meet in the middle have their connections removed, so\nyou end up with two crossing wires rather than four connecting wires.\n\nQuite annoying, but for now the workaround seems to be to just never\nhave a join of four wires coming together, but do two three-wire\nconnections.\n\nI'm sure it will get fixed soon in Kicad, but I have been tracking\nrandom daily source versions and rather than downgrade to a working\nversion, I'm working around this misfeature.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2fb24a992f4b53bfa08035bf2fe5d70ac11189ab",
+                "url": "https://api.github.com/repos/torvalds/1590A/git/trees/2fb24a992f4b53bfa08035bf2fe5d70ac11189ab"
+            },
+            "url": "https://api.github.com/repos/torvalds/1590A/git/commits/dc92304617b7654d93333e5080c75c6db7fd6112",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/1590A/commits/dc92304617b7654d93333e5080c75c6db7fd6112",
+        "html_url": "https://github.com/torvalds/1590A/commit/dc92304617b7654d93333e5080c75c6db7fd6112",
+        "comments_url": "https://api.github.com/repos/torvalds/1590A/commits/dc92304617b7654d93333e5080c75c6db7fd6112/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "072a3b1e49964125f4e49a3e253d331847171544",
+                "url": "https://api.github.com/repos/torvalds/1590A/commits/072a3b1e49964125f4e49a3e253d331847171544",
+                "html_url": "https://github.com/torvalds/1590A/commit/072a3b1e49964125f4e49a3e253d331847171544"
+            }
+        ]
+    }
+]

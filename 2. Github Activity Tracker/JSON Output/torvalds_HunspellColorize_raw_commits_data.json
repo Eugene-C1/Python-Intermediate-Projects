@@ -1,0 +1,406 @@
+[
+    {
+        "sha": "87c358bfc99454490f1ef3afcb9ecf7590a9367e",
+        "node_id": "C_kwDOQ8XTDdoAKDg3YzM1OGJmYzk5NDU0NDkwZjFlZjNhZmNiOWVjZjc1OTBhOTM2N2U",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-19T20:19:39Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-19T20:19:39Z"
+            },
+            "message": "Add local dictionaries if they exist\n\nThis is very simplistic - as is the whole project - but it adds a local\ndictionary file from the current working directory and from the home\ndirectory.\n\nGood enough for some testing, at least.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "b183f1ca5887fa89620e3e16e2bfb57305fbf7ae",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/trees/b183f1ca5887fa89620e3e16e2bfb57305fbf7ae"
+            },
+            "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/commits/87c358bfc99454490f1ef3afcb9ecf7590a9367e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/87c358bfc99454490f1ef3afcb9ecf7590a9367e",
+        "html_url": "https://github.com/torvalds/HunspellColorize/commit/87c358bfc99454490f1ef3afcb9ecf7590a9367e",
+        "comments_url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/87c358bfc99454490f1ef3afcb9ecf7590a9367e/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fcf2283690a7abb61c135389b933d349ce7415a9",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/fcf2283690a7abb61c135389b933d349ce7415a9",
+                "html_url": "https://github.com/torvalds/HunspellColorize/commit/fcf2283690a7abb61c135389b933d349ce7415a9"
+            }
+        ]
+    },
+    {
+        "sha": "fcf2283690a7abb61c135389b933d349ce7415a9",
+        "node_id": "C_kwDOQ8XTDdoAKGZjZjIyODM2OTBhN2FiYjYxYzEzNTM4OWI5MzNkMzQ5Y2U3NDE1YTk",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-19T17:08:48Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-19T17:08:48Z"
+            },
+            "message": "Use pkg-config to find hunspell instead of hardcoding it\n\nAlso add -Wall, and fix a compiler warning that showed up as a result.\n\nIt's all just slightly less hacky this way.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "a1fccee80ffd22ec5634c6ead77654c811ca299b",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/trees/a1fccee80ffd22ec5634c6ead77654c811ca299b"
+            },
+            "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/commits/fcf2283690a7abb61c135389b933d349ce7415a9",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/fcf2283690a7abb61c135389b933d349ce7415a9",
+        "html_url": "https://github.com/torvalds/HunspellColorize/commit/fcf2283690a7abb61c135389b933d349ce7415a9",
+        "comments_url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/fcf2283690a7abb61c135389b933d349ce7415a9/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0d99d1c88a985e3ea9c189942dc2327924b25ddf",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/0d99d1c88a985e3ea9c189942dc2327924b25ddf",
+                "html_url": "https://github.com/torvalds/HunspellColorize/commit/0d99d1c88a985e3ea9c189942dc2327924b25ddf"
+            }
+        ]
+    },
+    {
+        "sha": "0d99d1c88a985e3ea9c189942dc2327924b25ddf",
+        "node_id": "C_kwDOQ8XTDdoAKDBkOTlkMWM4OGE5ODVlM2VhOWMxODk5NDJkYzIzMjc5MjRiMjVkZGY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-19T00:04:37Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-19T00:04:37Z"
+            },
+            "message": "Update README about colorization..\n\nI fixed the most obvious interaction with the ANSI color sequences that\ncome from git colorizing its output, and this actually works\nsurprisingly well.  I've been using this _while_ looking at doing the\nhunspell thing in uemacs, and I don't actually hate it.\n\nYes, it ends up bold-facing various random variable names and other\nthings that aren't proper words, but it's less distracting than I\nthought it would be.\n\nI'll still continue to look at uemacs - because catching this while\nwriting commit messages is better than having \"git log\" show them later,\nbut I think I might actually end up using both.\n\nI continue to be surprised that google didn't show any pre-existing\nversion of this silly tool.  The default output from 'hunspell' (and\n'aspell' and friends - I don't want to claim that hunspell would be\nparticularly bad, quite the reverse) has always struck me as fairly\npointless.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "7018fdbc6dc0b1ef2badd5bc796174cb490e348b",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/trees/7018fdbc6dc0b1ef2badd5bc796174cb490e348b"
+            },
+            "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/commits/0d99d1c88a985e3ea9c189942dc2327924b25ddf",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/0d99d1c88a985e3ea9c189942dc2327924b25ddf",
+        "html_url": "https://github.com/torvalds/HunspellColorize/commit/0d99d1c88a985e3ea9c189942dc2327924b25ddf",
+        "comments_url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/0d99d1c88a985e3ea9c189942dc2327924b25ddf/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3",
+                "html_url": "https://github.com/torvalds/HunspellColorize/commit/d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3"
+            }
+        ]
+    },
+    {
+        "sha": "d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3",
+        "node_id": "C_kwDOQ8XTDdoAKGQyZjI0MzllY2Y1ZDVjNzBkYmMyNWY2MzU3MjlhOWVhMTdmZTYxYTM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-18T21:55:16Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-18T21:55:16Z"
+            },
+            "message": "Stop being quite so lazy about line lengths and UTF-8\n\nThis deals with line lengths by ignoring the issue and just using a\nstate machine on raw buffers.\n\nIt also deals with UTF-8 content using exactly the same \"ignore it\" way:\njust blithely assume that any non-US-ASCII characters are just letters\nin other alphabets.\n\nBecause ignorance is bliss, and that makes it do the right thing for\nFinnish and Swedish.  And presumably other languages that I don't speak\ntoo.\n\nOf course, if you use use other encodings than UTF-8, you get what you\ndeserve.  And even with UTF-8, this will get other Unicode things like\nhalf-space characters etc wrong, and just consider it all part of the\nword, and call you out on your odd spelling.\n\nYou win some, you lose some.  I'm not interested in doing an actual full\nUnicode lookup thing.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "95b9f7dd064ae1f77a0c623acadae8c057cd6200",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/trees/95b9f7dd064ae1f77a0c623acadae8c057cd6200"
+            },
+            "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/commits/d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3",
+        "html_url": "https://github.com/torvalds/HunspellColorize/commit/d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3",
+        "comments_url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/d2f2439ecf5d5c70dbc25f635729a9ea17fe61a3/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "bc93b5011e24b56211ec806e0a1697d8ef3278d3",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/bc93b5011e24b56211ec806e0a1697d8ef3278d3",
+                "html_url": "https://github.com/torvalds/HunspellColorize/commit/bc93b5011e24b56211ec806e0a1697d8ef3278d3"
+            }
+        ]
+    },
+    {
+        "sha": "bc93b5011e24b56211ec806e0a1697d8ef3278d3",
+        "node_id": "C_kwDOQ8XTDdoAKGJjOTNiNTAxMWUyNGI1NjIxMWVjODA2ZTBhMTY5N2Q4ZWYzMjc4ZDM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-18T19:53:56Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-01-18T19:53:56Z"
+            },
+            "message": "Do a really simple colorizing pager\n\nThis *must* exist somewhere, but google failed me and couldn't find it.\n\nI want a simple pager that shows me my typos in commit messages etc.  I\nreally should just integrate this into my editor instead, since that's\nthe real problem here (and my fingers refuse to learn new things:\nbelieve me, I've tried), but I decided that the first step would be to\njust do a minimal wrapper around the hunspell library to at least learn\nhow to use it.\n\nThis thing just exec's 'less' to do the actual paging, and inserts\nitself as a pipe between stdin and less. So you can do\n\n\texport LESS=-FRSX\n\texport GIT_PAGER=huncolor\n\nand you are more or less done.\n\nWell, you'd be done if this was slightly better - it doesn't do very\nwell with code etc.  It's not *horrible*, and mostly works together with\nthe native colorization, but it's not great either.  I might improve it,\nbut as a proof-of-concept this is about as simple as it gets.\n\n[ The \"build system\" is also as simple as it gets, and hardcodes the\n  hunspell version etc. I can't find it in myself to care right now ]\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "f83358a404f4d48f6307dba2c14e7fa755028a7f",
+                "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/trees/f83358a404f4d48f6307dba2c14e7fa755028a7f"
+            },
+            "url": "https://api.github.com/repos/torvalds/HunspellColorize/git/commits/bc93b5011e24b56211ec806e0a1697d8ef3278d3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/bc93b5011e24b56211ec806e0a1697d8ef3278d3",
+        "html_url": "https://github.com/torvalds/HunspellColorize/commit/bc93b5011e24b56211ec806e0a1697d8ef3278d3",
+        "comments_url": "https://api.github.com/repos/torvalds/HunspellColorize/commits/bc93b5011e24b56211ec806e0a1697d8ef3278d3/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": []
+    }
+]

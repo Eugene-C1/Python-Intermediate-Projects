@@ -1,0 +1,2482 @@
+[
+    {
+        "sha": "d02f1c3cdcc6a04d085538578d872ec6e3282382",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZDAyZjFjM2NkY2M2YTA0ZDA4NTUzODU3OGQ4NzJlYzZlMzI4MjM4Mg==",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-04-01T16:56:47Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-04-01T16:56:47Z"
+            },
+            "message": "Suunto EON Steel: set date too when doing device timesync\n\nI'd never noticed this before, since my date had always been already set\ncorrectly, but the timesync with the EON Steel only set the time, not\nthe date.\n\nThe fix is trivial, since the code already filled in the datetime data,\nit just didn't do the SET_DATE command.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "ed07b98096de2dd724da302481aeb9db7c98b048",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/ed07b98096de2dd724da302481aeb9db7c98b048"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/d02f1c3cdcc6a04d085538578d872ec6e3282382",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/d02f1c3cdcc6a04d085538578d872ec6e3282382",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/d02f1c3cdcc6a04d085538578d872ec6e3282382",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/d02f1c3cdcc6a04d085538578d872ec6e3282382/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0e0ee16ea69ae5d9eaf246f39e4c420a102d7046",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0e0ee16ea69ae5d9eaf246f39e4c420a102d7046",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/0e0ee16ea69ae5d9eaf246f39e4c420a102d7046"
+            }
+        ]
+    },
+    {
+        "sha": "0e0ee16ea69ae5d9eaf246f39e4c420a102d7046",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MGUwZWUxNmVhNjlhZTVkOWVhZjI0NmYzOWU0YzQyMGExMDJkNzA0Ng==",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-03-31T18:42:46Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-03-31T18:49:42Z"
+            },
+            "message": "Correctly fix build without HID support\n\nSuggested by: Linus Torvalds <torvalds@linux-foundation.org>\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "20a4e8b435c77b2894d38b8382eddceabc4bf5fa",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/20a4e8b435c77b2894d38b8382eddceabc4bf5fa"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/0e0ee16ea69ae5d9eaf246f39e4c420a102d7046",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0e0ee16ea69ae5d9eaf246f39e4c420a102d7046",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/0e0ee16ea69ae5d9eaf246f39e4c420a102d7046",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0e0ee16ea69ae5d9eaf246f39e4c420a102d7046/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "156cac65b6abed6835ba6fe1f0abf05abb3eb04c",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/156cac65b6abed6835ba6fe1f0abf05abb3eb04c",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/156cac65b6abed6835ba6fe1f0abf05abb3eb04c"
+            }
+        ]
+    },
+    {
+        "sha": "156cac65b6abed6835ba6fe1f0abf05abb3eb04c",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MTU2Y2FjNjViNmFiZWQ2ODM1YmE2ZmUxZjBhYmYwNWFiYjNlYjA0Yw==",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-03-31T18:35:31Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-03-31T18:49:31Z"
+            },
+            "message": "Revert \"Allow compilation on platforms without USBHID support\"\n\nThis reverts commit 7444cca876cf1637fd7c3d4ad1e48145b215aed8.\n\nThe commit does what it advertises - but also breaks HID support everywhere\nelse. Oops.\n\nReported-by: Linus Torvalds <torvalds@linux-foundation.org>\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "0488341548075423687c2ab0394b9928119ca6c0",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/0488341548075423687c2ab0394b9928119ca6c0"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/156cac65b6abed6835ba6fe1f0abf05abb3eb04c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/156cac65b6abed6835ba6fe1f0abf05abb3eb04c",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/156cac65b6abed6835ba6fe1f0abf05abb3eb04c",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/156cac65b6abed6835ba6fe1f0abf05abb3eb04c/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9cda25a98bb2d3e00ea76e873cfd3191da37c27c",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/9cda25a98bb2d3e00ea76e873cfd3191da37c27c",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/9cda25a98bb2d3e00ea76e873cfd3191da37c27c"
+            }
+        ]
+    },
+    {
+        "sha": "9cda25a98bb2d3e00ea76e873cfd3191da37c27c",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6OWNkYTI1YTk4YmIyZDNlMDBlYTc2ZTg3M2NmZDMxOTFkYTM3YzI3Yw==",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-03-14T05:33:47Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2018-03-14T05:33:47Z"
+            },
+            "message": "Merge pull request #14 from torvalds/Subsurface-branch\n\nMerge with upstream libdivecomputer",
+            "tree": {
+                "sha": "5f499a7eac16794f0d1acf4623851acbce0789aa",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/5f499a7eac16794f0d1acf4623851acbce0789aa"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/9cda25a98bb2d3e00ea76e873cfd3191da37c27c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJaqLQ7CRBK7hj4Ov3rIwAAdHIIAE0l1kIMEfa6W+SxBX/oS3y8\nrNtw78H0aqrlbjZpWrpz2a4lW7T1Opj2LACW2zWF1xBsLTrj3v4A8+rWpOLhNIKy\nSJT6wb4gTc2n80q5IhBFhCynbWeOLlvufDyWRffRD5GyBZSvBUcFxd6wW7LunUe1\n+I7mKo78n12Gs0eOvtiNyYDAghu2bCkMGPcoIBNPkJ3a52o5ULv4Fx1Y6AkhnHXn\nyMokOXFOLDTpBH4eh5I9K0HawS9LSAOTHA8l36gFwGFwe82m2JOZgcw7Zh5DD7LU\n4PfZ/B3tCV5HdqkkzjxTxjdVjE3RwTFa9w6NB3YzxOeXCYkCQb5TwIhWTgFfK0I=\n=eboM\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 5f499a7eac16794f0d1acf4623851acbce0789aa\nparent 7444cca876cf1637fd7c3d4ad1e48145b215aed8\nparent c52becf6d47f058fc7a87b69a34a57259e4891e3\nauthor Dirk Hohndel <dirk@hohndel.org> 1521005627 -0700\ncommitter GitHub <noreply@github.com> 1521005627 -0700\n\nMerge pull request #14 from torvalds/Subsurface-branch\n\nMerge with upstream libdivecomputer",
+                "verified_at": "2024-01-16T19:59:59Z"
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/9cda25a98bb2d3e00ea76e873cfd3191da37c27c",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/9cda25a98bb2d3e00ea76e873cfd3191da37c27c",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/9cda25a98bb2d3e00ea76e873cfd3191da37c27c/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/7444cca876cf1637fd7c3d4ad1e48145b215aed8"
+            },
+            {
+                "sha": "c52becf6d47f058fc7a87b69a34a57259e4891e3",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/c52becf6d47f058fc7a87b69a34a57259e4891e3",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/c52becf6d47f058fc7a87b69a34a57259e4891e3"
+            }
+        ]
+    },
+    {
+        "sha": "c52becf6d47f058fc7a87b69a34a57259e4891e3",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6YzUyYmVjZjZkNDdmMDU4ZmM3YTg3YjY5YTM0YTU3MjU5ZTQ4OTFlMw==",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:43:59Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:43:59Z"
+            },
+            "message": "Merge git://github.com/libdivecomputer/libdivecomputer into Subsurface-branch\n\nMerge with upstream:\n\n - support for the OSTC 2 TR\n\n - add support for dive computer filtering for device discovery\n\n - various cleanups particularly to timestamp handling\n\n - remove half-duplex emulation from the I/O api\n\n* 'master' of git://github.com/libdivecomputer/libdivecomputer:\n  Remove the half-duplex emulation from the I/O api\n  Handle the half-duplex emulation in the vyper2 backend\n  Use the new timer for the timestamps in the logging\n  Use the new timer for the timeout calculations\n  Add a high resolution timer module\n  Add functions for converting bluetooth addresses\n  Add support for the OSTC 2 TR\n  Add a workaround for invalid logbook begin pointers\n  Let the ringbuffer function handle a full ringbuffer\n  Suppress the warning if no O2 sensors are present\n  Integrate the connect step into the open function\n  Implement some filter functions\n  Add suport for applying a filter function\n  Re-write the device discovery using the iterator api\n  Cleanup the iterator internals",
+            "tree": {
+                "sha": "5f499a7eac16794f0d1acf4623851acbce0789aa",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/5f499a7eac16794f0d1acf4623851acbce0789aa"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/c52becf6d47f058fc7a87b69a34a57259e4891e3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/c52becf6d47f058fc7a87b69a34a57259e4891e3",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/c52becf6d47f058fc7a87b69a34a57259e4891e3",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/c52becf6d47f058fc7a87b69a34a57259e4891e3/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5b54386dbdf1e23300b2f3b57f369abcaa1b2714",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/5b54386dbdf1e23300b2f3b57f369abcaa1b2714",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/5b54386dbdf1e23300b2f3b57f369abcaa1b2714"
+            },
+            {
+                "sha": "38ff1f75dd32f24a37bc4486c4850eb15a73a46c",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/38ff1f75dd32f24a37bc4486c4850eb15a73a46c",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/38ff1f75dd32f24a37bc4486c4850eb15a73a46c"
+            }
+        ]
+    },
+    {
+        "sha": "5b54386dbdf1e23300b2f3b57f369abcaa1b2714",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6NWI1NDM4NmRiZGYxZTIzMzAwYjJmM2I1N2YzNjlhYmNhYTFiMjcxNA==",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:14:37Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:19:42Z"
+            },
+            "message": "remove the transfer type comments from the descriptor array\n\nThis basically reverts commit 4a3f7a7cce54 (\"Mark DC descriptors with\nsupported transport\").\n\nThe commit wasn't wrong, but it ends up having caused a *lot* of pain\nfor merging, because it adds the transfer type marker to most lines in\nthat descriptor array, and the end result is very painful to merge if\nupstream libdivecomputer ever changes any of the array entries (which\nhappens fairly regularly, either because of format changes, or because a\nnew entry is added).\n\nIt's probably better and simpler to simply have some entirely separate\nmodel for figuring out which dive computer supports which protocol.\nThere are enough common rules (like \"old Suunto models are all FTDI\")\nthat such a separate table probably would be simpler and clearer anyway.\n\nThis does not implement such a table, though - it just removes the\ninformation entirely.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "f19ba6a585b6e0eda17f8da7a84c3fd486f4b5c3",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/f19ba6a585b6e0eda17f8da7a84c3fd486f4b5c3"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/5b54386dbdf1e23300b2f3b57f369abcaa1b2714",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/5b54386dbdf1e23300b2f3b57f369abcaa1b2714",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/5b54386dbdf1e23300b2f3b57f369abcaa1b2714",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/5b54386dbdf1e23300b2f3b57f369abcaa1b2714/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f4e43afad9f113a4e83e7d9f507ffe3648842fc0",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f4e43afad9f113a4e83e7d9f507ffe3648842fc0",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f4e43afad9f113a4e83e7d9f507ffe3648842fc0"
+            }
+        ]
+    },
+    {
+        "sha": "f4e43afad9f113a4e83e7d9f507ffe3648842fc0",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZjRlNDNhZmFkOWYxMTNhNGU4M2U3ZDlmNTA3ZmZlMzY0ODg0MmZjMA==",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T18:59:40Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:19:42Z"
+            },
+            "message": "remove 'serial' number from descriptor array\n\nI added this long ago as a merge fixup (see commit f9db4ca97c4b: \"Merge\ngit://git.libdivecomputer.org/libdivecomputer into Subsurface-branch\"),\nbecause some of the OSTC parser_create() functions take a serial number.\n\nHowever, the serial number is never actually taken from the descriptor\narray, and if it was, it would be incorrect anyway.  None of the entries\nin the descriptor array actually have any, so it's always zero.\n\nSo just remove it, because it's a big pain whenever upstream changes the\ndescriptor array format.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "1e6a7dd48825aa4854f47b49d84635ec737e3a92",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/1e6a7dd48825aa4854f47b49d84635ec737e3a92"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/f4e43afad9f113a4e83e7d9f507ffe3648842fc0",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f4e43afad9f113a4e83e7d9f507ffe3648842fc0",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f4e43afad9f113a4e83e7d9f507ffe3648842fc0",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f4e43afad9f113a4e83e7d9f507ffe3648842fc0/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f5e10ff9bcb1963f8b1d1b2971244b39287d46e5",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f5e10ff9bcb1963f8b1d1b2971244b39287d46e5",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f5e10ff9bcb1963f8b1d1b2971244b39287d46e5"
+            }
+        ]
+    },
+    {
+        "sha": "f5e10ff9bcb1963f8b1d1b2971244b39287d46e5",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZjVlMTBmZjliY2IxOTYzZjhiMWQxYjI5NzEyNDRiMzkyODdkNDZlNQ==",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:08:13Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-03-11T19:19:42Z"
+            },
+            "message": "get rid of annoying compile warnings\n\nThis gets rid of the warnings in the build, mostly by just disabling\nthem entirely, and in one case by adding a default statement to make the\ncompiler not warn about lacking case statements for a switch()\nstatement.\n\nSome of the warnings really don't work that well for libdivecomputer\n(warning about pointer signs is very annoying when we mix regular\nstrings and various \"unsigned char *\" raw data).\n\nAnd some of the warnings we should probably re-enable once by one, and\nactually fix up.\n\nBut even the ones we should re-enable are right now more of a pain than\nthey are worth, and nobody has had the energy to do so.  And as long as\nthere are *so* many warnings, nobody likely will.\n\nIn the meantime, this gets rid of the harmless warnings, so that we can\nsee if any *bad* warnings happen.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "b033ea607adb2abee2f45e3ad2fe88a61eebc780",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/b033ea607adb2abee2f45e3ad2fe88a61eebc780"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/f5e10ff9bcb1963f8b1d1b2971244b39287d46e5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f5e10ff9bcb1963f8b1d1b2971244b39287d46e5",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f5e10ff9bcb1963f8b1d1b2971244b39287d46e5",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f5e10ff9bcb1963f8b1d1b2971244b39287d46e5/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/7444cca876cf1637fd7c3d4ad1e48145b215aed8"
+            }
+        ]
+    },
+    {
+        "sha": "38ff1f75dd32f24a37bc4486c4850eb15a73a46c",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MzhmZjFmNzVkZDMyZjI0YTM3YmM0NDg2YzQ4NTBlYjE1YTczYTQ2Yw==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-24T08:48:17Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-03-05T08:08:21Z"
+            },
+            "message": "Remove the half-duplex emulation from the I/O api\n\nNow that the half-duplex emulation code isn't used anymore, it can be\nremoved from the I/O stream api.",
+            "tree": {
+                "sha": "76e8116e0f13892771a571bb5b00cc80b8834476",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/76e8116e0f13892771a571bb5b00cc80b8834476"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/38ff1f75dd32f24a37bc4486c4850eb15a73a46c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/38ff1f75dd32f24a37bc4486c4850eb15a73a46c",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/38ff1f75dd32f24a37bc4486c4850eb15a73a46c",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/38ff1f75dd32f24a37bc4486c4850eb15a73a46c/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4897a8351bb5142c3fa13c97d41a5832b75205ab",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/4897a8351bb5142c3fa13c97d41a5832b75205ab",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/4897a8351bb5142c3fa13c97d41a5832b75205ab"
+            }
+        ]
+    },
+    {
+        "sha": "4897a8351bb5142c3fa13c97d41a5832b75205ab",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6NDg5N2E4MzUxYmI1MTQyYzNmYTEzYzk3ZDQxYTU4MzJiNzUyMDVhYg==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-24T08:16:23Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-03-05T08:08:21Z"
+            },
+            "message": "Handle the half-duplex emulation in the vyper2 backend\n\nThe half-duplex emulation is basically a workaround for a timing problem\nin the vyper2 backend. Since no other dive computer backend uses or\nneeds this feature, it makes no sense to support this at the I/O layer.\nIt can be implemented directly in the vyper2 backend instead.",
+            "tree": {
+                "sha": "a16c42eb841bd0ad9da3146c1776ea620ea25e79",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/a16c42eb841bd0ad9da3146c1776ea620ea25e79"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/4897a8351bb5142c3fa13c97d41a5832b75205ab",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/4897a8351bb5142c3fa13c97d41a5832b75205ab",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/4897a8351bb5142c3fa13c97d41a5832b75205ab",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/4897a8351bb5142c3fa13c97d41a5832b75205ab/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1"
+            }
+        ]
+    },
+    {
+        "sha": "ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZWUzMWYyNGNmYjIwYzc2ZGQwYmExZDExYmEwODdhYWE1MTMzMGFlMQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-23T19:43:45Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-03-05T08:08:21Z"
+            },
+            "message": "Use the new timer for the timestamps in the logging\n\nReplace the platform specific code with the new timers.",
+            "tree": {
+                "sha": "e3f2b55cec4dc5be91091320f28e5d9ceee05958",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/e3f2b55cec4dc5be91091320f28e5d9ceee05958"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/ee31f24cfb20c76dd0ba1d11ba087aaa51330ae1/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "eb4c150024edd7476aa5268b325be0091416e1ca",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/eb4c150024edd7476aa5268b325be0091416e1ca",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/eb4c150024edd7476aa5268b325be0091416e1ca"
+            }
+        ]
+    },
+    {
+        "sha": "eb4c150024edd7476aa5268b325be0091416e1ca",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZWI0YzE1MDAyNGVkZDc0NzZhYTUyNjhiMzI1YmUwMDkxNDE2ZTFjYQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-23T19:20:34Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-03-05T08:08:21Z"
+            },
+            "message": "Use the new timer for the timeout calculations\n\nReplace the gettimeofday() based implementation with the new monotonic\ntimers. This makes the implementation more robust against unexpected\nadjustments of the clock.",
+            "tree": {
+                "sha": "b1e84b8fd7713767e14fe35dc4316d38a0b04e9d",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/b1e84b8fd7713767e14fe35dc4316d38a0b04e9d"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/eb4c150024edd7476aa5268b325be0091416e1ca",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/eb4c150024edd7476aa5268b325be0091416e1ca",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/eb4c150024edd7476aa5268b325be0091416e1ca",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/eb4c150024edd7476aa5268b325be0091416e1ca/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a8adb16c0d4a5cb0cda4a0671822e7078dd502cf",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/a8adb16c0d4a5cb0cda4a0671822e7078dd502cf",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/a8adb16c0d4a5cb0cda4a0671822e7078dd502cf"
+            }
+        ]
+    },
+    {
+        "sha": "a8adb16c0d4a5cb0cda4a0671822e7078dd502cf",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6YThhZGIxNmMwZDRhNWNiMGNkYTRhMDY3MTgyMmU3MDc4ZGQ1MDJjZg==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-23T19:03:13Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-03-05T07:44:14Z"
+            },
+            "message": "Add a high resolution timer module\n\nThe new timer module provides an cross-platform interface for a high\nresolution monotonic clock. The timestamps are always relative to the\ncreation of the timer and their unit is one microseconds.\n\nThe timers can be used for logging, measuring elapsed time and\nimplementing timeouts.",
+            "tree": {
+                "sha": "30a562c39402f18dc4d0e5472536ba4e5ee666e5",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/30a562c39402f18dc4d0e5472536ba4e5ee666e5"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/a8adb16c0d4a5cb0cda4a0671822e7078dd502cf",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/a8adb16c0d4a5cb0cda4a0671822e7078dd502cf",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/a8adb16c0d4a5cb0cda4a0671822e7078dd502cf",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/a8adb16c0d4a5cb0cda4a0671822e7078dd502cf/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "becaf02ab63a67d584fcaa64fe649b69bb7a931f",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/becaf02ab63a67d584fcaa64fe649b69bb7a931f",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/becaf02ab63a67d584fcaa64fe649b69bb7a931f"
+            }
+        ]
+    },
+    {
+        "sha": "becaf02ab63a67d584fcaa64fe649b69bb7a931f",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6YmVjYWYwMmFiNjNhNjdkNTg0ZmNhYTY0ZmU2NDliNjliYjdhOTMxZg==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-15T07:25:28Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-03-04T19:49:49Z"
+            },
+            "message": "Add functions for converting bluetooth addresses",
+            "tree": {
+                "sha": "5e14ec4cf5345399508870d1d083a7a3b6d632dc",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/5e14ec4cf5345399508870d1d083a7a3b6d632dc"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/becaf02ab63a67d584fcaa64fe649b69bb7a931f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/becaf02ab63a67d584fcaa64fe649b69bb7a931f",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/becaf02ab63a67d584fcaa64fe649b69bb7a931f",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/becaf02ab63a67d584fcaa64fe649b69bb7a931f/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "efd47cd9a1333e4cd52bc2c126092ad30b45fe55",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/efd47cd9a1333e4cd52bc2c126092ad30b45fe55",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/efd47cd9a1333e4cd52bc2c126092ad30b45fe55"
+            }
+        ]
+    },
+    {
+        "sha": "efd47cd9a1333e4cd52bc2c126092ad30b45fe55",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZWZkNDdjZDlhMTMzM2U0Y2Q1MmJjMmMxMjYwOTJhZDMwYjQ1ZmU1NQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-15T19:17:47Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-17T09:22:44Z"
+            },
+            "message": "Add support for the OSTC 2 TR\n\nThe OSTC 2 TR add supports for one or more tank pressure transmitters,\nand the active transmitter is linked to the active gas mix.",
+            "tree": {
+                "sha": "740d24ebb28e4fe2ce2aa72a55f110f2dcfaed38",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/740d24ebb28e4fe2ce2aa72a55f110f2dcfaed38"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/efd47cd9a1333e4cd52bc2c126092ad30b45fe55",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/efd47cd9a1333e4cd52bc2c126092ad30b45fe55",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/efd47cd9a1333e4cd52bc2c126092ad30b45fe55",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/efd47cd9a1333e4cd52bc2c126092ad30b45fe55/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0ac15dffd37075c902f2b59da6fb49008142e236",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0ac15dffd37075c902f2b59da6fb49008142e236",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/0ac15dffd37075c902f2b59da6fb49008142e236"
+            }
+        ]
+    },
+    {
+        "sha": "7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6NzQ0NGNjYTg3NmNmMTYzN2ZkN2MzZDRhZDFlNDgxNDViMjE1YWVkOA==",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-02-12T20:21:07Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-02-12T20:25:25Z"
+            },
+            "message": "Allow compilation on platforms without USBHID support\n\nE.g. iOS.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "86d81a2f88fdd0b426e3cfd84439a8dcf4dc0679",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/86d81a2f88fdd0b426e3cfd84439a8dcf4dc0679"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/7444cca876cf1637fd7c3d4ad1e48145b215aed8",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/7444cca876cf1637fd7c3d4ad1e48145b215aed8/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8cf5209d318170d88a4b257d48dae1635d2eda53",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/8cf5209d318170d88a4b257d48dae1635d2eda53",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/8cf5209d318170d88a4b257d48dae1635d2eda53"
+            }
+        ]
+    },
+    {
+        "sha": "8cf5209d318170d88a4b257d48dae1635d2eda53",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6OGNmNTIwOWQzMTgxNzBkODhhNGIyNTdkNDhkYWUxNjM1ZDJlZGE1Mw==",
+        "commit": {
+            "author": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-02-07T16:10:59Z"
+            },
+            "committer": {
+                "name": "Dirk Hohndel",
+                "email": "dirk@hohndel.org",
+                "date": "2018-02-07T16:14:56Z"
+            },
+            "message": "Revert \"Shearwater: correctly handle the different models\"\n\nThis reverts commit 8ea8cebb4e6c3d86b9ceb2291caa077dabd2a3f7.\n\nWell intended, but as Jef points out it breaks download from older Shearwater\ndive computers in certain situations.\n\nSigned-off-by: Dirk Hohndel <dirk@hohndel.org>",
+            "tree": {
+                "sha": "c458f54d5d20a2179e1f6041c3d0822fe53be0d5",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/c458f54d5d20a2179e1f6041c3d0822fe53be0d5"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/8cf5209d318170d88a4b257d48dae1635d2eda53",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/8cf5209d318170d88a4b257d48dae1635d2eda53",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/8cf5209d318170d88a4b257d48dae1635d2eda53",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/8cf5209d318170d88a4b257d48dae1635d2eda53/comments",
+        "author": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "dirkhh",
+            "id": 237471,
+            "node_id": "MDQ6VXNlcjIzNzQ3MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/237471?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dirkhh",
+            "html_url": "https://github.com/dirkhh",
+            "followers_url": "https://api.github.com/users/dirkhh/followers",
+            "following_url": "https://api.github.com/users/dirkhh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dirkhh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dirkhh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dirkhh/subscriptions",
+            "organizations_url": "https://api.github.com/users/dirkhh/orgs",
+            "repos_url": "https://api.github.com/users/dirkhh/repos",
+            "events_url": "https://api.github.com/users/dirkhh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dirkhh/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fb0d0b269e87783e5e771071c02a76aa1e7dabbe",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/fb0d0b269e87783e5e771071c02a76aa1e7dabbe",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/fb0d0b269e87783e5e771071c02a76aa1e7dabbe"
+            }
+        ]
+    },
+    {
+        "sha": "0ac15dffd37075c902f2b59da6fb49008142e236",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MGFjMTVkZmZkMzcwNzVjOTAyZjJiNTlkYTZmYjQ5MDA4MTQyZTIzNg==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-05T19:16:48Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-06T12:00:57Z"
+            },
+            "message": "Add a workaround for invalid logbook begin pointers\n\nUnfortunately there are several devices where an invalid logbook begin\npointer occurs relative frequently. Typical examples are the Oceanic VT\n4.1 and the Sherwood Wisdom 2. In such cases, the strict validation of\nthe pointer causes the download to fail, without being able to download\nany dives at all.\n\nSince the begin pointer is only needed to detect the oldest logbook\nentry, we can fall back to downloading the entire logbook ringbuffer. If\nwe're lucky (and we usually are), we can detect the oldest entry by\ninspecting the logbook entries once they are downloaded (e.g. presence\nof uninitialized entries) and then the download will finish succesfully.\nIn the worst case scenario, we'll be able to download at least some\ndives before hitting another error.",
+            "tree": {
+                "sha": "d343a998c73ff81fd78769725b0091f45937b719",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/d343a998c73ff81fd78769725b0091f45937b719"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/0ac15dffd37075c902f2b59da6fb49008142e236",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0ac15dffd37075c902f2b59da6fb49008142e236",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/0ac15dffd37075c902f2b59da6fb49008142e236",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0ac15dffd37075c902f2b59da6fb49008142e236/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "05f55222101ae4b248aaf353d1a47514126389ee",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/05f55222101ae4b248aaf353d1a47514126389ee",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/05f55222101ae4b248aaf353d1a47514126389ee"
+            }
+        ]
+    },
+    {
+        "sha": "05f55222101ae4b248aaf353d1a47514126389ee",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MDVmNTUyMjIxMDFhZTRiMjQ4YWFmMzUzZDFhNDc1MTQxMjYzODllZQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-05T19:02:15Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-06T12:00:34Z"
+            },
+            "message": "Let the ringbuffer function handle a full ringbuffer\n\nThe ringbuffer_distance() function has a parameter to specify whether a\nringbuffer with identical begin/end pointers should be considered an\nempty or a full ringbuffer. Hence there is no need to handle the case of\na full ringbuffer manually.",
+            "tree": {
+                "sha": "5cc93082c350a122cd9d317587898e4d85241908",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/5cc93082c350a122cd9d317587898e4d85241908"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/05f55222101ae4b248aaf353d1a47514126389ee",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/05f55222101ae4b248aaf353d1a47514126389ee",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/05f55222101ae4b248aaf353d1a47514126389ee",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/05f55222101ae4b248aaf353d1a47514126389ee/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9117b593fc4552b6140e9c51594a4289584df99c",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/9117b593fc4552b6140e9c51594a4289584df99c",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/9117b593fc4552b6140e9c51594a4289584df99c"
+            }
+        ]
+    },
+    {
+        "sha": "9117b593fc4552b6140e9c51594a4289584df99c",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6OTExN2I1OTNmYzQ1NTJiNjE0MGU5YzUxNTk0YTQyODk1ODRkZjk5Yw==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-05T18:53:19Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-05T18:58:22Z"
+            },
+            "message": "Suppress the warning if no O2 sensors are present\n\nThe warning about disabling the O2 sensors due to factory default\ncalibration values, applies only if there is at least one calibrated O2\nsensor present.\n\nThis has no effect on the calibration bits, because those are already\nzero if there are no calibrated O2 sensors present.",
+            "tree": {
+                "sha": "9f979d5fb1c6e8b6cc878b30bd4d29f0f5782c6b",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/9f979d5fb1c6e8b6cc878b30bd4d29f0f5782c6b"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/9117b593fc4552b6140e9c51594a4289584df99c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/9117b593fc4552b6140e9c51594a4289584df99c",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/9117b593fc4552b6140e9c51594a4289584df99c",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/9117b593fc4552b6140e9c51594a4289584df99c/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1"
+            }
+        ]
+    },
+    {
+        "sha": "85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ODVlZWYxOWY4ZjliMTUxMGViM2FlNmU3OWY5NmVlNzdiN2IxYThiMQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-12-19T19:25:07Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-04T20:21:42Z"
+            },
+            "message": "Integrate the connect step into the open function\n\nThere is no need to expose the two step connection setup of the\nunderlying socket interface in the public api. Doing so may complicate\nthe implementation on platforms where the native api is not based on the\nsocket interface (e.g. Mac OS X).\n\nNote that the function to connect based on the IrDA service name is\nremoved. It's not used anywhere in libdivecomputer and since IrDA is an\noutdated technology nowadays, it's unlikely we'll need it in the future.",
+            "tree": {
+                "sha": "c161b7ba97e3d19f9c4785e96f8d324f0a439a84",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/c161b7ba97e3d19f9c4785e96f8d324f0a439a84"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/85eef19f8f9b1510eb3ae6e79f96ee77b7b1a8b1/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "695212ddf8781807a087813d28f5f21201d6b089",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/695212ddf8781807a087813d28f5f21201d6b089",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/695212ddf8781807a087813d28f5f21201d6b089"
+            }
+        ]
+    },
+    {
+        "sha": "695212ddf8781807a087813d28f5f21201d6b089",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6Njk1MjEyZGRmODc4MTgwN2EwODc4MTNkMjhmNWYyMTIwMWQ2YjA4OQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-12-22T22:06:40Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-04T20:21:42Z"
+            },
+            "message": "Merge branch 'discovery'",
+            "tree": {
+                "sha": "f46d7c3f4a18772f675fa2683d96df2d26cc611d",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/f46d7c3f4a18772f675fa2683d96df2d26cc611d"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/695212ddf8781807a087813d28f5f21201d6b089",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/695212ddf8781807a087813d28f5f21201d6b089",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/695212ddf8781807a087813d28f5f21201d6b089",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/695212ddf8781807a087813d28f5f21201d6b089/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f992d201ad955340e404e076c7cd227ad5413ce3",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f992d201ad955340e404e076c7cd227ad5413ce3",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f992d201ad955340e404e076c7cd227ad5413ce3"
+            },
+            {
+                "sha": "0ce3bd3e6dd715aa78a73390db4203f29b003b39",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0ce3bd3e6dd715aa78a73390db4203f29b003b39",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/0ce3bd3e6dd715aa78a73390db4203f29b003b39"
+            }
+        ]
+    },
+    {
+        "sha": "0ce3bd3e6dd715aa78a73390db4203f29b003b39",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MGNlM2JkM2U2ZGQ3MTVhYTc4YTczMzkwZGI0MjAzZjI5YjAwM2IzOQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-07-20T09:35:27Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-04T20:21:42Z"
+            },
+            "message": "Implement some filter functions",
+            "tree": {
+                "sha": "f46d7c3f4a18772f675fa2683d96df2d26cc611d",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/f46d7c3f4a18772f675fa2683d96df2d26cc611d"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/0ce3bd3e6dd715aa78a73390db4203f29b003b39",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0ce3bd3e6dd715aa78a73390db4203f29b003b39",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/0ce3bd3e6dd715aa78a73390db4203f29b003b39",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/0ce3bd3e6dd715aa78a73390db4203f29b003b39/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "30e406081780621b952791989c1f627c3865871e",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/30e406081780621b952791989c1f627c3865871e",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/30e406081780621b952791989c1f627c3865871e"
+            }
+        ]
+    },
+    {
+        "sha": "30e406081780621b952791989c1f627c3865871e",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6MzBlNDA2MDgxNzgwNjIxYjk1Mjc5MTk4OWMxZjYyN2MzODY1ODcxZQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-07-17T21:41:48Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-04T20:21:42Z"
+            },
+            "message": "Add suport for applying a filter function\n\nThe device descriptors are extended with a filter function. During the\ndevice discovery, this filter function is used to return only devices\nthat match a known dive computer.\n\nThe filtering is optional, and can be disabled by passing a NULL pointer\nfor the device descriptor when creating the iterator with one of the\ndc_xxx_iterator_new() functions.",
+            "tree": {
+                "sha": "69099556f8140d93d225ea7044b2e028e454ceac",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/69099556f8140d93d225ea7044b2e028e454ceac"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/30e406081780621b952791989c1f627c3865871e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/30e406081780621b952791989c1f627c3865871e",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/30e406081780621b952791989c1f627c3865871e",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/30e406081780621b952791989c1f627c3865871e/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ca91500ed5b42a8050f12ff20513bab1f1c40e4b",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/ca91500ed5b42a8050f12ff20513bab1f1c40e4b",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/ca91500ed5b42a8050f12ff20513bab1f1c40e4b"
+            }
+        ]
+    },
+    {
+        "sha": "ca91500ed5b42a8050f12ff20513bab1f1c40e4b",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6Y2E5MTUwMGVkNWI0MmE4MDUwZjEyZmYyMDUxM2JhYjFmMWM0MGU0Yg==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-03-08T15:38:07Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-02-04T20:21:16Z"
+            },
+            "message": "Re-write the device discovery using the iterator api\n\nReplacing the callback based interface with an iterator based interface,\nresults in a more extensible abstraction with a common interface for\neach of the built-in I/O implementations (serial, usbhid, irda and\nbluetooth).",
+            "tree": {
+                "sha": "d6c5148406d32ff03f4106ab9b21a0fe431a1841",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/d6c5148406d32ff03f4106ab9b21a0fe431a1841"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/ca91500ed5b42a8050f12ff20513bab1f1c40e4b",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/ca91500ed5b42a8050f12ff20513bab1f1c40e4b",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/ca91500ed5b42a8050f12ff20513bab1f1c40e4b",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/ca91500ed5b42a8050f12ff20513bab1f1c40e4b/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "296fad2d9d3387b8b3096c959fd48a659d126814",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/296fad2d9d3387b8b3096c959fd48a659d126814",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/296fad2d9d3387b8b3096c959fd48a659d126814"
+            }
+        ]
+    },
+    {
+        "sha": "fb0d0b269e87783e5e771071c02a76aa1e7dabbe",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6ZmIwZDBiMjY5ZTg3NzgzZTVlNzcxMDcxYzAyYTc2YWExZTdkYWJiZQ==",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-01-31T18:57:02Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2018-01-31T18:57:02Z"
+            },
+            "message": "Merge git://github.com/libdivecomputer/libdivecomputer into Subsurface-branch\n\nMerge with upstream.\n\n* git://github.com/libdivecomputer/libdivecomputer:\n  Simplify the conditional compilation\n  Disable some Windows specific compiler warnings\n  Use SDP to auto-detect the rfcomm port number\n  Use the actual IrDA device names\n  Use the correct data type for the temperature\n  Disable O2 sensors with default calibration values\n  Add support for the Seac Jack\n  Check for memory allocation errors\n  Erase the buffer before calling the vtable function\n  Replace hardcoded size with the sizeof operator\n  Use the correct model number for the Shearwater Nerd 2",
+            "tree": {
+                "sha": "5c3f71d2996387d0fa414a6dd9a8f209d8aa21f7",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/5c3f71d2996387d0fa414a6dd9a8f209d8aa21f7"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/fb0d0b269e87783e5e771071c02a76aa1e7dabbe",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/fb0d0b269e87783e5e771071c02a76aa1e7dabbe",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/fb0d0b269e87783e5e771071c02a76aa1e7dabbe",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/fb0d0b269e87783e5e771071c02a76aa1e7dabbe/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "70ad30bed30ce1b0b10eced0ffa7a115fed51d80",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/70ad30bed30ce1b0b10eced0ffa7a115fed51d80",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/70ad30bed30ce1b0b10eced0ffa7a115fed51d80"
+            },
+            {
+                "sha": "f992d201ad955340e404e076c7cd227ad5413ce3",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f992d201ad955340e404e076c7cd227ad5413ce3",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f992d201ad955340e404e076c7cd227ad5413ce3"
+            }
+        ]
+    },
+    {
+        "sha": "296fad2d9d3387b8b3096c959fd48a659d126814",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6Mjk2ZmFkMmQ5ZDMzODdiOGIzMDk2Yzk1OWZkNDhhNjU5ZDEyNjgxNA==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-03-08T14:04:17Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-01-30T21:00:41Z"
+            },
+            "message": "Cleanup the iterator internals",
+            "tree": {
+                "sha": "ddca7c5cc3e2f3f769113f9ccca37feb32fc2ea1",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/ddca7c5cc3e2f3f769113f9ccca37feb32fc2ea1"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/296fad2d9d3387b8b3096c959fd48a659d126814",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/296fad2d9d3387b8b3096c959fd48a659d126814",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/296fad2d9d3387b8b3096c959fd48a659d126814",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/296fad2d9d3387b8b3096c959fd48a659d126814/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f992d201ad955340e404e076c7cd227ad5413ce3",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f992d201ad955340e404e076c7cd227ad5413ce3",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f992d201ad955340e404e076c7cd227ad5413ce3"
+            }
+        ]
+    },
+    {
+        "sha": "f992d201ad955340e404e076c7cd227ad5413ce3",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6Zjk5MmQyMDFhZDk1NTM0MGU0MDRlMDc2YzdjZDIyN2FkNTQxM2NlMw==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-12-05T20:11:35Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-01-30T20:21:21Z"
+            },
+            "message": "Simplify the conditional compilation\n\nMove the global variables inside an existing conditionally compiled\nblock, to remove some of the #ifdef's.",
+            "tree": {
+                "sha": "5741c46482300777ce8098edde8efe873b1a4798",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/5741c46482300777ce8098edde8efe873b1a4798"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/f992d201ad955340e404e076c7cd227ad5413ce3",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f992d201ad955340e404e076c7cd227ad5413ce3",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/f992d201ad955340e404e076c7cd227ad5413ce3",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/f992d201ad955340e404e076c7cd227ad5413ce3/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "931d1857ce94b96c26468ce692454fcda8546875",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/931d1857ce94b96c26468ce692454fcda8546875",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/931d1857ce94b96c26468ce692454fcda8546875"
+            }
+        ]
+    },
+    {
+        "sha": "931d1857ce94b96c26468ce692454fcda8546875",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6OTMxZDE4NTdjZTk0Yjk2YzI2NDY4Y2U2OTI0NTRmY2RhODU0Njg3NQ==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-10-25T14:13:35Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-01-30T20:21:21Z"
+            },
+            "message": "Disable some Windows specific compiler warnings\n\nThe -Wno-pedantic-ms-format option is only needed for the MinGW target.\nBut for some reason, the AX_APPEND_COMPILE_FLAGS macro enables the\noption for all other GCC targets too. But during compilation GCC outputs\nthe warning \"unrecognized command line option\".",
+            "tree": {
+                "sha": "ca060c3e3a0bf320736a0a4c9d1c3cc5f0ae8263",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/ca060c3e3a0bf320736a0a4c9d1c3cc5f0ae8263"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/931d1857ce94b96c26468ce692454fcda8546875",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/931d1857ce94b96c26468ce692454fcda8546875",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/931d1857ce94b96c26468ce692454fcda8546875",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/931d1857ce94b96c26468ce692454fcda8546875/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "90eed3c790fcb1986a5ce665b8c0857bad85d486",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/90eed3c790fcb1986a5ce665b8c0857bad85d486",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/90eed3c790fcb1986a5ce665b8c0857bad85d486"
+            }
+        ]
+    },
+    {
+        "sha": "90eed3c790fcb1986a5ce665b8c0857bad85d486",
+        "node_id": "MDY6Q29tbWl0NzkxNzE5MDY6OTBlZWQzYzc5MGZjYjE5ODZhNWNlNjY1YjhjMDg1N2JhZDg1ZDQ4Ng==",
+        "commit": {
+            "author": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2017-10-05T20:07:14Z"
+            },
+            "committer": {
+                "name": "Jef Driesen",
+                "email": "jefdriesen@users.sourceforge.net",
+                "date": "2018-01-30T20:21:21Z"
+            },
+            "message": "Use SDP to auto-detect the rfcomm port number\n\nWhen the port number is set to zero (which is an invalid value), detect\nthe port number automatically. On Windows, we can simply supply the UUID\nof the serial port service, and the Windows api will take care of the\ndiscovery. On Linux (bluez), the SDP discovery needs to be performed\nmanually to retrieve the port number.",
+            "tree": {
+                "sha": "b195a1af276449dda7a8a3a9864284f7d87c88d5",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/trees/b195a1af276449dda7a8a3a9864284f7d87c88d5"
+            },
+            "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/git/commits/90eed3c790fcb1986a5ce665b8c0857bad85d486",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/90eed3c790fcb1986a5ce665b8c0857bad85d486",
+        "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/90eed3c790fcb1986a5ce665b8c0857bad85d486",
+        "comments_url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/90eed3c790fcb1986a5ce665b8c0857bad85d486/comments",
+        "author": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jefdriesen",
+            "id": 28502821,
+            "node_id": "MDQ6VXNlcjI4NTAyODIx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/28502821?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jefdriesen",
+            "html_url": "https://github.com/jefdriesen",
+            "followers_url": "https://api.github.com/users/jefdriesen/followers",
+            "following_url": "https://api.github.com/users/jefdriesen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jefdriesen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jefdriesen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jefdriesen/subscriptions",
+            "organizations_url": "https://api.github.com/users/jefdriesen/orgs",
+            "repos_url": "https://api.github.com/users/jefdriesen/repos",
+            "events_url": "https://api.github.com/users/jefdriesen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jefdriesen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6d5ac37f99c38bac626d5ea33a3fdd1c628bf57f",
+                "url": "https://api.github.com/repos/torvalds/libdc-for-dirk/commits/6d5ac37f99c38bac626d5ea33a3fdd1c628bf57f",
+                "html_url": "https://github.com/torvalds/libdc-for-dirk/commit/6d5ac37f99c38bac626d5ea33a3fdd1c628bf57f"
+            }
+        ]
+    }
+]

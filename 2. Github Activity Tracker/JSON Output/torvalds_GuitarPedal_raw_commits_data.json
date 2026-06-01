@@ -1,0 +1,2472 @@
+[
+    {
+        "sha": "a3ebdaa10df351a974558d1f878840b66fb2e021",
+        "node_id": "C_kwDOPxUIktoAKGEzZWJkYWExMGRmMzUxYTk3NDU1OGQxZjg3ODg0MGI2NmZiMmUwMjE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-06-01T05:34:26Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-06-01T05:34:26Z"
+            },
+            "message": "echo: Fix up displayed time and tone values\n\nThe echo effect did actually calculate the right values for the sound,\nbut in the conversion to the metadata model, the \"display in right\nunits\" code for these two pots got lost.\n\nThe math was done in two places (in echo_time/tone_display() and in\necho_init()) and the 'display' part was lost in the chaos of rewriting\nthe pot descriptors and re-doing how the effects were defined.\n\nThis reinstates the display by teaching the metadata about the special\nexponential function that these two pots used, and updating the pot\ndescription to match the match that the effects used to do in two\nseparate places.\n\nMy bad for not noticing immediately - this is all Ricky's code, so I\ndidn't react to the largely automated conversion.  And that's despite\nthe fact that I had done the special display conversion in the original\nHothouse conversion case.\n\nSo I only noticed that the display code got dropped as part of testing\nout the Web UI, and noticing that the numbers looked all kinds of odd\n(\"That 0.5 ms echo time can't be right..  D'oh!\")\n\nI think they are back to the real values now.  The Web UI is still a bit\nodd with all the excessive precision (\"6412.53 Hz\" - it really shouldn't\nbe shown to six significant digits), but at least it looks like the\nvalues are in the right ballpark now.\n\nFixes: 9c208692f7f1 (\"Convert effects to metadata-driven boiler plate generation\")\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "14d5f29eadda174d70dab374c1b7109bf459e018",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/14d5f29eadda174d70dab374c1b7109bf459e018"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/a3ebdaa10df351a974558d1f878840b66fb2e021",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/a3ebdaa10df351a974558d1f878840b66fb2e021",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/a3ebdaa10df351a974558d1f878840b66fb2e021",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/a3ebdaa10df351a974558d1f878840b66fb2e021/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c4b615cad7ef52c28b77561b6a1fd23fed11ada8",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c4b615cad7ef52c28b77561b6a1fd23fed11ada8",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/c4b615cad7ef52c28b77561b6a1fd23fed11ada8"
+            }
+        ]
+    },
+    {
+        "sha": "c4b615cad7ef52c28b77561b6a1fd23fed11ada8",
+        "node_id": "C_kwDOPxUIktoAKGM0YjYxNWNhZDdlZjUyYzI4Yjc3NTYxYjZhMWZkMjNmZWQxMWFkYTg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-06-01T04:32:07Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-06-01T04:32:07Z"
+            },
+            "message": "WebMIDI: Add toy graphical EQ visualization\n\nThis is not the frequency-accurate graph that the pedal screen has, it's\nmore of a toy-like visual approximation of the sliders, but it's cute.\n\nAt least it's cute in my desktop view..  It might be a bit cramped on a\nphone screen.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "ac991894a8e05f88d8a6c0130d4b8b7d0bdb0d5c",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/ac991894a8e05f88d8a6c0130d4b8b7d0bdb0d5c"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/c4b615cad7ef52c28b77561b6a1fd23fed11ada8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c4b615cad7ef52c28b77561b6a1fd23fed11ada8",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/c4b615cad7ef52c28b77561b6a1fd23fed11ada8",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c4b615cad7ef52c28b77561b6a1fd23fed11ada8/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b400fe0723f1e304ebef6e24b700ffcb90921d7c",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b400fe0723f1e304ebef6e24b700ffcb90921d7c",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/b400fe0723f1e304ebef6e24b700ffcb90921d7c"
+            }
+        ]
+    },
+    {
+        "sha": "b400fe0723f1e304ebef6e24b700ffcb90921d7c",
+        "node_id": "C_kwDOPxUIktoAKGI0MDBmZTA3MjNmMWUzMDRlYmVmNmUyNGI3MDBmZmNiOTA5MjFkN2M",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-06-01T03:50:50Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-06-01T04:00:53Z"
+            },
+            "message": "Cache 24c02 eeprom contents, write to it more carefully\n\nThe 24c02 eeprom isn't the fanciest of chips, and when it is busy\nwriting it falls off the i2c bus - and the write can take up to 5ms.\n\nThat really wasn't an issue when we only wrote back the effect state\nwhen switching effects manually.  The writes were naturally limited by\nthe UI update speed.\n\nBut the new WebMIDI interface with the \"save all effects\" option means\nthat suddenly writes weren't limited by the UI update speed at all, and\nthey started failing.\n\nThe most straightforward solution to this is to just cache the whole\n(little) eeprom state in RAM, and have a \"eeprom_task()\" that writes\nback dirty data with the required 5ms delays.  In fact, to keep things\nsimple, we'll just keep it to the same UI update limit it used to have.\n\nSo now loading the effect just reads it from the RAM cache, and saving\nthe effect just writes it back to the RAM cache and marks it dirty for\nlater writeback.\n\nIn fact, since we buffer it anyway, let's just make the writes be\nlimited to 8 bytes at a time, so that if I were to ever make the mistake\nof getting an older version of the 24c02, it will still work.\n\nThe chips I have all have a 16-byte page size, but some old versions\napparently have 8-byte pages and writing 16 bytes at a time wouldn't\nwork (the second half would just overwrite the first half).\n\nReading the 24c02 doesn't have any of those issues, and you can just\nslurp in the whole 256-byte thing in one go at boot time.\n\nThis seems to fix all the saving problems that the new WebMIDI code\nexposed.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "2e22ff312cc02032292816b87783bc7932d74bff",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/2e22ff312cc02032292816b87783bc7932d74bff"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/b400fe0723f1e304ebef6e24b700ffcb90921d7c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b400fe0723f1e304ebef6e24b700ffcb90921d7c",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/b400fe0723f1e304ebef6e24b700ffcb90921d7c",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b400fe0723f1e304ebef6e24b700ffcb90921d7c/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1655dbb1f6d4119f45952ccc5bb725fe40d53e0c",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/1655dbb1f6d4119f45952ccc5bb725fe40d53e0c",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/1655dbb1f6d4119f45952ccc5bb725fe40d53e0c"
+            }
+        ]
+    },
+    {
+        "sha": "1655dbb1f6d4119f45952ccc5bb725fe40d53e0c",
+        "node_id": "C_kwDOPxUIktoAKDE2NTVkYmIxZjZkNDExOWY0NTk1MmNjYzViYjcyNWZlNDBkNTNlMGM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T22:37:02Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T23:24:42Z"
+            },
+            "message": "Make it easier to update the WebMIDI app\n\nDoing the load/save/reset changes made it obvious that the PWA app also\nneeds to be easy to update, since the app and the pedal are pretty\nclosely intertwined.\n\nSome day maybe the MIDI CC details are more stable, and we could even\nhave a discovery protocol, and the tight integration between pedal\nfirmware and app can be a thing of the past.\n\nBut that day isn't today.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "6df7b6d274fd885d99008e4681ed56339f36e854",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/6df7b6d274fd885d99008e4681ed56339f36e854"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/1655dbb1f6d4119f45952ccc5bb725fe40d53e0c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/1655dbb1f6d4119f45952ccc5bb725fe40d53e0c",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/1655dbb1f6d4119f45952ccc5bb725fe40d53e0c",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/1655dbb1f6d4119f45952ccc5bb725fe40d53e0c/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d00c59ea7a094add0e888e585b14207d92eb3914",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/d00c59ea7a094add0e888e585b14207d92eb3914",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/d00c59ea7a094add0e888e585b14207d92eb3914"
+            }
+        ]
+    },
+    {
+        "sha": "d00c59ea7a094add0e888e585b14207d92eb3914",
+        "node_id": "C_kwDOPxUIktoAKGQwMGM1OWVhN2EwOTRhZGQwZTg4OGU1ODViMTQyMDdkOTJlYjM5MTQ",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T22:17:18Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T23:24:42Z"
+            },
+            "message": "Add support for effect load/save and reset-to-defaults\n\nPlaying around with the WebMIDI interface - that seems to work quite\nwell - I was easily able to make a mess, particularly with the 10-band\nEQ that doesn't have a very nice interface yet.\n\nSo I wanted a \"reset to defaults\" to undo my mess.  But also a load and\nsave operation to load things to the internal eeprom, or save any\npossibly good settings.\n\nAll of this either per-effect, or globally for the whole pedal.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "df06847addae78b11a684cdc432f79812bf16f33",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/df06847addae78b11a684cdc432f79812bf16f33"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/d00c59ea7a094add0e888e585b14207d92eb3914",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/d00c59ea7a094add0e888e585b14207d92eb3914",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/d00c59ea7a094add0e888e585b14207d92eb3914",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/d00c59ea7a094add0e888e585b14207d92eb3914/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "133ce526c1f6a61806336dd0d7d439f67e4caa5f",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/133ce526c1f6a61806336dd0d7d439f67e4caa5f",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/133ce526c1f6a61806336dd0d7d439f67e4caa5f"
+            }
+        ]
+    },
+    {
+        "sha": "133ce526c1f6a61806336dd0d7d439f67e4caa5f",
+        "node_id": "C_kwDOPxUIktoAKDEzM2NlNTI2YzFmNmE2MTgwNjMzNmRkMGQ3ZDQzOWY2N2U0Y2FhNWY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T21:47:53Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T21:47:53Z"
+            },
+            "message": "WebMIDI Progressive Web App (PWA) infrastructure\n\nThis should expose the 'WebMIDI' directory as a GitHub Pages entry,\nalong with the auto-generated 'effects.js' file that is not committed to\nthe repository.\n\nAll I ostensibly need to do is to expose it all, and enable the settings\nfor Pages to be deployed from \"Github Actions\".\n\nBut I _will_ mess this up, won't I? Let's see how many attempts it\ntakes?\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "e49e90364adc4ab5970c5c4c9021df81ab96cd30",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/e49e90364adc4ab5970c5c4c9021df81ab96cd30"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/133ce526c1f6a61806336dd0d7d439f67e4caa5f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/133ce526c1f6a61806336dd0d7d439f67e4caa5f",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/133ce526c1f6a61806336dd0d7d439f67e4caa5f",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/133ce526c1f6a61806336dd0d7d439f67e4caa5f/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5f146d1b559a987339fbadd3e7a5cf630fd925d1",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/5f146d1b559a987339fbadd3e7a5cf630fd925d1",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/5f146d1b559a987339fbadd3e7a5cf630fd925d1"
+            }
+        ]
+    },
+    {
+        "sha": "5f146d1b559a987339fbadd3e7a5cf630fd925d1",
+        "node_id": "C_kwDOPxUIktoAKDVmMTQ2ZDFiNTU5YTk4NzMzOWZiYWRkM2U3YTVjZjYzMGZkOTI1ZDE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T21:13:39Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T21:13:39Z"
+            },
+            "message": "Add preliminary icons for the guitar pedal control app\n\nDo I look like I have the artistic skill of creating an app icon?\n\nIt would be funny if I made it look like a 5-year-old did the icons\nwith crayons. But I ended up eating all the crayons instead, so I\nhad to resort to just using AI for this part too.\n\nLet's not kid ourselves: I enjoy the \"close to hardware\" part of this\nproject, but when it comes to actual musical effects, Ricky has been\ndoing the heavy lifting.  And when it comes to python scripting or\nanything web-related, I leave it in the capable hands of AI.\n\nThese icons are cheesy. But maybe that is project-appropriate by now.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "4b9fce8220a4b2a6af8090605297c017d8190f2b",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/4b9fce8220a4b2a6af8090605297c017d8190f2b"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/5f146d1b559a987339fbadd3e7a5cf630fd925d1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/5f146d1b559a987339fbadd3e7a5cf630fd925d1",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/5f146d1b559a987339fbadd3e7a5cf630fd925d1",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/5f146d1b559a987339fbadd3e7a5cf630fd925d1/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0a1091e058fed57b00fc998d3918e025afa1acca",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/0a1091e058fed57b00fc998d3918e025afa1acca",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/0a1091e058fed57b00fc998d3918e025afa1acca"
+            }
+        ]
+    },
+    {
+        "sha": "0a1091e058fed57b00fc998d3918e025afa1acca",
+        "node_id": "C_kwDOPxUIktoAKDBhMTA5MWUwNThmZWQ1N2IwMGZjOTk4ZDM5MThlMDI1YWZhMWFjY2E",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T21:09:47Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T21:09:47Z"
+            },
+            "message": "Clean up WebMIDI subdirectory as prep for using it as a Web App\n\nThis moves the .gitignore file into the parent directory, and the python\nweb server script into the scripts directory.  This is prep-work for\nexposing the web interface as a 'Progressive Web App', and just making\nthe WebMIDI directory contents be the GitHub Pages thing that can then\nbe used as-is on the phone.\n\nSo let's just get rid of anything that isn't directly about just that\nPWA infrastructure.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "de09fc9f79611b0e70db6d774cd1807b346a7595",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/de09fc9f79611b0e70db6d774cd1807b346a7595"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/0a1091e058fed57b00fc998d3918e025afa1acca",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/0a1091e058fed57b00fc998d3918e025afa1acca",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/0a1091e058fed57b00fc998d3918e025afa1acca",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/0a1091e058fed57b00fc998d3918e025afa1acca/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9c208692f7f1f778901b3b5a7a00bb5c11b8d063",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/9c208692f7f1f778901b3b5a7a00bb5c11b8d063",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/9c208692f7f1f778901b3b5a7a00bb5c11b8d063"
+            }
+        ]
+    },
+    {
+        "sha": "9c208692f7f1f778901b3b5a7a00bb5c11b8d063",
+        "node_id": "C_kwDOPxUIktoAKDljMjA4NjkyZjdmMWY3Nzg5MDFiM2I1YTdhMDBiYjVjMTFiOGQwNjM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T20:27:57Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T20:39:35Z"
+            },
+            "message": "Convert effects to metadata-driven boiler plate generation\n\nThis is the actual effect format update mentioned in the previous\ncommit: express the boiler plate details in the comment at the top of\nthe effect so that it can be auto-generated.\n\nPart of that is that now the default values can be much more sanely\nexpressed: instead of setting the defaults as the particular integer\nvalues the pot takes, express them in the user-visible units.\n\nSo the default noise gate level value can now be described as\n\n    // POT: \"Level\" LINEAR(-100.0 -40.0) = -70.0 dB\n\ninstead of the inscrutable\n\n    EFFECT_POT(\"Level\", desc_dB, gate_pot0_level, 0),   // -70dB\n\nwhere the default value of 0 ended up indeed being -70dB, but we had to\nhave a comment to that effect because it was so non-obvious (it came\nfrom the fact that gate_pot0_level() did a linear interpolation between\n-100 and -40, and -70 is the middle value).\n\nSo now the pot values make a lot more sense and defaults are easier to\nsee and set.\n\nThis also means that instead of having the pot values be -60 to +60 (in\norder to make the default \"noon\" be zero and needing no initializer),\nsince we auto-generate the defaults we can make the actual internal\nvalues be the more straightforward 0..120 range - not only matching what\nwe did for MIDI, but also simplifying a lot of the helper math cases.\n\nAs a result, the pot arrays are now done as 'unsigned char'.\n\nWhile doing all this, I also noticed that the ->describe() function is\njust entirely historical: it used to depend on the pot value for when\nthe enumerations were done as a separate hack.  But these days\nenumeration pots are an integral part of the pot description, and the\n->describe() functions were all just returning the unit string.\n\nSo get rid of the function pointer indirection, and just make it have a\nsimple and straightforward 'const char *unit' string.\n\nThis all makes the 'gen_effect' python script a bit bigger, but that is\nmore than made up for by the boiler plate removal in the effects\nthemselves, so not only does it make things clearer, this all removes\nmore lines than it adds.\n\nAnd equally importantly, it means that now the Web UI actually can\nconvert the raw pot values into sensible units, because it too can take\nthe pot descriptions into account.  Some other minor UI updates while at\nit.\n\nAll the python and JS scripting itself was obviously all done by AI.\nSome day I might care enough to learn to actually write python, but for\nnow I'm perfectly happy just reading the end result.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "51469cb9af2cdfa65518100761c88ce9dcbd0f7a",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/51469cb9af2cdfa65518100761c88ce9dcbd0f7a"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/9c208692f7f1f778901b3b5a7a00bb5c11b8d063",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/9c208692f7f1f778901b3b5a7a00bb5c11b8d063",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/9c208692f7f1f778901b3b5a7a00bb5c11b8d063",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/9c208692f7f1f778901b3b5a7a00bb5c11b8d063/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f"
+            }
+        ]
+    },
+    {
+        "sha": "4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f",
+        "node_id": "C_kwDOPxUIktoAKDQ3MjA4MjBlOGIzOGVhNjZlZjNmMjExMWIyYjZhZWJhMWMzY2VhMGY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T16:19:11Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-31T20:39:35Z"
+            },
+            "message": "Move all effects into 'effects/' subdirectory\n\n.. leaving the audio helper headers in 'audio/'.\n\nI'll make the auto-generation script pick up the effects list\nautomatically from the files in that directory, but I'll do that\nseparately: this is just the minimal file move.\n\nNote that it's not enough to just enumerate the effects: the order of\neffects also matters, so it's not quite as simple as just generating the\neffect list from a simple directory listing.\n\nSo the next step is to add some more metadata to the effects files.\n\nRight now the only \"metadata\" is the dummy wrapper macro just to mark\nthe pot descriptions.  I want to extend that too - it would be good to\nactually contain the description and mapping of values too, so that\ninstead of using C function pointers the pot descriptions would have a\nhigher level abstraction that can be not only turned into the C code,\nbut also used for the Web MIDI side.\n\nAnd the effect itself should have its own metadata - not just the\nordering requirement (as some kind of \"priority number\"), but the effect\nname (and shortname) would be exposed too.\n\nI'll have to think about it some more, but my rough plan would be to\nhave the metadata at the top of the effect file in a comment block that\nis trivially parsed, and instead of having 'gen_effects.py' just\ngenerate the trivial\n\n   #include \"../effects/{base}.h\"\n\nthing for effect_map.h, it would generate all the boiler plate for pot\nvalues translations and all of 'struct effect' for that effect.\n\nMake all the metadata simple enough that it can be easily translated\ninto both the actual C code running on the microcontroller, but also the\nJS code running in the web app so that the Web MIDI UI shows proper pot\nvalue ranges etc.\n\nThe above is a bit handwavy - I'll have to experiment.  But my thinking\nwould be that the gate effect - just to pick a random example - would go\nfrom having pot functions and a 'struct effect' like this:\n\n    static float gate_pot0_level(signed char pot)\n    {\n        // -100dB .. -40dB is 0.01mV..10mV peak signal level\n        // If your noise floor is anywhere near -100dB, you don't need the\n        // gate in the first place, but maybe it's a good way to actually\n        // _see_ what your noise floor is...\n        return linear_pot(pot, -100.0f, -40.0f);\n    }\n    [...]\n    static struct effect gate_effect = {\n        .name = \"Noise Gate\",\n        .short_name = \"GATE\",\n        .init = gate_init,\n        .step = gate_step,\n        .pots = {\n            EFFECT_POT(\"Level\", desc_dB, gate_pot0_level, 0),       // -70dB\n            EFFECT_POT(\"Attack\", desc_ms, gate_pot1_attack, -42),   // ~1.5ms\n            EFFECT_POT(\"Release\", desc_ms, gate_pot2_release, -30), // ~150ms\n        }\n    };\n\nto having a comment header at the top of the effect:\n\n    // NAME: Noise Gate [GATE]\n    // PRIORITY: 1\n    //    POT: \"Level\" LINEAR(-100 -40) dB\n    //    POT: \"Attack\" LINEAR(0 10) ms\n    //    POT: \"Release\" LINEAR(50 500) ms\n\nand gen_effects.py would just generate the boilerplate code for the\ninterfaces, while the actual real meat of the effect (the init and step\nfunctions) would remain as-is.\n\nAs always, the EQ effect is special, because it does that whole graph\nthing.  So we'd have to have a special case for that, but that would\nprobably be just a simple\n\n    //    GRAPH: eq_graph\n\nat least for now, and only graphing the frequency response on the pedal,\nnot in the Web UI thing.\n\nAnyway - that's the plan.  But for now, just separate out the effects\nheaders from the other code.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "53d5e0f064d1cc074d8ea880a660258c3f4d8968",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/53d5e0f064d1cc074d8ea880a660258c3f4d8968"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/4720820e8b38ea66ef3f2111b2b6aeba1c3cea0f/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1"
+            }
+        ]
+    },
+    {
+        "sha": "4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1",
+        "node_id": "C_kwDOPxUIktoAKDQ0MzhhM2I2ODA3MmNiMWMyOTUwOWJhM2RjMGE3ZjZmZWJhOWRiZTE",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T18:16:26Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T19:21:27Z"
+            },
+            "message": "Add Web app for MIDI state changes\n\nThis was largely because I wanted to test the whole MIDI thing without\nalways having to build a separate \"host\" and \"device\" pedal and checking\nthat they speak to each other.\n\nInstead, I can just keep the device pedal connected to the computer both\nfor programming and for testing (well, at least for testing the regular\ndevice side).\n\nAnd initially I thought I'd do some local thing using libusb (not my\nfavorite thing ever, but I've used it for the dive computer side so at\nleast I'm familiar with it), but since I also need a UI...\n\nSo instead I decided that \"hey, maybe I would just want to do it on a\nphone with USB OTG and ask AI to generate some Web app\"\n\nBecause let's face it.  I'm no good at UI's.  Or JavaScript.  A toddler\non crack would do a better job at it than I do at either of those.\n\nIt's not actually running on my phone - yet - but I can test it on my\ndesktop, and it should be fairly straightforward to just turn it into a\nphone web app too, but that's for later if this whole \"use MIDI to\ncontrol the pedal\" actually turns out to be a good idea.\n\nIt might all be me being crazy.  I actually have a Sonicake \"Pocket\nControl\" MIDI controller together with an expression pedal that should\narrive today for testing.  Because I don't know if any of this is\nactually even remotely right: it could be that I just have a buggy\nguitar pedal that just happens to work together with a buggy Web app.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c9deab2e73a24113aa658552e871a80d7879817e",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/c9deab2e73a24113aa658552e871a80d7879817e"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/4438a3b68072cb1c29509ba3dc0a7f6feba9dbe1/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "604f909d788ed5e51226fc64428777e42a6bf863",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/604f909d788ed5e51226fc64428777e42a6bf863",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/604f909d788ed5e51226fc64428777e42a6bf863"
+            }
+        ]
+    },
+    {
+        "sha": "604f909d788ed5e51226fc64428777e42a6bf863",
+        "node_id": "C_kwDOPxUIktoAKDYwNGY5MDlkNzg4ZWQ1ZTUxMjI2ZmM2NDQyODc3N2U0MmE2YmY4NjM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T17:24:19Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T19:15:54Z"
+            },
+            "message": "Make the MIDI control use the new pot mapping\n\n.. and also make pot changes generate MIDI messages in USB device mode\ntoo, not just in USB host mode.\n\nThat way you get bidirectional updates, so that the host can also see\nthe device pot changes.\n\nAnd since the host would also want to see what the initial values are,\nadd a STATE_DUMP_CC MIDI message, so that when you connect the two\ntogether they can synchronize from known state rather than having to\nalways start from scratch.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "052dfb218228358d78eedd86d922f0b31679df80",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/052dfb218228358d78eedd86d922f0b31679df80"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/604f909d788ed5e51226fc64428777e42a6bf863",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/604f909d788ed5e51226fc64428777e42a6bf863",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/604f909d788ed5e51226fc64428777e42a6bf863",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/604f909d788ed5e51226fc64428777e42a6bf863/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "75fa01a333402b6e85b4bced5555825de7688593",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/75fa01a333402b6e85b4bced5555825de7688593",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/75fa01a333402b6e85b4bced5555825de7688593"
+            }
+        ]
+    },
+    {
+        "sha": "75fa01a333402b6e85b4bced5555825de7688593",
+        "node_id": "C_kwDOPxUIktoAKDc1ZmEwMWEzMzM0MDJiNmU4NWI0YmNlZDU1NTU4MjVkZTc2ODg1OTM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T19:04:15Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T19:04:15Z"
+            },
+            "message": "Fix USB device descriptor for the composite audio / MIDI device case\n\nThe USB device descriptor needs a \"Interface Association Descriptor\n(IAD)\" for the MIDI part.  Add it.\n\nSince the pedal exposes a composite interface of both the audio\ninterface (for audio in and out) and the MIDI interface (for controlling\nthe effects), it should have that interface association descriptor to\ntell the other side that the two interfaces go together and control the\nsame function.\n\nI don't think Linux actually cares, but Antigravity tells me apparently\nWindows needs it to load the MIDI drivers, so let's do it right.\n\nOf course, I have no way of testing whether this really makes any\ndifference.  But in my cunning plan to completely revolutionize the\nwhole audio market with my incredible guitar pedal, I will have to take\nover the Windows market too.\n\n \"Brain, what do you want to do tonight?\"\n \"The same thing we do every night, Pinky - try to take over the world!\"\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "de7a0e05a4ac8f7739f1e498515b13da1fcdc63b",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/de7a0e05a4ac8f7739f1e498515b13da1fcdc63b"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/75fa01a333402b6e85b4bced5555825de7688593",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/75fa01a333402b6e85b4bced5555825de7688593",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/75fa01a333402b6e85b4bced5555825de7688593",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/75fa01a333402b6e85b4bced5555825de7688593/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "181fa6efda1e032c15f57f0f6101f280d0289818",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/181fa6efda1e032c15f57f0f6101f280d0289818",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/181fa6efda1e032c15f57f0f6101f280d0289818"
+            }
+        ]
+    },
+    {
+        "sha": "181fa6efda1e032c15f57f0f6101f280d0289818",
+        "node_id": "C_kwDOPxUIktoAKDE4MWZhNmVmZGExZTAzMmMxNWY1N2YwZjYxMDFmMjgwZDAyODk4MTg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T17:10:34Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-30T18:55:10Z"
+            },
+            "message": "Mark the pot descriptors so that we can easily auto-generate pot lists\n\nThis is part of the whole \"control things over MIDI\" thing, which needs\na list of pots that can be controlled.\n\nWhile at it, make the 'effects[]' array be auto-generated too.  This\nneeds some more cleanup, right now it just effectively moves the list of\neffects from audio/effect.h into the CMakeLists.txt file instead, which\nisn't really much of an improvement, but I'll have to think more about\nhow I want to do this.\n\nI *suspect* the answer is that I'll just split the 'audio' subdirectory\nin two, and move the effects into a separate 'effect' subdirectory,\nwhile leaving the \"helper utility headers\" in 'audio'.\n\nBut for now this is mainly just a minimal \"mark the pot descriptors for\neasy scripting\" together with a script to generate some headers with\nthat information in them (including a 'effects.js' header for a Web UI).\n\n... and since I still really don't do python - or Web UIs, for that\nmatter - that script was entirely by antigravity.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "7976d45c7d5403b78fcb31e79b2f445badc290ca",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/7976d45c7d5403b78fcb31e79b2f445badc290ca"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/181fa6efda1e032c15f57f0f6101f280d0289818",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/181fa6efda1e032c15f57f0f6101f280d0289818",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/181fa6efda1e032c15f57f0f6101f280d0289818",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/181fa6efda1e032c15f57f0f6101f280d0289818/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b3e2ec26f88c8b688db82b7aa81dba17ba4572cd",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b3e2ec26f88c8b688db82b7aa81dba17ba4572cd",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/b3e2ec26f88c8b688db82b7aa81dba17ba4572cd"
+            }
+        ]
+    },
+    {
+        "sha": "b3e2ec26f88c8b688db82b7aa81dba17ba4572cd",
+        "node_id": "C_kwDOPxUIktoAKGIzZTJlYzI2Zjg4YzhiNjg4ZGI4MmI3YWE4MWRiYTE3YmE0NTcyY2Q",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T20:38:19Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T20:38:19Z"
+            },
+            "message": "Merge https://github.com/clevelandmusicco/GuitarPedal\n\nMerge effect updates from Ricky Sheaves.\n\nThis makes some of the effects quite a bit cheaper in memory and/or in\nCPU use.  It enables flush-to-zero for denormals which can make a big\ndifference, uses a few less filters in the reverb, and makes the echo\neffect use 16-bit integers for the delay path, saving a lot of memory.\n\nI made the %fpscr register accesses use the compiler built-ins instead\nof inline asm - it's not like I dislike the inline asm in general, but\nin this case it seems simpler to just use the compiler infrastructure.\n\nAlso, Ricky added an isb instruction to flush the pipeline - that's one\nof those \"technically correct\" things to do to synchronize the fpscr\naccess, but it really doesn't matter in this case.  Even if there were\nFPU instructions in flight (and there aren't), we simply don't care that\ndeeply. So keep it simple and stupid.\n\n* https://github.com/clevelandmusicco/GuitarPedal:\n  Echo: replace float[65536] delay line with int16_t[32768]\n  Enable hardware FTZ on both cores; drop `reverb_flush()`\n  Reverb: revert to 8 comb filters and 4 Schroeder allpass filters",
+            "tree": {
+                "sha": "740499ca50ee0811fae57ba278161fc625b1e95c",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/740499ca50ee0811fae57ba278161fc625b1e95c"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/b3e2ec26f88c8b688db82b7aa81dba17ba4572cd",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b3e2ec26f88c8b688db82b7aa81dba17ba4572cd",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/b3e2ec26f88c8b688db82b7aa81dba17ba4572cd",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b3e2ec26f88c8b688db82b7aa81dba17ba4572cd/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb"
+            },
+            {
+                "sha": "21a364ae35cd7e8a7ae106a59895298f2bc7b6b2",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/21a364ae35cd7e8a7ae106a59895298f2bc7b6b2",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/21a364ae35cd7e8a7ae106a59895298f2bc7b6b2"
+            }
+        ]
+    },
+    {
+        "sha": "b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb",
+        "node_id": "C_kwDOPxUIktoAKGI0NTRhMWRjYWQzYTJhZDEzOGVjZmZiM2ZiZjVlNmUzNGYyNmEwZWI",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T19:49:48Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T20:15:27Z"
+            },
+            "message": "Change pot value range from -100..+100 to -60..+60\n\nSo \"100\" looks like a rounder number to a human, and that's obviously\nwhy I picked that original range.\n\nBut the -100..+100 range does not map very well to MIDI, which sends\n7-bit numbers in the 0..127 range.  I started out with -63..+63\noriginally, but that really doesn't work when some of the settings (like\nthe \"octaves\" for the pitch shifter) really want nice divisors.\n\nSo '60' it is, and in some ways it is actually a \"rounder\" number than\n100, in that it divides nicely into even more cases than 100 does.\n\nWhile 100 is natural in base-10, it is only divisible by combinations of\ntwo and five.  In contrast 60 is divisible by combinations of two, three\nand five, and so maps well to things like that octave setting.\n\nI don't think the reduced range (201 steps down to \"only\" 121 steps) is\nactually noticeable.  We'll see.  There's \"high-res MIDI\" that sends\nvalues in two parts, but that seems overkill.\n\nThe slider UI was already limited to only displaying 128 values simply\ndue to the resolution of the display, so ...\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "d99eb42680926279a024a4930a673e0bc29f84bb",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/d99eb42680926279a024a4930a673e0bc29f84bb"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/b454a1dcad3a2ad138ecffb3fbf5e6e34f26a0eb/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c35a62ea737500ff393769ee2fa29dba76c14653",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c35a62ea737500ff393769ee2fa29dba76c14653",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/c35a62ea737500ff393769ee2fa29dba76c14653"
+            }
+        ]
+    },
+    {
+        "sha": "c35a62ea737500ff393769ee2fa29dba76c14653",
+        "node_id": "C_kwDOPxUIktoAKGMzNWE2MmVhNzM3NTAwZmYzOTM3NjllZTJmYTI5ZGJhNzZjMTQ2NTM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T17:47:39Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T20:14:36Z"
+            },
+            "message": "Switch USB HID protocol to use MIDI over USB instead\n\nThe HID protocol was a mistake - I blame the fact that I have all the\nmusical ability of a snail on drugs.  The obviously correct answer is to\nuse MIDI, so that we could use an actual standard interface both on a\ncomputer and even using things like external stomp switches.\n\nAs always, the USB code is written by Antigravity.  I think that's the\nproper distribution of roles: Ricky has been doing any actual _musical_\neffects, I've been doing the hardware interfaces, and Antigravity deals\nwith the tinyusb integration.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "c1588e58d2638cae781ca6e4dbcf7e6d49ad8c08",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/c1588e58d2638cae781ca6e4dbcf7e6d49ad8c08"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/c35a62ea737500ff393769ee2fa29dba76c14653",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c35a62ea737500ff393769ee2fa29dba76c14653",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/c35a62ea737500ff393769ee2fa29dba76c14653",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c35a62ea737500ff393769ee2fa29dba76c14653/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c3828495b2070fcc634978fa63505616f7d8d118",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c3828495b2070fcc634978fa63505616f7d8d118",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/c3828495b2070fcc634978fa63505616f7d8d118"
+            }
+        ]
+    },
+    {
+        "sha": "21a364ae35cd7e8a7ae106a59895298f2bc7b6b2",
+        "node_id": "C_kwDOPxUIktoAKDIxYTM2NGFlMzVjZDdlOGE3YWUxMDZhNTk4OTUyOThmMmJjN2I2YjI",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-29T19:26:31Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-29T19:26:31Z"
+            },
+            "message": "Echo: replace float[65536] delay line with int16_t[32768]\n\nThe `float array[65536]` delay line was consuming 256 KB -- 59% of the\nentire 434 KB bss -- leaving only 7.5 KB of headroom against the 520 KB\nSRAM limit. With `copy_to_ram` in effect, text + bss share the same\npool. A 7.5 KB margin is far too uncomfortable.\n\n`audio/util.h`:\n- Add `__sample_array_write_s16` / `sample_array_write_s16`: writes a\n  `[-1, 1]` float to an `int16_t` cell as `val * 32767`.\n- Add `__sample_array_read_s16` / `sample_array_read_s16`: converts two\n  adjacent `int16_t` cells to float via `1/32767` and returns the\n  linearly interpolated result. Same ring-buffer bitmask logic as the\n  float variants.\n\n`audio/echo.h`:\n- `echo.array`: `float[65536]` (256 KB) -> `int16_t[32768]` (64 KB).\n  Saves 192 KB. bss drops from 434 KB to 238 KB; SRAM headroom goes\n  from 7.5 KB to ~199 KB. (!!!)\n- `ECHO_DELAY_MAX_S`: 0.800 -> 0.672. The smaller array holds 32768\n  samples at 48 kHz = 0.683 s. There's still plenty of margin for wow/flutter\n  modulation. This tighter delay range is still in Maestro EP-1/2 territory.\n- `ECHO_DELAY_LOG2_RATIO`: 4.0 -> 3.75 to match.\n- `read_pos` clamp: 65534.0 -> 32766.0 to match the new buffer size.\n- Read/write calls updated to `sample_array_read_s16` /\n  `sample_array_write_s16`.\n- And here's the controversial change:16-bit quantization noise sits at\n~-96 dBFS (CD quality), below the guitar noise floor, and is further\nattenuated by the playback LPF on every pass. We're emulating a tape\nrecorder from the 1960s, which had a dynamic range of ~65-75 dBFS.\nThis roughly maps to an 11 to 13-bit digital scale. So, arguably, it's much\nmore authentic now ;)\n- Change default pot values:\n  - `Time`: 46 -> 55 (~374.7 ms via the log taper).\n  - `WowFlut`: 0 -> -50 (25% depth via `linear_pot`).\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "2a6055c20644c2684c67e4bd649e08db74ed88a8",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/2a6055c20644c2684c67e4bd649e08db74ed88a8"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/21a364ae35cd7e8a7ae106a59895298f2bc7b6b2",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/21a364ae35cd7e8a7ae106a59895298f2bc7b6b2",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/21a364ae35cd7e8a7ae106a59895298f2bc7b6b2",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/21a364ae35cd7e8a7ae106a59895298f2bc7b6b2/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840"
+            }
+        ]
+    },
+    {
+        "sha": "cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840",
+        "node_id": "C_kwDOPxUIktoAKGNkYzRhYTQ3YmY5ZTQwMmFhZWQwZGNmNzc0N2I4MjFjZjlkMGQ4NDA",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-29T18:21:37Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-29T18:21:37Z"
+            },
+            "message": "Enable hardware FTZ on both cores; drop `reverb_flush()`\n\n`enable_ftz()` sets the FZ bit (24) in FPSCR via inline assembly on\nboth cores at startup. The Cortex-M33 VFPv5 FPU handles subnormals in\nhardware rather than via a software trap, but still takes a 5-20x\npenalty per operation. Any feedback path that decays to sub-1e-38 will\nhit this without FTZ enabled, not just reverb's comb filters.\n\nThe old `reverb_flush()` only protected `filterstore` in the comb loop.\nHardware FTZ covers every float op in the chain: allpass buffers, echo\nfeedback, and any future effect, without per-site code needed.\n\nFPSCR is per-core state, so `enable_ftz()` is called in both `main()`\nand `audio_processing()`.\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "a2d76877c113352549c3796da32916f4d8b3f0c2",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/a2d76877c113352549c3796da32916f4d8b3f0c2"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/cdc4aa47bf9e402aaed0dcf7747b821cf9d0d840/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8398215bf62d68d74da0fb8b6a2dcf2bb8274333",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/8398215bf62d68d74da0fb8b6a2dcf2bb8274333",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/8398215bf62d68d74da0fb8b6a2dcf2bb8274333"
+            }
+        ]
+    },
+    {
+        "sha": "8398215bf62d68d74da0fb8b6a2dcf2bb8274333",
+        "node_id": "C_kwDOPxUIktoAKDgzOTgyMTViZjYyZDY4ZDc0ZGEwZmI4YjZhMmRjZjJiYjgyNzQzMzM",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-29T17:55:04Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-29T17:55:04Z"
+            },
+            "message": "Reverb: revert to 8 comb filters and 4 Schroeder allpass filters\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "b3e0d912e570b86f1111c3c0604a481bd929fb61",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/b3e0d912e570b86f1111c3c0604a481bd929fb61"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/8398215bf62d68d74da0fb8b6a2dcf2bb8274333",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/8398215bf62d68d74da0fb8b6a2dcf2bb8274333",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/8398215bf62d68d74da0fb8b6a2dcf2bb8274333",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/8398215bf62d68d74da0fb8b6a2dcf2bb8274333/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c3828495b2070fcc634978fa63505616f7d8d118",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c3828495b2070fcc634978fa63505616f7d8d118",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/c3828495b2070fcc634978fa63505616f7d8d118"
+            }
+        ]
+    },
+    {
+        "sha": "c3828495b2070fcc634978fa63505616f7d8d118",
+        "node_id": "C_kwDOPxUIktoAKGMzODI4NDk1YjIwNzBmY2M2MzQ5NzhmYTYzNTA1NjE2ZjdkOGQxMTg",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T04:32:04Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-29T04:32:04Z"
+            },
+            "message": "Use 'copy_to_ram' in order to avoid running out of flash\n\nNow with a lot more effects, we started to lose samples when enabling\nthe more expensive ones.  And when I did some testing with unrolling\nloops to improve code quality actually made it worse.\n\nThe actual performance issue ends up being that now that we have more\neffects, we're also blowing out the XIP cache.  It's only 16kB in size,\nand once you start missing in the XIP cache you get the whole hot of\nwaiting for flash.  Which really hurts on that simple in-order core.\n\nNow, we don't have a ton of SRAM on the rp2354 either, and obviously\n'copy_to_ram' will mean that now we have even less, when the boot phase\nwill copy the code into that precious resource.\n\nBut we have enough for the current effects, and with this simple\none-liner I can enable every single effect without any missing samples.\n\nIt's definitely getting to the point where I think any future effects\nwill have to start kicking out some less worthy existing ones.  The\npitch shifter is probably bound to be the first to go, even if I enjoy\nhow ridiculous it sounds.\n\nWe could try to be more granular, and only move the functions that run\nas part of the audio loop on the second core into RAM, but I'm not sure\nit's worth the effort compared to the one-liner build setting.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "1d39c952eefb72edcfa31e079df340353c76008e",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/1d39c952eefb72edcfa31e079df340353c76008e"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/c3828495b2070fcc634978fa63505616f7d8d118",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c3828495b2070fcc634978fa63505616f7d8d118",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/c3828495b2070fcc634978fa63505616f7d8d118",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/c3828495b2070fcc634978fa63505616f7d8d118/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "077444b2f2dee660ce4a26800a8317fcec5a9f79",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/077444b2f2dee660ce4a26800a8317fcec5a9f79",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/077444b2f2dee660ce4a26800a8317fcec5a9f79"
+            }
+        ]
+    },
+    {
+        "sha": "077444b2f2dee660ce4a26800a8317fcec5a9f79",
+        "node_id": "C_kwDOPxUIktoAKDA3NzQ0NGIyZjJkZWU2NjBjZTRhMjY4MDBhODMxN2ZjZWM1YTlmNzk",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-28T23:14:49Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-28T23:14:49Z"
+            },
+            "message": "Merge https://github.com/clevelandmusicco/GuitarPedal\n\nPull new and updated effects from Ricky Sheaves:\n \"This is fun. I spent hours today converting code from various\n  projects.\n\n  In addition to the effects you already have, these round out the\n  'essentials' rather nicely, I think. These are 90% of everything\n  I use on a weekly basis:\n\n    Vibrato\n\tA must for organ-like tones (and full-blown chorus with the MIX at 50%)\n\n    Reverb\n\tThis one took some tuning given the CPU budget and the growing FX chain\n\n    Preamp\n\tTube / JFET saturation (different than Boost)\n\n    Tremolo\n\tStandard issue; I added the somewhat-rare harmonic mode\n\n    Echo\n\tNo big changes, but I had to tune it once Reverb + Echo couldn't\n\tplay nicely\n\n  The commit messages pretty much cover it all\"\n\nNote that the reverb effect in particular is fairly expensive, and it's\neasy to overwhelm the poor little RP2354 when enabling lots of effects.\n\nThe UI will not keep you from overwhelming the MCU, but you'll notice\nit: the sound turns scratchy and bad, and the right-hand LED will grow\nmore brightly to show signal problems.\n\n[ The right-hand LED also glows brightly for signal clipping, but it's\n  typically pretty easy to tell whether it glowing due to clipping or\n  due to a sample loss due to a overwhelmed CPU.\n\n  They sound very different - a rather \"scratchy\" sound when missing\n  samples vs a loud distorted signal. And their behavior pattern is\n  different too: the clipping obviously happens with loud signals and\n  tends to be temporary, while the overwhelmed CPU tends to be a pretty\n  constant thing depending purely on the number (and type) of effects\n  enabled, not the amplitude of the output ]\n\n* https://github.com/clevelandmusicco/GuitarPedal:\n  Tremolo: fix the harmonic tremolo level drop\n  Add tremolo effect with NORM and HARM modes\n  Reduce reverb CPU load; minor echo optimisations\n  Reverb: expand to 12 combs/6 allpasses, add per-comb LFO modulation\n  Add Freeverb reverb effect (Schroeder-Moorer, mono 48 kHz)\n  Add preamp and vibrato effects\n  Tape Echo: remove cruft and tweak performance",
+            "tree": {
+                "sha": "a35e2a9a132deb079bd710a480d5ad48bdafea5a",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/a35e2a9a132deb079bd710a480d5ad48bdafea5a"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/077444b2f2dee660ce4a26800a8317fcec5a9f79",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/077444b2f2dee660ce4a26800a8317fcec5a9f79",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/077444b2f2dee660ce4a26800a8317fcec5a9f79",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/077444b2f2dee660ce4a26800a8317fcec5a9f79/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef"
+            },
+            {
+                "sha": "ccae8959b8490fbb43a990a5c99c55bfcb8a77bd",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/ccae8959b8490fbb43a990a5c99c55bfcb8a77bd",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/ccae8959b8490fbb43a990a5c99c55bfcb8a77bd"
+            }
+        ]
+    },
+    {
+        "sha": "d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef",
+        "node_id": "C_kwDOPxUIktoAKGQzMTM1YTNiMGZmZWFhZGNiNmUyMGFlYzk3YmQyYzFhNzE1MGZjZWY",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-28T22:51:56Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-28T22:51:56Z"
+            },
+            "message": "eeprom: only use 16 bytes per effect save area\n\nI originally reserved 32 bytes per effect for saving to the eeprom, with\nthe idea that I'd have a secondary save area and only a fairly small\nnumber of effects.  Except I never did that secondary save area, and the\neffects have kept growing.\n\nSince I just picked the simplest 2kbit i2c eeprom there is, the whole\nsave area is just 256 bytes in size.  That makes the i2c programming\nvery simple, but it meant that with 32 bytes per effect it could only\nsave 8 effects.\n\nWe already have more than that (counting the USB \"effect\"), and Ricky\nhas been doing a few more.  So let's just get rid of the theoretical\nsecondary save area, and give each effect just 16 bytes of eeprom.\n\nWhile doing that, I'm also updating the checksum to cover more of the\neffect data, so that when you change an effect (rename it, or to add new\nstate or whatever), there's a higher likelihood that the checksum won't\nmatch some random old setting, and the state will instead reset to\ndefaults rather than something nonsensical.\n\nThe checksum literally exists just for that \"I re-orderd the effects or\nchanged the pot meanings of the pots, and it should reset to something\nsane instead of becoming something senseless\".  So let's make it better\nfor that.\n\n[ Also change the default for the pitch effect to be one octave up,\n  since that's the silly setting it was \"designed\" for ]\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "009f66d4d187be1f07854de4ffee44be7111e657",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/009f66d4d187be1f07854de4ffee44be7111e657"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/d3135a3b0ffeaadcb6e20aec97bd2c1a7150fcef/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc"
+            }
+        ]
+    },
+    {
+        "sha": "2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc",
+        "node_id": "C_kwDOPxUIktoAKDJhM2M0YzdlNmE4N2QzZTc1MWQwM2ZkNjA5ZGRlODdhNmQ3NzdkZmM",
+        "commit": {
+            "author": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-28T20:33:58Z"
+            },
+            "committer": {
+                "name": "Linus Torvalds",
+                "email": "torvalds@linux-foundation.org",
+                "date": "2026-05-28T20:33:58Z"
+            },
+            "message": "Add USB host/device mode build options\n\nThis adds the option for the USB-C connector to be used as a way to\ncommunicate the UI state between two pedals over USB HID.\n\nThe default setting is that the pedal is a USB device that exposes both\nUSB audio interfaces and a USB HID interface.\n\nThe other configuration is to build the \"UI pedal\" as a USB host: no\naudio capabilities, but it can communicate over the USB HID interface\nwith the audio pedal, and it has the screen and the controls on it.\n\nIt also means that when you connect the audio box to a computer, not\nonly do you get the audio interface, the new USB HID interface could be\nused to change all the effect settings dynamically from the computer\ntoo.\n\nIt's currently a specialized magic HID interface that is very closely\ntied to the particular effects versions on the pedal, so it's not very\nconvenient as a control interface, but that can hopefully be fixed\neventually with a slightly more thought out interface.\n\nThere could be variations on this model, where the audio box has\npossibly a single on-off stomp switch and maybe a master volume knob, so\nit doesn't have to be entirely hardcoded.  But since the audio pedal\ndoes have the EEPROM with effect settings, it would be entirely useful\non its own even without the UI connected.\n\nThe UI pedal could also possibly talk MIDI, and thus extend on the UI\nthat way.\n\nThis is all very hand-wavy and experimental.  I don't have such hardware\nyet, but I can test this by just connecting two of the existing pedals,\nwith one acting as the audio pedal and the other as the UI pedal.\n\nIt is unclear if any actual user would want to do it this way, although\nRicky Sheaves did point me at pedals like the Orange OMEC Teleport that\nhe has.  That works as a limited version of my envisioned audio pedal -\njust without the built-in effects.\n\nI'm doing this because I want to play with form factors once more, and\nseparating the audio side from the UI means that I can play with one\nwithout having to worry about the other.\n\nThis is kind of a higher-level version of what I did with the codec and\nrp2354 boards for hardware layout.\n\nSigned-off-by: Linus Torvalds <torvalds@linux-foundation.org>",
+            "tree": {
+                "sha": "6048f0eb1cd4090a29a065386bc431999d1f21a5",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/6048f0eb1cd4090a29a065386bc431999d1f21a5"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/2a3c4c7e6a87d3e751d03fd609dde87a6d777dfc/comments",
+        "author": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "torvalds",
+            "id": 1024025,
+            "node_id": "MDQ6VXNlcjEwMjQwMjU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/torvalds",
+            "html_url": "https://github.com/torvalds",
+            "followers_url": "https://api.github.com/users/torvalds/followers",
+            "following_url": "https://api.github.com/users/torvalds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/torvalds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/torvalds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/torvalds/subscriptions",
+            "organizations_url": "https://api.github.com/users/torvalds/orgs",
+            "repos_url": "https://api.github.com/users/torvalds/repos",
+            "events_url": "https://api.github.com/users/torvalds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/torvalds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "403b2027edea2d0a2dc622c0831e744e2f122eab",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/403b2027edea2d0a2dc622c0831e744e2f122eab",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/403b2027edea2d0a2dc622c0831e744e2f122eab"
+            }
+        ]
+    },
+    {
+        "sha": "ccae8959b8490fbb43a990a5c99c55bfcb8a77bd",
+        "node_id": "C_kwDOPxUIktoAKGNjYWU4OTU5Yjg0OTBmYmI0M2E5OTBhNWM5OWM1NWJmY2I4YTc3YmQ",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-28T13:54:48Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-28T13:56:37Z"
+            },
+            "message": "Tremolo: fix the harmonic tremolo level drop\n\nThe old HARM formula was:\n\n    lo*(1 + k*lfo) + hi*(1 - k*lfo)  ==  (lo+hi) + k*lfo*(lo-hi)\n\nThe two filters (LP at 144.7 Hz, HP at 636.6 Hz) are not a\ncomplementary crossover pair, so `lo+hi` has a broad mid-frequency\ndip around 8 dB at 300 Hz. That made HARM noticeably quieter\nthan NORM at the same gain staging.\n\nNew formula:\n\n    in + k*lfo*(lo - hi)\n\nThe modulation term `k*lfo*(lo-hi)` is identical; only the carrier\nchanges from `lo+hi` to `in`.\n\n- Unity gain at zero depth, matching NORM behaviour.\n- At mid frequencies the apparent depth per unit `k` is reduced. Increasing the depth control compensates.\n- At frequency extremes one branch dominates and depth is unchanged.\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "d6688f4dd77f0d82ca130ba4d4c1e742ad473a33",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/d6688f4dd77f0d82ca130ba4d4c1e742ad473a33"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/ccae8959b8490fbb43a990a5c99c55bfcb8a77bd",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/ccae8959b8490fbb43a990a5c99c55bfcb8a77bd",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/ccae8959b8490fbb43a990a5c99c55bfcb8a77bd",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/ccae8959b8490fbb43a990a5c99c55bfcb8a77bd/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "68cdb10daa2cf9f35fc2ddfa393015721f3c32de",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/68cdb10daa2cf9f35fc2ddfa393015721f3c32de",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/68cdb10daa2cf9f35fc2ddfa393015721f3c32de"
+            }
+        ]
+    },
+    {
+        "sha": "68cdb10daa2cf9f35fc2ddfa393015721f3c32de",
+        "node_id": "C_kwDOPxUIktoAKDY4Y2RiMTBkYWEyY2Y5ZjM1ZmMyZGRmYTM5MzAxNTcyMWYzYzMyZGU",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-28T09:51:45Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-28T09:51:45Z"
+            },
+            "message": "Add tremolo effect with NORM and HARM modes\n\nJust three controls.\n\nRATE: 0.1-10 Hz, cubic\nDEPTH\nMODE (NORM/HARM).\n\nNORM mode uses bipolar AM: gain = 1 + k*lfo, where k = depth/(2-depth).\nAverage level stays at 1.0 at all depth settings, so 100% depth swings\n0..2x rather than cutting average level by up to 6 dB.\n\nHARM mode models the Fender 6G4 harmonic vibrato circuit with two\none-pole filters: a LP at 144.7 Hz (220k/5nF) for the low branch and a\nHP at 636.6 Hz (1M/250pF, computed as in-LP) for the high branch. The\nLFO modulates them in opposite phase. The two corners are not\ncomplementary, so there is a broad mid-frequency dip and phasey\nrecombination on summing, which is what gives the brownface character.\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "f267b0ba48df214cbfff0169a2b47519c5476884",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/f267b0ba48df214cbfff0169a2b47519c5476884"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/68cdb10daa2cf9f35fc2ddfa393015721f3c32de",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/68cdb10daa2cf9f35fc2ddfa393015721f3c32de",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/68cdb10daa2cf9f35fc2ddfa393015721f3c32de",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/68cdb10daa2cf9f35fc2ddfa393015721f3c32de/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "711ad60287822f8c10842cea7626f8a18112265c",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/711ad60287822f8c10842cea7626f8a18112265c",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/711ad60287822f8c10842cea7626f8a18112265c"
+            }
+        ]
+    },
+    {
+        "sha": "711ad60287822f8c10842cea7626f8a18112265c",
+        "node_id": "C_kwDOPxUIktoAKDcxMWFkNjAyODc4MjJmOGMxMDg0MmNlYTc2MjZmOGExODExMjI2NWM",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T19:51:09Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T19:51:09Z"
+            },
+            "message": "Reduce reverb CPU load; minor echo optimisations\n\nWhile testing, I discovered that loading reverb and echo at the same\ntime resulted in audio artefacts. I don't have a profiler or cycle\ncounter on the hardware, so I made these changes a couple at a time\nuntil the noise/distortion/crackle disappeared from the combined\necho loop + reverb tail. Not very scientific, and my math may not be\nclose to right, but it worked.\n\nReverb:\n- Drop from 12 to 10 parallel FBCFs; scale `REVERB_FIXEDGAIN` up from\n  0.007 to 0.0084 to preserve wet level with fewer combs; reverb still\n  sounds OK\n- Remove fractional-delay interpolation from the comb read: one buffer\n  load per comb instead of two, dropping the lerp multiply-adds\n- Eliminate the redundant `depth` clamp in the comb loop -- all ten\n  delay values (1215-1907) leave more than `REVERB_MOD_DEPTH` (6)\n  samples of headroom, so the branch was always taken; inline the\n  constant directly\n- Remove `reverb_flush` from the allpass chain; the 0.5 feedback\n  coefficient guarantees decay, so subnormals cannot accumulate there\n\nEcho:\n- Precompute `tanhf(preamp_asymmetry)` once in `echo_init` as\n  `preamp_dc_offset`; the value is constant but `tanhf` is not\n  folded by the compiler from a `const` struct field\n- Cache equal-power blend gains (`dry_gain`, `wet_gain`); recompute\n  `fastsincos` only when `blend` drifts more than 0.001, matching the\n  existing `last_tone` guard pattern for the playback LPF\n\nRough cycles/sample saved (M33 @ 172.8 MHz, 3600 cycles/sample budget):\n\n```\n| Change                                               | ~cycles/sample |\n|------------------------------------------------------|----------------|\n| 12 -> 10 combs (2 full comb iterations eliminated)   |             60 |\n| Remove lerp from comb read (2 loads -> 1)            |             70 |\n| Remove redundant `depth` clamp in comb loop          |             35 |\n| Remove `reverb_flush` from 6 allpasses               |             18 |\n| Precompute `tanhf(preamp_asymmetry)` in `echo_init`  |             50 |\n| Cache blend `fastsincos` (saved on ~99.9% of samples)|             12 |\n| **Total**                                            |       **~245** |\n```\n\nI say \"rough\" becuase is really just an instruction count and that't it.\nBut, ~7% of the per-sample budget. Lerp removal and comb count reduction\nare the bulk of it. The `tanhf` saving is disproportionate for one line: it\ngoes through `exp` internally (~50 cycles on M33). Comb buffer\nreads are non-sequential loads, so real savings may be somewhat less\nthan the instruction count suggests.\n\nNOTE: if we enable flush-to-zero by default on the MP33 FPU, we could save\nup to ~40 cycles/sample in addition to the stuff above. Might be as simple\nas\n\n  // FPU context is per-core; must be set on core 1 separately.\n  __set_FPSCR(__get_FPSCR() | 0x01000000); // FZ bit (bit 24)\n\nat the top of `audio_processing()`. I'll leave that for Linus to suss out, though.\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "36529aee2d3de3cddc1154b4b30173ab5985ac52",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/36529aee2d3de3cddc1154b4b30173ab5985ac52"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/711ad60287822f8c10842cea7626f8a18112265c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/711ad60287822f8c10842cea7626f8a18112265c",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/711ad60287822f8c10842cea7626f8a18112265c",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/711ad60287822f8c10842cea7626f8a18112265c/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "afe7cd9a132330daf2194d597a967644957c50be",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/afe7cd9a132330daf2194d597a967644957c50be",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/afe7cd9a132330daf2194d597a967644957c50be"
+            }
+        ]
+    },
+    {
+        "sha": "afe7cd9a132330daf2194d597a967644957c50be",
+        "node_id": "C_kwDOPxUIktoAKGFmZTdjZDlhMTMyMzMwZGFmMjE5NGQ1OTdhOTY3NjQ0OTU3YzUwYmU",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T16:56:43Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T16:56:43Z"
+            },
+            "message": "Reverb: expand to 12 combs/6 allpasses, add per-comb LFO modulation\n\nStandard Freeverb produces metallic ringing in long tails because fixed\ninteger delays create sharp resonant peaks. Extending the filter bank\nand adding LFO modulation on each comb read pointer breaks up the\nperiodicity.\n\nDSP changes:\n- Comb count 8 -> 12: four additional delay lengths continuing the\n  original spacing pattern (1831, 1907, 1979, 2045 samples), all\n  within the existing `REVERB_COMB_SIZE = 2048` buffer\n- Allpass count 4 -> 6: two additional delays (153, 87 samples)\n  continuing the descending sequence\n- Four quadrature-phasor LFOs modulate each comb's read pointer:\n  complex-multiply rotation per sample, no `sincos` in the hot path;\n  rates 0.21/0.31/0.46/0.67 Hz (~3:2 geometric spacing to prevent\n  beating); phases staggered 0/0.25/0.5/0.75 cycles at init\n- Comb read upgraded from integer to linearly-interpolated fractional\n  delay; modulation depth clamped to `min(6 samples, buffer headroom)`\n  so the read pointer can never lap the write pointer\n- LFOs assigned round-robin to the 12 combs (`i % 4`)\n\nGain constants retuned for the larger filter bank:\n- `fixedgain` 0.015 -> 0.010 (proportional scaling for 12 combs)\n- `scalewet` 3.0 -> 1.5, `scaledry` 2.0 -> 1.2 (unity dry at 0% wet)\n- Damp range [0.0, 0.4] -> [0.1, 0.5]: fully undamped tails are\n  rarely useful and the old low end was dead space on the pot\n- Default Mix -50 -> -65 (0.175 wet), Damp 0 -> 15 (pole = 0.33)\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "4474d797092c6103397a590d64ee78fe05666694",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/4474d797092c6103397a590d64ee78fe05666694"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/afe7cd9a132330daf2194d597a967644957c50be",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/afe7cd9a132330daf2194d597a967644957c50be",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/afe7cd9a132330daf2194d597a967644957c50be",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/afe7cd9a132330daf2194d597a967644957c50be/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "57d12d07ae7cabdf7518ae5e8908226f72bf2494",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/57d12d07ae7cabdf7518ae5e8908226f72bf2494",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/57d12d07ae7cabdf7518ae5e8908226f72bf2494"
+            }
+        ]
+    },
+    {
+        "sha": "57d12d07ae7cabdf7518ae5e8908226f72bf2494",
+        "node_id": "C_kwDOPxUIktoAKDU3ZDEyZDA3YWU3Y2FiZGY3NTE4YWU1ZTg5MDgyMjZmNzJiZjI0OTQ",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T16:00:48Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T16:00:48Z"
+            },
+            "message": "Add Freeverb reverb effect (Schroeder-Moorer, mono 48 kHz)\n\nJezar's public-domain Freeverb algorithm, ported to the pedal's\nsample-at-a-time mono path at 48 kHz.\n\nDSP topology:\n- 8 parallel feedback comb filters (FBCF), all fed directly from\n  the input; each has a one-pole LP in its feedback path\n- 4 series Schroeder allpass filters on the summed comb output\n- Delay lengths are the canonical Freeverb 44100 Hz values scaled\n  to 48000 Hz (multiply by 48/44.1)\n\nParameters:\n- Mix: linear dry/wet, with `fixedgain` (0.015) on the comb input\n  and `scalewet`/`scaledry` (3.0/2.0) normalising levels\n- Room: feedback gain `g` in [0.70, 0.98] via roomscale/roomoffset\n- Damp: one-pole LP pole in [0, 0.4]; higher = more HF rolloff in\n  the FBCF feedback path\n\nTwo hardware workarounds required:\n- `reverb_flush()` manually zeros subnormals in the comb and allpass\n  buffers; the Cortex-M33 FPU does not flush-to-zero by default,\n  causing ~100x slowdown once the reverb tail decays below 1e-38\n- All `reverb_state` fields including `.delay` are set in\n  `reverb_init()` because pico-sdk silently zeroes large static  objects\nduring the .data copy from flash\n\nRegistered in `effects[]` between echo and pitch.\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "a3b27d1f9e18110b2e5603fce5bec8ac67acd1f7",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/a3b27d1f9e18110b2e5603fce5bec8ac67acd1f7"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/57d12d07ae7cabdf7518ae5e8908226f72bf2494",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/57d12d07ae7cabdf7518ae5e8908226f72bf2494",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/57d12d07ae7cabdf7518ae5e8908226f72bf2494",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/57d12d07ae7cabdf7518ae5e8908226f72bf2494/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "80e09d302651ac6fb891e5033c1a2a0e44a5ab72",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/80e09d302651ac6fb891e5033c1a2a0e44a5ab72",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/80e09d302651ac6fb891e5033c1a2a0e44a5ab72"
+            }
+        ]
+    },
+    {
+        "sha": "80e09d302651ac6fb891e5033c1a2a0e44a5ab72",
+        "node_id": "C_kwDOPxUIktoAKDgwZTA5ZDMwMjY1MWFjNmZiODkxZTUwMzNjMWEyYTBlNDRhNWFiNzI",
+        "commit": {
+            "author": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T15:14:13Z"
+            },
+            "committer": {
+                "name": "Ricky Sheaves",
+                "email": "code@clevelandmusicco.com",
+                "date": "2026-05-27T15:14:13Z"
+            },
+            "message": "Add preamp and vibrato effects\n\n**Preamp** (`preamp.h`)\n\nWait, don't we already have a Boost effect? Yes, but ...\n\nThe current boost effect does wavefolding: it hard-clips by reflecting the\nsignal back on itself, generating mostly odd-order harmonics with a sharp\ntransition at the clip boundary. That's perfect for aggressive clipping or\ndistortion pedal simulation, but it is not how a class-A analog front end\nbehaves.\n\nPreamp uses asymmetrically biased tanh saturation. Biasing the waveshaper\noff-centre generates even-order harmonics (mostly 2nd), which is the magick\nbehind the warm character of class-A tube and JFET stages. The distortion onset\nis gradual; there is no clip boundary; just a soft knee. So, at moderate drive\nsettings the signal is more coloured than clipped. Players who want 'always-on'\nfront-end character rather than an obvious clipping stage tend to prefer this.\n\nUsage: select Voice (Tube or JFET), dial Sat from 0.5x (clean) to 4x (hard\nclip), trim Level +/-20 dB. Works best early in the chain, typically first.\n\n- Tube voice models two cascaded 12AX7 triode stages using `tanhf()` as the\nwaveshaper. A fixed 0.15 grid-bias offset on each stage pushes the operating\npoint off-centre, generating even-order harmonics for vintage-amp character.\n- An interstage DC block (~38 Hz, one-pole IIR) strips the stage-1 DC offset\nbefore stage 2 so the asymmetry doesn't accumulate.\n- JFET voice models a single common-emitter 2N5457-like stage with three\nfrequency-domain features: an emitter-bypass low shelf (~120 Hz, -6 dB), an\nasymmetric `tanhf()` waveshaper with a 0.12 bias offset, and a Miller-cap HF\nrolloff (~9 kHz one-pole LPF).\n- Output normalization constants (`PREAMP_TUBE_NORM`, `PREAMP_JFET_NORM`) are\nprecomputed at the default drive of 1.2x so unity gain is preserved (well, just\nbarely above, actually) at the default settings.\n\n**Vibrato** (`vibrato.h`)\n\nUsage: set Rate (0.1-8 Hz) for LFO speed, Depth (0-5 ms) for pitch swing, Mix\nfor dry/wet balance. At 100% wet you get pure pitch vibrato; blend in dry signal\nfor chorus. 100% dry with a Rate of ~5 Hz makes for a nice rotary speaker\nemulation.\n\n- Writes incoming samples into a 1024-entry ring buffer (~21 ms at 48 kHz) and\nreads back with a fractionally interpolated index offset by a sine LFO riding on\na 6 ms center delay.\n- The center delay keeps the read head from overtaking the write head even at\nmaximum depth (6 ms + 5 ms = 11 ms, well inside the 21 ms buffer).\n- Mix uses an equal-power crossfade: `dry = cos(0.25 * mix)`, `wet = sin(0.25 *\nmix)`, computed once in `vibrato_init` via `fastsincos`.\n\n**effect.h**\n\n- Add `desc_s()` unit descriptor (seconds) alongside the existing Hz/ms/dB\nhelpers (will be used by a future reverb effect).\n- Insert `#include \"preamp.h\"` and `EFF(preamp)` immediately after `gate` (new\nindex 1).\n- Insert `#include \"vibrato.h\"` and `EFF(vibrato)` immediately after `flanger`\n(new index 6).\n- **Note:** inserting effects mid-array shifts all subsequent effect indices,\nwhich shifts their EEPROM page addresses. You'll need to hold both encoders down\nwith no USB connection to reset after first boot.\n\nSigned-off-by: Ricky Sheaves <ricky@clevelandmusicco.com>",
+            "tree": {
+                "sha": "cf2eb696a95d2d0162c2bf325cf3980fd7cd7e7f",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/trees/cf2eb696a95d2d0162c2bf325cf3980fd7cd7e7f"
+            },
+            "url": "https://api.github.com/repos/torvalds/GuitarPedal/git/commits/80e09d302651ac6fb891e5033c1a2a0e44a5ab72",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null,
+                "verified_at": null
+            }
+        },
+        "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/80e09d302651ac6fb891e5033c1a2a0e44a5ab72",
+        "html_url": "https://github.com/torvalds/GuitarPedal/commit/80e09d302651ac6fb891e5033c1a2a0e44a5ab72",
+        "comments_url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/80e09d302651ac6fb891e5033c1a2a0e44a5ab72/comments",
+        "author": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "clevelandmusicco",
+            "id": 162055667,
+            "node_id": "U_kgDOCajF8w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162055667?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/clevelandmusicco",
+            "html_url": "https://github.com/clevelandmusicco",
+            "followers_url": "https://api.github.com/users/clevelandmusicco/followers",
+            "following_url": "https://api.github.com/users/clevelandmusicco/following{/other_user}",
+            "gists_url": "https://api.github.com/users/clevelandmusicco/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/clevelandmusicco/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/clevelandmusicco/subscriptions",
+            "organizations_url": "https://api.github.com/users/clevelandmusicco/orgs",
+            "repos_url": "https://api.github.com/users/clevelandmusicco/repos",
+            "events_url": "https://api.github.com/users/clevelandmusicco/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/clevelandmusicco/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "cd67ccf78234b0ce222b019afd892821051ead57",
+                "url": "https://api.github.com/repos/torvalds/GuitarPedal/commits/cd67ccf78234b0ce222b019afd892821051ead57",
+                "html_url": "https://github.com/torvalds/GuitarPedal/commit/cd67ccf78234b0ce222b019afd892821051ead57"
+            }
+        ]
+    }
+]
