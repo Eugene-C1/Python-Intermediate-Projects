@@ -12,6 +12,7 @@ def compile_json_to_clean_csv():
     
     commit_rows = []
     contributor_rows = []
+    repo_rows = []
     
     # 1. Scan the folder for commit files
     # Filename format: {username}_{repo_name}_raw_commits_data.json
@@ -65,6 +66,29 @@ def compile_json_to_clean_csv():
         except Exception as e:
             print(f"Skipping corrupt file {file_path.name}: {e}")
 
+    # 3. Scan the folder for repo files
+    # Filename format: {username}_{repo_name}_raw_contributors_data.json
+    for file_path in JSON_DIR.glob(f'{username}_raw_repo_data.json'):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                repos = json.load(f)
+                
+            if isinstance(repos, list):
+                for repo in repos:
+                    row = {
+                        'Username': username,
+                        'Repo_Name': repo.get('name'),
+                        'Size': repo.get('size'),
+                        'Stargazers_Count': repo.get('stargazers_count'),
+                        'Watchers_Count': repo.get('watchers_count'),
+                        'Language' : repo.get('language'),
+                        'Forks_Count' : repo.get('forks_count'),
+                        'Open_Issues_Count': repo.get('open_issues_count')
+                    }
+                    repo_rows.append(row)
+        except Exception as e:
+            print(f"Skipping corrupt file {file_path.name}: {e}")
+
     # 3. Save everything into massive master CSV files
     if commit_rows:
         df_commits = pd.DataFrame(commit_rows)
@@ -75,11 +99,17 @@ def compile_json_to_clean_csv():
             
         df_commits.to_csv(CSV_DIR / 'master_commits_cleanup.csv', index=False, encoding='utf-8')
         print(f"Compiled {len(commit_rows)} commits into master_commits_cleanup.csv")
-        
+
     if contributor_rows:
         df_contributors = pd.DataFrame(contributor_rows)
         df_contributors.to_csv(CSV_DIR / 'master_contributors_cleanup.csv', index=False, encoding='utf-8')
         print(f"Compiled {len(contributor_rows)} contributors into master_contributors_cleanup.csv")
+
+    if repo_rows:
+        df_repos = pd.DataFrame(repo_rows)
+        df_repos.to_csv(CSV_DIR / 'master_repo_cleanup.csv', index=False, encoding='utf-8')
+        print(f"Compiled {len(repo_rows)} repositories into master_repo_cleanup.csv")
+    
 
 if __name__ == '__main__':
     compile_json_to_clean_csv()
